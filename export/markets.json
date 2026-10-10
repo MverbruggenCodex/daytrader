@@ -1,0 +1,68 @@
+[
+ {
+  "market": "BTCUSD",
+  "status": "Buiten sessie",
+  "price": 83046.0,
+  "day_open": 82553.0,
+  "day_high": 83153.0,
+  "day_low": 82525.0,
+  "bias": "Neutraal",
+  "note": "BTC op Liquid · trend 15m",
+  "updated": "2026-10-10T20:00:00Z"
+ },
+ {
+  "market": "EURUSD",
+  "status": "Buiten sessie",
+  "price": 1.1206,
+  "day_open": 1.1206,
+  "day_high": 1.1206,
+  "day_low": 1.1206,
+  "bias": "Neutraal",
+  "note": "xyz:EUR op Liquid · trend 15m",
+  "updated": "2026-10-10T19:45:00Z"
+ },
+ {
+  "market": "XAUUSD",
+  "status": "Buiten sessie",
+  "price": 4190.3,
+  "day_open": 4190.3,
+  "day_high": 4190.3,
+  "day_low": 4190.2,
+  "bias": "Neutraal",
+  "note": "xyz:GOLD op Liquid · trend 15m",
+  "updated": "2026-10-10T20:00:00Z"
+ },
+ {
+  "market": "SP500",
+  "status": "Buiten sessie",
+  "price": 7806.9,
+  "day_open": 7806.8,
+  "day_high": 7808.0,
+  "day_low": 7805.7,
+  "bias": "Neutraal",
+  "note": "Vervangt de DJ30, die niet op Liquid staat",
+  "updated": "2026-10-10T20:00:00Z"
+ },
+ {
+  "market": "USDCAD",
+  "status": "Niet beschikbaar",
+  "price": null,
+  "day_open": null,
+  "day_high": null,
+  "day_low": null,
+  "bias": "—",
+  "note": "Niet beschikbaar op Liquid/Hyperliquid",
+  "updated": "2026-10-10T20:03:32Z"
+ },
+ {
+  "market": "DJ30",
+  "status": "Niet beschikbaar",
+  "price": null,
+  "day_open": null,
+  "day_high": null,
+  "day_low": null,
+  "bias": "—",
+  "note": "Niet beschikbaar op Liquid/Hyperliquid; SP500 vervangt hem",
+  "updated": "2026-10-10T20:03:32Z"
+ }
+]

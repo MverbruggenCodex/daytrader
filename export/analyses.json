@@ -1,0 +1,50 @@
+[
+ {
+  "id": "A001",
+  "time": "2026-10-10T16:06:50Z",
+  "market": "BTCUSD",
+  "price": 82972.6,
+  "bias": "Bearish",
+  "trigger": "Start + dagcheck",
+  "title": "Short BTC: herstel loopt vast onder de oude range-bodem",
+  "text": "BTC handelde van 24 sep tot 6 okt in een range van ca. 82.600–87.200. Op 7–8 okt brak de koers daar onderuit tot 80.329. Het herstel daarna stopte gisteren (9 okt) op 83.463: onder de oude range-bodem en de 50-EMA op 4u (ca. 83.600). Vandaag kruipt de koers terug richting 83.000. De koers staat onder de 50-EMA en sinds 87.229 maakt BTC lagere toppen. Nieuws: geen duidelijke aanleiding voor de daling gevonden. Weekend betekent dunne liquiditeit, dus valse uitbraken zijn goed mogelijk.",
+  "action": "Short geopend op 82.972,6 · stop 83.650 · doel 79.850",
+  "invalidation": "4u-slot boven 83.650"
+ },
+ {
+  "id": "A002",
+  "time": "2026-10-10T16:15:10Z",
+  "market": "BTCUSD",
+  "price": 82952.3,
+  "bias": "Bearish",
+  "trigger": "Statuscheck + correctie",
+  "title": "Correctie: entry stond op een verouderde koers",
+  "text": "De eerste boeking gebruikte een verouderde koers van Kraken (82.394,8, van 9 okt). De echte koers bij openen was ca. 82.972,6. De trade is daarom gecorrigeerd naar die entry, met dezelfde stop en hetzelfde doel en een grootte die past bij €1,50 risico. Daardoor ligt de stop nu krap (ongeveer 1x de gemiddelde 4u-range) en is de risk/reward 1:4,6. De koers test 83.000; de setup blijft geldig zolang er geen 4u-slot boven 83.650 komt.",
+  "action": "Trade open gelaten · entry gecorrigeerd",
+  "invalidation": "4u-slot boven 83.650"
+ },
+ {
+  "id": "A003",
+  "time": "2026-10-10T19:39:25Z",
+  "market": "BTCUSD",
+  "price": 83046.0,
+  "bias": "Bearish, korte termijn sterker",
+  "trigger": "Statuscheck (Liquid gekoppeld)",
+  "title": "Short staat licht in de min; momentum op korte termijn draait omhoog",
+  "text": "BTC kroop vanavond naar 83.153 en staat nu rond 83.046, net boven de 20-EMA op 4u (83.006). De 50-EMA ligt op 83.649, vrijwel precies op onze stop. Op korte termijn is het momentum positief: MACD-histogram stijgt, stochastic 80 (overkocht). De grotere structuur blijft bearish: koers onder de 50-EMA, OBV daalt. Positionering op Liquid: de winstgevende traders zitten 48% long tegenover 53% bij de verliezende groep, dus smart money leunt iets meer short. Geen reden om in te grijpen; de stop blijft staan.",
+  "action": "Trade open laten · stop 83.650 ongewijzigd",
+  "invalidation": "4u-slot boven 83.650"
+ },
+ {
+  "id": "E00001",
+  "time": "2026-10-10T20:03:19Z",
+  "market": "BTCUSD",
+  "price": 83046.0,
+  "bias": "zijwaarts",
+  "trigger": "Strategie gewijzigd",
+  "title": "Overgestapt op ORB + Trade with Pat supply & demand",
+  "text": "Vanaf nu handelt het account alleen nog volgens vaste regels: openingsrange van Londen (09:00) en New York (15:30), uitbraak met displacement (grote candles, fair value gap, break of structure) mee met de 15m-trend, entry bij terugval naar een verse zone en een slot weer erbuiten, minimaal 1:2 en dicht voor sessie-einde. De oude BTC-short (T001) loopt door tot stop of doel. USDCAD en DJ30 staan niet op Liquid; de S&P 500 vervangt de DJ30.",
+  "action": "Engine actief",
+  "invalidation": ""
+ }
+]

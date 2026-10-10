@@ -1,0 +1,24 @@
+[
+ {
+  "id": "T001",
+  "market": "BTCUSD",
+  "side": "Short",
+  "status": "Open",
+  "opened_at": "2026-10-10T16:06:50Z",
+  "entry": 82972.6,
+  "stop": 83650.0,
+  "target": 79850.0,
+  "size": 0.00248,
+  "risk_eur": 1.5,
+  "rr": 4.61,
+  "exit": null,
+  "closed_at": null,
+  "pnl_eur": null,
+  "r_result": null,
+  "setup": "Breakdown-retest",
+  "reason": "Eerste fictieve trade van vóór de ORB-strategie; loopt door tot stop of doel.",
+  "strategy": "Swing (voor ORB)",
+  "exit_reason": null,
+  "fees_eur": 0.0
+ }
+]
