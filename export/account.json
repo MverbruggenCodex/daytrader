@@ -3,7 +3,7 @@
   "venue": "Liquid paper account",
   "currency": "USD",
   "start_balance": 10000,
-  "risk_pct": 3,
+  "risk_pct": 1,
   "max_open_trades": 3,
   "daily_stop_pct": 6,
   "min_rr": 2,
@@ -15,7 +15,7 @@
   "liquid_paper_mode": true,
   "liquid_synced_at": "2026-10-11T09:05:16Z",
   "started_at": "2026-10-11T08:40:32Z",
-  "updated": "2026-10-11T09:05:16Z",
+  "updated": "2026-10-11T09:33:17Z",
   "strategy": "ORB + Trade with Pat supply & demand"
  }
 ]

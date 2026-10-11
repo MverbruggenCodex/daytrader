@@ -311,3 +311,19 @@ def test_breakeven_moves_stop():
     assert t.stop == 100.0 and t.status == "open"
     (c,) = b.manage("BTCUSD", Candle(FIVE, 100.5, 100.6, 99.8, 100.0), FIVE)
     assert c.exit_reason == "breakeven" and -0.2 < c.r_result < 0
+
+
+def test_orb_breakout_mode_and_trade_flag():
+    candles, info = london_long_setup()
+    eng, ev = run_engine(candles, cfg(mode="orb", orb_entry="close", orb_stop="opposite", target_r=1.0))
+    (t,) = eng.broker.trades
+    assert t.side == "long" and t.strategy == "ORB-uitbraak" and t.entry > info["or_high"]
+    assert t.stop == pytest.approx(min(c.l for c in candles if info["open_t"] <= c.t < info["open_t"] + 15 * 60_000))
+    c = cfg()
+    c["markets"]["BTCUSD"]["trade"] = False
+    eng2, _ = run_engine(candles, c)
+    assert eng2.broker.trades == [] and eng2.zones == []
+    c = cfg()
+    c["markets"]["BTCUSD"]["strategy"] = {"mode": "orb", "target_r": 1.0}
+    eng3, _ = run_engine(candles, c)
+    assert eng3.broker.trades[0].strategy == "ORB-uitbraak"

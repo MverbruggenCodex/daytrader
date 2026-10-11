@@ -3,11 +3,11 @@
   "market": "BTCUSD",
   "status": "Sessie Londen",
   "price": 82985.0,
-  "day_open": 82833.0,
+  "day_open": 82861.0,
   "day_high": 83185.0,
   "day_low": 82725.0,
   "bias": "Bullish",
-  "note": "BTC op Liquid · trend 15m",
+  "note": "Getest: ORB + supply & demand, slot-entry, doel = beweging (min. 1:2), trend 15m",
   "updated": "2026-10-11T09:05:00Z"
  },
  {
@@ -18,7 +18,7 @@
   "day_high": 1.1212,
   "day_low": 1.1205,
   "bias": "Neutraal",
-  "note": "xyz:EUR op Liquid · trend 15m",
+  "note": "Alleen volgen; strategie verloor in de backtest",
   "updated": "2026-10-11T08:30:00Z"
  },
  {
@@ -29,7 +29,7 @@
   "day_high": 4195.5,
   "day_low": 4188.9,
   "bias": "Bullish",
-  "note": "xyz:GOLD op Liquid · trend 15m",
+  "note": "Alleen volgen; strategie voor goud wordt getest",
   "updated": "2026-10-11T09:05:00Z"
  },
  {
@@ -40,7 +40,7 @@
   "day_high": 7812.5,
   "day_low": 7804.5,
   "bias": "Bullish",
-  "note": "Vervangt de DJ30, die niet op Liquid staat",
+  "note": "Alleen volgen; vervangt de DJ30",
   "updated": "2026-10-11T09:05:00Z"
  },
  {
@@ -52,7 +52,7 @@
   "day_low": null,
   "bias": "—",
   "note": "Niet beschikbaar op Liquid/Hyperliquid",
-  "updated": "2026-10-11T09:05:16Z"
+  "updated": "2026-10-11T09:33:17Z"
  },
  {
   "market": "DJ30",
@@ -63,6 +63,6 @@
   "day_low": null,
   "bias": "—",
   "note": "Niet beschikbaar op Liquid/Hyperliquid; SP500 vervangt hem",
-  "updated": "2026-10-11T09:05:16Z"
+  "updated": "2026-10-11T09:33:17Z"
  }
 ]

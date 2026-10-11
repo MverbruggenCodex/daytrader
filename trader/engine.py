@@ -28,7 +28,9 @@ class Engine:
     def __init__(self, cfg: dict, state: dict, now_ms: int, live_from: Optional[int] = None):
         self.cfg = cfg
         self.state = state
-        self.scfg = cfg["strategy"]
+        self.base_scfg = cfg["strategy"]
+        self.scfg = self.base_scfg
+        self.market_scfg = {k: dict(self.base_scfg, **(v.get("strategy") or {})) for k, v in cfg["markets"].items()}
         self.acfg = cfg["account"]
         self.markets = {k: v for k, v in cfg["markets"].items() if v.get("enabled")}
         self.candle_ms = self.scfg["candle_minutes"] * 60_000
@@ -104,9 +106,13 @@ class Engine:
             self._event_exit(t)
 
         mcfg = self.markets[m]
+        if not mcfg.get("trade", True):
+            return
+        self.scfg = self.market_scfg[m]
         a = atr(cs[max(0, i - self.scfg["atr_period"]):i + 1], self.scfg["atr_period"])
         for w in windows_at(c.t, mcfg, self.cfg["sessions"]):
             self._session_candle(m, cs, i, a, w)
+        self.scfg = self.base_scfg
 
     def _session_candle(self, m: str, cs: List[Candle], i: int, a: float, w: Window) -> None:
         c = cs[i]
@@ -128,6 +134,9 @@ class Engine:
                             f"Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
                             "Geen trade; zones zoeken", "")
         if ss["or_high"] is None or c.t >= w.entry_until:
+            return
+        if self.scfg.get("mode", "sd") == "orb":
+            self._orb_candle(m, cs, i, a, w, ss)
             return
 
         # 1) existing zones of this session
@@ -326,6 +335,89 @@ class Engine:
             self.broker.close(t, stop, fill_candle.t + self.candle_ms, "stop loss")
             self._event_exit(t)
 
+    # ---- classic opening range breakout --------------------------------------------
+    def _orb_candle(self, m: str, cs: List[Candle], i: int, a: float, w: Window, ss: dict) -> None:
+        """Breakout of the opening range. entry 'close': first 5m close outside the range;
+        'retest': after the breakout, the first candle that touches the broken edge and closes back outside."""
+        c = cs[i]
+        hi, lo = ss["or_high"], ss["or_low"]
+        if ss["trades"] >= self.scfg["max_trades_per_session"] or ss.get("orb_done"):
+            return
+        rng = hi - lo
+        if rng <= 0:
+            return
+        side = ss.get("orb_side")
+        if side is None:
+            if c.c > hi:
+                side = "long"
+            elif c.c < lo:
+                side = "short"
+            else:
+                return
+            ss["orb_side"] = side
+            if self.scfg.get("orb_entry", "close") == "retest":
+                return  # wait for the retest
+        else:
+            if self.scfg.get("orb_entry", "close") != "retest":
+                return
+            if side == "long" and not (c.l <= hi and c.c > hi):
+                if c.c < lo:
+                    ss["orb_done"] = True
+                return
+            if side == "short" and not (c.h >= lo and c.c < lo):
+                if c.c > hi:
+                    ss["orb_done"] = True
+                return
+        ss["orb_done"] = True
+        long = side == "long"
+        why = []
+        if self.scfg.get("require_trend", True):
+            tr = self._trend(m, cs, i)
+            if tr != ("up" if long else "down"):
+                why.append(f"trend is {self._trend_nl(tr)}")
+        if self.scfg.get("min_range_atr") and a > 0 and rng < self.scfg["min_range_atr"] * a:
+            why.append("openingsrange te klein")
+        if self.scfg.get("max_range_atr") and a > 0 and rng > self.scfg["max_range_atr"] * a:
+            why.append("openingsrange te groot")
+        entry = c.c
+        if self.scfg.get("orb_stop", "opposite") == "mid":
+            stop = (hi + lo) / 2
+        else:
+            stop = lo if long else hi
+        risk = abs(entry - stop)
+        if risk <= 0 or (long and stop >= entry) or (not long and stop <= entry):
+            why.append("geen ruimte voor de stop")
+        elif risk / entry * 100 < self.scfg.get("min_stop_pct", 0.0):
+            why.append("stop te krap (kosten)")
+        if self.broker.open_trades(m):
+            why.append("er staat al een positie open in deze markt")
+        ok, reason = self.broker.can_open(c.t)
+        if not ok:
+            why.append(reason)
+        bo = self._blackout(m, c.t)
+        if bo:
+            why.append(f"nieuwsfilter: {bo}")
+        if c.t < self.live_from:
+            return
+        if why:
+            self._event(m, c, "Overgeslagen", f"ORB-uitbraak {w.label} niet genomen",
+                        f"Slot {'boven' if long else 'onder'} de openingsrange, maar: {'; '.join(why)}.", "Geen trade", "")
+            return
+        tr_r = self.scfg.get("target_r", 2.0)
+        target = entry + tr_r * risk if long else entry - tr_r * risk
+        checks = {"orb_high": hi, "orb_low": lo, "risk0": risk, "rr": tr_r}
+        if self.scfg.get("breakeven_r"):
+            checks["be_r"] = self.scfg["breakeven_r"]
+        t = self.broker.open(m, side, entry, stop, target, c.t + self.candle_ms,
+                             setup=f"ORB-uitbraak {w.label}", strategy="ORB-uitbraak", session_key=f"{m}|{w.key}",
+                             close_at=w.close, checks=checks,
+                             reason=f"5m-slot {'boven' if long else 'onder'} de openingsrange {self._p(m, lo)} – {self._p(m, hi)}.")
+        ss["trades"] += 1
+        self._new_intent(t, w)
+        self._event(m, c, "Entry", f"{'Long' if long else 'Short'} {m} ({t.id}), ORB-uitbraak", t.reason,
+                    f"{'Long' if long else 'Short'} op {self._p(m, entry)} · stop {self._p(m, stop)} · doel {self._p(m, target)} (1:{tr_r})",
+                    f"stop {self._p(m, stop)} of sessie-einde")
+
     def _new_zone_intent(self, z: Zone, plan: dict, limit: float, w: Window, c: Candle) -> None:
         """Limit-entry mode: the Liquid paper order is prepared as soon as the zone exists."""
         risk_usd = round(self.broker.sizing_equity(c.t) * self.acfg["risk_pct"] / 100, 2)
@@ -351,7 +443,7 @@ class Engine:
     def _trend(self, m: str, cs: List[Candle], i: int) -> str:
         tm = self.scfg["trend_minutes"] * 60_000
         bucket = cs[i].t - cs[i].t % tm
-        key = (m, bucket)
+        key = (m, tm, bucket)
         if key not in self._trend_cache:
             higher = aggregate(cs[max(0, i - 3 * 120):i + 1], self.scfg["trend_minutes"], self.scfg["candle_minutes"])
             self._trend_cache[key] = trend(higher[-80:], self.scfg["swing_pivot"])
@@ -359,7 +451,11 @@ class Engine:
 
     def trend_now(self, m: str) -> str:
         cs = self.history(m)
-        return self._trend(m, cs, len(cs) - 1) if cs else "range"
+        self.scfg = self.market_scfg.get(m, self.base_scfg)
+        try:
+            return self._trend(m, cs, len(cs) - 1) if cs else "range"
+        finally:
+            self.scfg = self.base_scfg
 
     def _blackout(self, m: str, ts: int) -> str:
         for b in self.state.get("blackouts", []):
@@ -380,7 +476,7 @@ class Engine:
         self.state["event_seq"] += 1
         ev = {
             "id": f"E{self.state['event_seq']:05d}", "t": c.t + self.candle_ms, "market": m, "price": c.c,
-            "bias": self._trend_nl(self._trend_cache.get((m, c.t - c.t % (self.scfg['trend_minutes'] * 60_000)), "")),
+            "bias": self._trend_nl(self._trend_cache.get((m, self.scfg['trend_minutes'] * 60_000, c.t - c.t % (self.scfg['trend_minutes'] * 60_000)), "")),
             "trigger": trigger, "title": title, "text": text, "action": action, "invalidation": invalidation,
             "when": ams_hm(c.t + self.candle_ms),
         }

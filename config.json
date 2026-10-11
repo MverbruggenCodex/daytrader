@@ -4,7 +4,7 @@
     "venue": "Liquid paper account",
     "currency": "USD",
     "start_balance": 10000,
-    "risk_pct": 3,
+    "risk_pct": 1,
     "max_open_trades": 3,
     "daily_stop_pct": 6,
     "min_rr": 2,
@@ -26,7 +26,9 @@
       ],
       "trade_weekends": true,
       "decimals": 1,
-      "max_leverage": 20
+      "max_leverage": 20,
+      "trade": true,
+      "note": "Getest: ORB + supply & demand, slot-entry, doel = beweging (min. 1:2), trend 15m"
     },
     "EURUSD": {
       "symbol": "xyz:EUR",
@@ -37,7 +39,9 @@
       ],
       "trade_weekends": false,
       "decimals": 5,
-      "max_leverage": 20
+      "max_leverage": 20,
+      "trade": false,
+      "note": "Alleen volgen; strategie verloor in de backtest"
     },
     "XAUUSD": {
       "symbol": "xyz:GOLD",
@@ -48,7 +52,9 @@
       ],
       "trade_weekends": false,
       "decimals": 1,
-      "max_leverage": 10
+      "max_leverage": 10,
+      "trade": false,
+      "note": "Alleen volgen; strategie voor goud wordt getest"
     },
     "SP500": {
       "symbol": "xyz:SP500",
@@ -58,8 +64,9 @@
       ],
       "trade_weekends": false,
       "decimals": 1,
-      "note": "Vervangt de DJ30, die niet op Liquid staat",
-      "max_leverage": 10
+      "note": "Alleen volgen; vervangt de DJ30",
+      "max_leverage": 10,
+      "trade": false
     },
     "USDCAD": {
       "symbol": null,
@@ -93,6 +100,14 @@
       "open": "09:30",
       "range_minutes": 15,
       "entry_until": "12:00",
+      "close": "16:00"
+    },
+    "london_asia": {
+      "label": "Londen (Aziatische range)",
+      "tz": "Europe/London",
+      "open": "00:00",
+      "range_minutes": 480,
+      "entry_until": "11:00",
       "close": "16:00"
     }
   },
