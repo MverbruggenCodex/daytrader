@@ -1,1 +1,21 @@
-[]
+[
+ {
+  "id": "—",
+  "trade_id": null,
+  "market": null,
+  "symbol": null,
+  "side": null,
+  "price": null,
+  "sl": null,
+  "tp": null,
+  "notional": null,
+  "leverage": null,
+  "risk_usd": null,
+  "rr": null,
+  "status": null,
+  "created": null,
+  "expires": null,
+  "note": null,
+  "_empty": true
+ }
+]

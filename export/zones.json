@@ -1,1 +1,16 @@
-[]
+[
+ {
+  "id": "—",
+  "market": null,
+  "session": null,
+  "side": null,
+  "bottom": null,
+  "top": null,
+  "status": null,
+  "created": null,
+  "fvg": null,
+  "bos": null,
+  "note": null,
+  "_empty": true
+ }
+]

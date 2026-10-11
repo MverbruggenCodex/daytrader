@@ -1,1 +1,26 @@
-[]
+[
+ {
+  "id": "—",
+  "market": null,
+  "side": null,
+  "status": null,
+  "opened_at": null,
+  "entry": null,
+  "stop": null,
+  "target": null,
+  "size": null,
+  "risk_usd": null,
+  "rr": null,
+  "exit": null,
+  "closed_at": null,
+  "pnl_usd": null,
+  "r_result": null,
+  "setup": null,
+  "reason": null,
+  "strategy": null,
+  "exit_reason": null,
+  "fees_usd": null,
+  "liquid": null,
+  "_empty": true
+ }
+]

@@ -101,10 +101,23 @@ def build(engine: Engine) -> Dict[str, list]:
             "orders": orders}
 
 
+EMPTY_COLUMNS = {
+    "trades": ["id", "market", "side", "status", "opened_at", "entry", "stop", "target", "size", "risk_usd", "rr", "exit",
+               "closed_at", "pnl_usd", "r_result", "setup", "reason", "strategy", "exit_reason", "fees_usd", "liquid"],
+    "orders": ["id", "trade_id", "market", "symbol", "side", "price", "sl", "tp", "notional", "leverage", "risk_usd", "rr",
+               "status", "created", "expires", "note"],
+    "zones": ["id", "market", "session", "side", "bottom", "top", "status", "created", "fvg", "bos", "note"],
+    "analyses": ["id", "time", "market", "price", "bias", "trigger", "title", "text", "action", "invalidation"],
+}
+
+
 def write(engine: Engine, out_dir: str) -> Dict[str, str]:
+    """The dashboard cannot read a file without rows, so an empty table gets one row marked _empty."""
     os.makedirs(out_dir, exist_ok=True)
     paths = {}
     for name, rows in build(engine).items():
+        if not rows and name in EMPTY_COLUMNS:
+            rows = [dict({k: None for k in EMPTY_COLUMNS[name]}, id="—", _empty=True)]
         p = os.path.join(out_dir, f"{name}.json")
         with open(p, "w") as f:
             json.dump(rows, f, indent=1, ensure_ascii=False)
