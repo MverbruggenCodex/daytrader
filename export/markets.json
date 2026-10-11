@@ -3,7 +3,7 @@
   "market": "BTCUSD",
   "status": "Sessie Londen",
   "price": 82985.0,
-  "day_open": 82870.0,
+  "day_open": 82804.0,
   "day_high": 83185.0,
   "day_low": 82725.0,
   "bias": "Bullish",
@@ -30,9 +30,9 @@
   "day_open": 4189.8,
   "day_high": 4195.5,
   "day_low": 4188.9,
-  "bias": "Bullish",
-  "note": "Alleen volgen; strategie voor goud wordt getest",
-  "trading": false,
+  "bias": "Neutraal",
+  "note": "Getest: ORB-uitbraak New York (range 15:30–15:45), entry op de retest, stop aan de overkant van de range, doel 1R, trend 60m",
+  "trading": true,
   "updated": "2026-10-11T09:05:00Z"
  },
  {
@@ -57,7 +57,7 @@
   "bias": "—",
   "note": "Niet beschikbaar op Liquid/Hyperliquid",
   "trading": false,
-  "updated": "2026-10-11T09:36:49Z"
+  "updated": "2026-10-11T09:48:07Z"
  },
  {
   "market": "DJ30",
@@ -69,6 +69,6 @@
   "bias": "—",
   "note": "Niet beschikbaar op Liquid/Hyperliquid; SP500 vervangt hem",
   "trading": false,
-  "updated": "2026-10-11T09:36:49Z"
+  "updated": "2026-10-11T09:48:07Z"
  }
 ]

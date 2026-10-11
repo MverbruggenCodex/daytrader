@@ -23,13 +23,17 @@
 
 <main>
   <section class="hero" aria-labelledby="hero-title">
+    <h2 id="hero-title" class="sr">Koers en strategie</h2>
+    <div class="switch" role="group" aria-label="Markt in de grafiek">
+      <button type="button" data-m="BTCUSD" aria-pressed="true">Bitcoin</button>
+      <button type="button" data-m="XAUUSD" aria-pressed="false">Goud</button>
+    </div>
     <div class="ticker">
-      <h2 id="hero-title">BTC</h2>
       <p class="price" id="btc-price">—</p>
       <p class="change" id="btc-change">—</p>
     </div>
-    <p class="hero-note" id="hero-note">Laatste 24 uur in candles van 5 minuten, met de sessies van Londen en New York, de openingsrange en de zones die de bot tekende.</p>
-    <div class="chart" id="chart" role="img" aria-label="Koersgrafiek van BTC met sessies, openingsranges en zones"></div>
+    <p class="hero-note" id="hero-note"></p>
+    <div class="chart" id="chart" role="img" aria-label="Koersgrafiek met sessies, openingsranges, zones en trades"></div>
     <ul class="legend" aria-hidden="true">
       <li><i class="lg-lon"></i>Sessie Londen</li>
       <li><i class="lg-ny"></i>Sessie New York</li>
@@ -63,33 +67,47 @@
     <div class="table-wrap"><table id="trades"><thead><tr>
       <th>#</th><th>Markt</th><th>Richting</th><th>Geopend</th><th class="n">Entry</th><th class="n">Stop</th><th class="n">Doel</th><th class="n">R:R</th><th class="n">Resultaat</th><th>Liquid</th>
     </tr></thead><tbody></tbody></table></div>
-    <p class="empty" id="trades-empty" hidden>Nog geen trades. De bot handelt BTC tijdens de eerste uren van de sessies van Londen (09:00) en New York (15:30).</p>
+    <p class="empty" id="trades-empty" hidden>Nog geen trades. De bot handelt BTC in de eerste uren na de opening van Londen (09:00) en New York (15:30), en goud na de opening van New York.</p>
   </section>
 
   <section class="method" aria-labelledby="method-title">
     <h2 id="method-title">Hoe de bot handelt</h2>
-    <div class="method-grid">
-      <div class="rules">
-        <p>De bot handelt alleen BTC, met de strategie die in de backtest van een jaar als enige in beide halfjaren winst maakte.</p>
+    <p class="lead">Elke markt heeft de strategie die in een backtest van een jaar als beste uit de bus kwam en in beide halfjaren winst maakte. 1% risico per trade, en elke order wordt pas geplaatst nadat jij hem bevestigt.</p>
+    <div class="strats">
+      <article class="strat">
+        <h3>Bitcoin</h3>
+        <p class="strat-sub">Openingsrange + supply &amp; demand</p>
         <ul>
           <li>Het eerste kwartier van Londen en New York is de openingsrange.</li>
           <li>Een zone telt pas na een sterke beweging met een fair value gap en een break of structure, door de range heen en mee met de trend.</li>
           <li>Instappen als de koers terugkomt in een verse zone en er weer buiten sluit.</li>
           <li>Stop net voorbij de zone, doel de top of bodem van de beweging, minimaal 1:2.</li>
-          <li>1% risico per trade. Elke order wordt pas geplaatst nadat jij hem bevestigt.</li>
         </ul>
-      </div>
-      <div class="bt">
-        <p class="bt-head">Backtest, 1 jaar BTC</p>
-        <dl>
-          <div><dt>Trades</dt><dd>29</dd></div>
+        <dl class="bt">
+          <div><dt>Trades per jaar</dt><dd>29</dd></div>
           <div><dt>Gewonnen</dt><dd>41%</dd></div>
           <div><dt>Gemiddeld per trade</dt><dd>+0,29R</dd></div>
-          <div><dt>Kans op een winstgevend jaar</dt><dd>76%</dd></div>
+          <div><dt>Kans op winstgevend jaar</dt><dd>76%</dd></div>
         </dl>
-        <p class="bt-foot">Op basis van 1000 Monte Carlo-simulaties. Een kleine steekproef: echte resultaten kunnen flink afwijken. <a href="https://github.com/MverbruggenCodex/daytrader/blob/main/backtests/2026-10-11.md">Volledig rapport</a></p>
-      </div>
+      </article>
+      <article class="strat">
+        <h3>Goud</h3>
+        <p class="strat-sub">Uitbraak uit de openingsrange van New York</p>
+        <ul>
+          <li>De range is het eerste kwartier na de opening van New York (15:30–15:45).</li>
+          <li>Na een slot buiten de range wacht de bot tot de koers de rand opnieuw raakt en er weer buiten sluit.</li>
+          <li>Stop aan de andere kant van de range, doel even ver als de stop (1R).</li>
+          <li>Alleen mee met de trend op het uurgrafiek.</li>
+        </ul>
+        <dl class="bt">
+          <div><dt>Trades per jaar</dt><dd>42</dd></div>
+          <div><dt>Gewonnen</dt><dd>64%</dd></div>
+          <div><dt>Gemiddeld per trade</dt><dd>+0,16R</dd></div>
+          <div><dt>Kans op winstgevend jaar</dt><dd>85%</dd></div>
+        </dl>
+      </article>
     </div>
+    <p class="bt-foot">Kans op een winstgevend jaar uit 1000 Monte Carlo-simulaties. Kleine steekproeven, en voor goud is tokenized gold als vervanger gebruikt: echte resultaten kunnen flink afwijken. <a href="https://github.com/MverbruggenCodex/daytrader/blob/main/backtests/2026-10-11.md">Volledig backtestrapport</a></p>
   </section>
 </main>
 

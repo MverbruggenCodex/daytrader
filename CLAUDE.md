@@ -14,8 +14,9 @@ Liquid, **alleen na bevestiging door de gebruiker in de chat** (dat eist de Liqu
 ## Opbouw
 - `config.json`: account (risico 1% per trade, min. 1:2, max 3 open, daglimiet −6%, onderpand max 25% per order),
   markten met Liquid-symbolen en max hefboom, sessies, strategie. Dashboard-URL: `dashboard_url`.
-- Markten: alleen **BTCUSD** (`BTC`) handelt (backtest 11-10-2026, zie `backtests/`). EURUSD, XAUUSD en SP500 staan
-  op `"trade": false`: koersen worden gevolgd, er komen geen signalen. Per markt kan `strategy` de basisstrategie
+- Markten die handelen (backtest 11-10-2026, zie `backtests/`): **BTCUSD** (`BTC`) met ORB + supply & demand, en
+  **XAUUSD** (`xyz:GOLD`) met een ORB-uitbraak in New York (retest-entry, stop overkant range, doel 1R, trend 60m).
+  EURUSD en SP500 staan op `"trade": false`: koersen worden gevolgd, er komen geen signalen. Per markt kan `strategy` de basisstrategie
   overschrijven (bijv. `"mode": "orb"`). USDCAD en DJ30 staan niet op Liquid.
 - `trader/engine.py` signalen + modeltrades, `trader/orders.py` paper-orders (limiet + SL/TP, sizing, levenscyclus),
   `trader/zones.py` Pats zones en entry-regels, `state/state.json` de staat.

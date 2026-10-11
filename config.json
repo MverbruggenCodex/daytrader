@@ -47,14 +47,21 @@
       "symbol": "xyz:GOLD",
       "enabled": true,
       "sessions": [
-        "london",
         "newyork"
       ],
       "trade_weekends": false,
       "decimals": 1,
       "max_leverage": 10,
-      "trade": false,
-      "note": "Alleen volgen; strategie voor goud wordt getest"
+      "trade": true,
+      "note": "Getest: ORB-uitbraak New York (range 15:30\u201315:45), entry op de retest, stop aan de overkant van de range, doel 1R, trend 60m",
+      "strategy": {
+        "mode": "orb",
+        "orb_entry": "retest",
+        "orb_stop": "opposite",
+        "target_r": 1.0,
+        "require_trend": true,
+        "trend_minutes": 60
+      }
     },
     "SP500": {
       "symbol": "xyz:SP500",

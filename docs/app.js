@@ -23,6 +23,11 @@
 
   let exp = {};
   let candles = [];
+  let active = 'BTCUSD';
+  const NOTES = {
+    BTCUSD: 'Bitcoin, laatste 24 uur in candles van 5 minuten. Met de sessies van Londen en New York, de openingsranges, de zones die de bot tekende en de trades.',
+    XAUUSD: 'Goud, laatste 24 uur in candles van 5 minuten. De bot handelt de uitbraak uit de openingsrange van New York (15:30–15:45); de range en de trades staan in de grafiek.',
+  };
   let lastPrices = {};
 
   async function getJSON(name) {
@@ -61,9 +66,9 @@
     const W = box.clientWidth, Hh = box.clientHeight;
     const pad = { l: 8, r: 64, t: 12, b: 24 };
     const t0 = candles[0].t, t1 = candles[candles.length - 1].t + 5 * 60e3;
-    const zones = real(exp.zones_chart).filter((z) => z.market === 'BTCUSD' && Date.parse(z.until || new Date()) >= t0);
-    const sess = real(exp.sessions).filter((s) => s.market === 'BTCUSD' && Date.parse(s.open) >= t0 - 2 * H);
-    const trades = real(exp.trades).filter((t) => t.market === 'BTCUSD' && (t.status === 'Open' || Date.parse(t.closed_at || 0) >= t0));
+    const zones = real(exp.zones_chart).filter((z) => z.market === active && Date.parse(z.until || new Date()) >= t0);
+    const sess = real(exp.sessions).filter((s) => s.market === active && Date.parse(s.open) >= t0 - 2 * H);
+    const trades = real(exp.trades).filter((t) => t.market === active && (t.status === 'Open' || Date.parse(t.closed_at || 0) >= t0));
     let lo = Math.min(...candles.map((c) => c.l)), hi = Math.max(...candles.map((c) => c.h));
     for (const t of trades.filter((t) => t.status === 'Open')) { lo = Math.min(lo, t.stop, t.target); hi = Math.max(hi, t.stop, t.target); }
     const padY = (hi - lo) * 0.06; lo -= padY; hi += padY;
@@ -185,7 +190,7 @@
       $('n-result-s').textContent = `${pct((eq / start - 1) * 100)} op ${usd.format(start)}`;
     }
     const open = real(exp.trades).filter((t) => t.status === 'Open');
-    $('n-open').textContent = open.length ? `${open[0].side} ${open[0].market}` : 'Geen';
+    $('n-open').textContent = open.length ? (open.length > 1 ? `${open.length} posities` : `${open[0].side} ${NAMES[open[0].market] || open[0].market}`) : 'Geen';
     $('n-open-s').textContent = open.length ? `entry ${px(open[0].entry)}, stop ${px(open[0].stop)}, doel ${px(open[0].target)}` : `Max ${a.risk_pct ?? 1}% risico per trade`;
     const wait = real(exp.orders).filter((o) => o.status === 'Wacht op bevestiging');
     $('n-wait').textContent = wait.length ? `${wait.length} order${wait.length > 1 ? 's' : ''}` : 'Niets';
@@ -263,14 +268,15 @@
 
   async function refreshPrices() {
     try {
-      candles = await hl('BTC', '5m', 24);
+      candles = await hl(MARKETS[active], '5m', 24);
       const last = candles[candles.length - 1].c, first = candles[0].o;
       const p = $('btc-price');
       p.textContent = px(last); p.classList.remove('tick'); void p.offsetWidth; p.classList.add('tick');
       const ch = (last / first - 1) * 100;
       const c = $('btc-change'); c.textContent = `${pct(ch)} in 24 uur`; c.className = 'change ' + (ch >= 0 ? 'up' : 'down');
-      document.title = `BTC ${px(last)} | Daytrader desk`;
-    } catch (e) { candles = candles || []; }
+      document.title = `${NAMES[active]} ${px(last)} | Daytrader desk`;
+    } catch (e) { candles = []; }
+    $('hero-note').textContent = NOTES[active];
     drawChart();
   }
 
@@ -282,6 +288,15 @@
     await drawMarkets();
     drawChart();
   }
+
+  document.querySelectorAll('.switch button').forEach((b) => {
+    b.addEventListener('click', () => {
+      active = b.dataset.m;
+      document.querySelectorAll('.switch button').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+      candles = [];
+      refreshPrices();
+    });
+  });
 
   let rt;
   window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(drawChart, 120); });
