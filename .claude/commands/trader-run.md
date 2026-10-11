@@ -44,7 +44,7 @@ Voer één ronde uit van de ORB + supply & demand trader op het **Liquid paper a
    `ArtifactData`-batch de datasets met dezelfde naam bij: `source: {kind: "file", url: <nieuwe /_blob/...>, name}`
    en `updated: {at: <nu ISO>, by: "Claude"}`. Het live paper account en de BTC-grafiek laden zelf via Liquid.
 
-7. **Opslaan.** `git add state/ && git commit -m "Run <tijd>: <samenvatting>" && git push`.
+7. **Opslaan.** `git add state/ export/ && git commit -m "Run <tijd>: <samenvatting>" && git push`.
 
 8. **Rapport.** Kort: nieuwe signalen, orders die op bevestiging wachten (met de vraag), fills/exits, paper-equity,
    en wat mislukte. Wachten er orders: eindig met de bevestigingsvraag.
