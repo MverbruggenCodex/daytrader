@@ -278,3 +278,36 @@ def test_cli_orders_require_paper_mode(tmp_path):
                    env=env, capture_output=True)
     out = json.loads(subprocess.run(base + ["orders"], check=True, env=env, capture_output=True, text=True).stdout)
     assert out["propose"] == [] and out["watch"][0]["liquid_order_id"] == "123"
+
+
+def test_target_r_and_min_stop_options():
+    candles, info = london_long_setup()
+    eng, _ = run_engine(candles, cfg(target_mode="r", target_r=1.0))
+    (t,) = eng.broker.trades
+    assert t.target - t.entry == pytest.approx(t.entry - t.stop) and t.exit_reason == "take profit"
+    eng2, ev = run_engine(candles, cfg(min_stop_pct=50.0))
+    assert eng2.broker.trades == [] and any("stop te krap" in e["text"] for e in ev)
+
+
+def test_limit_entry_mode_prepares_order_at_zone_and_fills():
+    candles, info = london_long_setup()
+    lo, hi = info["zone"]
+    eng, ev = run_engine(candles, cfg(entry_mode="limit"))
+    z = next(z for z in eng.zones if z.side == "long")
+    assert "limit" in z.checks and lo <= z.checks["limit"] <= hi
+    assert any(o["trade_id"] == z.id for o in eng.state["orders"])  # order prepared at zone creation
+    # let the tap candle (13th from the end) reach the limit price
+    deep = [Candle(c.t, c.o, c.h, min(c.l, z.checks["limit"] - 0.01) if c.t == candles[-13].t else c.l, c.c) for c in candles]
+    eng2, _ = run_engine(deep, cfg(entry_mode="limit"))
+    assert len(eng2.broker.trades) == 1 and eng2.broker.trades[0].entry <= z.checks["limit"]
+
+
+def test_breakeven_moves_stop():
+    from trader.models import Trade
+    acfg = cfg()["account"]
+    b = Broker({"trades": []}, acfg)
+    t = b.open("BTCUSD", "long", 100.0, 99.0, 103.0, 0, checks={"be_r": 1.0, "risk0": 1.0})
+    b.manage("BTCUSD", Candle(0, 100, 101.2, 99.9, 101), FIVE)
+    assert t.stop == 100.0 and t.status == "open"
+    (c,) = b.manage("BTCUSD", Candle(FIVE, 100.5, 100.6, 99.8, 100.0), FIVE)
+    assert c.exit_reason == "breakeven" and -0.2 < c.r_result < 0

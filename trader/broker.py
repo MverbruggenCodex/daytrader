@@ -88,16 +88,23 @@ class Broker:
             if t.close_at is not None and c.t >= t.close_at:
                 closed.append(self.close(t, c.o, c.t, "sessie-einde"))
                 continue
+            stop_reason = "breakeven" if t.checks.get("be_done") else "stop loss"
             if t.side == "long":
                 if c.l <= t.stop:
-                    closed.append(self.close(t, min(c.o, t.stop), c.t + candle_ms, "stop loss"))
+                    closed.append(self.close(t, min(c.o, t.stop), c.t + candle_ms, stop_reason))
                 elif c.h >= t.target:
                     closed.append(self.close(t, max(c.o, t.target), c.t + candle_ms, "take profit"))
             else:
                 if c.h >= t.stop:
-                    closed.append(self.close(t, max(c.o, t.stop), c.t + candle_ms, "stop loss"))
+                    closed.append(self.close(t, max(c.o, t.stop), c.t + candle_ms, stop_reason))
                 elif c.l <= t.target:
                     closed.append(self.close(t, min(c.o, t.target), c.t + candle_ms, "take profit"))
+            be_r = t.checks.get("be_r")
+            if t.status == "open" and be_r and not t.checks.get("be_done"):
+                r0 = t.checks.get("risk0") or abs(t.entry - t.stop)
+                if (t.side == "long" and c.h >= t.entry + be_r * r0) or (t.side == "short" and c.l <= t.entry - be_r * r0):
+                    t.stop = t.entry  # applies from the next candle
+                    t.checks["be_done"] = True
         return closed
 
     def open_pnl(self, prices: dict) -> float:

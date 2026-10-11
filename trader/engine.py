@@ -131,7 +131,11 @@ class Engine:
             return
 
         # 1) existing zones of this session
+        limit_mode = self.scfg.get("entry_mode", "close") == "limit"
         for z in [z for z in self.zones_by_key.get(key, []) if z.status in ("fresh", "touched") and z.created_t < c.t]:
+            if limit_mode:
+                self._limit_check(m, z, cs, i, a, w, ss)
+                continue
             res = evaluate_touch(z, c, a, self.scfg)
             if res == "none":
                 continue
@@ -185,6 +189,20 @@ class Engine:
         z.checks["or_break"] = broke
         self.zones.append(z)
         self.zones_by_key.setdefault(key, []).append(z)
+        if limit_mode:
+            zc = det["zone_candle"]
+            body_top, body_bot = max(zc.o, zc.c), min(zc.o, zc.c)
+            limit = (body_top + body_bot) / 2 if body_top > body_bot else (z.top + z.bottom) / 2
+            z.checks["limit"] = limit
+            plan = self._plan(z, cs, i, a, limit)
+            problems = self._plan_problems(plan)
+            if problems:
+                z.status, z.status_t, z.note = "skipped", c.t, "; ".join(problems)
+                if c.t >= self.live_from:
+                    self._event(m, c, "Overgeslagen", f"{self._zname(z)} zonder limietorder", "Zone gevonden, maar: "
+                                + "; ".join(problems) + ".", "Geen order", "")
+                return
+            self._new_zone_intent(z, plan, limit, w, c)
         if c.t >= self.live_from:
             self._event(m, c, "Nieuwe zone", f"Nieuwe {self._zname(z).lower()} na uitbraak {w.label}",
                         f"{det['run_len']} grote candles {'omhoog' if side == 'long' else 'omlaag'} (gem. {det['avg_body_x']}x normale grootte) "
@@ -192,16 +210,66 @@ class Engine:
                         f"Zone {self._p(m, z.bottom)} – {self._p(m, z.top)}. Wacht op een terugval naar de zone en een slot weer erbuiten.",
                         "Zone actief, wacht op entry", f"slot {'onder' if side == 'long' else 'boven'} {self._p(m, z.bottom if side == 'long' else z.top)}")
 
-    def _try_entry(self, m: str, z: Zone, cs: List[Candle], i: int, a: float, w: Window, ss: dict) -> None:
-        c = cs[i]
+    # ---- entries -------------------------------------------------------------------
+    def _plan(self, z: Zone, cs: List[Candle], i: int, a: float, entry: float) -> dict:
+        """Stop, target and R:R for an entry at `entry` from zone z."""
         long = z.side == "long"
-        entry = c.c
         buf = self.scfg["stop_buffer_atr"] * a
         stop = z.bottom - buf if long else z.top + buf
-        seg = [x for x in cs[max(0, i - 300):i + 1] if x.t >= z.origin_t]
-        target = max([z.leg_extreme] + [x.h for x in seg]) if long else min([z.leg_extreme] + [x.l for x in seg])
         risk = abs(entry - stop)
+        if self.scfg.get("target_mode", "leg") == "r":
+            tr = self.scfg.get("target_r", 2.0)
+            target = entry + tr * risk if long else entry - tr * risk
+        else:
+            seg = [x for x in cs[max(0, i - 300):i + 1] if x.t >= z.origin_t]
+            target = max([z.leg_extreme] + [x.h for x in seg]) if long else min([z.leg_extreme] + [x.l for x in seg])
         rr = ((target - entry) if long else (entry - target)) / risk if risk > 0 else 0.0
+        return {"stop": stop, "target": target, "rr": rr, "risk": risk,
+                "stop_pct": risk / entry * 100 if entry else 0.0}
+
+    def _plan_problems(self, plan: dict) -> List[str]:
+        why = []
+        if plan["risk"] <= 0:
+            why.append("geen ruimte tussen entry en stop")
+        if plan["stop_pct"] < self.scfg.get("min_stop_pct", 0.0):
+            why.append(f"stop te krap ({plan['stop_pct']:.3f}% < {self.scfg['min_stop_pct']}%, kosten te hoog)")
+        if self.scfg.get("target_mode", "leg") != "r" and plan["rr"] < self.acfg["min_rr"]:
+            why.append(f"R:R 1:{plan['rr']:.2f} onder minimum 1:{self.acfg['min_rr']}")
+        return why
+
+    def _try_entry(self, m: str, z: Zone, cs: List[Candle], i: int, a: float, w: Window, ss: dict) -> None:
+        """Pat's normal entry: the candle that tapped the zone closed back outside it."""
+        c = cs[i]
+        self._enter(m, z, cs, i, a, w, ss, entry=c.c, opened_t=c.t + self.candle_ms, fill_candle=None,
+                    how="De koers tikte de zone aan en sloot er weer buiten")
+
+    def _limit_check(self, m: str, z: Zone, cs: List[Candle], i: int, a: float, w: Window, ss: dict) -> None:
+        """Pat's aggressive entry: a resting limit in the middle of the zone candle's body."""
+        c = cs[i]
+        limit = z.checks.get("limit")
+        if limit is None:
+            return
+        long = z.side == "long"
+        if (long and c.l > limit) or (not long and c.h < limit):
+            return
+        prev = cs[i - 1] if i > 0 else None
+        if prev is not None and a > 0 and prev.body > self.scfg["falling_knife_atr"] * a and \
+                ((long and prev.bear) or (not long and prev.bull)):
+            z.status, z.status_t, z.note = "skipped", c.t, "vallend mes: limiet geannuleerd"
+            self._event(m, c, "Overgeslagen", f"{self._zname(z)}: vallend mes",
+                        "Een grote candle dook richting de zone; de limietorder wordt geannuleerd (Pat: geen vallend mes vangen).",
+                        "Order annuleren", "")
+            return
+        fill = min(limit, c.o) if long else max(limit, c.o)
+        self._enter(m, z, cs, i, a, w, ss, entry=fill, opened_t=c.t + self.candle_ms, fill_candle=c,
+                    how="De limietorder in de zone werd gevuld")
+
+    def _enter(self, m: str, z: Zone, cs: List[Candle], i: int, a: float, w: Window, ss: dict, entry: float,
+               opened_t: int, fill_candle: Optional[Candle], how: str) -> None:
+        c = cs[i]
+        long = z.side == "long"
+        plan = self._plan(z, cs, i, a, entry)
+        stop, target, rr = plan["stop"], plan["target"], plan["rr"]
 
         why = []
         if c.t < self.live_from:
@@ -217,8 +285,7 @@ class Engine:
         bo = self._blackout(m, c.t)
         if bo:
             why.append(f"nieuwsfilter: {bo}")
-        if rr < self.acfg["min_rr"]:
-            why.append(f"R:R 1:{rr:.2f} onder minimum 1:{self.acfg['min_rr']}")
+        why += self._plan_problems(plan)
         if self.scfg.get("prefer_extreme_zone"):
             reach = self.scfg["extreme_zone_atr"] * a
             deeper = [o for o in self.zones_by_key.get(z.session_key, []) if o is not z and o.side == z.side
@@ -229,7 +296,7 @@ class Engine:
         if why:
             z.status, z.status_t, z.note = "skipped", c.t, "; ".join(why)
             self._event(m, c, "Overgeslagen", f"Entry-signaal {self._zname(z).lower()} niet genomen",
-                        f"De koers tikte de zone aan en sloot er weer buiten, maar: {'; '.join(why)}.", "Geen trade", "")
+                        f"{how}, maar: {'; '.join(why)}.", "Geen trade", "")
             return
 
         discount = entry < (z.bottom + target) / 2 if long else entry > (z.top + target) / 2
@@ -237,21 +304,36 @@ class Engine:
         prior = pivots(cs[max(0, idx0 - 120):idx0], self.scfg["swing_pivot"])
         flips = [p[2] for p in prior if p[1] == ("H" if long else "L") and z.bottom <= p[2] <= z.top]
         checks = dict(z.checks)
-        checks.update({"vers": True, "discount": discount, "level_stack": bool(flips), "rr": round(rr, 2)})
+        checks.update({"vers": True, "discount": discount, "level_stack": bool(flips), "rr": round(rr, 2),
+                       "risk0": plan["risk"]})
+        if self.scfg.get("breakeven_r"):
+            checks["be_r"] = self.scfg["breakeven_r"]
         t = self.broker.open(
-            m, z.side, entry, stop, target, c.t + self.candle_ms,
+            m, z.side, entry, stop, target, opened_t,
             setup=f"ORB {w.label} + {'demand' if long else 'supply'}-zone", session_key=z.session_key,
             close_at=w.close, zone_id=z.id, checks=checks,
-            reason=(f"Zone {self._p(m, z.bottom)} – {self._p(m, z.top)} aangetikt, candle sloot er weer buiten. "
-                    f"Trend 15m {self._trend_nl(checks.get('trend_15m', ''))}; FVG {'ja' if checks.get('fvg') else 'nee'}; "
+            reason=(f"{how}. Zone {self._p(m, z.bottom)} – {self._p(m, z.top)}. "
+                    f"Trend {self._trend_nl(checks.get('trend_15m', ''))}; FVG {'ja' if checks.get('fvg') else 'nee'}; "
                     f"BOS {'ja' if checks.get('bos') else 'nee'}; discount {'ja' if discount else 'nee'}; level stack {'ja' if flips else 'nee'}."))
         z.status, z.status_t = "entered", c.t
         ss["trades"] += 1
-        self._new_intent(t, w)
-        self._event(m, c, "Entry", f"Signaal {'long' if long else 'short'} {m} ({t.id}), paper-order klaar ter bevestiging",
-                    t.reason + f" Doel = recente {'top' if long else 'bodem'} van de beweging.",
-                    f"{'Long' if long else 'Short'} op {self._p(m, entry)} · stop {self._p(m, stop)} · doel {self._p(m, target)} (1:{rr:.2f})",
+        if self.scfg.get("entry_mode", "close") == "close":
+            self._new_intent(t, w)
+        self._event(m, c, "Entry", f"{'Long' if long else 'Short'} {m} ({t.id})",
+                    t.reason, f"{'Long' if long else 'Short'} op {self._p(m, entry)} · stop {self._p(m, stop)} · doel {self._p(m, target)} (1:{rr:.2f})",
                     f"stop {self._p(m, stop)} of sessie-einde")
+        if fill_candle is not None and ((long and fill_candle.l <= stop) or (not long and fill_candle.h >= stop)):
+            self.broker.close(t, stop, fill_candle.t + self.candle_ms, "stop loss")
+            self._event_exit(t)
+
+    def _new_zone_intent(self, z: Zone, plan: dict, limit: float, w: Window, c: Candle) -> None:
+        """Limit-entry mode: the Liquid paper order is prepared as soon as the zone exists."""
+        risk_usd = round(self.broker.sizing_equity(c.t) * self.acfg["risk_pct"] / 100, 2)
+        t = Trade(id=z.id, market=z.market, side=z.side, entry=limit, stop=plan["stop"], target=plan["target"],
+                  size=0.0, risk_usd=risk_usd, opened_t=c.t + self.candle_ms, zone_id=z.id,
+                  reason=f"Limietorder in de {self._zname(z).lower()} {self._p(z.market, z.bottom)} – {self._p(z.market, z.top)} "
+                         f"(midden van de body van de zone-candle), Pats agressieve entry.")
+        self._new_intent(t, w)
 
     def _new_intent(self, t: Trade, w: Window) -> None:
         """Order intent for the Liquid paper account (only for live signals)."""
