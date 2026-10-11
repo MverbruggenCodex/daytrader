@@ -38,6 +38,9 @@ class Engine:
         self.live_from = state["started_t"] if live_from is None else live_from
         self.broker = Broker(state, self.acfg)
         self.zones: List[Zone] = [Zone.from_dict(z) for z in state.get("zones", [])]
+        self.zones_by_key: Dict[str, List[Zone]] = {}
+        for z in self.zones:
+            self.zones_by_key.setdefault(z.session_key, []).append(z)
         self.new_events: List[dict] = []
         self.order_changes: List[str] = []
         state.setdefault("orders", [])
@@ -128,7 +131,7 @@ class Engine:
             return
 
         # 1) existing zones of this session
-        for z in [z for z in self.zones if z.session_key == key and z.status in ("fresh", "touched") and z.created_t < c.t]:
+        for z in [z for z in self.zones_by_key.get(key, []) if z.status in ("fresh", "touched") and z.created_t < c.t]:
             res = evaluate_touch(z, c, a, self.scfg)
             if res == "none":
                 continue
@@ -154,8 +157,8 @@ class Engine:
             return
         origin = det["zone_candle"].t
         side = det["side"]
-        for z in self.zones:
-            if z.session_key == key and z.origin_t == origin and z.side == side:
+        for z in self.zones_by_key.get(key, []):
+            if z.origin_t == origin and z.side == side:
                 if z.status == "fresh":
                     z.leg_extreme = max(z.leg_extreme, det["leg_extreme"]) if side == "long" else min(z.leg_extreme, det["leg_extreme"])
                 return
@@ -181,6 +184,7 @@ class Engine:
         z.checks["trend_15m"] = tr
         z.checks["or_break"] = broke
         self.zones.append(z)
+        self.zones_by_key.setdefault(key, []).append(z)
         if c.t >= self.live_from:
             self._event(m, c, "Nieuwe zone", f"Nieuwe {self._zname(z).lower()} na uitbraak {w.label}",
                         f"{det['run_len']} grote candles {'omhoog' if side == 'long' else 'omlaag'} (gem. {det['avg_body_x']}x normale grootte) "
@@ -194,7 +198,7 @@ class Engine:
         entry = c.c
         buf = self.scfg["stop_buffer_atr"] * a
         stop = z.bottom - buf if long else z.top + buf
-        seg = [x for x in cs[:i + 1] if x.t >= z.origin_t]
+        seg = [x for x in cs[max(0, i - 300):i + 1] if x.t >= z.origin_t]
         target = max([z.leg_extreme] + [x.h for x in seg]) if long else min([z.leg_extreme] + [x.l for x in seg])
         risk = abs(entry - stop)
         rr = ((target - entry) if long else (entry - target)) / risk if risk > 0 else 0.0
@@ -217,7 +221,7 @@ class Engine:
             why.append(f"R:R 1:{rr:.2f} onder minimum 1:{self.acfg['min_rr']}")
         if self.scfg.get("prefer_extreme_zone"):
             reach = self.scfg["extreme_zone_atr"] * a
-            deeper = [o for o in self.zones if o is not z and o.session_key == z.session_key and o.side == z.side
+            deeper = [o for o in self.zones_by_key.get(z.session_key, []) if o is not z and o.side == z.side
                       and o.status == "fresh" and ((o.top < z.bottom and z.bottom - o.top <= reach) if long
                                                    else (o.bottom > z.top and o.bottom - z.top <= reach))]
             if deeper:
@@ -229,7 +233,7 @@ class Engine:
             return
 
         discount = entry < (z.bottom + target) / 2 if long else entry > (z.top + target) / 2
-        idx0 = next((k for k, x in enumerate(cs) if x.t >= z.origin_t), i)
+        idx0 = next((k for k in range(max(0, i - 300), i + 1) if cs[k].t >= z.origin_t), i)
         prior = pivots(cs[max(0, idx0 - 120):idx0], self.scfg["swing_pivot"])
         flips = [p[2] for p in prior if p[1] == ("H" if long else "L") and z.bottom <= p[2] <= z.top]
         checks = dict(z.checks)

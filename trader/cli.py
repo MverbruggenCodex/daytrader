@@ -147,36 +147,31 @@ def cmd_export(a, cfg):
 
 
 def cmd_backtest(a, cfg):
-    state = st_mod.empty_state()
-    now = now_ms()
-    engine = Engine(cfg, state, now, live_from=0)
-    from . import engine as eng_mod
-    eng_mod.KEEP_CANDLES = 100_000
-    _collect(a, cfg, engine, days=a.days)
-    engine.run()
-    export.write(engine, a.export)
-    closed = [t for t in engine.broker.trades if t.status == "closed"]
-    wins = [t for t in closed if (t.pnl_usd or 0) > 0]
-    eq, peak, dd = cfg["account"]["start_balance"], cfg["account"]["start_balance"], 0.0
-    for t in sorted(closed, key=lambda t: t.closed_t):
-        eq += t.pnl_usd
-        peak = max(peak, eq)
-        dd = max(dd, (peak - eq) / peak if peak else 0)
-    res = {
-        "markets": {m: len(engine.history(m)) for m in engine.markets},
-        "trades": len(closed),
-        "open_at_end": len(engine.broker.open_trades()),
-        "win_rate": round(len(wins) / len(closed), 3) if closed else None,
-        "avg_r": round(sum(t.r_result or 0 for t in closed) / len(closed), 2) if closed else None,
-        "net_eur": round(sum(t.pnl_usd for t in closed), 2),
-        "end_balance": engine.broker.balance(),
-        "max_drawdown_pct": round(dd * 100, 1),
-        "zones": len(engine.zones),
-        "by_market": {m: round(sum(t.pnl_usd for t in closed if t.market == m), 2) for m in engine.markets},
-        "trades_list": [{"id": t.id, "market": t.market, "side": t.side, "opened": iso(t.opened_t), "r": t.r_result,
-                         "exit": t.exit_reason} for t in closed],
-    }
-    print(json.dumps(res, indent=1, ensure_ascii=False))
+    """Backtest on Hyperliquid data (needs internet) or on candle files in --from-dir (<MARKET>.json)."""
+    from . import backtest
+    if a.from_dir:
+        candles = data.load_inbox(a.from_dir, cfg["markets"])
+    else:
+        now = now_ms()
+        candles = {}
+        for key, m in cfg["markets"].items():
+            if not m.get("enabled"):
+                continue
+            cs, cursor = [], now - int(a.days * 86_400_000)
+            while cursor < now:
+                chunk = data.fetch_hyperliquid(m["symbol"], cursor, now)
+                if not chunk or chunk[-1].t <= cursor:
+                    break
+                cs.extend(chunk)
+                cursor = chunk[-1].t + 1
+            candles[key] = cs
+    res = backtest.run(cfg, {k: v for k, v in candles.items() if v})
+    out = {"stats": res["stats"], "candles": res["candles"], "zones": res["zones"]}
+    if a.mc:
+        out["monte_carlo"] = backtest.monte_carlo([t.r_result or 0 for t in res["trades"]], sims=a.mc,
+                                                  risk_pct=cfg["account"]["risk_pct"],
+                                                  start=cfg["account"]["start_balance"])
+    print(json.dumps(out, indent=1, ensure_ascii=False))
     return 0
 
 
@@ -295,6 +290,8 @@ def main(argv=None) -> int:
             s.add_argument("--interval", type=int, default=300)
         else:
             s.add_argument("--days", type=float, default=14)
+            s.add_argument("--from-dir", default="", help="map met <MARKET>.json candle-bestanden")
+            s.add_argument("--mc", type=int, default=1000, help="aantal Monte Carlo-simulaties (0 = uit)")
 
     sub.add_parser("orders", help="wat er op Liquid moet gebeuren (voorstellen, annuleren, sluiten)")
 

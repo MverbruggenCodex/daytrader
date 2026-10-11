@@ -47,6 +47,11 @@ class Broker:
             return False, "account leeg"
         return True, ""
 
+    def _fee_pct(self, maker: bool) -> float:
+        if maker:
+            return self.acfg.get("fee_maker_pct", self.acfg.get("fee_pct", 0.045))
+        return self.acfg.get("fee_taker_pct", self.acfg.get("fee_pct", 0.045))
+
     def next_id(self) -> str:
         nums = [int(t.id[1:]) for t in self.trades if t.id[1:].isdigit()]
         return f"T{(max(nums) + 1 if nums else 1):03d}"
@@ -56,7 +61,7 @@ class Broker:
         risk_usd = round(self.sizing_equity(ts) * self.acfg["risk_pct"] / 100, 2)
         dist = abs(entry - stop)
         size = risk_usd / dist
-        fee = self.acfg["fee_pct"] / 100 * entry * size
+        fee = self._fee_pct(maker=True) / 100 * entry * size  # entry is a limit order
         t = Trade(id=self.next_id(), market=market, side=side, entry=entry, stop=stop, target=target,
                   size=round(size, 8), risk_usd=risk_usd, opened_t=ts, fees_usd=round(fee, 4), **extra)
         self.trades.append(t)
@@ -64,7 +69,7 @@ class Broker:
 
     def close(self, t: Trade, price: float, ts: int, reason: str) -> Trade:
         pnl = (price - t.entry) * t.size * t.dir
-        fees = t.fees_usd + self.acfg["fee_pct"] / 100 * price * t.size
+        fees = t.fees_usd + self._fee_pct(maker=reason == "take profit") / 100 * price * t.size
         t.exit = price
         t.closed_t = ts
         t.exit_reason = reason
