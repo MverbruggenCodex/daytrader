@@ -84,7 +84,8 @@ def build(engine: Engine) -> Dict[str, list]:
             "market": key, "status": status, "price": last.c if last else None,
             "day_open": day[0].o if day else None, "day_high": max(c.h for c in day) if day else None,
             "day_low": min(c.l for c in day) if day else None, "bias": bias,
-            "note": m.get("note") or f"{m.get('symbol')} op Liquid · trend 15m",
+            "note": m.get("note") or f"{m.get('symbol')} op Liquid, trend 15m",
+            "trading": bool(m.get("enabled") and m.get("trade", True)),
             "updated": iso(last.t + engine.candle_ms) if last else iso(now),
         })
 
@@ -97,8 +98,26 @@ def build(engine: Engine) -> Dict[str, list]:
             "fvg": bool(z.checks.get("fvg")), "bos": bool(z.checks.get("bos")), "note": z.note,
         })
 
+    sessions = []
+    for key, ss in sorted(st.get("sessions", {}).items(), key=lambda kv: kv[1].get("open", 0)):
+        if ss.get("or_high") is None or ss.get("open", 0) < now - 3 * 86_400_000:
+            continue
+        scfg = cfg["sessions"].get(ss.get("session"), {})
+        sessions.append({
+            "key": key, "market": ss["market"], "session": ss.get("session"), "label": ss.get("label"),
+            "open": iso(ss["open"]), "range_end": iso(ss["open"] + scfg.get("range_minutes", 15) * 60_000),
+            "or_high": ss["or_high"], "or_low": ss["or_low"], "trades": ss.get("trades", 0),
+        })
+
+    zones_chart = []
+    for z in engine.zones:
+        if z.created_t >= now - 3 * 86_400_000:
+            zones_chart.append({"id": z.id, "market": z.market, "side": z.side, "bottom": z.bottom, "top": z.top,
+                                "from": iso(z.origin_t), "until": iso(z.status_t) if z.status_t else None,
+                                "status": ZONE_STATUS_NL.get(z.status, z.status)})
+
     return {"account": account, "trades": trades, "analyses": analyses, "markets": markets, "zones": zones,
-            "orders": orders}
+            "orders": orders, "sessions": sessions, "zones_chart": zones_chart}
 
 
 EMPTY_COLUMNS = {

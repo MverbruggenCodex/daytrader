@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Daytrader desk</title>
+<meta name="description" content="Live overzicht van de ORB + supply &amp; demand paper trader op Liquid.">
+<meta name="theme-color" content="#14233A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2314233A'/%3E%3Cpath d='M9 22V12M9 12h0M16 25V8M23 19V10' stroke='%23EDF1EE' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <h1>Daytrader desk</h1>
+    <p class="mode" id="mode">Paper account</p>
+  </div>
+  <p class="sync" id="sync">Laden…</p>
+</header>
+
+<main>
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="ticker">
+      <h2 id="hero-title">BTC</h2>
+      <p class="price" id="btc-price">—</p>
+      <p class="change" id="btc-change">—</p>
+    </div>
+    <p class="hero-note" id="hero-note">Laatste 24 uur in candles van 5 minuten, met de sessies van Londen en New York, de openingsrange en de zones die de bot tekende.</p>
+    <div class="chart" id="chart" role="img" aria-label="Koersgrafiek van BTC met sessies, openingsranges en zones"></div>
+    <ul class="legend" aria-hidden="true">
+      <li><i class="lg-lon"></i>Sessie Londen</li>
+      <li><i class="lg-ny"></i>Sessie New York</li>
+      <li><i class="lg-or"></i>Openingsrange</li>
+      <li><i class="lg-dem"></i>Demand-zone</li>
+      <li><i class="lg-sup"></i>Supply-zone</li>
+    </ul>
+  </section>
+
+  <section class="numbers" aria-label="Account">
+    <div><p class="k">Paper-equity</p><p class="v" id="n-equity">—</p><p class="s" id="n-equity-s"></p></div>
+    <div><p class="k">Sinds de start</p><p class="v" id="n-result">—</p><p class="s" id="n-result-s"></p></div>
+    <div><p class="k">Open positie</p><p class="v" id="n-open">—</p><p class="s" id="n-open-s"></p></div>
+    <div><p class="k">Wacht op jou</p><p class="v" id="n-wait">—</p><p class="s" id="n-wait-s"></p></div>
+  </section>
+
+  <div class="split">
+    <section class="feed" aria-labelledby="feed-title">
+      <h2 id="feed-title">Wat de bot doet</h2>
+      <ol id="feed" class="timeline"></ol>
+    </section>
+    <section class="markets" aria-labelledby="markets-title">
+      <h2 id="markets-title">Markten</h2>
+      <ul id="markets"></ul>
+    </section>
+  </div>
+
+  <section class="trades" aria-labelledby="trades-title">
+    <h2 id="trades-title">Trades</h2>
+    <p class="lead">Elk signaal van de strategie, met wat er op het Liquid paper account mee gebeurde.</p>
+    <div class="table-wrap"><table id="trades"><thead><tr>
+      <th>#</th><th>Markt</th><th>Richting</th><th>Geopend</th><th class="n">Entry</th><th class="n">Stop</th><th class="n">Doel</th><th class="n">R:R</th><th class="n">Resultaat</th><th>Liquid</th>
+    </tr></thead><tbody></tbody></table></div>
+    <p class="empty" id="trades-empty" hidden>Nog geen trades. De bot handelt BTC tijdens de eerste uren van de sessies van Londen (09:00) en New York (15:30).</p>
+  </section>
+
+  <section class="method" aria-labelledby="method-title">
+    <h2 id="method-title">Hoe de bot handelt</h2>
+    <div class="method-grid">
+      <div class="rules">
+        <p>De bot handelt alleen BTC, met de strategie die in de backtest van een jaar als enige in beide halfjaren winst maakte.</p>
+        <ul>
+          <li>Het eerste kwartier van Londen en New York is de openingsrange.</li>
+          <li>Een zone telt pas na een sterke beweging met een fair value gap en een break of structure, door de range heen en mee met de trend.</li>
+          <li>Instappen als de koers terugkomt in een verse zone en er weer buiten sluit.</li>
+          <li>Stop net voorbij de zone, doel de top of bodem van de beweging, minimaal 1:2.</li>
+          <li>1% risico per trade. Elke order wordt pas geplaatst nadat jij hem bevestigt.</li>
+        </ul>
+      </div>
+      <div class="bt">
+        <p class="bt-head">Backtest, 1 jaar BTC</p>
+        <dl>
+          <div><dt>Trades</dt><dd>29</dd></div>
+          <div><dt>Gewonnen</dt><dd>41%</dd></div>
+          <div><dt>Gemiddeld per trade</dt><dd>+0,29R</dd></div>
+          <div><dt>Kans op een winstgevend jaar</dt><dd>76%</dd></div>
+        </dl>
+        <p class="bt-foot">Op basis van 1000 Monte Carlo-simulaties. Een kleine steekproef: echte resultaten kunnen flink afwijken. <a href="https://github.com/MverbruggenCodex/daytrader/blob/main/backtests/2026-10-11.md">Volledig rapport</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>Dit is een experiment met nepgeld op het paper account van Liquid. Geen beleggingsadvies.</p>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

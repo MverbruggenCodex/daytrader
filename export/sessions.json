@@ -1,0 +1,13 @@
+[
+ {
+  "key": "BTCUSD|london|2026-10-11",
+  "market": "BTCUSD",
+  "session": "london",
+  "label": "Londen",
+  "open": "2026-10-11T07:00:00Z",
+  "range_end": "2026-10-11T07:15:00Z",
+  "or_high": 83185.0,
+  "or_low": 83073.0,
+  "trades": 0
+ }
+]
