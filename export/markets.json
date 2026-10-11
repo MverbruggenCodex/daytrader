@@ -2,50 +2,50 @@
  {
   "market": "BTCUSD",
   "status": "Sessie Londen",
-  "price": 82972.0,
-  "day_open": 82765.0,
+  "price": 83134.0,
+  "day_open": 82831.0,
   "day_high": 83185.0,
   "day_low": 82725.0,
-  "bias": "Neutraal",
+  "bias": "Bearish",
   "note": "Getest: ORB + supply & demand, slot-entry, doel = beweging (min. 1:2), trend 15m",
   "trading": true,
-  "updated": "2026-10-11T11:10:00Z"
+  "updated": "2026-10-11T12:10:00Z"
  },
  {
   "market": "EURUSD",
   "status": "Buiten sessie",
-  "price": 1.121,
+  "price": 1.1213,
   "day_open": 1.1206,
   "day_high": 1.1215,
   "day_low": 1.1205,
-  "bias": "Neutraal",
+  "bias": "Bullish",
   "note": "Alleen volgen; strategie verloor in de backtest",
   "trading": false,
-  "updated": "2026-10-11T11:10:00Z"
+  "updated": "2026-10-11T12:10:00Z"
  },
  {
   "market": "XAUUSD",
   "status": "Buiten sessie",
-  "price": 4194.0,
+  "price": 4195.0,
   "day_open": 4189.8,
   "day_high": 4196.0,
   "day_low": 4188.9,
   "bias": "Neutraal",
   "note": "Getest: ORB-uitbraak New York (range 15:30–15:45), entry op de retest, stop aan de overkant van de range, doel 1R, trend 60m",
   "trading": true,
-  "updated": "2026-10-11T11:10:00Z"
+  "updated": "2026-10-11T12:10:00Z"
  },
  {
   "market": "SP500",
   "status": "Buiten sessie",
-  "price": 7809.5,
+  "price": 7810.7,
   "day_open": 7810.3,
-  "day_high": 7812.5,
+  "day_high": 7812.7,
   "day_low": 7804.5,
   "bias": "Neutraal",
   "note": "Alleen volgen; vervangt de DJ30",
   "trading": false,
-  "updated": "2026-10-11T11:10:00Z"
+  "updated": "2026-10-11T12:10:00Z"
  },
  {
   "market": "USDCAD",
@@ -57,7 +57,7 @@
   "bias": "—",
   "note": "Niet beschikbaar op Liquid/Hyperliquid",
   "trading": false,
-  "updated": "2026-10-11T11:11:43Z"
+  "updated": "2026-10-11T12:11:23Z"
  },
  {
   "market": "DJ30",
@@ -69,6 +69,6 @@
   "bias": "—",
   "note": "Niet beschikbaar op Liquid/Hyperliquid; SP500 vervangt hem",
   "trading": false,
-  "updated": "2026-10-11T11:11:43Z"
+  "updated": "2026-10-11T12:11:23Z"
  }
 ]
