@@ -14,6 +14,7 @@ def cfg(**strategy_overrides):
         c = json.load(f)
     c = copy.deepcopy(c)
     c["markets"] = {"BTCUSD": {"symbol": "BTC", "enabled": True, "sessions": ["london"], "trade_weekends": False, "decimals": 2}}
+    c["account"]["risk_pct"] = 3  # tests are written for 3% risk, independent of the live setting
     c["strategy"].update(strategy_overrides)
     return c
 
