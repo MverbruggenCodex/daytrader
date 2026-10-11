@@ -2,14 +2,14 @@
  {
   "market": "BTCUSD",
   "status": "Sessie Londen",
-  "price": 82985.0,
-  "day_open": 82804.0,
+  "price": 82983.0,
+  "day_open": 82817.0,
   "day_high": 83185.0,
   "day_low": 82725.0,
-  "bias": "Bullish",
+  "bias": "Neutraal",
   "note": "Getest: ORB + supply & demand, slot-entry, doel = beweging (min. 1:2), trend 15m",
   "trading": true,
-  "updated": "2026-10-11T09:05:00Z"
+  "updated": "2026-10-11T09:55:00Z"
  },
  {
   "market": "EURUSD",
@@ -57,7 +57,7 @@
   "bias": "—",
   "note": "Niet beschikbaar op Liquid/Hyperliquid",
   "trading": false,
-  "updated": "2026-10-11T09:48:07Z"
+  "updated": "2026-10-11T09:57:06Z"
  },
  {
   "market": "DJ30",
@@ -69,6 +69,6 @@
   "bias": "—",
   "note": "Niet beschikbaar op Liquid/Hyperliquid; SP500 vervangt hem",
   "trading": false,
-  "updated": "2026-10-11T09:48:07Z"
+  "updated": "2026-10-11T09:57:06Z"
  }
 ]
