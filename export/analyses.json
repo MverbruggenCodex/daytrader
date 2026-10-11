@@ -58,5 +58,17 @@
   "text": "De trader gebruikt nu het paper account van Liquid (ca. $10.000 nepgeld) in plaats van het eigen €50-account. Elk signaal van de engine wordt een limietorder met stop loss en take profit op Liquid; Liquid vereist dat elke order in de chat wordt bevestigd. Risico 3% per trade, minimaal 1:2. Het oude €50-account met de BTC-short T001 is gearchiveerd.",
   "action": "Liquid paper actief",
   "invalidation": ""
+ },
+ {
+  "id": "E00003",
+  "time": "2026-10-11T07:20:00Z",
+  "market": "BTCUSD",
+  "price": 83097.0,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange Londen staat",
+  "text": "BTCUSD: range van het eerste kwartier 83.073,0 – 83.185,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
  }
 ]
