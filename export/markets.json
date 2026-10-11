@@ -2,14 +2,14 @@
  {
   "market": "BTCUSD",
   "status": "Sessie New York",
-  "price": 83084.0,
-  "day_open": 82937.0,
-  "day_high": 83205.0,
+  "price": 83740.0,
+  "day_open": 82996.0,
+  "day_high": 83950.0,
   "day_low": 82746.0,
-  "bias": "Neutraal",
+  "bias": "Bearish",
   "note": "Getest: ORB + supply & demand, slot-entry, doel = beweging (min. 1:2), trend 15m",
   "trading": true,
-  "updated": "2026-10-11T15:10:00Z"
+  "updated": "2026-10-11T16:10:00Z"
  },
  {
   "market": "EURUSD",
@@ -21,31 +21,31 @@
   "bias": "Neutraal",
   "note": "Alleen volgen; strategie verloor in de backtest",
   "trading": false,
-  "updated": "2026-10-11T15:05:00Z"
+  "updated": "2026-10-11T15:50:00Z"
  },
  {
   "market": "XAUUSD",
   "status": "Buiten sessie",
-  "price": 4193.8,
+  "price": 4195.5,
   "day_open": 4189.8,
   "day_high": 4197.2,
   "day_low": 4188.9,
-  "bias": "Neutraal",
+  "bias": "Bullish",
   "note": "Getest: ORB-uitbraak New York (range 15:30–15:45), entry op de retest, stop aan de overkant van de range, doel 1R, trend 60m",
   "trading": true,
-  "updated": "2026-10-11T15:10:00Z"
+  "updated": "2026-10-11T16:10:00Z"
  },
  {
   "market": "SP500",
   "status": "Buiten sessie",
-  "price": 7810.0,
+  "price": 7813.1,
   "day_open": 7810.3,
-  "day_high": 7812.7,
+  "day_high": 7815.0,
   "day_low": 7804.5,
   "bias": "Neutraal",
   "note": "Alleen volgen; vervangt de DJ30",
   "trading": false,
-  "updated": "2026-10-11T15:10:00Z"
+  "updated": "2026-10-11T16:10:00Z"
  },
  {
   "market": "USDCAD",
@@ -57,7 +57,7 @@
   "bias": "—",
   "note": "Niet beschikbaar op Liquid/Hyperliquid",
   "trading": false,
-  "updated": "2026-10-11T15:12:05Z"
+  "updated": "2026-10-11T16:11:20Z"
  },
  {
   "market": "DJ30",
@@ -69,6 +69,6 @@
   "bias": "—",
   "note": "Niet beschikbaar op Liquid/Hyperliquid; SP500 vervangt hem",
   "trading": false,
-  "updated": "2026-10-11T15:12:05Z"
+  "updated": "2026-10-11T16:11:20Z"
  }
 ]

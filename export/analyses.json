@@ -82,5 +82,17 @@
   "text": "BTCUSD: range van het eerste kwartier 83.037,0 – 83.062,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
   "action": "Geen trade; zones zoeken",
   "invalidation": ""
+ },
+ {
+  "id": "E00005",
+  "time": "2026-10-11T15:45:00Z",
+  "market": "BTCUSD",
+  "price": 83379.0,
+  "bias": "omlaag",
+  "trigger": "Overgeslagen",
+  "title": "Displacement zonder setup (omhoog)",
+  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is omlaag. Geen zone.",
+  "action": "Geen trade",
+  "invalidation": ""
  }
 ]
