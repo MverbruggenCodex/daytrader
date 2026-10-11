@@ -1,8 +1,10 @@
 # Daytrader — ORB + Trade with Pat supply & demand (paper trading)
 
-Een fictieve daytrader met een startaccount van **€50**. De engine handelt op 5-minuten-candles van
-Liquid/Hyperliquid volgens vaste regels en houdt alles bij in een JSON-staat. Er worden **geen echte orders**
-geplaatst. Het dashboard (Claude-artifact) toont account, trades, zones en het analyselogboek.
+Een daytrader op het **Liquid paper account** (simulatie, ca. $10.000 nepgeld). De engine zoekt op 5-minuten-candles
+van Liquid/Hyperliquid naar setups volgens vaste regels. Elk signaal wordt een **limietorder met stop loss en take profit**
+op het paper account; de Liquid-connector eist dat elke order in de chat wordt bevestigd. Daarnaast houdt de engine een
+modelaccount bij met de uitkomst van *alle* signalen. Het dashboard (Claude-artifact) toont het live paper account,
+orders, modeltrades, zones en het analyselogboek.
 
 ## Strategie
 
@@ -30,8 +32,14 @@ Minimaal **1:2** risk/reward, anders geen trade.
 - de diepste zone is de sterkste: ligt er binnen 2 ATR een diepere verse zone, dan wordt de hogere overgeslagen;
 - discount en level stack worden per trade vastgelegd.
 
-**Risico:** 3% van het saldo per trade, max 3 open trades, max 1 trade per markt per sessie, stoppen bij −6% op een dag.
-Fees 0,045% per kant. Nieuwsfilter via `blackout`.
+**Risico:** 3% van de paper-equity per trade, max 3 open trades, max 1 trade per markt per sessie, stoppen bij −6% op een dag.
+Onderpand per order max 25% van de equity en de hefboom max per markt (BTC/EUR 20x, goud/S&P 10x); bij een heel krappe
+stop kan het risico daardoor lager uitvallen dan 3%. Minimaal $10 onderpand (Liquid). Fees 0,045% per kant.
+Nieuwsfilter via `blackout`.
+
+**Orders op Liquid:** limiet op de entry-prijs, GTC, met SL/TP. Een voorstel is 2 uur geldig (of tot het einde van het
+entry-venster) en vervalt als de koers al voorbij stop of doel is. Niet-gevulde limieten worden aan het eind van het
+entry-venster geannuleerd; bij sessie-einde wordt voorgesteld de positie te sluiten.
 
 ## Markten
 
@@ -54,12 +62,16 @@ python -m trader run --source hyperliquid --loop   # lokaal 24/7, elke 5 minuten
 python -m trader run --source inbox          # met candles die Claude via Liquid in inbox/ zette
 python -m trader backtest --days 14          # backtest op Hyperliquid-data (lokaal)
 python -m trader blackout --start 2026-10-14T14:15 --end 2026-10-14T15:00 --reason "CPI VS"
+python -m trader liquid-sync --file portfolio.json   # get_portfolio-antwoord van Liquid opslaan
+python -m trader orders                      # wat er op Liquid moet gebeuren
+python -m trader order-update --id O001 --status placed --liquid-id 123
 python tests/run_tests.py                    # tests
 ```
 
 ### In Claude Code
 Gebruik `/trader-run` (zie `.claude/commands/trader-run.md`): Claude haalt candles op via de Liquid-connector,
-draait de engine, werkt het dashboard bij en commit de staat. Een geplande taak draait deze ronde elk uur; omdat de
+draait de engine, bereidt paper-orders voor (en plaatst ze na jouw "ja"), werkt het dashboard bij en commit de staat.
+`/trader-confirm` toont openstaande orders en plaatst ze na bevestiging. Een geplande taak draait deze ronde elk uur; omdat de
 engine alle gemiste 5-minuten-candles alsnog in volgorde verwerkt, levert dat dezelfde trades op als realtime meekijken,
 alleen later gemeld.
 
@@ -70,7 +82,8 @@ config.json          account, markten, sessies, strategie-instellingen
 trader/structure.py  ATR, swing points, trend, fair value gaps
 trader/zones.py      displacement, zones, Pats entry-regels
 trader/sessions.py   sessievensters (tijdzone-bewust)
-trader/broker.py     paper broker: sizing, stop/doel, fees, daglimiet
+trader/broker.py     modelaccount: sizing, stop/doel, fees, daglimiet
+trader/orders.py     paper-orders voor Liquid: sizing, hefboom, levenscyclus
 trader/engine.py     candle-voor-candle verwerking
 trader/export.py     JSON voor het dashboard
 state/state.json     staat (trades, zones, logboek, candle-cache)

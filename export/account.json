@@ -1,15 +1,21 @@
 [
  {
-  "start_balance": 50,
-  "currency": "EUR",
+  "venue": "Liquid paper account",
+  "currency": "USD",
+  "start_balance": 10000,
   "risk_pct": 3,
   "max_open_trades": 3,
   "daily_stop_pct": 6,
   "min_rr": 2,
   "eurusd": 1.1206,
-  "rent_goal": 1550,
-  "started_at": "2026-10-10T20:03:19Z",
-  "updated": "2026-10-10T20:03:32Z",
+  "rent_goal_eur": 1550,
+  "model_balance": 10000,
+  "model_trades": 0,
+  "liquid_equity": 9989.69,
+  "liquid_paper_mode": true,
+  "liquid_synced_at": "2026-10-11T08:40:32Z",
+  "started_at": "2026-10-11T08:40:32Z",
+  "updated": "2026-10-11T08:40:32Z",
   "strategy": "ORB + Trade with Pat supply & demand"
  }
 ]

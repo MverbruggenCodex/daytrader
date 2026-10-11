@@ -1,11 +1,11 @@
 [
  {
   "market": "BTCUSD",
-  "status": "Buiten sessie",
+  "status": "Sessie Londen",
   "price": 83046.0,
-  "day_open": 82553.0,
+  "day_open": 82753.0,
   "day_high": 83153.0,
-  "day_low": 82525.0,
+  "day_low": 82725.0,
   "bias": "Neutraal",
   "note": "BTC op Liquid · trend 15m",
   "updated": "2026-10-10T20:00:00Z"
@@ -52,7 +52,7 @@
   "day_low": null,
   "bias": "—",
   "note": "Niet beschikbaar op Liquid/Hyperliquid",
-  "updated": "2026-10-10T20:03:32Z"
+  "updated": "2026-10-11T08:40:32Z"
  },
  {
   "market": "DJ30",
@@ -63,6 +63,6 @@
   "day_low": null,
   "bias": "—",
   "note": "Niet beschikbaar op Liquid/Hyperliquid; SP500 vervangt hem",
-  "updated": "2026-10-10T20:03:32Z"
+  "updated": "2026-10-11T08:40:32Z"
  }
 ]

@@ -46,5 +46,17 @@
   "text": "Vanaf nu handelt het account alleen nog volgens vaste regels: openingsrange van Londen (09:00) en New York (15:30), uitbraak met displacement (grote candles, fair value gap, break of structure) mee met de 15m-trend, entry bij terugval naar een verse zone en een slot weer erbuiten, minimaal 1:2 en dicht voor sessie-einde. De oude BTC-short (T001) loopt door tot stop of doel. USDCAD en DJ30 staan niet op Liquid; de S&P 500 vervangt de DJ30.",
   "action": "Engine actief",
   "invalidation": ""
+ },
+ {
+  "id": "E00002",
+  "time": "2026-10-11T08:40:32Z",
+  "market": "BTCUSD",
+  "price": 83046.0,
+  "bias": "—",
+  "trigger": "Account gewijzigd",
+  "title": "Overgestapt op het Liquid paper account",
+  "text": "De trader gebruikt nu het paper account van Liquid (ca. $10.000 nepgeld) in plaats van het eigen €50-account. Elk signaal van de engine wordt een limietorder met stop loss en take profit op Liquid; Liquid vereist dat elke order in de chat wordt bevestigd. Risico 3% per trade, minimaal 1:2. Het oude €50-account met de BTC-short T001 is gearchiveerd.",
+  "action": "Liquid paper actief",
+  "invalidation": ""
  }
 ]

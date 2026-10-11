@@ -21,6 +21,9 @@ def empty_state() -> dict:
         "event_seq": 0,
         "blackouts": [],
         "started_t": None,
+        "orders": [],
+        "order_seq": 0,
+        "liquid": None,
     }
 
 

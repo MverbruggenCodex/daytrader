@@ -1,32 +1,6 @@
 {
  "version": 1,
- "trades": [
-  {
-   "id": "T001",
-   "market": "BTCUSD",
-   "side": "short",
-   "entry": 82972.6,
-   "stop": 83650.0,
-   "target": 79850.0,
-   "size": 0.00248,
-   "risk_eur": 1.5,
-   "opened_t": 1791648410000,
-   "status": "open",
-   "strategy": "Swing (voor ORB)",
-   "setup": "Breakdown-retest",
-   "session_key": null,
-   "close_at": null,
-   "zone_id": null,
-   "checks": {},
-   "reason": "Eerste fictieve trade van vóór de ORB-strategie; loopt door tot stop of doel.",
-   "exit": null,
-   "closed_t": null,
-   "exit_reason": null,
-   "pnl_eur": null,
-   "r_result": null,
-   "fees_eur": 0.0
-  }
- ],
+ "trades": [],
  "zones": [],
  "events": [
   {
@@ -76,38 +50,21 @@
    "text": "Vanaf nu handelt het account alleen nog volgens vaste regels: openingsrange van Londen (09:00) en New York (15:30), uitbraak met displacement (grote candles, fair value gap, break of structure) mee met de 15m-trend, entry bij terugval naar een verse zone en een slot weer erbuiten, minimaal 1:2 en dicht voor sessie-einde. De oude BTC-short (T001) loopt door tot stop of doel. USDCAD en DJ30 staan niet op Liquid; de S&P 500 vervangt de DJ30.",
    "action": "Engine actief",
    "invalidation": ""
+  },
+  {
+   "id": "E00002",
+   "t": 1791708032082,
+   "market": "BTCUSD",
+   "price": 83046.0,
+   "bias": "—",
+   "trigger": "Account gewijzigd",
+   "title": "Overgestapt op het Liquid paper account",
+   "text": "De trader gebruikt nu het paper account van Liquid (ca. $10.000 nepgeld) in plaats van het eigen €50-account. Elk signaal van de engine wordt een limietorder met stop loss en take profit op Liquid; Liquid vereist dat elke order in de chat wordt bevestigd. Risico 3% per trade, minimaal 1:2. Het oude €50-account met de BTC-short T001 is gearchiveerd.",
+   "action": "Liquid paper actief",
+   "invalidation": ""
   }
  ],
- "sessions": {
-  "BTCUSD|london|2026-10-10": {
-   "market": "BTCUSD",
-   "session": "london",
-   "label": "Londen",
-   "day": "2026-10-10",
-   "open": 1791615600000,
-   "or_high": 82728.0,
-   "or_low": 82612.0,
-   "range_done": true,
-   "trades": 0,
-   "skipped_origins": [
-    1791614400000
-   ]
-  },
-  "BTCUSD|newyork|2026-10-10": {
-   "market": "BTCUSD",
-   "session": "newyork",
-   "label": "New York",
-   "day": "2026-10-10",
-   "open": 1791639000000,
-   "or_high": 82819.0,
-   "or_low": 82750.0,
-   "range_done": true,
-   "trades": 0,
-   "skipped_origins": [
-    1791641100000
-   ]
-  }
- },
+ "sessions": {},
  "last_ts": {
   "BTCUSD": 1791662100000,
   "EURUSD": 1791661200000,
@@ -1766,7 +1723,17 @@
  },
  "eurusd": 1.1206,
  "zone_seq": 0,
- "event_seq": 1,
+ "event_seq": 2,
  "blackouts": [],
- "started_t": 1791662599897
+ "started_t": 1791708032082,
+ "orders": [],
+ "order_seq": 0,
+ "liquid": {
+  "paper_mode": true,
+  "equity": 9989.69,
+  "available": 9989.69,
+  "margin_used": 0.0,
+  "positions": [],
+  "updated_t": 1791708032165
+ }
 }

@@ -11,6 +11,7 @@ from datetime import datetime, timezone
 from . import data, export, state as st_mod
 from .engine import Engine
 from .models import Trade
+from .orders import ACTIVE, housekeeping, sync_positions
 from .sessions import iso
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -40,11 +41,11 @@ def summary(engine: Engine) -> dict:
     prices = {m: (engine.history(m)[-1].c if engine.history(m) else None) for m in engine.markets}
     b = engine.broker
     closed = [t for t in b.trades if t.status == "closed"]
-    wins = [t for t in closed if (t.pnl_eur or 0) > 0]
+    wins = [t for t in closed if (t.pnl_usd or 0) > 0]
     return {
         "time": iso(engine.now),
-        "balance_eur": b.balance(),
-        "open_pnl_eur": b.open_pnl({k: v for k, v in prices.items() if v}, engine.eurusd()),
+        "model_balance_usd": b.balance(),
+        "open_pnl_usd": b.open_pnl({k: v for k, v in prices.items() if v}),
         "open_trades": [{"id": t.id, "market": t.market, "side": t.side, "entry": t.entry, "stop": t.stop,
                          "target": t.target} for t in b.open_trades()],
         "closed_trades": len(closed),
@@ -53,6 +54,9 @@ def summary(engine: Engine) -> dict:
                          for z in engine.zones if z.status in ("fresh", "touched")],
         "last_candle": {m: (iso(engine.history(m)[-1].t) if engine.history(m) else None) for m in engine.markets},
         "prices": prices,
+        "liquid": engine.state.get("liquid"),
+        "orders_attention": [o for o in engine.state.get("orders", []) if o["status"] in ACTIVE],
+        "order_changes": engine.order_changes,
     }
 
 
@@ -62,13 +66,6 @@ def cmd_init(a, cfg):
         print(f"{path} bestaat al (gebruik --force om opnieuw te beginnen)")
         return 1
     state = st_mod.empty_state()
-    if a.seed_legacy:
-        legacy = Trade(id="T001", market="BTCUSD", side="short", entry=82972.6, stop=83650.0, target=79850.0,
-                       size=0.00248, risk_eur=1.5, opened_t=parse_time("2026-10-10T16:06:50Z"),
-                       strategy="Swing (voor ORB)", setup="Breakdown-retest",
-                       reason="Eerste fictieve trade van vóór de ORB-strategie; loopt door tot stop of doel.")
-        state["trades"].append(legacy.to_dict())
-        state["eurusd"] = 1.11953
     st_mod.save(path, state)
     print(f"Nieuwe staat geschreven naar {path}")
     return 0
@@ -159,10 +156,10 @@ def cmd_backtest(a, cfg):
     engine.run()
     export.write(engine, a.export)
     closed = [t for t in engine.broker.trades if t.status == "closed"]
-    wins = [t for t in closed if (t.pnl_eur or 0) > 0]
+    wins = [t for t in closed if (t.pnl_usd or 0) > 0]
     eq, peak, dd = cfg["account"]["start_balance"], cfg["account"]["start_balance"], 0.0
     for t in sorted(closed, key=lambda t: t.closed_t):
-        eq += t.pnl_eur
+        eq += t.pnl_usd
         peak = max(peak, eq)
         dd = max(dd, (peak - eq) / peak if peak else 0)
     res = {
@@ -171,11 +168,11 @@ def cmd_backtest(a, cfg):
         "open_at_end": len(engine.broker.open_trades()),
         "win_rate": round(len(wins) / len(closed), 3) if closed else None,
         "avg_r": round(sum(t.r_result or 0 for t in closed) / len(closed), 2) if closed else None,
-        "net_eur": round(sum(t.pnl_eur for t in closed), 2),
+        "net_eur": round(sum(t.pnl_usd for t in closed), 2),
         "end_balance": engine.broker.balance(),
         "max_drawdown_pct": round(dd * 100, 1),
         "zones": len(engine.zones),
-        "by_market": {m: round(sum(t.pnl_eur for t in closed if t.market == m), 2) for m in engine.markets},
+        "by_market": {m: round(sum(t.pnl_usd for t in closed if t.market == m), 2) for m in engine.markets},
         "trades_list": [{"id": t.id, "market": t.market, "side": t.side, "opened": iso(t.opened_t), "r": t.r_result,
                          "exit": t.exit_reason} for t in closed],
     }
@@ -210,6 +207,72 @@ def cmd_note(a, cfg):
     return 0
 
 
+def _latest_prices(state: dict) -> dict:
+    return {m: rows[-1][4] for m, rows in state.get("candles", {}).items() if rows}
+
+
+def cmd_orders(a, cfg):
+    """What Claude has to do on Liquid this round."""
+    state = st_mod.load(a.state)
+    housekeeping(state.setdefault("orders", []), now_ms(), _latest_prices(state))
+    st_mod.save(a.state, state)
+    lq = state.get("liquid") or {}
+    out = {
+        "paper_mode": lq.get("paper_mode"),
+        "propose": [o for o in state["orders"] if o["status"] == "pending"],
+        "cancel": [o for o in state["orders"] if o["status"] == "cancel_needed"],
+        "close": [o for o in state["orders"] if o["status"] == "close_needed"],
+        "watch": [o for o in state["orders"] if o["status"] in ("placed", "filled")],
+    }
+    if lq.get("paper_mode") is not True:
+        out["propose"] = []
+        out["blocked"] = ("Liquid staat niet (aantoonbaar) in paper modus. Draai eerst liquid-sync met een "
+                          "get_portfolio-antwoord waarin paperMode true is. Geen orders voorstellen of plaatsen.")
+    print(json.dumps(out, indent=1, ensure_ascii=False))
+    return 0
+
+
+def cmd_order_update(a, cfg):
+    state = st_mod.load(a.state)
+    for o in state.get("orders", []):
+        if o["id"] == a.id:
+            o["status"] = a.status
+            if a.liquid_id:
+                o["liquid_order_id"] = a.liquid_id
+            if a.note:
+                o["note"] = a.note
+            o["updated_t"] = now_ms()
+            st_mod.save(a.state, state)
+            print(json.dumps(o, indent=1, ensure_ascii=False))
+            return 0
+    print(f"Order {a.id} niet gevonden")
+    return 1
+
+
+def cmd_liquid_sync(a, cfg):
+    """Store a get_portfolio answer from the Liquid connector and match positions to orders."""
+    state = st_mod.load(a.state)
+    with open(a.file) as f:
+        pf = json.load(f)
+    if isinstance(pf, dict) and "content" in pf:
+        pf = json.loads("".join(p.get("text", "") for p in pf["content"]))
+    acct = pf.get("account") or {}
+    positions = pf.get("positions") or []
+    state["liquid"] = {
+        "paper_mode": pf.get("paperMode") is True,
+        "equity": float(acct["equity"]) if acct.get("equity") is not None else None,
+        "available": float(acct["available_balance"]) if acct.get("available_balance") is not None else None,
+        "margin_used": float(acct["margin_used"]) if acct.get("margin_used") is not None else None,
+        "positions": positions,
+        "updated_t": now_ms(),
+    }
+    changes = sync_positions(state.setdefault("orders", []), positions)
+    st_mod.save(a.state, state)
+    print(json.dumps({"paper_mode": state["liquid"]["paper_mode"], "equity": state["liquid"]["equity"],
+                      "positions": len(positions), "changes": changes}, indent=1, ensure_ascii=False))
+    return 0 if state["liquid"]["paper_mode"] else 2
+
+
 def main(argv=None) -> int:
     p = argparse.ArgumentParser(prog="trader", description="ORB + supply & demand paper trader")
     p.add_argument("--config", default=os.path.join(ROOT, "config.json"))
@@ -218,7 +281,6 @@ def main(argv=None) -> int:
     sub = p.add_subparsers(dest="cmd", required=True)
 
     s = sub.add_parser("init", help="nieuwe staat aanmaken")
-    s.add_argument("--seed-legacy", action="store_true", help="neem de eerste BTC-short (T001) over")
     s.add_argument("--force", action="store_true")
 
     sub.add_parser("fetch-plan", help="welke candles Claude via Liquid moet ophalen")
@@ -233,6 +295,18 @@ def main(argv=None) -> int:
             s.add_argument("--interval", type=int, default=300)
         else:
             s.add_argument("--days", type=float, default=14)
+
+    sub.add_parser("orders", help="wat er op Liquid moet gebeuren (voorstellen, annuleren, sluiten)")
+
+    s = sub.add_parser("order-update", help="status van een order bijwerken na een Liquid-actie")
+    s.add_argument("--id", required=True)
+    s.add_argument("--status", required=True, choices=["pending", "placed", "filled", "closed", "declined", "expired",
+                                                       "cancel_needed", "close_needed", "cancelled", "rejected"])
+    s.add_argument("--liquid-id", default="")
+    s.add_argument("--note", default="")
+
+    s = sub.add_parser("liquid-sync", help="get_portfolio-antwoord van Liquid opslaan")
+    s.add_argument("--file", required=True)
 
     sub.add_parser("status")
     sub.add_parser("export")
@@ -257,6 +331,7 @@ def main(argv=None) -> int:
     handler = {
         "init": cmd_init, "fetch-plan": cmd_fetch_plan, "run": cmd_run, "backtest": cmd_backtest,
         "status": cmd_status, "export": cmd_export, "blackout": cmd_blackout, "note": cmd_note,
+        "orders": cmd_orders, "order-update": cmd_order_update, "liquid-sync": cmd_liquid_sync,
     }[a.cmd]
     return handler(a, cfg) or 0
 

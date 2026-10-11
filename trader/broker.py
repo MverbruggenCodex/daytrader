@@ -1,10 +1,16 @@
-"""Paper broker: position sizing, stop/target handling, fees and account rules."""
+"""Model broker: simulates every signal of the strategy (sizing, stop/target, fees, account rules).
+
+All amounts are in USD, the currency of the Liquid paper account. Position size is based on
+the Liquid paper equity when a recent sync exists, otherwise on the simulated balance.
+"""
 from __future__ import annotations
 
 from typing import List, Optional, Tuple
 
 from .models import Candle, Trade
 from .sessions import ams_date
+
+LIQUID_FRESH_MS = 6 * 3_600_000
 
 
 class Broker:
@@ -15,10 +21,16 @@ class Broker:
 
     # ---- account -------------------------------------------------------------------
     def realized(self) -> float:
-        return sum(t.pnl_eur or 0.0 for t in self.trades if t.status == "closed")
+        return sum(t.pnl_usd or 0.0 for t in self.trades if t.status == "closed")
 
     def balance(self) -> float:
         return round(self.acfg["start_balance"] + self.realized(), 2)
+
+    def sizing_equity(self, ts: int) -> float:
+        lq = self.state.get("liquid") or {}
+        if lq.get("paper_mode") and lq.get("equity") and ts - lq.get("updated_t", 0) <= LIQUID_FRESH_MS:
+            return float(lq["equity"])
+        return self.balance()
 
     def open_trades(self, market: Optional[str] = None) -> List[Trade]:
         return [t for t in self.trades if t.status == "open" and (market is None or t.market == market)]
@@ -27,7 +39,7 @@ class Broker:
         if len(self.open_trades()) >= self.acfg["max_open_trades"]:
             return False, f"al {self.acfg['max_open_trades']} trades open"
         day = ams_date(ts)
-        today = sum(t.pnl_eur or 0.0 for t in self.trades if t.status == "closed" and t.closed_t and ams_date(t.closed_t) == day)
+        today = sum(t.pnl_usd or 0.0 for t in self.trades if t.status == "closed" and t.closed_t and ams_date(t.closed_t) == day)
         start_of_day = self.balance() - today
         if start_of_day > 0 and today <= -self.acfg["daily_stop_pct"] / 100 * start_of_day:
             return False, f"daglimiet van -{self.acfg['daily_stop_pct']}% bereikt"
@@ -40,57 +52,55 @@ class Broker:
         return f"T{(max(nums) + 1 if nums else 1):03d}"
 
     # ---- orders --------------------------------------------------------------------
-    def open(self, market: str, side: str, entry: float, stop: float, target: float, ts: int,
-             eurusd: float, **extra) -> Trade:
-        risk_eur = round(self.balance() * self.acfg["risk_pct"] / 100, 2)
+    def open(self, market: str, side: str, entry: float, stop: float, target: float, ts: int, **extra) -> Trade:
+        risk_usd = round(self.sizing_equity(ts) * self.acfg["risk_pct"] / 100, 2)
         dist = abs(entry - stop)
-        size = risk_eur * eurusd / dist  # all markets are quoted in USD
-        fee_eur = self.acfg["fee_pct"] / 100 * entry * size / eurusd
+        size = risk_usd / dist
+        fee = self.acfg["fee_pct"] / 100 * entry * size
         t = Trade(id=self.next_id(), market=market, side=side, entry=entry, stop=stop, target=target,
-                  size=round(size, 8), risk_eur=risk_eur, opened_t=ts, fees_eur=round(fee_eur, 4), **extra)
+                  size=round(size, 8), risk_usd=risk_usd, opened_t=ts, fees_usd=round(fee, 4), **extra)
         self.trades.append(t)
         return t
 
-    def close(self, t: Trade, price: float, ts: int, reason: str, eurusd: float) -> Trade:
-        pnl_usd = (price - t.entry) * t.size * t.dir
-        exit_fee_eur = self.acfg["fee_pct"] / 100 * price * t.size / eurusd
-        fees = t.fees_eur + exit_fee_eur
+    def close(self, t: Trade, price: float, ts: int, reason: str) -> Trade:
+        pnl = (price - t.entry) * t.size * t.dir
+        fees = t.fees_usd + self.acfg["fee_pct"] / 100 * price * t.size
         t.exit = price
         t.closed_t = ts
         t.exit_reason = reason
         t.status = "closed"
-        t.fees_eur = round(fees, 4)
-        t.pnl_eur = round(pnl_usd / eurusd - fees, 2)
-        t.r_result = round(t.pnl_eur / t.risk_eur, 2) if t.risk_eur else None
+        t.fees_usd = round(fees, 4)
+        t.pnl_usd = round(pnl - fees, 2)
+        t.r_result = round(t.pnl_usd / t.risk_usd, 2) if t.risk_usd else None
         return t
 
-    def manage(self, market: str, c: Candle, eurusd: float, candle_ms: int) -> List[Trade]:
+    def manage(self, market: str, c: Candle, candle_ms: int) -> List[Trade]:
         """Apply one new candle to the open trades of a market. Stop wins if both are hit."""
         closed = []
         for t in self.open_trades(market):
             if c.t < t.opened_t:
                 continue
             if t.close_at is not None and c.t >= t.close_at:
-                closed.append(self.close(t, c.o, c.t, "sessie-einde", eurusd))
+                closed.append(self.close(t, c.o, c.t, "sessie-einde"))
                 continue
             if t.side == "long":
                 if c.l <= t.stop:
-                    closed.append(self.close(t, min(c.o, t.stop), c.t + candle_ms, "stop loss", eurusd))
+                    closed.append(self.close(t, min(c.o, t.stop), c.t + candle_ms, "stop loss"))
                 elif c.h >= t.target:
-                    closed.append(self.close(t, max(c.o, t.target), c.t + candle_ms, "take profit", eurusd))
+                    closed.append(self.close(t, max(c.o, t.target), c.t + candle_ms, "take profit"))
             else:
                 if c.h >= t.stop:
-                    closed.append(self.close(t, max(c.o, t.stop), c.t + candle_ms, "stop loss", eurusd))
+                    closed.append(self.close(t, max(c.o, t.stop), c.t + candle_ms, "stop loss"))
                 elif c.l <= t.target:
-                    closed.append(self.close(t, min(c.o, t.target), c.t + candle_ms, "take profit", eurusd))
+                    closed.append(self.close(t, min(c.o, t.target), c.t + candle_ms, "take profit"))
         return closed
 
-    def open_pnl(self, prices: dict, eurusd: float) -> float:
+    def open_pnl(self, prices: dict) -> float:
         total = 0.0
         for t in self.open_trades():
             p = prices.get(t.market)
             if p:
-                total += (p - t.entry) * t.size * t.dir / eurusd
+                total += (p - t.entry) * t.size * t.dir
         return round(total, 2)
 
     def dump(self) -> list:

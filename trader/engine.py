@@ -13,6 +13,7 @@ from __future__ import annotations
 from typing import Dict, List, Optional
 
 from .broker import Broker
+from .orders import ACTIVE, housekeeping, make_intent
 from .models import Candle, Trade, Zone
 from .sessions import Window, ams_hm, windows_at
 from .structure import aggregate, atr, pivots, trend
@@ -38,6 +39,9 @@ class Engine:
         self.broker = Broker(state, self.acfg)
         self.zones: List[Zone] = [Zone.from_dict(z) for z in state.get("zones", [])]
         self.new_events: List[dict] = []
+        self.order_changes: List[str] = []
+        state.setdefault("orders", [])
+        state.setdefault("order_seq", 0)
         self._trend_cache: Dict[tuple, str] = {}
 
     # ---- data ----------------------------------------------------------------------
@@ -72,6 +76,9 @@ class Engine:
         for _, _, m, i in queue:
             self.process(m, hist[m], i)
             self.state["last_ts"][m] = hist[m][i].t
+        prices = {m: cs[-1].c for m, cs in hist.items() if cs}
+        for change in housekeeping(self.state["orders"], self.now, prices):
+            self.order_changes.append(change)
         self._persist()
         return self.new_events
 
@@ -82,13 +89,15 @@ class Engine:
         self.state["sessions"] = {k: v for k, v in self.state["sessions"].items() if v.get("open", 0) >= horizon}
         self.state["events"] = self.state["events"][-KEEP_EVENTS:]
         self.state["blackouts"] = [b for b in self.state.get("blackouts", []) if b["end"] >= horizon]
+        self.state["orders"] = [o for o in self.state["orders"]
+                                if o["status"] in ACTIVE or o["created_t"] >= self.now - 30 * 86_400_000]
 
     # ---- per candle ----------------------------------------------------------------
     def process(self, m: str, cs: List[Candle], i: int) -> None:
         c = cs[i]
         if m == "EURUSD":
             self.state["eurusd"] = c.c
-        for t in self.broker.manage(m, c, self.eurusd(), self.candle_ms):
+        for t in self.broker.manage(m, c, self.candle_ms):
             self._event_exit(t)
 
         mcfg = self.markets[m]
@@ -226,7 +235,7 @@ class Engine:
         checks = dict(z.checks)
         checks.update({"vers": True, "discount": discount, "level_stack": bool(flips), "rr": round(rr, 2)})
         t = self.broker.open(
-            m, z.side, entry, stop, target, c.t + self.candle_ms, self.eurusd(),
+            m, z.side, entry, stop, target, c.t + self.candle_ms,
             setup=f"ORB {w.label} + {'demand' if long else 'supply'}-zone", session_key=z.session_key,
             close_at=w.close, zone_id=z.id, checks=checks,
             reason=(f"Zone {self._p(m, z.bottom)} – {self._p(m, z.top)} aangetikt, candle sloot er weer buiten. "
@@ -234,10 +243,23 @@ class Engine:
                     f"BOS {'ja' if checks.get('bos') else 'nee'}; discount {'ja' if discount else 'nee'}; level stack {'ja' if flips else 'nee'}."))
         z.status, z.status_t = "entered", c.t
         ss["trades"] += 1
-        self._event(m, c, "Entry", f"{'Long' if long else 'Short'} {m} geopend ({t.id})",
+        self._new_intent(t, w)
+        self._event(m, c, "Entry", f"Signaal {'long' if long else 'short'} {m} ({t.id}), paper-order klaar ter bevestiging",
                     t.reason + f" Doel = recente {'top' if long else 'bodem'} van de beweging.",
                     f"{'Long' if long else 'Short'} op {self._p(m, entry)} · stop {self._p(m, stop)} · doel {self._p(m, target)} (1:{rr:.2f})",
                     f"stop {self._p(m, stop)} of sessie-einde")
+
+    def _new_intent(self, t: Trade, w: Window) -> None:
+        """Order intent for the Liquid paper account (only for live signals)."""
+        mcfg = self.markets[t.market]
+        if not mcfg.get("symbol") or t.opened_t < self.live_from:
+            return
+        self.state["order_seq"] += 1
+        expires = min(w.entry_until, t.opened_t + self.acfg["intent_valid_minutes"] * 60_000)
+        o = make_intent(t, mcfg["symbol"], mcfg, self.acfg, self.broker.sizing_equity(t.opened_t), t.opened_t,
+                        expires, w.close, self.state["order_seq"])
+        self.state["orders"].append(o)
+        self.order_changes.append(f"{o['id']} {o['status']} voor {t.id}")
 
     # ---- helpers -------------------------------------------------------------------
     def _trend(self, m: str, cs: List[Candle], i: int) -> str:
@@ -262,11 +284,11 @@ class Engine:
     def _event_exit(self, t: Trade) -> None:
         ts = (t.closed_t or self.now) - self.candle_ms
         c = Candle(ts, t.exit or 0, t.exit or 0, t.exit or 0, t.exit or 0)
-        res = "winst" if (t.pnl_eur or 0) > 0 else "verlies"
+        res = "winst" if (t.pnl_usd or 0) > 0 else "verlies"
         self._event(t.market, c, "Exit", f"{t.id} gesloten: {t.exit_reason} ({res})",
                     f"{t.side.capitalize()} {t.market} van {self._p(t.market, t.entry)} gesloten op {self._p(t.market, t.exit)} "
-                    f"via {t.exit_reason}. Resultaat €{t.pnl_eur:.2f} ({t.r_result:+.2f}R).",
-                    f"Positie gesloten · €{t.pnl_eur:.2f}", "")
+                    f"via {t.exit_reason}. Modelresultaat ${t.pnl_usd:,.2f} ({t.r_result:+.2f}R).",
+                    f"Positie gesloten · ${t.pnl_usd:,.2f}", "")
 
     def _event(self, m: str, c: Candle, trigger: str, title: str, text: str, action: str, invalidation: str) -> None:
         self.state["event_seq"] += 1

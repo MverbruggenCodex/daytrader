@@ -76,7 +76,7 @@ class Trade(_Dictable):
     stop: float
     target: float
     size: float  # units of the base asset
-    risk_eur: float
+    risk_usd: float
     opened_t: int
     status: str = "open"  # open | closed
     strategy: str = "ORB + Supply & Demand"
@@ -89,9 +89,9 @@ class Trade(_Dictable):
     exit: Optional[float] = None
     closed_t: Optional[int] = None
     exit_reason: Optional[str] = None
-    pnl_eur: Optional[float] = None
+    pnl_usd: Optional[float] = None
     r_result: Optional[float] = None
-    fees_eur: float = 0.0
+    fees_usd: float = 0.0
 
     @property
     def dir(self) -> int:

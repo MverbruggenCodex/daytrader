@@ -1,27 +1,99 @@
 {
   "dashboard_url": "https://claude.ai/artifact/LxRuJxwJKGHhZHRUvmkMnf",
   "account": {
-    "start_balance": 50,
-    "currency": "EUR",
+    "venue": "Liquid paper account",
+    "currency": "USD",
+    "start_balance": 10000,
     "risk_pct": 3,
     "max_open_trades": 3,
     "daily_stop_pct": 6,
     "min_rr": 2,
-    "rent_goal": 1550,
     "fee_pct": 0.045,
+    "collateral_cap_pct": 25,
+    "min_collateral": 10,
+    "intent_valid_minutes": 120,
+    "rent_goal_eur": 1550,
     "eurusd_fallback": 1.12
   },
   "markets": {
-    "BTCUSD": {"symbol": "BTC", "enabled": true, "sessions": ["london", "newyork"], "trade_weekends": true, "decimals": 1},
-    "EURUSD": {"symbol": "xyz:EUR", "enabled": true, "sessions": ["london", "newyork"], "trade_weekends": false, "decimals": 5},
-    "XAUUSD": {"symbol": "xyz:GOLD", "enabled": true, "sessions": ["london", "newyork"], "trade_weekends": false, "decimals": 1},
-    "SP500": {"symbol": "xyz:SP500", "enabled": true, "sessions": ["newyork"], "trade_weekends": false, "decimals": 1, "note": "Vervangt de DJ30, die niet op Liquid staat"},
-    "USDCAD": {"symbol": null, "enabled": false, "sessions": [], "trade_weekends": false, "decimals": 5, "note": "Niet beschikbaar op Liquid/Hyperliquid"},
-    "DJ30": {"symbol": null, "enabled": false, "sessions": [], "trade_weekends": false, "decimals": 0, "note": "Niet beschikbaar op Liquid/Hyperliquid; SP500 vervangt hem"}
+    "BTCUSD": {
+      "symbol": "BTC",
+      "enabled": true,
+      "sessions": [
+        "london",
+        "newyork"
+      ],
+      "trade_weekends": true,
+      "decimals": 1,
+      "max_leverage": 20
+    },
+    "EURUSD": {
+      "symbol": "xyz:EUR",
+      "enabled": true,
+      "sessions": [
+        "london",
+        "newyork"
+      ],
+      "trade_weekends": false,
+      "decimals": 5,
+      "max_leverage": 20
+    },
+    "XAUUSD": {
+      "symbol": "xyz:GOLD",
+      "enabled": true,
+      "sessions": [
+        "london",
+        "newyork"
+      ],
+      "trade_weekends": false,
+      "decimals": 1,
+      "max_leverage": 10
+    },
+    "SP500": {
+      "symbol": "xyz:SP500",
+      "enabled": true,
+      "sessions": [
+        "newyork"
+      ],
+      "trade_weekends": false,
+      "decimals": 1,
+      "note": "Vervangt de DJ30, die niet op Liquid staat",
+      "max_leverage": 10
+    },
+    "USDCAD": {
+      "symbol": null,
+      "enabled": false,
+      "sessions": [],
+      "trade_weekends": false,
+      "decimals": 5,
+      "note": "Niet beschikbaar op Liquid/Hyperliquid"
+    },
+    "DJ30": {
+      "symbol": null,
+      "enabled": false,
+      "sessions": [],
+      "trade_weekends": false,
+      "decimals": 0,
+      "note": "Niet beschikbaar op Liquid/Hyperliquid; SP500 vervangt hem"
+    }
   },
   "sessions": {
-    "london": {"label": "Londen", "tz": "Europe/London", "open": "08:00", "range_minutes": 15, "entry_until": "11:00", "close": "16:00"},
-    "newyork": {"label": "New York", "tz": "America/New_York", "open": "09:30", "range_minutes": 15, "entry_until": "12:00", "close": "16:00"}
+    "london": {
+      "label": "Londen",
+      "tz": "Europe/London",
+      "open": "08:00",
+      "range_minutes": 15,
+      "entry_until": "11:00",
+      "close": "16:00"
+    },
+    "newyork": {
+      "label": "New York",
+      "tz": "America/New_York",
+      "open": "09:30",
+      "range_minutes": 15,
+      "entry_until": "12:00",
+      "close": "16:00"
+    }
   },
   "strategy": {
     "candle_minutes": 5,

@@ -90,21 +90,66 @@ def test_entry_dead_and_knife_rules():
 def test_sizing_risk_and_stop_first():
     acfg = cfg()["account"]
     b = Broker({"trades": []}, acfg)
-    t = b.open("BTCUSD", "long", 100.0, 99.0, 103.0, 0, eurusd=1.0)
-    assert t.risk_eur == 1.5 and t.size == pytest.approx(1.5)
-    closed = b.manage("BTCUSD", Candle(FIVE, 100, 104, 98.5, 101), 1.0, FIVE)  # both hit -> stop
+    t = b.open("BTCUSD", "long", 100.0, 99.0, 103.0, 0)
+    assert t.risk_usd == 300 and t.size == pytest.approx(300)
+    closed = b.manage("BTCUSD", Candle(FIVE, 100, 104, 98.5, 101), FIVE)  # both hit -> stop
     assert closed[0].exit_reason == "stop loss" and closed[0].r_result < -0.99
-    assert b.balance() < 50
+    assert b.balance() < 10000
+
+
+def test_sizing_uses_fresh_liquid_equity():
+    acfg = cfg()["account"]
+    st = {"trades": [], "liquid": {"paper_mode": True, "equity": 5000.0, "updated_t": 0}}
+    b = Broker(st, acfg)
+    assert b.open("BTCUSD", "long", 100.0, 99.0, 103.0, 1000).risk_usd == 150
+    assert b.open("BTCUSD", "long", 100.0, 99.0, 103.0, 7 * 3_600_000).risk_usd == 300  # stale sync -> model
 
 
 def test_daily_stop_blocks_new_trades():
     acfg = cfg()["account"]
     b = Broker({"trades": []}, acfg)
     for k in range(2):
-        t = b.open("BTCUSD", "long", 100.0, 99.0, 103.0, k * FIVE, eurusd=1.0)
-        b.close(t, 99.0, k * FIVE + FIVE, "stop loss", 1.0)
+        t = b.open("BTCUSD", "long", 100.0, 99.0, 103.0, k * FIVE)
+        b.close(t, 99.0, k * FIVE + FIVE, "stop loss")
     ok, why = b.can_open(3 * FIVE)
     assert not ok and "daglimiet" in why
+
+
+# ---- liquid orders ---------------------------------------------------------------------
+def test_order_sizing_and_rounding():
+    from trader.models import Trade
+    from trader.orders import make_intent, sig_round, size_order
+    acfg = cfg()["account"]
+    t = Trade("T001", "BTCUSD", "long", 83046.0, 82000.0, 86000.0, 0.0, 300.0, 0)
+    sz = size_order(t, {"max_leverage": 20}, acfg, 10000)
+    assert sz["notional"] == pytest.approx(300 / (1046 / 83046), rel=1e-3) and sz["leverage"] == 10
+    assert sz["collateral"] <= 2500 + 0.01 and sz["leverage"] <= 20 and sz["risk_usd"] == pytest.approx(300, rel=1e-3)
+    capped = size_order(t, {"max_leverage": 2}, acfg, 10000)
+    assert capped["leverage"] == 2 and capped["notional"] == 5000 and capped["risk_usd"] < 300  # cap limits the risk
+    assert sig_round(83046.37) == 83046 and sig_round(1.120634) == 1.1206 and sig_round(4190.345) == 4190.3
+    tiny = Trade("T002", "BTCUSD", "long", 100.0, 50.0, 200.0, 0.0, 1.0, 0)
+    o = make_intent(tiny, "BTC", {"max_leverage": 20}, acfg, 10000, 0, 10, 20, 1)
+    assert o["status"] == "rejected"
+
+
+def test_order_housekeeping_and_sync():
+    from trader.orders import housekeeping, sync_positions
+    base = {"market": "BTCUSD", "symbol": "BTC", "side": "long", "sl": 99.0, "tp": 103.0, "created_t": 0,
+            "expires_t": 100, "close_at": 200}
+    o1 = dict(base, id="O1", status="pending")
+    o2 = dict(base, id="O2", status="pending")
+    o3 = dict(base, id="O3", status="placed")
+    o4 = dict(base, id="O4", status="filled")
+    housekeeping([o1], 150, {"BTCUSD": 100.0})
+    housekeeping([o2], 50, {"BTCUSD": 98.0})
+    housekeeping([o3, o4], 250, {})
+    assert o1["status"] == "expired" and o2["status"] == "expired" and "voorbij" in o2["note"]
+    assert o3["status"] == "cancel_needed" and o4["status"] == "close_needed"
+    o5 = dict(base, id="O5", status="placed")
+    sync_positions([o5, o4], [{"coin": "BTC", "szi": "0.1"}])
+    assert o5["status"] == "filled" and o4["status"] == "close_needed"
+    sync_positions([o5, o4], [])
+    assert o5["status"] == "closed" and o4["status"] == "closed"
 
 
 # ---- end to end ------------------------------------------------------------------------
@@ -125,8 +170,11 @@ def test_full_london_long_trade_hits_target():
     t = trades[0]
     assert t.side == "long" and t.entry == pytest.approx(info["entry"])
     assert t.stop < info["zone"][0] and t.target >= info["leg_high"]
-    assert t.status == "closed" and t.exit_reason == "take profit" and t.pnl_eur > 0
+    assert t.status == "closed" and t.exit_reason == "take profit" and t.pnl_usd > 0
     assert t.rr >= 2
+    (o,) = eng.state["orders"]
+    assert o["trade_id"] == t.id and o["type"] == "limit" and o["status"] in ("pending", "expired")
+    assert o["notional"] > 0 and o["sl"] < o["price"] < o["tp"]
     kinds = [e["trigger"] for e in events]
     assert "Openingsrange" in kinds and "Nieuwe zone" in kinds and "Entry" in kinds and "Exit" in kinds
     files = build(eng)
@@ -198,3 +246,35 @@ def test_cli_inbox_run(tmp_path):
     res = json.loads(out.stdout)
     assert res["new_candles"]["BTCUSD"] == len(candles)
     assert (tmp_path / "export" / "trades.json").exists() and not list(inbox.glob("*.json"))
+
+
+def test_cli_orders_require_paper_mode(tmp_path):
+    candles, _ = london_long_setup()
+    c = cfg()
+    cfg_path = tmp_path / "config.json"
+    cfg_path.write_text(json.dumps(c))
+    env = dict(os.environ, PYTHONPATH=ROOT)
+    base = [sys.executable, "-m", "trader", "--config", str(cfg_path), "--state", str(tmp_path / "state.json"),
+            "--export", str(tmp_path / "export")]
+    subprocess.run(base + ["init"], check=True, env=env, capture_output=True)
+    state = json.loads((tmp_path / "state.json").read_text())
+    state["orders"] = [{"id": "O001", "trade_id": "T001", "market": "BTCUSD", "symbol": "BTC", "side": "long",
+                        "price": 100.0, "sl": 99.0, "tp": 103.0, "rr": 3.0, "created_t": 0,
+                        "expires_t": 10 ** 15, "close_at": 10 ** 15, "status": "pending"}]
+    (tmp_path / "state.json").write_text(json.dumps(state))
+    out = json.loads(subprocess.run(base + ["orders"], check=True, env=env, capture_output=True, text=True).stdout)
+    assert out["propose"] == [] and "blocked" in out
+    live = tmp_path / "live.json"
+    live.write_text(json.dumps({"paperMode": False, "account": {"equity": "100"}, "positions": []}))
+    r = subprocess.run(base + ["liquid-sync", "--file", str(live)], env=env, capture_output=True, text=True)
+    assert r.returncode == 2
+    paper = tmp_path / "paper.json"
+    paper.write_text(json.dumps({"paperMode": True, "account": {"equity": "9989.69", "available_balance": "9989.69",
+                                                                "margin_used": "0.00"}, "positions": []}))
+    subprocess.run(base + ["liquid-sync", "--file", str(paper)], check=True, env=env, capture_output=True)
+    out = json.loads(subprocess.run(base + ["orders"], check=True, env=env, capture_output=True, text=True).stdout)
+    assert [o["id"] for o in out["propose"]] == ["O001"] and "blocked" not in out
+    subprocess.run(base + ["order-update", "--id", "O001", "--status", "placed", "--liquid-id", "123"], check=True,
+                   env=env, capture_output=True)
+    out = json.loads(subprocess.run(base + ["orders"], check=True, env=env, capture_output=True, text=True).stdout)
+    assert out["propose"] == [] and out["watch"][0]["liquid_order_id"] == "123"
