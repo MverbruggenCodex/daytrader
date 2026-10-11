@@ -11,11 +11,11 @@
   "rent_goal_eur": 1550,
   "model_balance": 10000,
   "model_trades": 0,
-  "liquid_equity": 10052.83,
+  "liquid_equity": 10033.55,
   "liquid_paper_mode": true,
-  "liquid_synced_at": "2026-10-11T14:12:12Z",
+  "liquid_synced_at": "2026-10-11T15:12:05Z",
   "started_at": "2026-10-11T08:40:32Z",
-  "updated": "2026-10-11T14:12:12Z",
+  "updated": "2026-10-11T15:12:05Z",
   "strategy": "ORB + Trade with Pat supply & demand"
  }
 ]
