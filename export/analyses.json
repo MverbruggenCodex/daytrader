@@ -226,5 +226,17 @@
   "text": "Slot onder de openingsrange, maar: trend is zijwaarts.",
   "action": "Geen trade",
   "invalidation": ""
+ },
+ {
+  "id": "E00017",
+  "time": "2026-10-12T16:55:00Z",
+  "market": "BTCUSD",
+  "price": 82549.0,
+  "bias": "omlaag",
+  "trigger": "Overgeslagen",
+  "title": "Displacement zonder setup (omlaag)",
+  "text": "Sterke beweging met FVG en break of structure, maar beweging breekt de openingsrange niet. Geen zone.",
+  "action": "Geen trade",
+  "invalidation": ""
  }
 ]
