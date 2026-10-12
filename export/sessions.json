@@ -20,5 +20,27 @@
   "or_high": 83062.0,
   "or_low": 83037.0,
   "trades": 0
+ },
+ {
+  "key": "BTCUSD|asia|2026-10-12",
+  "market": "BTCUSD",
+  "session": "asia",
+  "label": "Tokio",
+  "open": "2026-10-12T00:00:00Z",
+  "range_end": "2026-10-12T00:15:00Z",
+  "or_high": 83751.0,
+  "or_low": 83677.0,
+  "trades": 0
+ },
+ {
+  "key": "XAUUSD|asia|2026-10-12",
+  "market": "XAUUSD",
+  "session": "asia",
+  "label": "Tokio",
+  "open": "2026-10-12T00:00:00Z",
+  "range_end": "2026-10-12T00:15:00Z",
+  "or_high": 4207.9,
+  "or_low": 4188.7,
+  "trades": 0
  }
 ]
