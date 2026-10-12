@@ -214,5 +214,17 @@
   "text": "XAUUSD: range van het eerste kwartier 4.170,7 – 4.175,9. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
   "action": "Geen trade; zones zoeken",
   "invalidation": ""
+ },
+ {
+  "id": "E00016",
+  "time": "2026-10-12T15:25:00Z",
+  "market": "XAUUSD",
+  "price": 4166.9,
+  "bias": "zijwaarts",
+  "trigger": "Overgeslagen",
+  "title": "ORB-uitbraak New York niet genomen",
+  "text": "Slot onder de openingsrange, maar: trend is zijwaarts.",
+  "action": "Geen trade",
+  "invalidation": ""
  }
 ]
