@@ -15302,54 +15302,11 @@
  "order_seq": 0,
  "liquid": {
   "paper_mode": true,
-  "equity": 9713.9,
-  "available": 3075.41,
-  "margin_used": 6638.49,
-  "positions": [
-   {
-    "symbol": "xyz:GOLD-PERP",
-    "side": "short",
-    "size": "7.1431",
-    "entryPx": "4199.5882152",
-    "markPx": "4185.7",
-    "leverage": "10",
-    "leverageType": "isolated",
-    "unrealizedPnl": "99.20491",
-    "liquidationPx": "4409.56762596",
-    "marginUsed": "2989.8516515",
-    "returnOnEquity": "0.03307042",
-    "tp": null,
-    "sl": null,
-    "tpCoverage": 0,
-    "slCoverage": 0,
-    "displayName": "GOLD"
-   },
-   {
-    "symbol": "xyz:EUR-PERP",
-    "side": "long",
-    "size": "61841.3",
-    "entryPx": "1.12036133",
-    "markPx": "1.1209",
-    "leverage": "19",
-    "leverageType": "isolated",
-    "unrealizedPnl": "33.31177",
-    "liquidationPx": "1.09087814",
-    "marginUsed": "3648.6367",
-    "returnOnEquity": "0.00913513",
-    "tp": "1.1263",
-    "sl": "1.118",
-    "tpTriggerPxs": [
-     "1.1263"
-    ],
-    "slTriggerPxs": [
-     "1.118"
-    ],
-    "tpCoverage": 1,
-    "slCoverage": 1,
-    "displayName": "EURUSD"
-   }
-  ],
-  "updated_t": 1791787605819
+  "equity": 9622.74,
+  "available": 9622.74,
+  "margin_used": 0.0,
+  "positions": [],
+  "updated_t": 1791787925234
  },
  "htf": {
   "BTCUSD@60": [
