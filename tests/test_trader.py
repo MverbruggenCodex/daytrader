@@ -327,3 +327,58 @@ def test_orb_breakout_mode_and_trade_flag():
     c["markets"]["BTCUSD"]["strategy"] = {"mode": "orb", "target_r": 1.0}
     eng3, _ = run_engine(candles, c)
     assert eng3.broker.trades[0].strategy == "ORB-uitbraak"
+
+
+# ---- swing (Trade with Pat, 1h) ------------------------------------------------------------
+def _swing_bars():
+    """Uptrend, flip level ~127, impulse 116 -> 140, 4 red candles into the 50% discount, then engulfing."""
+    H1 = 3_600_000
+    t0 = ms("2026-09-01T00:00:00")
+    closes = [100 + 10 * k / 39 for k in range(40)]
+    closes += [110 + 17 * k / 6 for k in range(1, 7)]   # up to 127 (flip level)
+    closes += [127 - 11 * k / 5 for k in range(1, 6)]   # down to 116 (swing low)
+    closes += [116 + 24 * k / 8 for k in range(1, 9)]   # impulse to 140 (swing high)
+    closes += [137, 134, 131, 127.6]                    # 4 red candles into the discount
+    bars, prev = [], 100.0
+    for k, c in enumerate(closes):
+        bars.append(Candle(t0 + k * H1, prev, max(prev, c) + 0.3, min(prev, c) - 0.3, c))
+        prev = c
+    bars.append(Candle(t0 + len(closes) * H1, 127.5, 131.8, 127.4, 131.5))  # bullish engulfing
+    return bars
+
+
+def test_swing_setup_long_and_mirror():
+    from trader import swing
+    p = swing.params({})
+    bars = _swing_bars()
+    s = swing.find_setup(bars, p)
+    assert s is not None and s["side"] == "long"
+    assert s["entry"] == 131.5 and s["target"] == pytest.approx(140.3)
+    assert s["stop"] < 127.3 and s["rr"] >= 1
+    assert s["level"] is not None and abs(s["level"] - 127.3) < 1.5
+    mirrored = [Candle(c.t, -c.o, -c.l, -c.h, -c.c) for c in bars]
+    m = swing.find_setup(mirrored, p)
+    assert m is not None and m["side"] == "short" and m["rr"] == s["rr"]
+    # no engulfing on the last candle -> no setup
+    assert swing.find_setup(bars[:-1], p) is None
+
+
+def test_swing_mode_in_engine_builds_1h_and_opens_trade():
+    c = cfg()
+    c["markets"]["BTCUSD"]["strategy"] = {"mode": "swing", "tf_minutes": 60}
+    bars = _swing_bars()
+    five = []
+    for b in bars:  # split every 1h bar into 12 five-minute candles following o -> l -> h -> c
+        path = [b.o, b.l, b.h, b.c]
+        for j in range(12):
+            a = path[min(3, j * 4 // 12)]
+            z = path[min(3, (j + 1) * 4 // 12)] if j < 11 else b.c
+            five.append(Candle(b.t + j * FIVE, a, max(a, z), min(a, z), z))
+    st = st_mod.empty_state()
+    eng = Engine(c, st, now_ms=five[-1].t + 2 * FIVE, live_from=0)
+    eng.ingest("BTCUSD", five)
+    eng.run()
+    trades = [t for t in eng.broker.trades if t.market == "BTCUSD"]
+    assert len(trades) == 1 and trades[0].side == "long" and trades[0].strategy == "Swing"
+    assert len(st["htf"]["BTCUSD"]) == len(bars)
+    assert any(o["trade_id"] == trades[0].id for o in st["orders"])

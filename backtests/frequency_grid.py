@@ -75,6 +75,24 @@ for mk, pre in (("BTCUSD", "SB"), ("XAUUSD", "SG"), ("EURUSD", "SE")):
     for sid, label, strat in SWING:
         VARIANTS.append((pre + sid, mk, label, [], strat, {}, REAL_FEES))
 
+MID_FEES = {"fee_maker_pct": 0.065, "fee_taker_pct": 0.095}
+VARIANTS += [
+    ("X1", "BTCUSD", "Swing 1u, doel 2R + EMA-confluence", [], dict(SW, target="r", target_r=2.0, ema_confluence=True), {}, REAL_FEES),
+    ("X2", "BTCUSD", "Swing 1u, doel 2R, discount 61,8%", [], dict(SW, target="r", target_r=2.0, discount=0.618), {}, REAL_FEES),
+    ("X3", "BTCUSD", "Swing 1u, doel 3R", [], dict(SW, target="r", target_r=3.0), {}, REAL_FEES),
+    ("X4", "BTCUSD", "Swing 1u, doel 2R, min. 4 rode", [], dict(SW, target="r", target_r=2.0, min_red=4), {}, REAL_FEES),
+    ("X5", "BTCUSD", "Swing 4u, doel 3R", [], dict(SW, tf_minutes=240, target="r", target_r=3.0), {}, REAL_FEES),
+    ("X6", "XAUUSD", "Swing 4u, doel 1,5R", [], dict(SW, tf_minutes=240, target="r", target_r=1.5), {}, REAL_FEES),
+    ("X7", "XAUUSD", "Swing 4u + EMA-confluence", [], dict(SW, tf_minutes=240, ema_confluence=True), {}, REAL_FEES),
+    ("X8", "XAUUSD", "Swing 1u, doel 2R + EMA-confluence", [], dict(SW, target="r", target_r=2.0, ema_confluence=True), {}, REAL_FEES),
+    ("F1", "BTCUSD", "SB1 met oude kosten", [], dict(SW), {}, OLD_FEES),
+    ("F2", "BTCUSD", "SB2 met oude kosten", [], dict(SW, target="r", target_r=2.0), {}, OLD_FEES),
+    ("F3", "BTCUSD", "SB2, maker 0,065%", [], dict(SW, target="r", target_r=2.0), {}, MID_FEES),
+    ("F4", "BTCUSD", "B1, maker 0,065%", ["london", "newyork"], None, {}, MID_FEES),
+    ("F5", "XAUUSD", "G1, maker 0,065%", ["newyork"], ORB, {}, MID_FEES),
+    ("F6", "XAUUSD", "SG8 met oude kosten", [], dict(SW, tf_minutes=240, target="r", target_r=2.0), {}, OLD_FEES),
+]
+
 
 def variant_cfg(market, sessions, strat, base_changes, fees):
     cfg = copy.deepcopy(BASE)
