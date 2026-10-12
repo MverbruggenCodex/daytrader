@@ -59,6 +59,22 @@ VARIANTS = [
     ("E3", "EURUSD", "ORB 1,5R, Londen + NY", ["london", "newyork"], dict(ORB, target_r=1.5), {}, REAL_FEES),
 ]
 
+# Trade with Pat swing (video CtJN2t3Uc0M): 24/7, no sessions
+SW = {"mode": "swing", "tf_minutes": 60}
+SWING = [
+    ("1", "Swing 1u (Pat)", dict(SW)),
+    ("2", "Swing 1u, doel 2R", dict(SW, target="r", target_r=2.0)),
+    ("3", "Swing 1u, min. 1:1,5", dict(SW, min_rr=1.5)),
+    ("4", "Swing 1u, zonder 'look left'", dict(SW, look_left=False)),
+    ("5", "Swing 1u, zonder engulfing", dict(SW, require_engulf=False)),
+    ("6", "Swing 1u, + EMA-confluence", dict(SW, ema_confluence=True)),
+    ("7", "Swing 4u (Pat)", dict(SW, tf_minutes=240)),
+    ("8", "Swing 4u, doel 2R", dict(SW, tf_minutes=240, target="r", target_r=2.0)),
+]
+for mk, pre in (("BTCUSD", "SB"), ("XAUUSD", "SG"), ("EURUSD", "SE")):
+    for sid, label, strat in SWING:
+        VARIANTS.append((pre + sid, mk, label, [], strat, {}, REAL_FEES))
+
 
 def variant_cfg(market, sessions, strat, base_changes, fees):
     cfg = copy.deepcopy(BASE)

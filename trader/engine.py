@@ -16,12 +16,14 @@ from .broker import Broker
 from .orders import ACTIVE, housekeeping, make_intent
 from .models import Candle, Trade, Zone
 from .sessions import Window, ams_hm, windows_at
+from . import swing as swing_mod
 from .structure import aggregate, atr, pivots, trend
 from .zones import detect_displacement, evaluate_touch, make_zone, zone_is_valid
 
 KEEP_CANDLES = 900
 KEEP_EVENTS = 400
 KEEP_DAYS_MS = 4 * 86_400_000
+KEEP_HTF = 400
 
 
 class Engine:
@@ -48,6 +50,7 @@ class Engine:
         state.setdefault("orders", [])
         state.setdefault("order_seq", 0)
         self._trend_cache: Dict[tuple, str] = {}
+        self._htf_cache: Dict[str, List[Candle]] = {}
 
     # ---- data ----------------------------------------------------------------------
     def ingest(self, market: str, candles: List[Candle]) -> int:
@@ -90,6 +93,8 @@ class Engine:
     def _persist(self) -> None:
         horizon = self.now - KEEP_DAYS_MS
         self.state["trades"] = self.broker.dump()
+        for m, rows in self._htf_cache.items():
+            self.state.setdefault("htf", {})[m] = [r.to_list() for r in rows[-KEEP_HTF:]]
         self.state["zones"] = [z.to_dict() for z in self.zones if z.created_t >= horizon]
         self.state["sessions"] = {k: v for k, v in self.state["sessions"].items() if v.get("open", 0) >= horizon}
         self.state["events"] = self.state["events"][-KEEP_EVENTS:]
@@ -109,6 +114,10 @@ class Engine:
         if not mcfg.get("trade", True):
             return
         self.scfg = self.market_scfg[m]
+        if self.scfg.get("mode") == "swing":
+            self._swing_candle(m, cs, i)
+            self.scfg = self.base_scfg
+            return
         a = atr(cs[max(0, i - self.scfg["atr_period"]):i + 1], self.scfg["atr_period"])
         for w in windows_at(c.t, mcfg, self.cfg["sessions"]):
             self._session_candle(m, cs, i, a, w)
@@ -417,6 +426,96 @@ class Engine:
         self._event(m, c, "Entry", f"{'Long' if long else 'Short'} {m} ({t.id}), ORB-uitbraak", t.reason,
                     f"{'Long' if long else 'Short'} op {self._p(m, entry)} · stop {self._p(m, stop)} · doel {self._p(m, target)} (1:{tr_r})",
                     f"stop {self._p(m, stop)} of sessie-einde")
+
+    # ---- Trade with Pat swing (1h / 4h) -----------------------------------------------
+    def ingest_htf(self, market: str, candles: List[Candle], tf_minutes: int) -> int:
+        """Merge closed higher-timeframe candles (e.g. Liquid 1h) into state['htf']."""
+        tf_ms = tf_minutes * 60_000
+        store = self.state.setdefault("htf", {})
+        cache = {int(r[0]): r for r in store.get(market, [])}
+        before = len(cache)
+        for c in candles:
+            if c.t % tf_ms == 0 and c.t + tf_ms <= self.now:
+                cache[c.t] = c.to_list()
+        store[market] = sorted(cache.values(), key=lambda r: r[0])[-KEEP_HTF:]
+        self._htf_cache.pop(market, None)
+        return len(cache) - before
+
+    def _htf(self, m: str, cs: List[Candle], i: int, tf_ms: int) -> Optional[List[Candle]]:
+        """Higher-timeframe candles up to and including the bucket that closes with cs[i]."""
+        c = cs[i]
+        if (c.t + self.candle_ms) % tf_ms:
+            return None
+        key = c.t + self.candle_ms - tf_ms
+        need = tf_ms // self.candle_ms
+        store = self.state.setdefault("htf", {})
+        rows = self._htf_cache.get(m)
+        if rows is None:
+            rows = [Candle.from_list(r) for r in store.get(m, [])]
+        if not rows or rows[-1].t < key:
+            g = [x for x in cs[max(0, i - need + 1):i + 1] if x.t >= key]
+            if len(g) == need:
+                rows.append(Candle(key, g[0].o, max(x.h for x in g), min(x.l for x in g), g[-1].c, sum(x.v for x in g)))
+        rows = rows[-KEEP_HTF:]
+        self._htf_cache[m] = rows
+        if not rows or rows[-1].t != key:
+            return None
+        return rows
+
+    def _swing_candle(self, m: str, cs: List[Candle], i: int) -> None:
+        p = swing_mod.params(self.scfg)
+        tf_ms = p["tf_minutes"] * 60_000
+        h = self._htf(m, cs, i, tf_ms)
+        if not h:
+            return
+        c = cs[i]
+        setup = swing_mod.find_setup(h, p)
+        if not setup:
+            return
+        used = self.state.setdefault("swing_used", {}).setdefault(m, [])
+        if setup["impulse_t"] in used:
+            return
+        used.append(setup["impulse_t"])
+        del used[:-50]
+        long = setup["side"] == "long"
+        tf = f"{p['tf_minutes'] // 60}u" if p["tf_minutes"] >= 60 else f"{p['tf_minutes']}m"
+        why = []
+        if self.broker.open_trades(m):
+            why.append("er staat al een positie open in deze markt")
+        ok, reason = self.broker.can_open(c.t)
+        if not ok:
+            why.append(reason)
+        bo = self._blackout(m, c.t)
+        if bo:
+            why.append(f"nieuwsfilter: {bo}")
+        risk = abs(setup["entry"] - setup["stop"])
+        if risk / setup["entry"] * 100 < self.scfg.get("min_stop_pct", 0.0):
+            why.append("stop te krap (kosten)")
+        if c.t < self.live_from:
+            return
+        if why:
+            self._event(m, c, "Overgeslagen", f"Swing-setup {m} ({tf}) niet genomen",
+                        f"Pullback met bevestiging, maar: {'; '.join(why)}.", "Geen trade", "")
+            return
+        ts = c.t + self.candle_ms
+        close_at = ts + p["max_hold_hours"] * 3_600_000 if p["max_hold_hours"] else None
+        lvl = f", steun/weerstand links op {self._p(m, setup['level'])}" if setup.get("level") is not None else ""
+        reason = (f"{tf}-trend {'boven' if long else 'onder'} de EMA {p['ema_len']}; pullback van minstens {p['min_red']} "
+                  f"{'rode' if long else 'groene'} candles tot voorbij 50% van de beweging "
+                  f"{self._p(m, setup['swing_low'])} – {self._p(m, setup['swing_high'])}{lvl}; "
+                  f"{'bullish' if long else 'bearish'} engulfing als bevestiging.")
+        checks = {"risk0": risk, "rr": setup["rr"], "level": setup.get("level"), "impulse_t": setup["impulse_t"]}
+        t = self.broker.open(m, setup["side"], setup["entry"], setup["stop"], setup["target"], ts,
+                             setup=f"Swing {tf} (Pat)", strategy="Swing", session_key=f"{m}|swing|{ts}",
+                             close_at=close_at, checks=checks, reason=reason)
+        w = Window(name="swing", label=f"Swing {tf}", day=ams_hm(ts), open=ts, range_end=ts,
+                   entry_until=ts + self.acfg["intent_valid_minutes"] * 60_000,
+                   close=close_at or ts + 30 * 86_400_000)
+        self._new_intent(t, w)
+        self._event(m, c, "Entry", f"{'Long' if long else 'Short'} {m} ({t.id}), swing {tf}", reason,
+                    f"{'Long' if long else 'Short'} op {self._p(m, t.entry)} · stop {self._p(m, t.stop)} · "
+                    f"doel {self._p(m, t.target)} (1:{setup['rr']})",
+                    f"stop {self._p(m, t.stop)} of na {p['max_hold_hours']} uur")
 
     def _new_zone_intent(self, z: Zone, plan: dict, limit: float, w: Window, c: Candle) -> None:
         """Limit-entry mode: the Liquid paper order is prepared as soon as the zone exists."""
