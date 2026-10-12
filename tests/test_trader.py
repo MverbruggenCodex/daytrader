@@ -365,7 +365,7 @@ def test_swing_setup_long_and_mirror():
 
 def test_swing_mode_in_engine_builds_1h_and_opens_trade():
     c = cfg()
-    c["markets"]["BTCUSD"]["strategy"] = {"mode": "swing", "tf_minutes": 60}
+    c["markets"]["BTCUSD"]["strategy"] = [{}, {"mode": "swing", "tf_minutes": 60}]  # S&D + swing together
     bars = _swing_bars()
     five = []
     for b in bars:  # split every 1h bar into 12 five-minute candles following o -> l -> h -> c
@@ -380,5 +380,5 @@ def test_swing_mode_in_engine_builds_1h_and_opens_trade():
     eng.run()
     trades = [t for t in eng.broker.trades if t.market == "BTCUSD"]
     assert len(trades) == 1 and trades[0].side == "long" and trades[0].strategy == "Swing"
-    assert len(st["htf"]["BTCUSD"]) == len(bars)
+    assert len(st["htf"]["BTCUSD@60"]) == len(bars)
     assert any(o["trade_id"] == trades[0].id for o in st["orders"])

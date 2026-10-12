@@ -71,6 +71,12 @@ def cmd_init(a, cfg):
     return 0
 
 
+def swing_timeframes(mcfg: dict) -> list:
+    strat = mcfg.get("strategy")
+    lst = strat if isinstance(strat, list) else [strat or {}]
+    return sorted({int(x.get("tf_minutes", 60)) for x in lst if (x or {}).get("mode") == "swing"})
+
+
 def cmd_fetch_plan(a, cfg):
     state = st_mod.load(a.state)
     now = now_ms()
@@ -85,6 +91,10 @@ def cmd_fetch_plan(a, cfg):
             limit = min(CANDLES_PER_RUN_MAX, max(12, int((now - last) / (cfg["strategy"]["candle_minutes"] * 60_000)) + 6))
         plan.append({"market": key, "symbol": m["symbol"], "interval": f"{cfg['strategy']['candle_minutes']}m",
                      "limit": limit, "inbox_file": f"inbox/{key}.json"})
+        for tf in swing_timeframes(m):
+            have = len(state.get("htf", {}).get(f"{key}@{tf}", []))
+            plan.append({"market": key, "symbol": m["symbol"], "interval": f"{tf // 60}h" if tf >= 60 else f"{tf}m",
+                         "limit": CANDLES_PER_RUN_MAX if have < 120 else 6, "inbox_file": f"inbox/{key}@{tf}.json"})
     print(json.dumps(plan, indent=1))
     return 0
 
@@ -96,6 +106,9 @@ def _collect(a, cfg, engine: Engine, days: float = 0.0) -> dict:
         for key, cs in got.items():
             if key in engine.markets:
                 counts[key] = engine.ingest(key, cs)
+        for (key, tf), cs in data.load_inbox_htf(a.inbox, cfg["markets"]).items():
+            if key in engine.markets:
+                counts[f"{key}@{tf}"] = engine.ingest_htf(key, cs, tf)
     else:
         span = days * 86_400_000 if days else 0
         for key, m in engine.markets.items():
@@ -112,6 +125,11 @@ def _collect(a, cfg, engine: Engine, days: float = 0.0) -> dict:
                     break
                 cursor = chunk[-1].t + 1
             counts[key] = engine.ingest(key, cs)
+            for tf in swing_timeframes(cfg["markets"][key]):
+                if len(engine.state.get("htf", {}).get(f"{key}@{tf}", [])) < 120 or not last:
+                    hcs = data.fetch_hyperliquid(m["symbol"], engine.now - 200 * tf * 60_000, engine.now,
+                                                 interval=f"{tf // 60}h" if tf >= 60 else f"{tf}m")
+                    counts[f"{key}@{tf}"] = engine.ingest_htf(key, hcs, tf)
     return counts
 
 

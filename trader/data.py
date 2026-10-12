@@ -68,6 +68,21 @@ def load_inbox(path: str, markets: dict) -> Dict[str, List[Candle]]:
     return found
 
 
+def load_inbox_htf(path: str, markets: dict) -> Dict[tuple, List[Candle]]:
+    """Read higher-timeframe files inbox/<MARKET>@<minutes>.json, e.g. BTCUSD@60.json."""
+    found: Dict[tuple, List[Candle]] = {}
+    if not os.path.isdir(path):
+        return found
+    for name in sorted(os.listdir(path)):
+        if "@" not in name or not name.endswith(".json"):
+            continue
+        key, tf = name[:-5].split("@", 1)
+        if key in markets and tf.isdigit():
+            with open(os.path.join(path, name)) as f:
+                found[(key, int(tf))] = parse_candles(json.load(f))
+    return found
+
+
 def clear_inbox(path: str) -> None:
     if not os.path.isdir(path):
         return

@@ -32,7 +32,12 @@ class Engine:
         self.state = state
         self.base_scfg = cfg["strategy"]
         self.scfg = self.base_scfg
-        self.market_scfg = {k: dict(self.base_scfg, **(v.get("strategy") or {})) for k, v in cfg["markets"].items()}
+        # a market can run several strategies: at most one session based (S&D or ORB) plus swing modes
+        self.market_scfgs = {k: [dict(self.base_scfg, **(x or {})) for x in
+                                 (v.get("strategy") if isinstance(v.get("strategy"), list) else [v.get("strategy")])]
+                             for k, v in cfg["markets"].items()}
+        self.market_scfg = {k: next((x for x in v if x.get("mode") != "swing"), v[0])
+                            for k, v in self.market_scfgs.items()}
         self.acfg = cfg["account"]
         self.markets = {k: v for k, v in cfg["markets"].items() if v.get("enabled")}
         self.candle_ms = self.scfg["candle_minutes"] * 60_000
@@ -113,14 +118,14 @@ class Engine:
         mcfg = self.markets[m]
         if not mcfg.get("trade", True):
             return
-        self.scfg = self.market_scfg[m]
-        if self.scfg.get("mode") == "swing":
-            self._swing_candle(m, cs, i)
-            self.scfg = self.base_scfg
-            return
-        a = atr(cs[max(0, i - self.scfg["atr_period"]):i + 1], self.scfg["atr_period"])
-        for w in windows_at(c.t, mcfg, self.cfg["sessions"]):
-            self._session_candle(m, cs, i, a, w)
+        for sc in self.market_scfgs[m]:
+            self.scfg = sc
+            if sc.get("mode") == "swing":
+                self._swing_candle(m, cs, i)
+                continue
+            a = atr(cs[max(0, i - sc["atr_period"]):i + 1], sc["atr_period"])
+            for w in windows_at(c.t, mcfg, self.cfg["sessions"]):
+                self._session_candle(m, cs, i, a, w)
         self.scfg = self.base_scfg
 
     def _session_candle(self, m: str, cs: List[Candle], i: int, a: float, w: Window) -> None:
@@ -431,14 +436,15 @@ class Engine:
     def ingest_htf(self, market: str, candles: List[Candle], tf_minutes: int) -> int:
         """Merge closed higher-timeframe candles (e.g. Liquid 1h) into state['htf']."""
         tf_ms = tf_minutes * 60_000
+        key = f"{market}@{tf_minutes}"
         store = self.state.setdefault("htf", {})
-        cache = {int(r[0]): r for r in store.get(market, [])}
+        cache = {int(r[0]): r for r in store.get(key, [])}
         before = len(cache)
         for c in candles:
             if c.t % tf_ms == 0 and c.t + tf_ms <= self.now:
                 cache[c.t] = c.to_list()
-        store[market] = sorted(cache.values(), key=lambda r: r[0])[-KEEP_HTF:]
-        self._htf_cache.pop(market, None)
+        store[key] = sorted(cache.values(), key=lambda r: r[0])[-KEEP_HTF:]
+        self._htf_cache.pop(key, None)
         return len(cache) - before
 
     def _htf(self, m: str, cs: List[Candle], i: int, tf_ms: int) -> Optional[List[Candle]]:
@@ -448,16 +454,17 @@ class Engine:
             return None
         key = c.t + self.candle_ms - tf_ms
         need = tf_ms // self.candle_ms
+        skey = f"{m}@{tf_ms // 60_000}"
         store = self.state.setdefault("htf", {})
-        rows = self._htf_cache.get(m)
+        rows = self._htf_cache.get(skey)
         if rows is None:
-            rows = [Candle.from_list(r) for r in store.get(m, [])]
+            rows = [Candle.from_list(r) for r in store.get(skey, [])]
         if not rows or rows[-1].t < key:
             g = [x for x in cs[max(0, i - need + 1):i + 1] if x.t >= key]
             if len(g) == need:
                 rows.append(Candle(key, g[0].o, max(x.h for x in g), min(x.l for x in g), g[-1].c, sum(x.v for x in g)))
         rows = rows[-KEEP_HTF:]
-        self._htf_cache[m] = rows
+        self._htf_cache[skey] = rows
         if not rows or rows[-1].t != key:
             return None
         return rows
@@ -472,7 +479,7 @@ class Engine:
         setup = swing_mod.find_setup(h, p)
         if not setup:
             return
-        used = self.state.setdefault("swing_used", {}).setdefault(m, [])
+        used = self.state.setdefault("swing_used", {}).setdefault(f"{m}@{p['tf_minutes']}", [])
         if setup["impulse_t"] in used:
             return
         used.append(setup["impulse_t"])

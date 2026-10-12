@@ -25,8 +25,8 @@
   let candles = [];
   let active = 'BTCUSD';
   const NOTES = {
-    BTCUSD: 'Bitcoin, laatste 24 uur in candles van 5 minuten. Met de sessies van Londen en New York, de openingsranges, de zones die de bot tekende en de trades.',
-    XAUUSD: 'Goud, laatste 24 uur in candles van 5 minuten. De bot handelt de uitbraak uit de openingsrange van New York (15:30–15:45); de range en de trades staan in de grafiek.',
+    BTCUSD: 'Bitcoin, laatste 24 uur in candles van 5 minuten. De bot handelt de sessies van Tokio, Londen en New York (openingsranges en zones in de grafiek) en daarnaast dag en nacht swing-setups op de uurgrafiek.',
+    XAUUSD: 'Goud, laatste 24 uur in candles van 5 minuten. De bot handelt de uitbraak uit de openingsrange van Tokio, Londen en New York, en swing-setups op de 4-uursgrafiek.',
   };
   let lastPrices = {};
 

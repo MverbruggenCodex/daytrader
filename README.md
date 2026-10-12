@@ -32,7 +32,7 @@ Minimaal **1:2** risk/reward, anders geen trade.
 - de diepste zone is de sterkste: ligt er binnen 2 ATR een diepere verse zone, dan wordt de hogere overgeslagen;
 - discount en level stack worden per trade vastgelegd.
 
-**Risico:** 3% van de paper-equity per trade, max 3 open trades, max 1 trade per markt per sessie, stoppen bij −6% op een dag.
+**Risico:** 1% van de paper-equity per trade, max 3 open trades, max 1 positie per markt, stoppen bij −6% op een dag.
 Onderpand per order max 25% van de equity en de hefboom max per markt (BTC/EUR 20x, goud/S&P 10x); bij een heel krappe
 stop kan het risico daardoor lager uitvallen dan 3%. Minimaal $10 onderpand (Liquid). Fees 0,045% per kant.
 Nieuwsfilter via `blackout`.
@@ -43,13 +43,17 @@ entry-venster geannuleerd; bij sessie-einde wordt voorgesteld de positie te slui
 
 ## Markten
 
-| Markt | Symbool Liquid | Sessies |
+| Markt | Symbool Liquid | Strategie |
 |---|---|---|
-| BTCUSD | `BTC` | Londen, New York (ook weekend) |
-| EURUSD | `xyz:EUR` | Londen, New York |
-| XAUUSD | `xyz:GOLD` | Londen, New York |
-| SP500 | `xyz:SP500` | New York (vervangt DJ30) |
+| BTCUSD | `BTC` | ORB + S&D in Tokio, Londen, New York (2 per sessie, ook weekend) + swing 1u 24/7 |
+| XAUUSD | `xyz:GOLD` | ORB-uitbraak in Tokio, Londen, New York + swing 4u |
+| EURUSD | `xyz:EUR` | alleen volgen |
+| SP500 | `xyz:SP500` | alleen volgen (vervangt DJ30) |
 | USDCAD, DJ30 | — | niet beschikbaar op Liquid |
+
+**Swing (Trade with Pat):** op 1u/4u-candles, boven de EMA 50 alleen longs (eronder shorts), een pullback van minstens
+3 tegencandles voorbij 50% van de laatste beweging, op een oud niveau ("look left"), en een engulfing-candle als
+bevestiging. Stop onder de pullback. Code in `trader/swing.py`. Backtest: `backtests/2026-10-12.md`.
 
 ## Gebruik
 

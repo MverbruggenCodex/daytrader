@@ -32,7 +32,7 @@ def build(engine: Engine) -> Dict[str, list]:
         "liquid_equity": lq.get("equity"), "liquid_paper_mode": lq.get("paper_mode"),
         "liquid_synced_at": iso(lq["updated_t"]) if lq.get("updated_t") else None,
         "started_at": iso(st["started_t"]) if st.get("started_t") else None, "updated": iso(now),
-        "strategy": "ORB + Trade with Pat supply & demand",
+        "strategy": "ORB + supply & demand + swing (Trade with Pat)",
     }]
 
     ORDER_NL = {"pending": "Wacht op bevestiging", "placed": "Limietorder geplaatst", "filled": "Positie open",

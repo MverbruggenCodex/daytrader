@@ -8,8 +8,8 @@
     "max_open_trades": 3,
     "daily_stop_pct": 6,
     "min_rr": 2,
-    "fee_maker_pct": 0.015,
-    "fee_taker_pct": 0.045,
+    "fee_maker_pct": 0.095,
+    "fee_taker_pct": 0.095,
     "collateral_cap_pct": 25,
     "min_collateral": 10,
     "intent_valid_minutes": 120,
@@ -21,6 +21,7 @@
       "symbol": "BTC",
       "enabled": true,
       "sessions": [
+        "asia",
         "london",
         "newyork"
       ],
@@ -28,7 +29,19 @@
       "decimals": 1,
       "max_leverage": 20,
       "trade": true,
-      "note": "Getest: ORB + supply & demand, slot-entry, doel = beweging (min. 1:2), trend 15m"
+      "note": "Zoveel mogelijk trades (keuze 12-10): ORB + S&D in Tokio, Londen (tot 14:00) en New York (tot 15:00), 2 per sessie, plus Pats swing 1u 24/7 (doel 2R, EMA 50)",
+      "strategy": [
+        {
+          "max_trades_per_session": 2
+        },
+        {
+          "mode": "swing",
+          "tf_minutes": 60,
+          "target": "r",
+          "target_r": 2.0,
+          "ema_confluence": true
+        }
+      ]
     },
     "EURUSD": {
       "symbol": "xyz:EUR",
@@ -47,21 +60,30 @@
       "symbol": "xyz:GOLD",
       "enabled": true,
       "sessions": [
+        "asia",
+        "london",
         "newyork"
       ],
       "trade_weekends": false,
       "decimals": 1,
       "max_leverage": 10,
       "trade": true,
-      "note": "Getest: ORB-uitbraak New York (range 15:30\u201315:45), entry op de retest, stop aan de overkant van de range, doel 1R, trend 60m",
-      "strategy": {
-        "mode": "orb",
-        "orb_entry": "retest",
-        "orb_stop": "opposite",
-        "target_r": 1.0,
-        "require_trend": true,
-        "trend_minutes": 60
-      }
+      "note": "Zoveel mogelijk trades (keuze 12-10): ORB-uitbraak in Tokio, Londen en New York (retest, stop overkant, 1R, trend 60m), plus Pats swing 4u (EMA 50)",
+      "strategy": [
+        {
+          "mode": "orb",
+          "orb_entry": "retest",
+          "orb_stop": "opposite",
+          "target_r": 1.0,
+          "require_trend": true,
+          "trend_minutes": 60
+        },
+        {
+          "mode": "swing",
+          "tf_minutes": 240,
+          "ema_confluence": true
+        }
+      ]
     },
     "SP500": {
       "symbol": "xyz:SP500",
@@ -98,7 +120,7 @@
       "tz": "Europe/London",
       "open": "08:00",
       "range_minutes": 15,
-      "entry_until": "11:00",
+      "entry_until": "14:00",
       "close": "16:00"
     },
     "newyork": {
@@ -106,7 +128,7 @@
       "tz": "America/New_York",
       "open": "09:30",
       "range_minutes": 15,
-      "entry_until": "12:00",
+      "entry_until": "15:00",
       "close": "16:00"
     },
     "london_asia": {
@@ -116,6 +138,14 @@
       "range_minutes": 480,
       "entry_until": "11:00",
       "close": "16:00"
+    },
+    "asia": {
+      "label": "Tokio",
+      "tz": "Asia/Tokyo",
+      "open": "09:00",
+      "range_minutes": 15,
+      "entry_until": "12:00",
+      "close": "15:00"
     }
   },
   "strategy": {

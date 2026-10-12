@@ -67,47 +67,45 @@
     <div class="table-wrap"><table id="trades"><thead><tr>
       <th>#</th><th>Markt</th><th>Richting</th><th>Geopend</th><th class="n">Entry</th><th class="n">Stop</th><th class="n">Doel</th><th class="n">R:R</th><th class="n">Resultaat</th><th>Liquid</th>
     </tr></thead><tbody></tbody></table></div>
-    <p class="empty" id="trades-empty" hidden>Nog geen trades. De bot handelt BTC in de eerste uren na de opening van Londen (09:00) en New York (15:30), en goud na de opening van New York.</p>
+    <p class="empty" id="trades-empty" hidden>Nog geen trades. De bot handelt BTC en goud na de opening van Tokio (02:00), Londen (09:00) en New York (15:30), en zoekt daarnaast dag en nacht swing-setups.</p>
   </section>
 
   <section class="method" aria-labelledby="method-title">
     <h2 id="method-title">Hoe de bot handelt</h2>
-    <p class="lead">Elke markt heeft de strategie die in een backtest van een jaar als beste uit de bus kwam en in beide halfjaren winst maakte. 1% risico per trade, en elke order wordt pas geplaatst nadat jij hem bevestigt.</p>
+    <p class="lead">Sinds 12 oktober handelt de bot zo vaak mogelijk: meer sessies, langer instappen en de swing-strategie van Trade with Pat erbij. 1% risico per trade, nooit meer dan één positie per markt, en elke order wordt pas geplaatst nadat jij hem bevestigt.</p>
     <div class="strats">
       <article class="strat">
         <h3>Bitcoin</h3>
-        <p class="strat-sub">Openingsrange + supply &amp; demand</p>
+        <p class="strat-sub">Openingsrange + supply &amp; demand, plus swing op 1 uur</p>
         <ul>
-          <li>Het eerste kwartier van Londen en New York is de openingsrange.</li>
-          <li>Een zone telt pas na een sterke beweging met een fair value gap en een break of structure, door de range heen en mee met de trend.</li>
-          <li>Instappen als de koers terugkomt in een verse zone en er weer buiten sluit.</li>
-          <li>Stop net voorbij de zone, doel de top of bodem van de beweging, minimaal 1:2.</li>
+          <li>Sessies Tokio (02:00), Londen (09:00, instappen tot 15:00) en New York (15:30, tot 21:00), maximaal 2 trades per sessie.</li>
+          <li>Zone na een sterke beweging met fair value gap en break of structure, mee met de trend; instappen als de koers terugkomt en er weer buiten sluit.</li>
+          <li>Swing, dag en nacht: boven de EMA 50 een pullback van 3+ rode candles tot voorbij 50%, op een oud niveau en de EMA, dan een bullish engulfing. Doel 2R.</li>
         </ul>
         <dl class="bt">
-          <div><dt>Trades per jaar</dt><dd>29</dd></div>
-          <div><dt>Gewonnen</dt><dd>41%</dd></div>
-          <div><dt>Gemiddeld per trade</dt><dd>+0,29R</dd></div>
-          <div><dt>Kans op winstgevend jaar</dt><dd>76%</dd></div>
+          <div><dt>Trades per jaar</dt><dd>±125</dd></div>
+          <div><dt>Sessies, per trade</dt><dd>−1,1R</dd></div>
+          <div><dt>Swing, per trade</dt><dd>−0,05R</dd></div>
+          <div><dt>Kosten per rondje</dt><dd>0,19%</dd></div>
         </dl>
       </article>
       <article class="strat">
         <h3>Goud</h3>
-        <p class="strat-sub">Uitbraak uit de openingsrange van New York</p>
+        <p class="strat-sub">Uitbraak uit de openingsrange, plus swing op 4 uur</p>
         <ul>
-          <li>De range is het eerste kwartier na de opening van New York (15:30–15:45).</li>
-          <li>Na een slot buiten de range wacht de bot tot de koers de rand opnieuw raakt en er weer buiten sluit.</li>
-          <li>Stop aan de andere kant van de range, doel even ver als de stop (1R).</li>
-          <li>Alleen mee met de trend op het uurgrafiek.</li>
+          <li>De range is het eerste kwartier na de opening van Tokio, Londen en New York.</li>
+          <li>Na een slot buiten de range wacht de bot op de retest; stop aan de andere kant, doel 1R, alleen mee met de uurtrend.</li>
+          <li>Swing op de 4-uursgrafiek met dezelfde regels als bij Bitcoin, doel de laatste top of bodem.</li>
         </ul>
         <dl class="bt">
-          <div><dt>Trades per jaar</dt><dd>42</dd></div>
-          <div><dt>Gewonnen</dt><dd>64%</dd></div>
-          <div><dt>Gemiddeld per trade</dt><dd>+0,16R</dd></div>
-          <div><dt>Kans op winstgevend jaar</dt><dd>85%</dd></div>
+          <div><dt>Trades per jaar</dt><dd>±125</dd></div>
+          <div><dt>Uitbraak, per trade</dt><dd>−0,67R</dd></div>
+          <div><dt>Swing, per trade</dt><dd>+0,73R</dd></div>
+          <div><dt>Swing-trades per jaar</dt><dd>6</dd></div>
         </dl>
       </article>
     </div>
-    <p class="bt-foot">Kans op een winstgevend jaar uit 1000 Monte Carlo-simulaties. Kleine steekproeven, en voor goud is tokenized gold als vervanger gebruikt: echte resultaten kunnen flink afwijken. <a href="https://github.com/MverbruggenCodex/daytrader/blob/main/backtests/2026-10-11.md">Volledig backtestrapport</a></p>
+    <p class="bt-foot">Backtest van een jaar met de echte kosten van het Liquid paper account (0,095% per kant). Met die kosten verliezen de sessie-strategieën in de backtest; meer trades is een bewuste keuze voor dit experiment met nepgeld. Echte resultaten kunnen flink afwijken. <a href="https://github.com/MverbruggenCodex/daytrader/blob/main/backtests/2026-10-12.md">Backtestrapport 12 oktober</a></p>
   </section>
 </main>
 

@@ -14,8 +14,9 @@ Voer één ronde uit van de ORB + supply & demand trader op het **Liquid paper a
 - Zet nooit paper trading uit, reset het paper account niet en verplaats geen geld.
 
 ## Stappen
-1. **Candles.** `python -m trader fetch-plan`. Roep per markt Liquid `show_chart(symbol, interval="5m", limit)` aan en
-   schrijf het resultaat naar het `inbox_file` als `{"candles": [[timestamp, open, high, low, close], ...]}` (getallen).
+1. **Candles.** `python -m trader fetch-plan`. Roep per regel in het plan Liquid `show_chart(symbol, interval, limit)` aan
+   (met de `interval` uit het plan: `5m`, en voor de swing-strategie ook `1h`/`4h`) en schrijf het resultaat naar het
+   `inbox_file` als `{"candles": [[timestamp, open, high, low, close], ...]}` (getallen).
 
 2. **Account.** Liquid `get_portfolio` → schrijf het antwoord als JSON naar `inbox/portfolio.json` →
    `python -m trader liquid-sync --file inbox/portfolio.json`. Exitcode 2 = geen paper modus: geen orders deze ronde.
