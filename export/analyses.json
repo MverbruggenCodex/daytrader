@@ -286,5 +286,41 @@
   "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts, beweging breekt de openingsrange niet. Geen zone.",
   "action": "Geen trade",
   "invalidation": ""
+ },
+ {
+  "id": "E00022",
+  "time": "2026-10-13T07:20:00Z",
+  "market": "BTCUSD",
+  "price": 83746.0,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange Londen staat",
+  "text": "BTCUSD: range van het eerste kwartier 83.612,0 – 83.758,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00023",
+  "time": "2026-10-13T07:20:00Z",
+  "market": "XAUUSD",
+  "price": 4192.7,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange Londen staat",
+  "text": "XAUUSD: range van het eerste kwartier 4.188,7 – 4.194,4. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00024",
+  "time": "2026-10-13T07:40:00Z",
+  "market": "BTCUSD",
+  "price": 84003.0,
+  "bias": "omhoog",
+  "trigger": "Nieuwe zone",
+  "title": "Nieuwe demand-zone na uitbraak Londen",
+  "text": "3 grote candles omhoog (gem. 2.2x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 83.675,0 – 83.745,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
+  "action": "Zone actief, wacht op entry",
+  "invalidation": "slot onder 83.675,0"
  }
 ]
