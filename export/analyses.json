@@ -346,5 +346,53 @@
   "text": "De koers tikte de zone aan en sloot er weer buiten, maar: R:R 1:1.18 onder minimum 1:2; een diepere zone ligt dichtbij (Pat: de laagste demand / hoogste supply is de sterkste).",
   "action": "Geen trade",
   "invalidation": ""
+ },
+ {
+  "id": "E00027",
+  "time": "2026-10-13T08:45:00Z",
+  "market": "BTCUSD",
+  "price": 83760.0,
+  "bias": "onbekend",
+  "trigger": "Entry",
+  "title": "Long BTCUSD (T001)",
+  "text": "De koers tikte de zone aan en sloot er weer buiten. Zone 83.675,0 – 83.745,0. Trend omhoog; FVG ja; BOS ja; discount ja; level stack ja.",
+  "action": "Long op 83.760,0 · stop 83.662,0 · doel 84.133,0 (1:3.81)",
+  "invalidation": "stop 83.662,0 of sessie-einde"
+ },
+ {
+  "id": "E00028",
+  "time": "2026-10-13T08:50:00Z",
+  "market": "BTCUSD",
+  "price": 83662.0,
+  "bias": "onbekend",
+  "trigger": "Exit",
+  "title": "T001 gesloten: stop loss (verlies)",
+  "text": "Long BTCUSD van 83.760,0 gesloten op 83.662,0 via stop loss. Modelresultaat $-252.41 (-2.62R).",
+  "action": "Positie gesloten · $-252.41",
+  "invalidation": ""
+ },
+ {
+  "id": "E00029",
+  "time": "2026-10-13T08:55:00Z",
+  "market": "XAUUSD",
+  "price": 4187.9,
+  "bias": "zijwaarts",
+  "trigger": "Overgeslagen",
+  "title": "ORB-uitbraak Londen niet genomen",
+  "text": "Slot onder de openingsrange, maar: trend is zijwaarts.",
+  "action": "Geen trade",
+  "invalidation": ""
+ },
+ {
+  "id": "E00030",
+  "time": "2026-10-13T09:00:00Z",
+  "market": "BTCUSD",
+  "price": 83535.0,
+  "bias": "omhoog",
+  "trigger": "Overgeslagen",
+  "title": "Displacement zonder setup (omlaag)",
+  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is omhoog. Geen zone.",
+  "action": "Geen trade",
+  "invalidation": ""
  }
 ]
