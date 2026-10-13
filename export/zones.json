@@ -1,12 +1,25 @@
 [
  {
+  "id": "Z0003",
+  "market": "BTCUSD",
+  "session": "london",
+  "side": "Demand",
+  "bottom": 83822.0,
+  "top": 83952.0,
+  "status": "Overgeslagen",
+  "created": "2026-10-13T08:15:00Z",
+  "fvg": true,
+  "bos": true,
+  "note": "R:R 1:1.18 onder minimum 1:2; een diepere zone ligt dichtbij (Pat: de laagste demand / hoogste supply is de sterkste)"
+ },
+ {
   "id": "Z0002",
   "market": "BTCUSD",
   "session": "london",
   "side": "Demand",
   "bottom": 83675.0,
   "top": 83745.0,
-  "status": "Vers",
+  "status": "Aangetikt",
   "created": "2026-10-13T07:40:00Z",
   "fvg": true,
   "bos": true,

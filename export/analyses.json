@@ -322,5 +322,29 @@
   "text": "3 grote candles omhoog (gem. 2.2x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 83.675,0 – 83.745,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
   "action": "Zone actief, wacht op entry",
   "invalidation": "slot onder 83.675,0"
+ },
+ {
+  "id": "E00025",
+  "time": "2026-10-13T08:15:00Z",
+  "market": "BTCUSD",
+  "price": 84123.0,
+  "bias": "omhoog",
+  "trigger": "Nieuwe zone",
+  "title": "Nieuwe demand-zone na uitbraak Londen",
+  "text": "3 grote candles omhoog (gem. 2.01x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 83.822,0 – 83.952,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
+  "action": "Zone actief, wacht op entry",
+  "invalidation": "slot onder 83.822,0"
+ },
+ {
+  "id": "E00026",
+  "time": "2026-10-13T08:20:00Z",
+  "market": "BTCUSD",
+  "price": 83957.0,
+  "bias": "onbekend",
+  "trigger": "Overgeslagen",
+  "title": "Entry-signaal demand-zone niet genomen",
+  "text": "De koers tikte de zone aan en sloot er weer buiten, maar: R:R 1:1.18 onder minimum 1:2; een diepere zone ligt dichtbij (Pat: de laagste demand / hoogste supply is de sterkste).",
+  "action": "Geen trade",
+  "invalidation": ""
  }
 ]
