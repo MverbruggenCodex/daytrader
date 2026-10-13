@@ -2,14 +2,14 @@
  {
   "market": "BTCUSD",
   "status": "Buiten sessie",
-  "price": 83493.0,
-  "day_open": 82552.0,
+  "price": 83190.0,
+  "day_open": 81813.0,
   "day_high": 84133.0,
   "day_low": 81000.0,
-  "bias": "Bullish",
+  "bias": "Neutraal",
   "note": "Zoveel mogelijk trades (keuze 12-10): ORB + S&D in Tokio, Londen (tot 14:00) en New York (tot 15:00), 2 per sessie, plus Pats swing 1u 24/7 (doel 2R, EMA 50)",
   "trading": true,
-  "updated": "2026-10-13T22:40:00Z"
+  "updated": "2026-10-13T23:40:00Z"
  },
  {
   "market": "EURUSD",
@@ -21,31 +21,31 @@
   "bias": "Neutraal",
   "note": "Alleen volgen; strategie verloor in de backtest",
   "trading": false,
-  "updated": "2026-10-13T22:40:00Z"
+  "updated": "2026-10-13T23:30:00Z"
  },
  {
   "market": "XAUUSD",
   "status": "Buiten sessie",
-  "price": 4162.2,
-  "day_open": 4173.6,
+  "price": 4158.1,
+  "day_open": 4174.5,
   "day_high": 4200.4,
   "day_low": 4150.0,
   "bias": "Bearish",
   "note": "Zoveel mogelijk trades (keuze 12-10): ORB-uitbraak in Tokio, Londen en New York (retest, stop overkant, 1R, trend 60m), plus Pats swing 4u (EMA 50)",
   "trading": true,
-  "updated": "2026-10-13T22:40:00Z"
+  "updated": "2026-10-13T23:40:00Z"
  },
  {
   "market": "SP500",
   "status": "Buiten sessie",
-  "price": 7807.8,
-  "day_open": 7809.0,
+  "price": 7802.2,
+  "day_open": 7799.4,
   "day_high": 7811.4,
   "day_low": 7779.9,
-  "bias": "Bearish",
+  "bias": "Neutraal",
   "note": "Alleen volgen; vervangt de DJ30",
   "trading": false,
-  "updated": "2026-10-13T22:40:00Z"
+  "updated": "2026-10-13T23:40:00Z"
  },
  {
   "market": "USDCAD",
@@ -57,7 +57,7 @@
   "bias": "—",
   "note": "Niet beschikbaar op Liquid/Hyperliquid",
   "trading": false,
-  "updated": "2026-10-13T22:44:51Z"
+  "updated": "2026-10-13T23:44:00Z"
  },
  {
   "market": "DJ30",
@@ -69,6 +69,6 @@
   "bias": "—",
   "note": "Niet beschikbaar op Liquid/Hyperliquid; SP500 vervangt hem",
   "trading": false,
-  "updated": "2026-10-13T22:44:51Z"
+  "updated": "2026-10-13T23:44:00Z"
  }
 ]
