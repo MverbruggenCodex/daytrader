@@ -262,5 +262,29 @@
   "text": "XAUUSD: range van het eerste kwartier 4.162,5 – 4.171,6. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
   "action": "Geen trade; zones zoeken",
   "invalidation": ""
+ },
+ {
+  "id": "E00020",
+  "time": "2026-10-13T00:55:00Z",
+  "market": "XAUUSD",
+  "price": 4158.2,
+  "bias": "zijwaarts",
+  "trigger": "Overgeslagen",
+  "title": "ORB-uitbraak Tokio niet genomen",
+  "text": "Slot onder de openingsrange, maar: trend is zijwaarts.",
+  "action": "Geen trade",
+  "invalidation": ""
+ },
+ {
+  "id": "E00021",
+  "time": "2026-10-13T01:10:00Z",
+  "market": "BTCUSD",
+  "price": 81695.0,
+  "bias": "zijwaarts",
+  "trigger": "Overgeslagen",
+  "title": "Displacement zonder setup (omhoog)",
+  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts, beweging breekt de openingsrange niet. Geen zone.",
+  "action": "Geen trade",
+  "invalidation": ""
  }
 ]
