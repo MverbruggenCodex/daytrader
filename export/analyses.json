@@ -550,5 +550,29 @@
   "text": "Sterke beweging met FVG en break of structure, maar beweging breekt de openingsrange niet. Geen zone.",
   "action": "Geen trade",
   "invalidation": ""
+ },
+ {
+  "id": "E00044",
+  "time": "2026-10-14T12:44:26Z",
+  "market": "XAUUSD",
+  "price": 4140.8,
+  "bias": "—",
+  "trigger": "Nieuws",
+  "title": "Hete CPI VS: goud, BTC en indices omlaag",
+  "text": "CPI-cijfer (14:30) viel hoger uit; yields omhoog. Goud -1,6% naar 4.090, BTC -1,4% naar 82.700, S&P500 -0,7%, EURUSD -0,5%. Valt binnen de blackout 14:15–15:00.",
+  "action": "",
+  "invalidation": ""
+ },
+ {
+  "id": "E00045",
+  "time": "2026-10-14T12:10:00Z",
+  "market": "BTCUSD",
+  "price": 83698.0,
+  "bias": "zijwaarts",
+  "trigger": "Overgeslagen",
+  "title": "Displacement zonder setup (omhoog)",
+  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts. Geen zone.",
+  "action": "Geen trade",
+  "invalidation": ""
  }
 ]
