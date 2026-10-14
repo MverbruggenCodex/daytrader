@@ -12,10 +12,10 @@
   "leverage": 10,
   "risk_usd": 96.23,
   "rr": 1.0,
-  "status": "Limietorder geplaatst",
+  "status": "Geannuleerd",
   "created": "2026-10-14T15:05:00Z",
   "expires": "2026-10-14T17:05:00Z",
-  "note": ""
+  "note": "niet meer open op Liquid, geen fill"
  },
  {
   "id": "O001",
