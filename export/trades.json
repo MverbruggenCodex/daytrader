@@ -21,5 +21,28 @@
   "exit_reason": "stop loss",
   "fees_usd": 156.1782,
   "liquid": "Verlopen"
+ },
+ {
+  "id": "T002",
+  "market": "XAUUSD",
+  "side": "Short",
+  "status": "Open",
+  "opened_at": "2026-10-14T15:05:00Z",
+  "entry": 4092.7,
+  "stop": 4110.2,
+  "target": 4075.2,
+  "size": 5.49885714,
+  "risk_usd": 96.23,
+  "rr": 1.0,
+  "exit": null,
+  "closed_at": null,
+  "pnl_usd": null,
+  "r_result": null,
+  "setup": "ORB-uitbraak New York",
+  "reason": "5m-slot onder de openingsrange 4.093,4 – 4.110,2.",
+  "strategy": "ORB-uitbraak",
+  "exit_reason": null,
+  "fees_usd": 21.3799,
+  "liquid": "Wacht op bevestiging"
  }
 ]
