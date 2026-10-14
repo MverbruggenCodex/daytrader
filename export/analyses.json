@@ -466,5 +466,41 @@
   "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts. Geen zone.",
   "action": "Geen trade",
   "invalidation": ""
+ },
+ {
+  "id": "E00037",
+  "time": "2026-10-14T07:20:00Z",
+  "market": "BTCUSD",
+  "price": 83459.0,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange Londen staat",
+  "text": "BTCUSD: range van het eerste kwartier 83.281,0 – 83.596,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00038",
+  "time": "2026-10-14T07:20:00Z",
+  "market": "XAUUSD",
+  "price": 4146.7,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange Londen staat",
+  "text": "XAUUSD: range van het eerste kwartier 4.147,6 – 4.152,4. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00039",
+  "time": "2026-10-14T07:25:00Z",
+  "market": "XAUUSD",
+  "price": 4146.7,
+  "bias": "zijwaarts",
+  "trigger": "Overgeslagen",
+  "title": "ORB-uitbraak Londen niet genomen",
+  "text": "Slot onder de openingsrange, maar: trend is zijwaarts.",
+  "action": "Geen trade",
+  "invalidation": ""
  }
 ]
