@@ -12,7 +12,7 @@
   "leverage": 10,
   "risk_usd": 51.07,
   "rr": 1.0,
-  "status": "Wacht op bevestiging",
+  "status": "Limietorder geplaatst",
   "created": "2026-10-15T07:30:00Z",
   "expires": "2026-10-15T09:30:00Z",
   "note": ""

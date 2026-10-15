@@ -30173,15 +30173,16 @@
    "created_t": 1792049400000,
    "expires_t": 1792056600000,
    "close_at": 1792076400000,
-   "status": "pending",
-   "liquid_order_id": null,
+   "status": "placed",
+   "liquid_order_id": "122826",
    "idempotency_key": "daytrader-T003-1792049400000",
    "note": "",
    "reason": "5m-slot boven de openingsrange 4.136,3 – 4.144,8.",
    "notional": 24056.85,
    "leverage": 10,
    "collateral": 2405.68,
-   "risk_usd": 51.07
+   "risk_usd": 51.07,
+   "updated_t": 1792051137315
   }
  ],
  "order_seq": 3,
