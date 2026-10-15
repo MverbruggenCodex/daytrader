@@ -730,5 +730,17 @@
   "text": "5m-slot boven de openingsrange 4.136,3 – 4.144,8.",
   "action": "Long op 4.145,1 · stop 4.136,3 · doel 4.153,9 (1:1.0)",
   "invalidation": "stop 4.136,3 of sessie-einde"
+ },
+ {
+  "id": "E00059",
+  "time": "2026-10-15T08:15:00Z",
+  "market": "XAUUSD",
+  "price": 4153.900000000001,
+  "bias": "onbekend",
+  "trigger": "Exit",
+  "title": "T003 gesloten: take profit (winst)",
+  "text": "Long XAUUSD van 4.145,1 gesloten op 4.153,9 via take profit. Modelresultaat $10.02 (+0.10R).",
+  "action": "Positie gesloten · $10.02",
+  "invalidation": ""
  }
 ]
