@@ -12,10 +12,10 @@
   "leverage": 10,
   "risk_usd": 51.07,
   "rr": 1.0,
-  "status": "Limietorder geplaatst",
+  "status": "Geannuleerd",
   "created": "2026-10-15T07:30:00Z",
   "expires": "2026-10-15T09:30:00Z",
-  "note": ""
+  "note": "limietorder niet gevuld voor het einde van het entry-venster"
  },
  {
   "id": "O002",
