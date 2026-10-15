@@ -742,5 +742,17 @@
   "text": "Long XAUUSD van 4.145,1 gesloten op 4.153,9 via take profit. Modelresultaat $10.02 (+0.10R).",
   "action": "Positie gesloten · $10.02",
   "invalidation": ""
+ },
+ {
+  "id": "E00060",
+  "time": "2026-10-15T13:00:00Z",
+  "market": "BTCUSD",
+  "price": 80520.0,
+  "bias": "omlaag",
+  "trigger": "Nieuwe zone",
+  "title": "Nieuwe supply-zone na uitbraak Londen",
+  "text": "4 grote candles omlaag (gem. 3.31x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 80.704,0 – 81.054,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
+  "action": "Zone actief, wacht op entry",
+  "invalidation": "slot boven 81.054,0"
  }
 ]
