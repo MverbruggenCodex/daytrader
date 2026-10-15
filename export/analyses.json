@@ -814,5 +814,17 @@
   "text": "3 grote candles omhoog (gem. 1.91x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 82.000,0 – 82.183,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
   "action": "Zone actief, wacht op entry",
   "invalidation": "slot onder 82.000,0"
+ },
+ {
+  "id": "E00066",
+  "time": "2026-10-15T18:35:00Z",
+  "market": "BTCUSD",
+  "price": 82232.0,
+  "bias": "onbekend",
+  "trigger": "Overgeslagen",
+  "title": "Entry-signaal demand-zone niet genomen",
+  "text": "De koers tikte de zone aan en sloot er weer buiten, maar: R:R 1:1.57 onder minimum 1:2.",
+  "action": "Geen trade",
+  "invalidation": ""
  }
 ]

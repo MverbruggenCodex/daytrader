@@ -6,11 +6,11 @@
   "side": "Demand",
   "bottom": 82000.0,
   "top": 82183.0,
-  "status": "Vers",
+  "status": "Overgeslagen",
   "created": "2026-10-15T17:20:00Z",
   "fvg": true,
   "bos": true,
-  "note": ""
+  "note": "R:R 1:1.57 onder minimum 1:2"
  },
  {
   "id": "Z0004",
