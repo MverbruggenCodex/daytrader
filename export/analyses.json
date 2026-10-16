@@ -1030,5 +1030,29 @@
   "text": "Long XAUUSD van 4.185,7 gesloten op 4.160,9 via stop loss. Modelresultaat $-125.77 (-1.32R).",
   "action": "Positie gesloten · $-125.77",
   "invalidation": ""
+ },
+ {
+  "id": "E00084",
+  "time": "2026-10-16T17:20:00Z",
+  "market": "BTCUSD",
+  "price": 80794.0,
+  "bias": "omlaag",
+  "trigger": "Nieuwe zone",
+  "title": "Nieuwe supply-zone na uitbraak New York",
+  "text": "5 grote candles omlaag (gem. 1.83x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 81.326,0 – 81.414,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
+  "action": "Zone actief, wacht op entry",
+  "invalidation": "slot boven 81.414,0"
+ },
+ {
+  "id": "E00085",
+  "time": "2026-10-16T17:35:00Z",
+  "market": "BTCUSD",
+  "price": 81400.0,
+  "bias": "onbekend",
+  "trigger": "Overgeslagen",
+  "title": "Supply-zone: vallend mes",
+  "text": "De koers dook met een grote candle de zone in. Pat: geen vallend mes vangen, dus deze zone vervalt.",
+  "action": "Geen trade",
+  "invalidation": ""
  }
 ]
