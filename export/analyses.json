@@ -958,5 +958,53 @@
   "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts. Geen zone.",
   "action": "Geen trade",
   "invalidation": ""
+ },
+ {
+  "id": "E00078",
+  "time": "2026-10-16T13:50:00Z",
+  "market": "BTCUSD",
+  "price": 81854.0,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange New York staat",
+  "text": "BTCUSD: range van het eerste kwartier 81.740,0 – 82.050,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00079",
+  "time": "2026-10-16T13:50:00Z",
+  "market": "XAUUSD",
+  "price": 4180.8,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange New York staat",
+  "text": "XAUUSD: range van het eerste kwartier 4.160,9 – 4.180,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00080",
+  "time": "2026-10-16T13:55:00Z",
+  "market": "XAUUSD",
+  "price": 4185.7,
+  "bias": "omhoog",
+  "trigger": "Entry",
+  "title": "Long XAUUSD (T006), ORB-uitbraak",
+  "text": "5m-slot boven de openingsrange 4.160,9 – 4.180,0.",
+  "action": "Long op 4.185,7 · stop 4.160,9 · doel 4.210,5 (1:1.0)",
+  "invalidation": "stop 4.160,9 of sessie-einde"
+ },
+ {
+  "id": "E00081",
+  "time": "2026-10-16T14:25:00Z",
+  "market": "BTCUSD",
+  "price": 82405.0,
+  "bias": "zijwaarts",
+  "trigger": "Overgeslagen",
+  "title": "Displacement zonder setup (omhoog)",
+  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts. Geen zone.",
+  "action": "Geen trade",
+  "invalidation": ""
  }
 ]
