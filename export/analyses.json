@@ -934,5 +934,17 @@
   "text": "Long XAUUSD van 4.188,3 gesloten op 4.178,3 via stop loss. Modelresultaat $-172.72 (-1.79R).",
   "action": "Positie gesloten · $-172.72",
   "invalidation": ""
+ },
+ {
+  "id": "E00076",
+  "time": "2026-10-16T11:20:00Z",
+  "market": "BTCUSD",
+  "price": 82689.0,
+  "bias": "zijwaarts",
+  "trigger": "Overgeslagen",
+  "title": "Displacement zonder setup (omhoog)",
+  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts. Geen zone.",
+  "action": "Geen trade",
+  "invalidation": ""
  }
 ]
