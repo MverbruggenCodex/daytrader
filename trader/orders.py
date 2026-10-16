@@ -96,19 +96,26 @@ def housekeeping(intents: List[dict], now: int, prices: dict) -> List[str]:
     return changes
 
 
+def _base_symbol(sym) -> str:
+    """Liquid reports positions as e.g. 'xyz:GOLD-PERP'; orders use 'xyz:GOLD'."""
+    s = str(sym)
+    return s[:-5] if s.upper().endswith("-PERP") else s
+
+
 def sync_positions(intents: List[dict], positions: List[dict]) -> List[str]:
     """Match Liquid paper positions to placed/filled intents by symbol."""
     held = set()
     for pos in positions or []:
         sym = pos.get("coin") or pos.get("symbol") or pos.get("asset")
         if sym:
-            held.add(str(sym))
+            held.add(_base_symbol(sym))
     changes = []
     for o in intents:
-        if o["status"] == "placed" and o["symbol"] in held:
+        sym = _base_symbol(o["symbol"])
+        if o["status"] == "placed" and sym in held:
             o["status"], o["note"] = "filled", "limietorder gevuld"
             changes.append(f"{o['id']} gevuld")
-        elif o["status"] in ("filled", "close_needed") and o["symbol"] not in held:
+        elif o["status"] in ("filled", "close_needed") and sym not in held:
             o["status"], o["note"] = "closed", "positie niet meer open op Liquid (TP, SL of handmatig)"
             changes.append(f"{o['id']} gesloten")
     return changes

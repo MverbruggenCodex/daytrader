@@ -150,6 +150,9 @@ def test_order_housekeeping_and_sync():
     assert o5["status"] == "filled" and o4["status"] == "close_needed"
     sync_positions([o5, o4], [])
     assert o5["status"] == "closed" and o4["status"] == "closed"
+    gold = dict(base, id="O6", market="XAUUSD", symbol="xyz:GOLD", status="filled")
+    sync_positions([gold], [{"symbol": "xyz:GOLD-PERP", "size": "5.7"}])
+    assert gold["status"] == "filled"
 
 
 # ---- end to end ------------------------------------------------------------------------
