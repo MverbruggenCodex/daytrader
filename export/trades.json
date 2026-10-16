@@ -67,5 +67,28 @@
   "exit_reason": "take profit",
   "fees_usd": 86.2138,
   "liquid": "Geannuleerd"
+ },
+ {
+  "id": "T004",
+  "market": "XAUUSD",
+  "side": "Long",
+  "status": "Gesloten",
+  "opened_at": "2026-10-16T01:10:00Z",
+  "entry": 4158.9,
+  "stop": 4154.2,
+  "target": 4163.6,
+  "size": 20.47446809,
+  "risk_usd": 96.23,
+  "rr": 1.0,
+  "exit": 4154.2,
+  "closed_at": "2026-10-16T01:25:00Z",
+  "pnl_usd": -257.93,
+  "r_result": -2.68,
+  "setup": "ORB-uitbraak Tokio",
+  "reason": "5m-slot boven de openingsrange 4.154,2 – 4.157,8.",
+  "strategy": "ORB-uitbraak",
+  "exit_reason": "stop loss",
+  "fees_usd": 161.696,
+  "liquid": "Verlopen"
  }
 ]

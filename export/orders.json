@@ -1,5 +1,23 @@
 [
  {
+  "id": "O004",
+  "trade_id": "T004",
+  "market": "XAUUSD",
+  "symbol": "xyz:GOLD",
+  "side": "Long",
+  "price": 4158.9,
+  "sl": 4154.2,
+  "tp": 4163.6,
+  "notional": 24056.85,
+  "leverage": 10,
+  "risk_usd": 27.19,
+  "rr": 1.0,
+  "status": "Verlopen",
+  "created": "2026-10-16T01:10:00Z",
+  "expires": "2026-10-16T03:00:00Z",
+  "note": "koers (4150.6) al voorbij stop of doel"
+ },
+ {
   "id": "O003",
   "trade_id": "T003",
   "market": "XAUUSD",
