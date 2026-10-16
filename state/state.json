@@ -30698,25 +30698,50 @@
    "created_t": 1792158900000,
    "expires_t": 1792166100000,
    "close_at": 1792180800000,
-   "status": "pending",
-   "liquid_order_id": null,
+   "status": "filled",
+   "liquid_order_id": "125996",
    "idempotency_key": "daytrader-T006-1792158900000",
-   "note": "",
+   "note": "Direct gevuld op Liquid paper tegen 4.177,2 (limiet 4.185,7), SL 4.160,9, TP 4.210,5",
    "reason": "5m-slot boven de openingsrange 4.160,9 – 4.180,0.",
    "notional": 16084.56,
    "leverage": 7,
    "collateral": 2297.79,
-   "risk_usd": 95.3
+   "risk_usd": 95.3,
+   "updated_t": 1792165586580
   }
  ],
  "order_seq": 6,
  "liquid": {
   "paper_mode": true,
-  "equity": 9529.91,
-  "available": 9529.91,
-  "margin_used": 0.0,
-  "positions": [],
-  "updated_t": 1792165434361
+  "equity": 9514.47,
+  "available": 7221.39,
+  "margin_used": 2293.08,
+  "positions": [
+   {
+    "symbol": "xyz:GOLD-PERP",
+    "side": "long",
+    "size": "3.8427",
+    "entryPx": "4177.2",
+    "markPx": "4177.1",
+    "leverage": "7",
+    "leverageType": "isolated",
+    "unrealizedPnl": "-0.38427",
+    "liquidationPx": "3878.82857143",
+    "marginUsed": "2293.07632929",
+    "returnOnEquity": "-0.00016758",
+    "tp": "4210.5",
+    "sl": "4160.9",
+    "tpTriggerPxs": [
+     "4210.5"
+    ],
+    "slTriggerPxs": [
+     "4160.9"
+    ],
+    "tpCoverage": 1,
+    "slCoverage": 1
+   }
+  ],
+  "updated_t": 1792165594932
  },
  "htf": {
   "BTCUSD@60": [
