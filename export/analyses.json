@@ -1018,5 +1018,17 @@
   "text": "Sterke beweging met FVG en break of structure, maar beweging breekt de openingsrange niet. Geen zone.",
   "action": "Geen trade",
   "invalidation": ""
+ },
+ {
+  "id": "E00083",
+  "time": "2026-10-16T16:40:00Z",
+  "market": "XAUUSD",
+  "price": 4160.9,
+  "bias": "onbekend",
+  "trigger": "Exit",
+  "title": "T006 gesloten: stop loss (verlies)",
+  "text": "Long XAUUSD van 4.185,7 gesloten op 4.160,9 via stop loss. Modelresultaat $-125.77 (-1.32R).",
+  "action": "Positie gesloten · $-125.77",
+  "invalidation": ""
  }
 ]

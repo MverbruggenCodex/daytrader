@@ -12,10 +12,10 @@
   "leverage": 7,
   "risk_usd": 95.3,
   "rr": 1.0,
-  "status": "Positie open",
+  "status": "Gesloten",
   "created": "2026-10-16T13:55:00Z",
   "expires": "2026-10-16T15:55:00Z",
-  "note": "Direct gevuld op Liquid paper tegen 4.177,2 (limiet 4.185,7), SL 4.160,9, TP 4.210,5"
+  "note": "positie niet meer open op Liquid (TP, SL of handmatig)"
  },
  {
   "id": "O005",
