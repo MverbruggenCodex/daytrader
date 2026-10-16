@@ -826,5 +826,29 @@
   "text": "De koers tikte de zone aan en sloot er weer buiten, maar: R:R 1:1.57 onder minimum 1:2.",
   "action": "Geen trade",
   "invalidation": ""
+ },
+ {
+  "id": "E00067",
+  "time": "2026-10-16T00:20:00Z",
+  "market": "BTCUSD",
+  "price": 82351.0,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange Tokio staat",
+  "text": "BTCUSD: range van het eerste kwartier 82.185,0 – 82.359,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00068",
+  "time": "2026-10-16T00:20:00Z",
+  "market": "XAUUSD",
+  "price": 4157.8,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange Tokio staat",
+  "text": "XAUUSD: range van het eerste kwartier 4.154,2 – 4.157,8. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
  }
 ]
