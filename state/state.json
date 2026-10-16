@@ -30557,15 +30557,16 @@
    "created_t": 1792135500000,
    "expires_t": 1792142700000,
    "close_at": 1792162800000,
-   "status": "pending",
-   "liquid_order_id": null,
+   "status": "filled",
+   "liquid_order_id": "125254",
    "idempotency_key": "daytrader-T005-1792135500000",
-   "note": "",
+   "note": "Direct gevuld op 4186.2 (paper)",
    "reason": "5m-slot boven de openingsrange 4.178,3 – 4.187,1.",
    "notional": 24056.85,
    "leverage": 10,
    "collateral": 2405.68,
-   "risk_usd": 57.44
+   "risk_usd": 57.44,
+   "updated_t": 1792137106808
   }
  ],
  "order_seq": 5,

@@ -12,10 +12,10 @@
   "leverage": 10,
   "risk_usd": 57.44,
   "rr": 1.0,
-  "status": "Wacht op bevestiging",
+  "status": "Positie open",
   "created": "2026-10-16T07:25:00Z",
   "expires": "2026-10-16T09:25:00Z",
-  "note": ""
+  "note": "Direct gevuld op 4186.2 (paper)"
  },
  {
   "id": "O004",
