@@ -1162,5 +1162,41 @@
   "text": "4 grote candles omlaag (gem. 1.61x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 81.318,0 – 81.417,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
   "action": "Zone actief, wacht op entry",
   "invalidation": "slot boven 81.417,0"
+ },
+ {
+  "id": "E00095",
+  "time": "2026-10-17T18:05:00Z",
+  "market": "BTCUSD",
+  "price": 81473.0,
+  "bias": "onbekend",
+  "trigger": "Zone vervallen",
+  "title": "Supply-zone vervallen",
+  "text": "Een candle sloot door de supply-zone (81.318,0 – 81.417,0). Volgens Pats regel is een zone dan dood; geen trade.",
+  "action": "Geen trade",
+  "invalidation": ""
+ },
+ {
+  "id": "E00096",
+  "time": "2026-10-17T18:05:00Z",
+  "market": "BTCUSD",
+  "price": 81473.0,
+  "bias": "omlaag",
+  "trigger": "Overgeslagen",
+  "title": "Displacement zonder setup (omhoog)",
+  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is omlaag, beweging breekt de openingsrange niet. Geen zone.",
+  "action": "Geen trade",
+  "invalidation": ""
+ },
+ {
+  "id": "E00097",
+  "time": "2026-10-17T18:30:00Z",
+  "market": "BTCUSD",
+  "price": 81528.0,
+  "bias": "onbekend",
+  "trigger": "Zone vervallen",
+  "title": "Supply-zone vervallen",
+  "text": "Een candle sloot door de supply-zone (81.460,0 – 81.518,0). Volgens Pats regel is een zone dan dood; geen trade.",
+  "action": "Geen trade",
+  "invalidation": ""
  }
 ]

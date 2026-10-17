@@ -6,11 +6,11 @@
   "side": "Supply",
   "bottom": 81318.0,
   "top": 81417.0,
-  "status": "Vers",
+  "status": "Vervallen",
   "created": "2026-10-17T16:25:00Z",
   "fvg": true,
   "bos": true,
-  "note": ""
+  "note": "candle sloot door de zone"
  },
  {
   "id": "Z0008",
@@ -19,11 +19,11 @@
   "side": "Supply",
   "bottom": 81460.0,
   "top": 81518.0,
-  "status": "Vers",
+  "status": "Vervallen",
   "created": "2026-10-17T15:50:00Z",
   "fvg": true,
   "bos": true,
-  "note": ""
+  "note": "candle sloot door de zone"
  },
  {
   "id": "Z0007",
