@@ -13,9 +13,9 @@
   "model_trades": 6,
   "liquid_equity": 8807.36,
   "liquid_paper_mode": true,
-  "liquid_synced_at": "2026-10-17T05:45:13Z",
+  "liquid_synced_at": "2026-10-17T06:44:23Z",
   "started_at": "2026-10-11T08:40:32Z",
-  "updated": "2026-10-17T05:45:57Z",
+  "updated": "2026-10-17T06:44:28Z",
   "strategy": "ORB + supply & demand + swing (Trade with Pat)"
  }
 ]
