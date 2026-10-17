@@ -1198,5 +1198,17 @@
   "text": "Een candle sloot door de supply-zone (81.460,0 – 81.518,0). Volgens Pats regel is een zone dan dood; geen trade.",
   "action": "Geen trade",
   "invalidation": ""
+ },
+ {
+  "id": "E00098",
+  "time": "2026-10-17T21:45:31Z",
+  "market": "BTCUSD",
+  "price": 81591.0,
+  "bias": "—",
+  "trigger": "Nieuws",
+  "title": "Weekend-selloff",
+  "text": "Rond 23:20-23:35 (A'dam) gelijktijdige daling: BTC 81,6k naar 80,8k, goud 4160 naar 4142, SP500 7642 naar 7609; weekendhandel, geen geplande release.",
+  "action": "",
+  "invalidation": ""
  }
 ]
