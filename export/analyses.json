@@ -1054,5 +1054,17 @@
   "text": "De koers dook met een grote candle de zone in. Pat: geen vallend mes vangen, dus deze zone vervalt.",
   "action": "Geen trade",
   "invalidation": ""
+ },
+ {
+  "id": "E00086",
+  "time": "2026-10-17T00:20:00Z",
+  "market": "BTCUSD",
+  "price": 81561.0,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange Tokio staat",
+  "text": "BTCUSD: range van het eerste kwartier 81.545,0 – 81.608,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
  }
 ]
