@@ -1078,5 +1078,17 @@
   "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is omhoog. Geen zone.",
   "action": "Geen trade",
   "invalidation": ""
+ },
+ {
+  "id": "E00088",
+  "time": "2026-10-17T02:30:00Z",
+  "market": "BTCUSD",
+  "price": 81401.0,
+  "bias": "zijwaarts",
+  "trigger": "Overgeslagen",
+  "title": "Displacement zonder setup (omlaag)",
+  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts. Geen zone.",
+  "action": "Geen trade",
+  "invalidation": ""
  }
 ]
