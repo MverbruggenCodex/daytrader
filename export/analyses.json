@@ -1138,5 +1138,29 @@
   "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is omlaag. Geen zone.",
   "action": "Geen trade",
   "invalidation": ""
+ },
+ {
+  "id": "E00093",
+  "time": "2026-10-17T15:50:00Z",
+  "market": "BTCUSD",
+  "price": 81374.0,
+  "bias": "omlaag",
+  "trigger": "Nieuwe zone",
+  "title": "Nieuwe supply-zone na uitbraak New York",
+  "text": "3 grote candles omlaag (gem. 2.27x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 81.460,0 – 81.518,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
+  "action": "Zone actief, wacht op entry",
+  "invalidation": "slot boven 81.518,0"
+ },
+ {
+  "id": "E00094",
+  "time": "2026-10-17T16:25:00Z",
+  "market": "BTCUSD",
+  "price": 81255.0,
+  "bias": "omlaag",
+  "trigger": "Nieuwe zone",
+  "title": "Nieuwe supply-zone na uitbraak New York",
+  "text": "4 grote candles omlaag (gem. 1.61x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 81.318,0 – 81.417,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
+  "action": "Zone actief, wacht op entry",
+  "invalidation": "slot boven 81.417,0"
  }
 ]

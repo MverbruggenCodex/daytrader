@@ -1,5 +1,31 @@
 [
  {
+  "id": "Z0009",
+  "market": "BTCUSD",
+  "session": "newyork",
+  "side": "Supply",
+  "bottom": 81318.0,
+  "top": 81417.0,
+  "status": "Vers",
+  "created": "2026-10-17T16:25:00Z",
+  "fvg": true,
+  "bos": true,
+  "note": ""
+ },
+ {
+  "id": "Z0008",
+  "market": "BTCUSD",
+  "session": "newyork",
+  "side": "Supply",
+  "bottom": 81460.0,
+  "top": 81518.0,
+  "status": "Vers",
+  "created": "2026-10-17T15:50:00Z",
+  "fvg": true,
+  "bos": true,
+  "note": ""
+ },
+ {
   "id": "Z0007",
   "market": "BTCUSD",
   "session": "london",
