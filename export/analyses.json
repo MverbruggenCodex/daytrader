@@ -1210,5 +1210,17 @@
   "text": "Rond 23:20-23:35 (A'dam) gelijktijdige daling: BTC 81,6k naar 80,8k, goud 4160 naar 4142, SP500 7642 naar 7609; weekendhandel, geen geplande release.",
   "action": "",
   "invalidation": ""
+ },
+ {
+  "id": "E00099",
+  "time": "2026-10-17T22:00:00Z",
+  "market": "BTCUSD",
+  "price": 81103.0,
+  "bias": "onbekend",
+  "trigger": "Entry",
+  "title": "Short BTCUSD (T007), swing 1u",
+  "text": "1u-trend onder de EMA 50; pullback van minstens 3 groene candles tot voorbij 50% van de beweging 81.737,0 – 81.148,0, steun/weerstand links op 81.657,0; bearish engulfing als bevestiging.",
+  "action": "Short op 81.103,0 · stop 81.683,4 · doel 79.942,1 (1:2.0)",
+  "invalidation": "stop 81.683,4 of na 120 uur"
  }
 ]

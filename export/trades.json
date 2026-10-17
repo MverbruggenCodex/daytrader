@@ -136,5 +136,28 @@
   "exit_reason": "stop loss",
   "fees_usd": 30.4701,
   "liquid": "Gesloten"
+ },
+ {
+  "id": "T007",
+  "market": "BTCUSD",
+  "side": "Short",
+  "status": "Open",
+  "opened_at": "2026-10-17T22:00:00Z",
+  "entry": 81103.0,
+  "stop": 81683.45,
+  "target": 79942.1,
+  "size": 0.15172711,
+  "risk_usd": 88.07,
+  "rr": 2.0,
+  "exit": null,
+  "closed_at": null,
+  "pnl_usd": null,
+  "r_result": null,
+  "setup": "Swing 1u (Pat)",
+  "reason": "1u-trend onder de EMA 50; pullback van minstens 3 groene candles tot voorbij 50% van de beweging 81.737,0 – 81.148,0, steun/weerstand links op 81.657,0; bearish engulfing als bevestiging.",
+  "strategy": "Swing",
+  "exit_reason": null,
+  "fees_usd": 11.6902,
+  "liquid": "Wacht op bevestiging"
  }
 ]
