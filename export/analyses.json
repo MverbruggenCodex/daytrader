@@ -1234,5 +1234,17 @@
   "text": "BTCUSD: range van het eerste kwartier 81.358,0 – 81.451,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
   "action": "Geen trade; zones zoeken",
   "invalidation": ""
+ },
+ {
+  "id": "E00101",
+  "time": "2026-10-18T01:40:00Z",
+  "market": "BTCUSD",
+  "price": 81683.45,
+  "bias": "onbekend",
+  "trigger": "Exit",
+  "title": "T007 gesloten: stop loss (verlies)",
+  "text": "Short BTCUSD van 81.103,0 gesloten op 81.683,4 via stop loss. Modelresultaat $-111.53 (-1.27R).",
+  "action": "Positie gesloten · $-111.53",
+  "invalidation": ""
  }
 ]
