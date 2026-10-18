@@ -12,10 +12,10 @@
   "leverage": 6,
   "risk_usd": 88.07,
   "rr": 2.0,
-  "status": "Wacht op bevestiging",
+  "status": "Verlopen",
   "created": "2026-10-17T22:00:00Z",
   "expires": "2026-10-18T00:00:00Z",
-  "note": ""
+  "note": "niet op tijd bevestigd"
  },
  {
   "id": "O006",
