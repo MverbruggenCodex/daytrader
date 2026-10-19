@@ -1366,5 +1366,29 @@
   "text": "Short XAUUSD van 4.175,6 gesloten op 4.184,5 via sessie-einde. Modelresultaat $-133.63 (-1.52R).",
   "action": "Positie gesloten · $-133.63",
   "invalidation": ""
+ },
+ {
+  "id": "E00112",
+  "time": "2026-10-19T07:20:00Z",
+  "market": "BTCUSD",
+  "price": 82850.0,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange Londen staat",
+  "text": "BTCUSD: range van het eerste kwartier 82.800,0 – 82.869,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00113",
+  "time": "2026-10-19T07:20:00Z",
+  "market": "XAUUSD",
+  "price": 4187.1,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange Londen staat",
+  "text": "XAUUSD: range van het eerste kwartier 4.182,7 – 4.188,5. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
  }
 ]
