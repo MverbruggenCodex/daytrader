@@ -1,5 +1,18 @@
 [
  {
+  "id": "Z0011",
+  "market": "BTCUSD",
+  "session": "newyork",
+  "side": "Supply",
+  "bottom": 82301.0,
+  "top": 82503.0,
+  "status": "Vers",
+  "created": "2026-10-19T15:40:00Z",
+  "fvg": true,
+  "bos": true,
+  "note": ""
+ },
+ {
   "id": "Z0010",
   "market": "BTCUSD",
   "session": "asia",
@@ -76,18 +89,5 @@
   "fvg": true,
   "bos": true,
   "note": "R:R 1:1.57 onder minimum 1:2"
- },
- {
-  "id": "Z0004",
-  "market": "BTCUSD",
-  "session": "london",
-  "side": "Supply",
-  "bottom": 80704.0,
-  "top": 81054.0,
-  "status": "Vers",
-  "created": "2026-10-15T13:00:00Z",
-  "fvg": true,
-  "bos": true,
-  "note": ""
  }
 ]

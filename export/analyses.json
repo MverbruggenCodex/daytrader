@@ -1462,5 +1462,17 @@
   "text": "Slot onder de openingsrange, maar: trend is zijwaarts.",
   "action": "Geen trade",
   "invalidation": ""
+ },
+ {
+  "id": "E00120",
+  "time": "2026-10-19T15:40:00Z",
+  "market": "BTCUSD",
+  "price": 82093.0,
+  "bias": "omlaag",
+  "trigger": "Nieuwe zone",
+  "title": "Nieuwe supply-zone na uitbraak New York",
+  "text": "3 grote candles omlaag (gem. 2.68x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 82.301,0 – 82.503,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
+  "action": "Zone actief, wacht op entry",
+  "invalidation": "slot boven 82.503,0"
  }
 ]
