@@ -1354,5 +1354,17 @@
   "text": "4 grote candles omhoog (gem. 2.34x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 82.315,0 – 82.372,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
   "action": "Zone actief, wacht op entry",
   "invalidation": "slot onder 82.315,0"
+ },
+ {
+  "id": "E00111",
+  "time": "2026-10-19T06:00:00Z",
+  "market": "XAUUSD",
+  "price": 4184.5,
+  "bias": "onbekend",
+  "trigger": "Exit",
+  "title": "T008 gesloten: sessie-einde (verlies)",
+  "text": "Short XAUUSD van 4.175,6 gesloten op 4.184,5 via sessie-einde. Modelresultaat $-133.63 (-1.52R).",
+  "action": "Positie gesloten · $-133.63",
+  "invalidation": ""
  }
 ]
