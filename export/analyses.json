@@ -1342,5 +1342,17 @@
   "text": "5m-slot onder de openingsrange 4.180,7 – 4.186,7.",
   "action": "Short op 4.175,6 · stop 4.186,7 · doel 4.164,5 (1:1.0)",
   "invalidation": "stop 4.186,7 of sessie-einde"
+ },
+ {
+  "id": "E00110",
+  "time": "2026-10-19T02:50:00Z",
+  "market": "BTCUSD",
+  "price": 82746.0,
+  "bias": "omhoog",
+  "trigger": "Nieuwe zone",
+  "title": "Nieuwe demand-zone na uitbraak Tokio",
+  "text": "4 grote candles omhoog (gem. 2.34x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 82.315,0 – 82.372,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
+  "action": "Zone actief, wacht op entry",
+  "invalidation": "slot onder 82.315,0"
  }
 ]
