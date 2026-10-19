@@ -1474,5 +1474,17 @@
   "text": "3 grote candles omlaag (gem. 2.68x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 82.301,0 – 82.503,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
   "action": "Zone actief, wacht op entry",
   "invalidation": "slot boven 82.503,0"
+ },
+ {
+  "id": "E00121",
+  "time": "2026-10-19T18:30:00Z",
+  "market": "BTCUSD",
+  "price": 81808.0,
+  "bias": "zijwaarts",
+  "trigger": "Overgeslagen",
+  "title": "Displacement zonder setup (omlaag)",
+  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts. Geen zone.",
+  "action": "Geen trade",
+  "invalidation": ""
  }
 ]
