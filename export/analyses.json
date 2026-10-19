@@ -1330,5 +1330,17 @@
   "text": "XAUUSD: range van het eerste kwartier 4.180,7 – 4.186,7. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
   "action": "Geen trade; zones zoeken",
   "invalidation": ""
+ },
+ {
+  "id": "E00109",
+  "time": "2026-10-19T02:20:00Z",
+  "market": "XAUUSD",
+  "price": 4175.6,
+  "bias": "omlaag",
+  "trigger": "Entry",
+  "title": "Short XAUUSD (T008), ORB-uitbraak",
+  "text": "5m-slot onder de openingsrange 4.180,7 – 4.186,7.",
+  "action": "Short op 4.175,6 · stop 4.186,7 · doel 4.164,5 (1:1.0)",
+  "invalidation": "stop 4.186,7 of sessie-einde"
  }
 ]
