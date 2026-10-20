@@ -1618,5 +1618,17 @@
   "text": "De koers tikte de zone aan en sloot er weer buiten, maar: R:R 1:0.28 onder minimum 1:2.",
   "action": "Geen trade",
   "invalidation": ""
+ },
+ {
+  "id": "E00133",
+  "time": "2026-10-20T12:25:00Z",
+  "market": "BTCUSD",
+  "price": 81649.0,
+  "bias": "zijwaarts",
+  "trigger": "Overgeslagen",
+  "title": "Displacement zonder setup (omhoog)",
+  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts, beweging breekt de openingsrange niet. Geen zone.",
+  "action": "Geen trade",
+  "invalidation": ""
  }
 ]
