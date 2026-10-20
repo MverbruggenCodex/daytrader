@@ -1558,5 +1558,17 @@
   "text": "Short XAUUSD van 4.132,2 gesloten op 4.124,8 via take profit. Modelresultaat $-5.29 (-0.06R).",
   "action": "Positie gesloten · $-5.29",
   "invalidation": ""
+ },
+ {
+  "id": "E00128",
+  "time": "2026-10-20T01:55:00Z",
+  "market": "BTCUSD",
+  "price": 81754.0,
+  "bias": "zijwaarts",
+  "trigger": "Overgeslagen",
+  "title": "Displacement zonder setup (omhoog)",
+  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts, beweging breekt de openingsrange niet. Geen zone.",
+  "action": "Geen trade",
+  "invalidation": ""
  }
 ]
