@@ -1522,5 +1522,41 @@
   "text": "XAUUSD: range van het eerste kwartier 4.132,6 – 4.139,6. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
   "action": "Geen trade; zones zoeken",
   "invalidation": ""
+ },
+ {
+  "id": "E00125",
+  "time": "2026-10-20T01:00:00Z",
+  "market": "XAUUSD",
+  "price": 4132.2,
+  "bias": "omlaag",
+  "trigger": "Entry",
+  "title": "Short XAUUSD (T009), ORB-uitbraak",
+  "text": "5m-slot onder de openingsrange 4.132,6 – 4.139,6.",
+  "action": "Short op 4.132,2 · stop 4.139,6 · doel 4.124,8 (1:1.0)",
+  "invalidation": "stop 4.139,6 of sessie-einde"
+ },
+ {
+  "id": "E00126",
+  "time": "2026-10-20T01:15:00Z",
+  "market": "BTCUSD",
+  "price": 81248.0,
+  "bias": "zijwaarts",
+  "trigger": "Overgeslagen",
+  "title": "Displacement zonder setup (omlaag)",
+  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts. Geen zone.",
+  "action": "Geen trade",
+  "invalidation": ""
+ },
+ {
+  "id": "E00127",
+  "time": "2026-10-20T01:15:00Z",
+  "market": "XAUUSD",
+  "price": 4124.799999999999,
+  "bias": "onbekend",
+  "trigger": "Exit",
+  "title": "T009 gesloten: take profit (verlies)",
+  "text": "Short XAUUSD van 4.132,2 gesloten op 4.124,8 via take profit. Modelresultaat $-5.29 (-0.06R).",
+  "action": "Positie gesloten · $-5.29",
+  "invalidation": ""
  }
 ]

@@ -182,5 +182,28 @@
   "exit_reason": "sessie-einde",
   "fees_usd": 63.0145,
   "liquid": "Verlopen"
+ },
+ {
+  "id": "T009",
+  "market": "XAUUSD",
+  "side": "Short",
+  "status": "Gesloten",
+  "opened_at": "2026-10-20T01:00:00Z",
+  "entry": 4132.2,
+  "stop": 4139.6,
+  "target": 4124.8,
+  "size": 11.90135135,
+  "risk_usd": 88.07,
+  "rr": 1.0,
+  "exit": 4124.799999999999,
+  "closed_at": "2026-10-20T01:15:00Z",
+  "pnl_usd": -5.29,
+  "r_result": -0.06,
+  "setup": "ORB-uitbraak Tokio",
+  "reason": "5m-slot onder de openingsrange 4.132,6 – 4.139,6.",
+  "strategy": "ORB-uitbraak",
+  "exit_reason": "take profit",
+  "fees_usd": 93.356,
+  "liquid": "Verlopen"
  }
 ]
