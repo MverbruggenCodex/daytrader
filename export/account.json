@@ -7,15 +7,15 @@
   "max_open_trades": 3,
   "daily_stop_pct": 6,
   "min_rr": 2,
-  "eurusd": 1.1239,
+  "eurusd": 1.124,
   "rent_goal_eur": 1550,
   "model_balance": 8850.19,
   "model_trades": 9,
   "liquid_equity": 8807.36,
   "liquid_paper_mode": true,
-  "liquid_synced_at": "2026-10-20T16:43:19Z",
+  "liquid_synced_at": "2026-10-20T17:43:33Z",
   "started_at": "2026-10-11T08:40:32Z",
-  "updated": "2026-10-20T16:43:20Z",
+  "updated": "2026-10-20T17:43:39Z",
   "strategy": "ORB + supply & demand + swing (Trade with Pat)"
  }
 ]

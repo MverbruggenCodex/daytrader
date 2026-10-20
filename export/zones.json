@@ -76,18 +76,5 @@
   "fvg": true,
   "bos": true,
   "note": ""
- },
- {
-  "id": "Z0006",
-  "market": "BTCUSD",
-  "session": "newyork",
-  "side": "Supply",
-  "bottom": 81326.0,
-  "top": 81414.0,
-  "status": "Overgeslagen",
-  "created": "2026-10-16T17:20:00Z",
-  "fvg": true,
-  "bos": true,
-  "note": "vallend mes"
  }
 ]
