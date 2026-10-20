@@ -1594,5 +1594,17 @@
   "text": "XAUUSD: range van het eerste kwartier 4.130,0 – 4.136,7. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
   "action": "Geen trade; zones zoeken",
   "invalidation": ""
+ },
+ {
+  "id": "E00131",
+  "time": "2026-10-20T09:40:00Z",
+  "market": "BTCUSD",
+  "price": 81361.0,
+  "bias": "omlaag",
+  "trigger": "Nieuwe zone",
+  "title": "Nieuwe supply-zone na uitbraak Londen",
+  "text": "4 grote candles omlaag (gem. 1.75x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 81.389,0 – 81.549,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
+  "action": "Zone actief, wacht op entry",
+  "invalidation": "slot boven 81.549,0"
  }
 ]
