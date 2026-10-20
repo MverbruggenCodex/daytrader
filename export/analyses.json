@@ -1666,5 +1666,17 @@
   "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts. Geen zone.",
   "action": "Geen trade",
   "invalidation": ""
+ },
+ {
+  "id": "E00137",
+  "time": "2026-10-20T15:45:00Z",
+  "market": "XAUUSD",
+  "price": 4134.4,
+  "bias": "omlaag",
+  "trigger": "Overgeslagen",
+  "title": "ORB-uitbraak New York niet genomen",
+  "text": "Slot boven de openingsrange, maar: trend is omlaag.",
+  "action": "Geen trade",
+  "invalidation": ""
  }
 ]
