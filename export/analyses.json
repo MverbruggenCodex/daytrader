@@ -1,41 +1,5 @@
 [
  {
-  "id": "E00002",
-  "time": "2026-10-11T08:40:32Z",
-  "market": "BTCUSD",
-  "price": 83046.0,
-  "bias": "—",
-  "trigger": "Account gewijzigd",
-  "title": "Overgestapt op het Liquid paper account",
-  "text": "De trader gebruikt nu het paper account van Liquid (ca. $10.000 nepgeld) in plaats van het eigen €50-account. Elk signaal van de engine wordt een limietorder met stop loss en take profit op Liquid; Liquid vereist dat elke order in de chat wordt bevestigd. Risico 3% per trade, minimaal 1:2. Het oude €50-account met de BTC-short T001 is gearchiveerd.",
-  "action": "Liquid paper actief",
-  "invalidation": ""
- },
- {
-  "id": "E00003",
-  "time": "2026-10-11T07:20:00Z",
-  "market": "BTCUSD",
-  "price": 83097.0,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange Londen staat",
-  "text": "BTCUSD: range van het eerste kwartier 83.073,0 – 83.185,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
-  "id": "E00004",
-  "time": "2026-10-11T13:50:00Z",
-  "market": "BTCUSD",
-  "price": 83042.0,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange New York staat",
-  "text": "BTCUSD: range van het eerste kwartier 83.037,0 – 83.062,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
   "id": "E00005",
   "time": "2026-10-11T15:45:00Z",
   "market": "BTCUSD",
@@ -1796,6 +1760,42 @@
   "trigger": "Overgeslagen",
   "title": "ORB-uitbraak Londen niet genomen",
   "text": "Slot boven de openingsrange, maar: trend is zijwaarts.",
+  "action": "Geen trade",
+  "invalidation": ""
+ },
+ {
+  "id": "E00152",
+  "time": "2026-10-21T13:50:00Z",
+  "market": "BTCUSD",
+  "price": 83874.0,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange New York staat",
+  "text": "BTCUSD: range van het eerste kwartier 83.265,0 – 83.736,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00153",
+  "time": "2026-10-21T13:50:00Z",
+  "market": "XAUUSD",
+  "price": 4136.3,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange New York staat",
+  "text": "XAUUSD: range van het eerste kwartier 4.134,0 – 4.138,9. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00154",
+  "time": "2026-10-21T14:00:00Z",
+  "market": "XAUUSD",
+  "price": 4131.8,
+  "bias": "zijwaarts",
+  "trigger": "Overgeslagen",
+  "title": "ORB-uitbraak New York niet genomen",
+  "text": "Slot onder de openingsrange, maar: trend is zijwaarts.",
   "action": "Geen trade",
   "invalidation": ""
  }
