@@ -1,29 +1,5 @@
 [
  {
-  "id": "A001",
-  "time": "2026-10-10T16:06:50Z",
-  "market": "BTCUSD",
-  "price": 82972.6,
-  "bias": "Bearish",
-  "trigger": "Start + dagcheck",
-  "title": "Short BTC: herstel loopt vast onder de oude range-bodem",
-  "text": "BTC handelde van 24 sep tot 6 okt in een range van ca. 82.600–87.200. Op 7–8 okt brak de koers daar onderuit tot 80.329. Het herstel daarna stopte gisteren (9 okt) op 83.463: onder de oude range-bodem en de 50-EMA op 4u (ca. 83.600). Vandaag kruipt de koers terug richting 83.000. De koers staat onder de 50-EMA en sinds 87.229 maakt BTC lagere toppen. Nieuws: geen duidelijke aanleiding voor de daling gevonden. Weekend betekent dunne liquiditeit, dus valse uitbraken zijn goed mogelijk.",
-  "action": "Short geopend op 82.972,6 · stop 83.650 · doel 79.850",
-  "invalidation": "4u-slot boven 83.650"
- },
- {
-  "id": "A002",
-  "time": "2026-10-10T16:15:10Z",
-  "market": "BTCUSD",
-  "price": 82952.3,
-  "bias": "Bearish",
-  "trigger": "Statuscheck + correctie",
-  "title": "Correctie: entry stond op een verouderde koers",
-  "text": "De eerste boeking gebruikte een verouderde koers van Kraken (82.394,8, van 9 okt). De echte koers bij openen was ca. 82.972,6. De trade is daarom gecorrigeerd naar die entry, met dezelfde stop en hetzelfde doel en een grootte die past bij €1,50 risico. Daardoor ligt de stop nu krap (ongeveer 1x de gemiddelde 4u-range) en is de risk/reward 1:4,6. De koers test 83.000; de setup blijft geldig zolang er geen 4u-slot boven 83.650 komt.",
-  "action": "Trade open gelaten · entry gecorrigeerd",
-  "invalidation": "4u-slot boven 83.650"
- },
- {
   "id": "A003",
   "time": "2026-10-10T19:39:25Z",
   "market": "BTCUSD",
@@ -1796,6 +1772,30 @@
   "trigger": "Overgeslagen",
   "title": "Displacement zonder setup (omhoog)",
   "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is omlaag. Geen zone.",
+  "action": "Geen trade",
+  "invalidation": ""
+ },
+ {
+  "id": "E00148",
+  "time": "2026-10-21T08:50:00Z",
+  "market": "BTCUSD",
+  "price": 83592.0,
+  "bias": "omlaag",
+  "trigger": "Overgeslagen",
+  "title": "Displacement zonder setup (omhoog)",
+  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is omlaag. Geen zone.",
+  "action": "Geen trade",
+  "invalidation": ""
+ },
+ {
+  "id": "E00149",
+  "time": "2026-10-21T09:15:00Z",
+  "market": "BTCUSD",
+  "price": 83522.0,
+  "bias": "zijwaarts",
+  "trigger": "Overgeslagen",
+  "title": "Displacement zonder setup (omhoog)",
+  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts. Geen zone.",
   "action": "Geen trade",
   "invalidation": ""
  }
