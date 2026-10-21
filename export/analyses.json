@@ -1,29 +1,5 @@
 [
  {
-  "id": "A003",
-  "time": "2026-10-10T19:39:25Z",
-  "market": "BTCUSD",
-  "price": 83046.0,
-  "bias": "Bearish, korte termijn sterker",
-  "trigger": "Statuscheck (Liquid gekoppeld)",
-  "title": "Short staat licht in de min; momentum op korte termijn draait omhoog",
-  "text": "BTC kroop vanavond naar 83.153 en staat nu rond 83.046, net boven de 20-EMA op 4u (83.006). De 50-EMA ligt op 83.649, vrijwel precies op onze stop. Op korte termijn is het momentum positief: MACD-histogram stijgt, stochastic 80 (overkocht). De grotere structuur blijft bearish: koers onder de 50-EMA, OBV daalt. Positionering op Liquid: de winstgevende traders zitten 48% long tegenover 53% bij de verliezende groep, dus smart money leunt iets meer short. Geen reden om in te grijpen; de stop blijft staan.",
-  "action": "Trade open laten · stop 83.650 ongewijzigd",
-  "invalidation": "4u-slot boven 83.650"
- },
- {
-  "id": "E00001",
-  "time": "2026-10-10T20:03:19Z",
-  "market": "BTCUSD",
-  "price": 83046.0,
-  "bias": "zijwaarts",
-  "trigger": "Strategie gewijzigd",
-  "title": "Overgestapt op ORB + Trade with Pat supply & demand",
-  "text": "Vanaf nu handelt het account alleen nog volgens vaste regels: openingsrange van Londen (09:00) en New York (15:30), uitbraak met displacement (grote candles, fair value gap, break of structure) mee met de 15m-trend, entry bij terugval naar een verse zone en een slot weer erbuiten, minimaal 1:2 en dicht voor sessie-einde. De oude BTC-short (T001) loopt door tot stop of doel. USDCAD en DJ30 staan niet op Liquid; de S&P 500 vervangt de DJ30.",
-  "action": "Engine actief",
-  "invalidation": ""
- },
- {
   "id": "E00002",
   "time": "2026-10-11T08:40:32Z",
   "market": "BTCUSD",
@@ -1796,6 +1772,30 @@
   "trigger": "Overgeslagen",
   "title": "Displacement zonder setup (omhoog)",
   "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts. Geen zone.",
+  "action": "Geen trade",
+  "invalidation": ""
+ },
+ {
+  "id": "E00150",
+  "time": "2026-10-21T10:20:00Z",
+  "market": "BTCUSD",
+  "price": 83242.0,
+  "bias": "omhoog",
+  "trigger": "Overgeslagen",
+  "title": "Displacement zonder setup (omlaag)",
+  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is omhoog, beweging breekt de openingsrange niet. Geen zone.",
+  "action": "Geen trade",
+  "invalidation": ""
+ },
+ {
+  "id": "E00151",
+  "time": "2026-10-21T10:25:00Z",
+  "market": "XAUUSD",
+  "price": 4120.3,
+  "bias": "zijwaarts",
+  "trigger": "Overgeslagen",
+  "title": "ORB-uitbraak Londen niet genomen",
+  "text": "Slot boven de openingsrange, maar: trend is zijwaarts.",
   "action": "Geen trade",
   "invalidation": ""
  }
