@@ -1726,5 +1726,41 @@
   "text": "5m-slot boven de openingsrange 4.115,9 – 4.119,7.",
   "action": "Long op 4.120,9 · stop 4.115,9 · doel 4.125,9 (1:1.0)",
   "invalidation": "stop 4.115,9 of sessie-einde"
+ },
+ {
+  "id": "E00142",
+  "time": "2026-10-21T01:05:00Z",
+  "market": "BTCUSD",
+  "price": 82893.0,
+  "bias": "onbekend",
+  "trigger": "Zone vervallen",
+  "title": "Demand-zone vervallen",
+  "text": "Een candle sloot door de demand-zone (82.948,0 – 82.991,0). Volgens Pats regel is een zone dan dood; geen trade.",
+  "action": "Geen trade",
+  "invalidation": ""
+ },
+ {
+  "id": "E00143",
+  "time": "2026-10-21T01:05:00Z",
+  "market": "XAUUSD",
+  "price": 4115.9,
+  "bias": "onbekend",
+  "trigger": "Exit",
+  "title": "T010 gesloten: stop loss (verlies)",
+  "text": "Long XAUUSD van 4.120,9 gesloten op 4.115,9 via stop loss. Modelresultaat $-225.90 (-2.57R).",
+  "action": "Positie gesloten · $-225.90",
+  "invalidation": ""
+ },
+ {
+  "id": "E00144",
+  "time": "2026-10-21T01:10:00Z",
+  "market": "BTCUSD",
+  "price": 82814.0,
+  "bias": "omhoog",
+  "trigger": "Overgeslagen",
+  "title": "Displacement zonder setup (omlaag)",
+  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is omhoog. Geen zone.",
+  "action": "Geen trade",
+  "invalidation": ""
  }
 ]

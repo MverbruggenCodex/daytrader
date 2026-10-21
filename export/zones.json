@@ -6,11 +6,11 @@
   "side": "Demand",
   "bottom": 82948.0,
   "top": 82991.0,
-  "status": "Vers",
+  "status": "Vervallen",
   "created": "2026-10-21T00:20:00Z",
   "fvg": true,
   "bos": true,
-  "note": ""
+  "note": "candle sloot door de zone"
  },
  {
   "id": "Z0012",
