@@ -28,5 +28,15 @@
   "from": "2026-10-20T09:15:00Z",
   "until": "2026-10-20T09:40:00Z",
   "status": "Overgeslagen"
+ },
+ {
+  "id": "Z0013",
+  "market": "BTCUSD",
+  "side": "long",
+  "bottom": 82948.0,
+  "top": 82991.0,
+  "from": "2026-10-21T00:00:00Z",
+  "until": null,
+  "status": "Vers"
  }
 ]
