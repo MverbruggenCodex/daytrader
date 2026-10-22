@@ -1,29 +1,5 @@
 [
  {
-  "id": "E00019",
-  "time": "2026-10-13T00:20:00Z",
-  "market": "XAUUSD",
-  "price": 4166.2,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange Tokio staat",
-  "text": "XAUUSD: range van het eerste kwartier 4.162,5 – 4.171,6. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
-  "id": "E00020",
-  "time": "2026-10-13T00:55:00Z",
-  "market": "XAUUSD",
-  "price": 4158.2,
-  "bias": "zijwaarts",
-  "trigger": "Overgeslagen",
-  "title": "ORB-uitbraak Tokio niet genomen",
-  "text": "Slot onder de openingsrange, maar: trend is zijwaarts.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
   "id": "E00021",
   "time": "2026-10-13T01:10:00Z",
   "market": "BTCUSD",
@@ -1798,5 +1774,29 @@
   "text": "XAUUSD: range van het eerste kwartier 4.064,2 – 4.080,4. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
   "action": "Geen trade; zones zoeken",
   "invalidation": ""
+ },
+ {
+  "id": "E00169",
+  "time": "2026-10-22T14:50:00Z",
+  "market": "XAUUSD",
+  "price": 4062.8,
+  "bias": "omlaag",
+  "trigger": "Entry",
+  "title": "Short XAUUSD (T012), ORB-uitbraak",
+  "text": "5m-slot onder de openingsrange 4.064,2 – 4.080,4.",
+  "action": "Short op 4.062,8 · stop 4.080,4 · doel 4.045,2 (1:1.0)",
+  "invalidation": "stop 4.080,4 of sessie-einde"
+ },
+ {
+  "id": "E00170",
+  "time": "2026-10-22T15:15:00Z",
+  "market": "BTCUSD",
+  "price": 81435.0,
+  "bias": "omlaag",
+  "trigger": "Nieuwe zone",
+  "title": "Nieuwe supply-zone na uitbraak New York",
+  "text": "3 grote candles omlaag (gem. 3.48x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 81.759,0 – 81.907,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
+  "action": "Zone actief, wacht op entry",
+  "invalidation": "slot boven 81.907,0"
  }
 ]

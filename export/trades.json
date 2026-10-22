@@ -251,5 +251,28 @@
   "exit_reason": "take profit",
   "fees_usd": 54.1986,
   "liquid": "Gesloten"
+ },
+ {
+  "id": "T012",
+  "market": "XAUUSD",
+  "side": "Short",
+  "status": "Open",
+  "opened_at": "2026-10-22T14:50:00Z",
+  "entry": 4062.8,
+  "stop": 4080.4,
+  "target": 4045.2,
+  "size": 5.00397727,
+  "risk_usd": 88.07,
+  "rr": 1.0,
+  "exit": null,
+  "closed_at": null,
+  "pnl_usd": null,
+  "r_result": null,
+  "setup": "ORB-uitbraak New York",
+  "reason": "5m-slot onder de openingsrange 4.064,2 – 4.080,4.",
+  "strategy": "ORB-uitbraak",
+  "exit_reason": null,
+  "fees_usd": 19.3137,
+  "liquid": "Wacht op bevestiging"
  }
 ]
