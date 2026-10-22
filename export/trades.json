@@ -228,5 +228,28 @@
   "exit_reason": "stop loss",
   "fees_usd": 137.8289,
   "liquid": "Verlopen"
+ },
+ {
+  "id": "T011",
+  "market": "XAUUSD",
+  "side": "Short",
+  "status": "Open",
+  "opened_at": "2026-10-22T08:05:00Z",
+  "entry": 4087.4,
+  "stop": 4100.0,
+  "target": 4074.8,
+  "size": 6.98968254,
+  "risk_usd": 88.07,
+  "rr": 1.0,
+  "exit": null,
+  "closed_at": null,
+  "pnl_usd": null,
+  "r_result": null,
+  "setup": "ORB-uitbraak Londen",
+  "reason": "5m-slot onder de openingsrange 4.089,8 – 4.100,0.",
+  "strategy": "ORB-uitbraak",
+  "exit_reason": null,
+  "fees_usd": 27.1411,
+  "liquid": "Wacht op bevestiging"
  }
 ]

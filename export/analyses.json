@@ -1,17 +1,5 @@
 [
  {
-  "id": "E00013",
-  "time": "2026-10-12T12:30:00Z",
-  "market": "BTCUSD",
-  "price": 83121.0,
-  "bias": "omlaag",
-  "trigger": "Nieuwe zone",
-  "title": "Nieuwe supply-zone na uitbraak Londen",
-  "text": "3 grote candles omlaag (gem. 1.91x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 83.280,0 – 83.347,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
-  "action": "Zone actief, wacht op entry",
-  "invalidation": "slot boven 83.347,0"
- },
- {
   "id": "E00014",
   "time": "2026-10-12T13:50:00Z",
   "market": "BTCUSD",
@@ -1798,5 +1786,17 @@
   "text": "XAUUSD: range van het eerste kwartier 4.089,8 – 4.100,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
   "action": "Geen trade; zones zoeken",
   "invalidation": ""
+ },
+ {
+  "id": "E00163",
+  "time": "2026-10-22T08:05:00Z",
+  "market": "XAUUSD",
+  "price": 4087.4,
+  "bias": "omlaag",
+  "trigger": "Entry",
+  "title": "Short XAUUSD (T011), ORB-uitbraak",
+  "text": "5m-slot onder de openingsrange 4.089,8 – 4.100,0.",
+  "action": "Short op 4.087,4 · stop 4.100,0 · doel 4.074,8 (1:1.0)",
+  "invalidation": "stop 4.100,0 of sessie-einde"
  }
 ]
