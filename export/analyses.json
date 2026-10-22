@@ -1,17 +1,5 @@
 [
  {
-  "id": "E00016",
-  "time": "2026-10-12T15:25:00Z",
-  "market": "XAUUSD",
-  "price": 4166.9,
-  "bias": "zijwaarts",
-  "trigger": "Overgeslagen",
-  "title": "ORB-uitbraak New York niet genomen",
-  "text": "Slot onder de openingsrange, maar: trend is zijwaarts.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
   "id": "E00017",
   "time": "2026-10-12T16:55:00Z",
   "market": "BTCUSD",
@@ -1797,6 +1785,18 @@
   "title": "Displacement zonder setup (omhoog)",
   "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts, beweging breekt de openingsrange niet. Geen zone.",
   "action": "Geen trade",
+  "invalidation": ""
+ },
+ {
+  "id": "E00166",
+  "time": "2026-10-22T11:10:00Z",
+  "market": "XAUUSD",
+  "price": 4074.8,
+  "bias": "onbekend",
+  "trigger": "Exit",
+  "title": "T011 gesloten: take profit (winst)",
+  "text": "Short XAUUSD van 4.087,4 gesloten op 4.074,8 via take profit. Modelresultaat $33.87 (+0.38R).",
+  "action": "Positie gesloten · $33.87",
   "invalidation": ""
  }
 ]
