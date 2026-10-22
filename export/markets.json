@@ -3,7 +3,7 @@
   "market": "BTCUSD",
   "status": "Sessie Londen",
   "price": 81903.0,
-  "day_open": 83231.0,
+  "day_open": 83240.0,
   "day_high": 84850.0,
   "day_low": 81863.0,
   "bias": "Bullish",
@@ -15,7 +15,7 @@
   "market": "EURUSD",
   "status": "Sessie Londen",
   "price": 1.124,
-  "day_open": 1.1227,
+  "day_open": 1.122,
   "day_high": 1.1259,
   "day_low": 1.122,
   "bias": "Neutraal",
@@ -27,7 +27,7 @@
   "market": "XAUUSD",
   "status": "Sessie Londen",
   "price": 4088.4,
-  "day_open": 4122.0,
+  "day_open": 4121.8,
   "day_high": 4142.6,
   "day_low": 4068.6,
   "bias": "Bearish",
@@ -39,7 +39,7 @@
   "market": "SP500",
   "status": "Buiten sessie",
   "price": 7677.3,
-  "day_open": 7715.1,
+  "day_open": 7717.5,
   "day_high": 7767.7,
   "day_low": 7673.3,
   "bias": "Bearish",
@@ -57,7 +57,7 @@
   "bias": "—",
   "note": "Niet beschikbaar op Liquid/Hyperliquid",
   "trading": false,
-  "updated": "2026-10-22T08:58:24Z"
+  "updated": "2026-10-22T09:00:48Z"
  },
  {
   "market": "DJ30",
@@ -69,6 +69,6 @@
   "bias": "—",
   "note": "Niet beschikbaar op Liquid/Hyperliquid; SP500 vervangt hem",
   "trading": false,
-  "updated": "2026-10-22T08:58:24Z"
+  "updated": "2026-10-22T09:00:48Z"
  }
 ]

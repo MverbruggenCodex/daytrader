@@ -12,10 +12,10 @@
   "leverage": 10,
   "risk_usd": 67.87,
   "rr": 1.0,
-  "status": "Limietorder geplaatst",
+  "status": "Positie open",
   "created": "2026-10-22T08:05:00Z",
   "expires": "2026-10-22T10:05:00Z",
-  "note": ""
+  "note": "Limiet 136813 geannuleerd; op verzoek gebruiker market gevuld op 4082.69"
  },
  {
   "id": "O010",

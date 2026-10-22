@@ -32009,16 +32009,16 @@
    "created_t": 1792656300000,
    "expires_t": 1792663500000,
    "close_at": 1792681200000,
-   "status": "placed",
-   "liquid_order_id": "136813",
+   "status": "filled",
+   "liquid_order_id": "136816",
    "idempotency_key": "daytrader-T011-1792656300000",
-   "note": "",
+   "note": "Limiet 136813 geannuleerd; op verzoek gebruiker market gevuld op 4082.69",
    "reason": "5m-slot onder de openingsrange 4.089,8 – 4.100,0.",
    "notional": 22018.4,
    "leverage": 10,
    "collateral": 2201.84,
    "risk_usd": 67.87,
-   "updated_t": 1792659491325
+   "updated_t": 1792659648448
   }
  ],
  "order_seq": 11,
