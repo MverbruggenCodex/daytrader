@@ -1,29 +1,5 @@
 [
  {
-  "id": "E00021",
-  "time": "2026-10-13T01:10:00Z",
-  "market": "BTCUSD",
-  "price": 81695.0,
-  "bias": "zijwaarts",
-  "trigger": "Overgeslagen",
-  "title": "Displacement zonder setup (omhoog)",
-  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts, beweging breekt de openingsrange niet. Geen zone.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
-  "id": "E00022",
-  "time": "2026-10-13T07:20:00Z",
-  "market": "BTCUSD",
-  "price": 83746.0,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange Londen staat",
-  "text": "BTCUSD: range van het eerste kwartier 83.612,0 – 83.758,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
   "id": "E00023",
   "time": "2026-10-13T07:20:00Z",
   "market": "XAUUSD",
@@ -1798,5 +1774,29 @@
   "text": "3 grote candles omlaag (gem. 3.48x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 81.759,0 – 81.907,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
   "action": "Zone actief, wacht op entry",
   "invalidation": "slot boven 81.907,0"
+ },
+ {
+  "id": "E00171",
+  "time": "2026-10-22T16:15:00Z",
+  "market": "BTCUSD",
+  "price": 81620.0,
+  "bias": "onbekend",
+  "trigger": "Overgeslagen",
+  "title": "Entry-signaal supply-zone niet genomen",
+  "text": "De koers tikte de zone aan en sloot er weer buiten, maar: R:R 1:0.98 onder minimum 1:2.",
+  "action": "Geen trade",
+  "invalidation": ""
+ },
+ {
+  "id": "E00172",
+  "time": "2026-10-22T16:25:00Z",
+  "market": "XAUUSD",
+  "price": 4045.2000000000003,
+  "bias": "onbekend",
+  "trigger": "Exit",
+  "title": "T012 gesloten: take profit (winst)",
+  "text": "Short XAUUSD van 4.062,8 gesloten op 4.045,2 via take profit. Modelresultaat $49.53 (+0.56R).",
+  "action": "Positie gesloten · $49.53",
+  "invalidation": ""
  }
 ]
