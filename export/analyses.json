@@ -1,29 +1,5 @@
 [
  {
-  "id": "E00024",
-  "time": "2026-10-13T07:40:00Z",
-  "market": "BTCUSD",
-  "price": 84003.0,
-  "bias": "omhoog",
-  "trigger": "Nieuwe zone",
-  "title": "Nieuwe demand-zone na uitbraak Londen",
-  "text": "3 grote candles omhoog (gem. 2.2x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 83.675,0 – 83.745,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
-  "action": "Zone actief, wacht op entry",
-  "invalidation": "slot onder 83.675,0"
- },
- {
-  "id": "E00025",
-  "time": "2026-10-13T08:15:00Z",
-  "market": "BTCUSD",
-  "price": 84123.0,
-  "bias": "omhoog",
-  "trigger": "Nieuwe zone",
-  "title": "Nieuwe demand-zone na uitbraak Londen",
-  "text": "3 grote candles omhoog (gem. 2.01x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 83.822,0 – 83.952,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
-  "action": "Zone actief, wacht op entry",
-  "invalidation": "slot onder 83.822,0"
- },
- {
   "id": "E00026",
   "time": "2026-10-13T08:20:00Z",
   "market": "BTCUSD",
@@ -1798,5 +1774,29 @@
   "text": "3 grote candles omlaag (gem. 2.67x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 81.460,0 – 81.547,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
   "action": "Zone actief, wacht op entry",
   "invalidation": "slot boven 81.547,0"
+ },
+ {
+  "id": "E00174",
+  "time": "2026-10-23T00:20:00Z",
+  "market": "BTCUSD",
+  "price": 81196.0,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange Tokio staat",
+  "text": "BTCUSD: range van het eerste kwartier 81.141,0 – 81.410,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00175",
+  "time": "2026-10-23T00:20:00Z",
+  "market": "XAUUSD",
+  "price": 4023.8,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange Tokio staat",
+  "text": "XAUUSD: range van het eerste kwartier 4.022,5 – 4.029,1. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
  }
 ]

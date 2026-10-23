@@ -1,27 +1,5 @@
 [
  {
-  "key": "BTCUSD|asia|2026-10-20",
-  "market": "BTCUSD",
-  "session": "asia",
-  "label": "Tokio",
-  "open": "2026-10-20T00:00:00Z",
-  "range_end": "2026-10-20T00:15:00Z",
-  "or_high": 81986.0,
-  "or_low": 81744.0,
-  "trades": 0
- },
- {
-  "key": "XAUUSD|asia|2026-10-20",
-  "market": "XAUUSD",
-  "session": "asia",
-  "label": "Tokio",
-  "open": "2026-10-20T00:00:00Z",
-  "range_end": "2026-10-20T00:15:00Z",
-  "or_high": 4139.6,
-  "or_low": 4132.6,
-  "trades": 1
- },
- {
   "key": "BTCUSD|london|2026-10-20",
   "market": "BTCUSD",
   "session": "london",
@@ -196,5 +174,27 @@
   "or_high": 4080.4,
   "or_low": 4064.2,
   "trades": 1
+ },
+ {
+  "key": "BTCUSD|asia|2026-10-23",
+  "market": "BTCUSD",
+  "session": "asia",
+  "label": "Tokio",
+  "open": "2026-10-23T00:00:00Z",
+  "range_end": "2026-10-23T00:15:00Z",
+  "or_high": 81410.0,
+  "or_low": 81141.0,
+  "trades": 0
+ },
+ {
+  "key": "XAUUSD|asia|2026-10-23",
+  "market": "XAUUSD",
+  "session": "asia",
+  "label": "Tokio",
+  "open": "2026-10-23T00:00:00Z",
+  "range_end": "2026-10-23T00:15:00Z",
+  "or_high": 4029.1,
+  "or_low": 4022.5,
+  "trades": 0
  }
 ]
