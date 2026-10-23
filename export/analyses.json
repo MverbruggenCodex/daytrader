@@ -1,17 +1,5 @@
 [
  {
-  "id": "E00028",
-  "time": "2026-10-13T08:50:00Z",
-  "market": "BTCUSD",
-  "price": 83662.0,
-  "bias": "onbekend",
-  "trigger": "Exit",
-  "title": "T001 gesloten: stop loss (verlies)",
-  "text": "Long BTCUSD van 83.760,0 gesloten op 83.662,0 via stop loss. Modelresultaat $-252.41 (-2.62R).",
-  "action": "Positie gesloten · $-252.41",
-  "invalidation": ""
- },
- {
   "id": "E00029",
   "time": "2026-10-13T08:55:00Z",
   "market": "XAUUSD",
@@ -1798,5 +1786,17 @@
   "text": "6 grote candles omhoog (gem. 3.18x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 81.249,0 – 81.343,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
   "action": "Zone actief, wacht op entry",
   "invalidation": "slot onder 81.249,0"
+ },
+ {
+  "id": "E00178",
+  "time": "2026-10-23T06:44:24Z",
+  "market": "XAUUSD",
+  "price": 4016.6,
+  "bias": "—",
+  "trigger": "Nieuws",
+  "title": "Goud onder 4.000 geweest",
+  "text": "Nieuws: goud zakte deze week onder $4.000, laagste sinds juli; olieschok wakkert rentezorgen aan. 4u-low 3988,9.",
+  "action": "",
+  "invalidation": ""
  }
 ]
