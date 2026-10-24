@@ -1,41 +1,5 @@
 [
  {
-  "id": "E00044",
-  "time": "2026-10-14T12:44:26Z",
-  "market": "XAUUSD",
-  "price": 4140.8,
-  "bias": "—",
-  "trigger": "Nieuws",
-  "title": "Hete CPI VS: goud, BTC en indices omlaag",
-  "text": "CPI-cijfer (14:30) viel hoger uit; yields omhoog. Goud -1,6% naar 4.090, BTC -1,4% naar 82.700, S&P500 -0,7%, EURUSD -0,5%. Valt binnen de blackout 14:15–15:00.",
-  "action": "",
-  "invalidation": ""
- },
- {
-  "id": "E00045",
-  "time": "2026-10-14T12:10:00Z",
-  "market": "BTCUSD",
-  "price": 83698.0,
-  "bias": "zijwaarts",
-  "trigger": "Overgeslagen",
-  "title": "Displacement zonder setup (omhoog)",
-  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts. Geen zone.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
-  "id": "E00046",
-  "time": "2026-10-14T13:50:00Z",
-  "market": "BTCUSD",
-  "price": 82982.0,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange New York staat",
-  "text": "BTCUSD: range van het eerste kwartier 82.613,0 – 83.021,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
   "id": "E00047",
   "time": "2026-10-14T13:50:00Z",
   "market": "XAUUSD",
@@ -1796,6 +1760,42 @@
   "trigger": "Overgeslagen",
   "title": "Displacement zonder setup (omhoog)",
   "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts, beweging breekt de openingsrange niet. Geen zone.",
+  "action": "Geen trade",
+  "invalidation": ""
+ },
+ {
+  "id": "E00194",
+  "time": "2026-10-24T14:43:30Z",
+  "market": "BTCUSD",
+  "price": 80672.0,
+  "bias": "—",
+  "trigger": "Nieuws",
+  "title": "BTC zakt ~1% om 16:15 (A'dam)",
+  "text": "Scherpe verkoopgolf op zaterdag: BTC van ~80.700 naar 79.790 in 15 min met ~1.800 BTC volume in één 5m-candle; goud en SP500 (xyz, 24/7) gingen tegelijk omlaag. Nieuws: 'crypto market down today'. Geen high-impact macrorelease (weekend).",
+  "action": "",
+  "invalidation": ""
+ },
+ {
+  "id": "E00195",
+  "time": "2026-10-24T13:50:00Z",
+  "market": "BTCUSD",
+  "price": 80678.0,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange New York staat",
+  "text": "BTCUSD: range van het eerste kwartier 80.640,0 – 80.758,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00196",
+  "time": "2026-10-24T14:20:00Z",
+  "market": "BTCUSD",
+  "price": 80185.0,
+  "bias": "zijwaarts",
+  "trigger": "Overgeslagen",
+  "title": "Displacement zonder setup (omlaag)",
+  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts. Geen zone.",
   "action": "Geen trade",
   "invalidation": ""
  }
