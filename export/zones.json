@@ -76,18 +76,5 @@
   "fvg": true,
   "bos": true,
   "note": "candle sloot door de zone"
- },
- {
-  "id": "Z0012",
-  "market": "BTCUSD",
-  "session": "london",
-  "side": "Supply",
-  "bottom": 81389.0,
-  "top": 81549.0,
-  "status": "Overgeslagen",
-  "created": "2026-10-20T09:40:00Z",
-  "fvg": true,
-  "bos": true,
-  "note": "R:R 1:0.28 onder minimum 1:2"
  }
 ]
