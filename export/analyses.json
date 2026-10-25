@@ -1,17 +1,5 @@
 [
  {
-  "id": "E00058",
-  "time": "2026-10-15T07:30:00Z",
-  "market": "XAUUSD",
-  "price": 4145.1,
-  "bias": "omhoog",
-  "trigger": "Entry",
-  "title": "Long XAUUSD (T003), ORB-uitbraak",
-  "text": "5m-slot boven de openingsrange 4.136,3 – 4.144,8.",
-  "action": "Long op 4.145,1 · stop 4.136,3 · doel 4.153,9 (1:1.0)",
-  "invalidation": "stop 4.136,3 of sessie-einde"
- },
- {
   "id": "E00059",
   "time": "2026-10-15T08:15:00Z",
   "market": "XAUUSD",
@@ -1797,6 +1785,18 @@
   "title": "Supply-zone vervallen",
   "text": "Een candle sloot door de supply-zone (80.571,0 – 80.597,0). Volgens Pats regel is een zone dan dood; geen trade.",
   "action": "Geen trade",
+  "invalidation": ""
+ },
+ {
+  "id": "E00208",
+  "time": "2026-10-25T13:50:00Z",
+  "market": "BTCUSD",
+  "price": 80344.0,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange New York staat",
+  "text": "BTCUSD: range van het eerste kwartier 80.206,0 – 80.420,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
   "invalidation": ""
  }
 ]
