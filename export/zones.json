@@ -19,11 +19,11 @@
   "side": "Supply",
   "bottom": 80571.0,
   "top": 80597.0,
-  "status": "Vers",
+  "status": "Vervallen",
   "created": "2026-10-25T08:30:00Z",
   "fvg": true,
   "bos": true,
-  "note": ""
+  "note": "candle sloot door de zone"
  },
  {
   "id": "Z0018",
