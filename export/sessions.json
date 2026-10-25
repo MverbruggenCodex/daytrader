@@ -130,5 +130,16 @@
   "or_high": 80862.0,
   "or_low": 80754.0,
   "trades": 0
+ },
+ {
+  "key": "BTCUSD|london|2026-10-25",
+  "market": "BTCUSD",
+  "session": "london",
+  "label": "Londen",
+  "open": "2026-10-25T08:00:00Z",
+  "range_end": "2026-10-25T08:15:00Z",
+  "or_high": 80673.0,
+  "or_low": 80571.0,
+  "trades": 0
  }
 ]

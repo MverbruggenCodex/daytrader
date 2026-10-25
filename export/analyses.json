@@ -1,29 +1,5 @@
 [
  {
-  "id": "E00051",
-  "time": "2026-10-14T20:00:00Z",
-  "market": "XAUUSD",
-  "price": 4103.2,
-  "bias": "onbekend",
-  "trigger": "Exit",
-  "title": "T002 gesloten: sessie-einde (verlies)",
-  "text": "Short XAUUSD van 4.092,7 gesloten op 4.103,2 via sessie-einde. Modelresultaat $-100.55 (-1.04R).",
-  "action": "Positie gesloten · $-100.55",
-  "invalidation": ""
- },
- {
-  "id": "E00052",
-  "time": "2026-10-15T00:20:00Z",
-  "market": "BTCUSD",
-  "price": 81662.0,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange Tokio staat",
-  "text": "BTCUSD: range van het eerste kwartier 81.629,0 – 81.796,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
   "id": "E00053",
   "time": "2026-10-15T00:20:00Z",
   "market": "XAUUSD",
@@ -1798,5 +1774,29 @@
   "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is omlaag. Geen zone.",
   "action": "Geen trade",
   "invalidation": ""
+ },
+ {
+  "id": "E00201",
+  "time": "2026-10-25T08:20:00Z",
+  "market": "BTCUSD",
+  "price": 80547.0,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange Londen staat",
+  "text": "BTCUSD: range van het eerste kwartier 80.571,0 – 80.673,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00202",
+  "time": "2026-10-25T08:30:00Z",
+  "market": "BTCUSD",
+  "price": 80359.0,
+  "bias": "omlaag",
+  "trigger": "Nieuwe zone",
+  "title": "Nieuwe supply-zone na uitbraak Londen",
+  "text": "3 grote candles omlaag (gem. 2.86x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 80.571,0 – 80.597,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
+  "action": "Zone actief, wacht op entry",
+  "invalidation": "slot boven 80.597,0"
  }
 ]
