@@ -1,17 +1,5 @@
 [
  {
-  "id": "E00050",
-  "time": "2026-10-14T15:05:00Z",
-  "market": "XAUUSD",
-  "price": 4092.7,
-  "bias": "omlaag",
-  "trigger": "Entry",
-  "title": "Short XAUUSD (T002), ORB-uitbraak",
-  "text": "5m-slot onder de openingsrange 4.093,4 – 4.110,2.",
-  "action": "Short op 4.092,7 · stop 4.110,2 · doel 4.075,2 (1:1.0)",
-  "invalidation": "stop 4.110,2 of sessie-einde"
- },
- {
   "id": "E00051",
   "time": "2026-10-14T20:00:00Z",
   "market": "XAUUSD",
@@ -1797,6 +1785,18 @@
   "title": "Openingsrange Tokio staat",
   "text": "BTCUSD: range van het eerste kwartier 80.754,0 – 80.862,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
   "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00200",
+  "time": "2026-10-25T02:40:00Z",
+  "market": "BTCUSD",
+  "price": 80959.0,
+  "bias": "omlaag",
+  "trigger": "Overgeslagen",
+  "title": "Displacement zonder setup (omhoog)",
+  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is omlaag. Geen zone.",
+  "action": "Geen trade",
   "invalidation": ""
  }
 ]
