@@ -1,17 +1,5 @@
 [
  {
-  "id": "E00054",
-  "time": "2026-10-15T00:50:00Z",
-  "market": "BTCUSD",
-  "price": 81451.0,
-  "bias": "zijwaarts",
-  "trigger": "Overgeslagen",
-  "title": "Displacement zonder setup (omlaag)",
-  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts. Geen zone.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
   "id": "E00055",
   "time": "2026-10-15T01:10:00Z",
   "market": "BTCUSD",
@@ -1798,5 +1786,17 @@
   "text": "3 grote candles omlaag (gem. 3.25x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 80.345,0 – 80.415,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
   "action": "Zone actief, wacht op entry",
   "invalidation": "slot boven 80.415,0"
+ },
+ {
+  "id": "E00204",
+  "time": "2026-10-25T10:25:00Z",
+  "market": "BTCUSD",
+  "price": 80303.0,
+  "bias": "onbekend",
+  "trigger": "Entry",
+  "title": "Short BTCUSD (T013)",
+  "text": "De koers tikte de zone aan en sloot er weer buiten. Zone 80.345,0 – 80.415,0. Trend omlaag; FVG ja; BOS ja; discount ja; level stack ja.",
+  "action": "Short op 80.303,0 · stop 80.421,0 · doel 80.051,0 (1:2.14)",
+  "invalidation": "stop 80.421,0 of sessie-einde"
  }
 ]

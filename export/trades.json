@@ -274,5 +274,28 @@
   "exit_reason": "take profit",
   "fees_usd": 38.5437,
   "liquid": "Verlopen"
+ },
+ {
+  "id": "T013",
+  "market": "BTCUSD",
+  "side": "Short",
+  "status": "Open",
+  "opened_at": "2026-10-25T10:25:00Z",
+  "entry": 80303.0,
+  "stop": 80420.985714,
+  "target": 80051.0,
+  "size": 0.7464463,
+  "risk_usd": 88.07,
+  "rr": 2.14,
+  "exit": null,
+  "closed_at": null,
+  "pnl_usd": null,
+  "r_result": null,
+  "setup": "ORB Londen + supply-zone",
+  "reason": "De koers tikte de zone aan en sloot er weer buiten. Zone 80.345,0 – 80.415,0. Trend omlaag; FVG ja; BOS ja; discount ja; level stack ja.",
+  "strategy": "ORB + Supply & Demand",
+  "exit_reason": null,
+  "fees_usd": 56.9448,
+  "liquid": "Wacht op bevestiging"
  }
 ]
