@@ -1,15 +1,5 @@
 [
  {
-  "id": "Z0016",
-  "market": "BTCUSD",
-  "side": "short",
-  "bottom": 81460.0,
-  "top": 81547.0,
-  "from": "2026-10-22T16:35:00Z",
-  "until": null,
-  "status": "Vers"
- },
- {
   "id": "Z0017",
   "market": "BTCUSD",
   "side": "long",
@@ -48,5 +38,15 @@
   "from": "2026-10-25T09:00:00Z",
   "until": "2026-10-25T10:20:00Z",
   "status": "Trade"
+ },
+ {
+  "id": "Z0021",
+  "market": "BTCUSD",
+  "side": "long",
+  "bottom": 80527.0,
+  "top": 80591.0,
+  "from": "2026-10-25T16:35:00Z",
+  "until": null,
+  "status": "Vers"
  }
 ]
