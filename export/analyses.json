@@ -1,17 +1,5 @@
 [
  {
-  "id": "E00076",
-  "time": "2026-10-16T11:20:00Z",
-  "market": "BTCUSD",
-  "price": 82689.0,
-  "bias": "zijwaarts",
-  "trigger": "Overgeslagen",
-  "title": "Displacement zonder setup (omhoog)",
-  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts. Geen zone.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
   "id": "E00077",
   "time": "2026-10-16T12:55:00Z",
   "market": "BTCUSD",
@@ -1792,6 +1780,18 @@
   "time": "2026-10-26T14:20:00Z",
   "market": "BTCUSD",
   "price": 80172.0,
+  "bias": "omlaag",
+  "trigger": "Overgeslagen",
+  "title": "Displacement zonder setup (omhoog)",
+  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is omlaag. Geen zone.",
+  "action": "Geen trade",
+  "invalidation": ""
+ },
+ {
+  "id": "E00226",
+  "time": "2026-10-26T14:50:00Z",
+  "market": "BTCUSD",
+  "price": 80254.0,
   "bias": "omlaag",
   "trigger": "Overgeslagen",
   "title": "Displacement zonder setup (omhoog)",
