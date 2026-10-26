@@ -102,18 +102,5 @@
   "fvg": true,
   "bos": true,
   "note": "R:R 1:0.98 onder minimum 1:2"
- },
- {
-  "id": "Z0014",
-  "market": "BTCUSD",
-  "session": "asia",
-  "side": "Supply",
-  "bottom": 83257.0,
-  "top": 83394.0,
-  "status": "Vers",
-  "created": "2026-10-22T02:25:00Z",
-  "fvg": true,
-  "bos": true,
-  "note": ""
  }
 ]
