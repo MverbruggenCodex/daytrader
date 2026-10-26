@@ -1,41 +1,5 @@
 [
  {
-  "id": "E00063",
-  "time": "2026-10-15T14:20:00Z",
-  "market": "BTCUSD",
-  "price": 81276.0,
-  "bias": "omlaag",
-  "trigger": "Overgeslagen",
-  "title": "Displacement zonder setup (omhoog)",
-  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is omlaag. Geen zone.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
-  "id": "E00064",
-  "time": "2026-10-15T14:50:00Z",
-  "market": "BTCUSD",
-  "price": 81687.0,
-  "bias": "omlaag",
-  "trigger": "Overgeslagen",
-  "title": "Displacement zonder setup (omhoog)",
-  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is omlaag. Geen zone.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
-  "id": "E00065",
-  "time": "2026-10-15T17:20:00Z",
-  "market": "BTCUSD",
-  "price": 82543.0,
-  "bias": "omhoog",
-  "trigger": "Nieuwe zone",
-  "title": "Nieuwe demand-zone na uitbraak New York",
-  "text": "3 grote candles omhoog (gem. 1.91x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 82.000,0 – 82.183,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
-  "action": "Zone actief, wacht op entry",
-  "invalidation": "slot onder 82.000,0"
- },
- {
   "id": "E00066",
   "time": "2026-10-15T18:35:00Z",
   "market": "BTCUSD",
@@ -1797,6 +1761,42 @@
   "title": "Openingsrange Tokio staat",
   "text": "XAUUSD: range van het eerste kwartier 3.987,6 – 4.000,3. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
   "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00213",
+  "time": "2026-10-26T01:45:00Z",
+  "market": "BTCUSD",
+  "price": 79471.0,
+  "bias": "omlaag",
+  "trigger": "Nieuwe zone",
+  "title": "Nieuwe supply-zone na uitbraak Tokio",
+  "text": "4 grote candles omlaag (gem. 1.97x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 79.896,0 – 80.183,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
+  "action": "Zone actief, wacht op entry",
+  "invalidation": "slot boven 80.183,0"
+ },
+ {
+  "id": "E00214",
+  "time": "2026-10-26T01:45:00Z",
+  "market": "XAUUSD",
+  "price": 3986.8,
+  "bias": "omhoog",
+  "trigger": "Overgeslagen",
+  "title": "ORB-uitbraak Tokio niet genomen",
+  "text": "Slot onder de openingsrange, maar: trend is omhoog.",
+  "action": "Geen trade",
+  "invalidation": ""
+ },
+ {
+  "id": "E00215",
+  "time": "2026-10-26T02:10:00Z",
+  "market": "BTCUSD",
+  "price": 79833.0,
+  "bias": "onbekend",
+  "trigger": "Overgeslagen",
+  "title": "Entry-signaal supply-zone niet genomen",
+  "text": "De koers tikte de zone aan en sloot er weer buiten, maar: R:R 1:1.31 onder minimum 1:2.",
+  "action": "Geen trade",
   "invalidation": ""
  }
 ]
