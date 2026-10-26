@@ -108,5 +108,27 @@
   "or_high": 4000.3,
   "or_low": 3987.6,
   "trades": 0
+ },
+ {
+  "key": "BTCUSD|london|2026-10-26",
+  "market": "BTCUSD",
+  "session": "london",
+  "label": "Londen",
+  "open": "2026-10-26T08:00:00Z",
+  "range_end": "2026-10-26T08:15:00Z",
+  "or_high": 80014.0,
+  "or_low": 79620.0,
+  "trades": 0
+ },
+ {
+  "key": "XAUUSD|london|2026-10-26",
+  "market": "XAUUSD",
+  "session": "london",
+  "label": "Londen",
+  "open": "2026-10-26T08:00:00Z",
+  "range_end": "2026-10-26T08:15:00Z",
+  "or_high": 4017.8,
+  "or_low": 4011.3,
+  "trades": 0
  }
 ]
