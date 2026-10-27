@@ -1,41 +1,5 @@
 [
  {
-  "id": "E00081",
-  "time": "2026-10-16T14:25:00Z",
-  "market": "BTCUSD",
-  "price": 82405.0,
-  "bias": "zijwaarts",
-  "trigger": "Overgeslagen",
-  "title": "Displacement zonder setup (omhoog)",
-  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts. Geen zone.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
-  "id": "E00082",
-  "time": "2026-10-16T15:05:00Z",
-  "market": "BTCUSD",
-  "price": 81823.0,
-  "bias": "omlaag",
-  "trigger": "Overgeslagen",
-  "title": "Displacement zonder setup (omlaag)",
-  "text": "Sterke beweging met FVG en break of structure, maar beweging breekt de openingsrange niet. Geen zone.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
-  "id": "E00083",
-  "time": "2026-10-16T16:40:00Z",
-  "market": "XAUUSD",
-  "price": 4160.9,
-  "bias": "onbekend",
-  "trigger": "Exit",
-  "title": "T006 gesloten: stop loss (verlies)",
-  "text": "Long XAUUSD van 4.185,7 gesloten op 4.160,9 via stop loss. Modelresultaat $-125.77 (-1.32R).",
-  "action": "Positie gesloten · $-125.77",
-  "invalidation": ""
- },
- {
   "id": "E00084",
   "time": "2026-10-16T17:20:00Z",
   "market": "BTCUSD",
@@ -1797,6 +1761,42 @@
   "title": "FOMC-vergadering begint, besluit 28-10",
   "text": "Fed-vergadering 27-28 okt; rentebesluit woensdag 28-10 19:00 Amsterdam. Goud rond 4000, dicht bij laagste niveau van het contract.",
   "action": "",
+  "invalidation": ""
+ },
+ {
+  "id": "E00231",
+  "time": "2026-10-27T08:20:00Z",
+  "market": "BTCUSD",
+  "price": 79862.0,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange Londen staat",
+  "text": "BTCUSD: range van het eerste kwartier 79.782,0 – 79.927,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00232",
+  "time": "2026-10-27T08:20:00Z",
+  "market": "XAUUSD",
+  "price": 4001.1,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange Londen staat",
+  "text": "XAUUSD: range van het eerste kwartier 4.000,0 – 4.003,7. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00233",
+  "time": "2026-10-27T08:35:00Z",
+  "market": "XAUUSD",
+  "price": 3997.5,
+  "bias": "zijwaarts",
+  "trigger": "Overgeslagen",
+  "title": "ORB-uitbraak Londen niet genomen",
+  "text": "Slot onder de openingsrange, maar: trend is zijwaarts.",
+  "action": "Geen trade",
   "invalidation": ""
  }
 ]
