@@ -1,65 +1,5 @@
 [
  {
-  "id": "E00087",
-  "time": "2026-10-17T00:50:00Z",
-  "market": "BTCUSD",
-  "price": 81453.0,
-  "bias": "omhoog",
-  "trigger": "Overgeslagen",
-  "title": "Displacement zonder setup (omlaag)",
-  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is omhoog. Geen zone.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
-  "id": "E00088",
-  "time": "2026-10-17T02:30:00Z",
-  "market": "BTCUSD",
-  "price": 81401.0,
-  "bias": "zijwaarts",
-  "trigger": "Overgeslagen",
-  "title": "Displacement zonder setup (omlaag)",
-  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts. Geen zone.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
-  "id": "E00089",
-  "time": "2026-10-17T07:20:00Z",
-  "market": "BTCUSD",
-  "price": 81573.0,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange Londen staat",
-  "text": "BTCUSD: range van het eerste kwartier 81.588,0 – 81.620,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
-  "id": "E00090",
-  "time": "2026-10-17T11:30:00Z",
-  "market": "BTCUSD",
-  "price": 81533.0,
-  "bias": "omlaag",
-  "trigger": "Nieuwe zone",
-  "title": "Nieuwe supply-zone na uitbraak Londen",
-  "text": "3 grote candles omlaag (gem. 3.23x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 81.617,0 – 81.621,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
-  "action": "Zone actief, wacht op entry",
-  "invalidation": "slot boven 81.621,0"
- },
- {
-  "id": "E00091",
-  "time": "2026-10-17T13:50:00Z",
-  "market": "BTCUSD",
-  "price": 81473.0,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange New York staat",
-  "text": "BTCUSD: range van het eerste kwartier 81.446,0 – 81.502,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
   "id": "E00092",
   "time": "2026-10-17T14:35:00Z",
   "market": "BTCUSD",
@@ -1798,5 +1738,65 @@
   "text": "3 grote candles omhoog (gem. 1.53x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 79.837,0 – 79.903,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
   "action": "Zone actief, wacht op entry",
   "invalidation": "slot onder 79.837,0"
+ },
+ {
+  "id": "E00237",
+  "time": "2026-10-27T13:50:00Z",
+  "market": "BTCUSD",
+  "price": 80059.0,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange New York staat",
+  "text": "BTCUSD: range van het eerste kwartier 79.930,0 – 80.348,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00238",
+  "time": "2026-10-27T13:50:00Z",
+  "market": "XAUUSD",
+  "price": 4027.9,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange New York staat",
+  "text": "XAUUSD: range van het eerste kwartier 4.023,5 – 4.034,4. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00239",
+  "time": "2026-10-27T13:55:00Z",
+  "market": "BTCUSD",
+  "price": 80034.0,
+  "bias": "omhoog",
+  "trigger": "Overgeslagen",
+  "title": "Displacement zonder setup (omlaag)",
+  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is omhoog, beweging breekt de openingsrange niet. Geen zone.",
+  "action": "Geen trade",
+  "invalidation": ""
+ },
+ {
+  "id": "E00240",
+  "time": "2026-10-27T13:55:00Z",
+  "market": "BTCUSD",
+  "price": 80034.0,
+  "bias": "omhoog",
+  "trigger": "Overgeslagen",
+  "title": "Displacement zonder setup (omlaag)",
+  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is omhoog, beweging breekt de openingsrange niet. Geen zone.",
+  "action": "Geen trade",
+  "invalidation": ""
+ },
+ {
+  "id": "E00241",
+  "time": "2026-10-27T14:25:00Z",
+  "market": "XAUUSD",
+  "price": 4038.0,
+  "bias": "zijwaarts",
+  "trigger": "Overgeslagen",
+  "title": "ORB-uitbraak New York niet genomen",
+  "text": "Slot boven de openingsrange, maar: trend is zijwaarts.",
+  "action": "Geen trade",
+  "invalidation": ""
  }
 ]
