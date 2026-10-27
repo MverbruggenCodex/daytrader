@@ -1,17 +1,5 @@
 [
  {
-  "id": "E00086",
-  "time": "2026-10-17T00:20:00Z",
-  "market": "BTCUSD",
-  "price": 81561.0,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange Tokio staat",
-  "text": "BTCUSD: range van het eerste kwartier 81.545,0 – 81.608,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
   "id": "E00087",
   "time": "2026-10-17T00:50:00Z",
   "market": "BTCUSD",
@@ -1798,5 +1786,17 @@
   "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts, beweging breekt de openingsrange niet. Geen zone.",
   "action": "Geen trade",
   "invalidation": ""
+ },
+ {
+  "id": "E00236",
+  "time": "2026-10-27T12:20:00Z",
+  "market": "BTCUSD",
+  "price": 80047.0,
+  "bias": "omhoog",
+  "trigger": "Nieuwe zone",
+  "title": "Nieuwe demand-zone na uitbraak Londen",
+  "text": "3 grote candles omhoog (gem. 1.53x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 79.837,0 – 79.903,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
+  "action": "Zone actief, wacht op entry",
+  "invalidation": "slot onder 79.837,0"
  }
 ]
