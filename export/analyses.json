@@ -1,29 +1,5 @@
 [
  {
-  "id": "E00084",
-  "time": "2026-10-16T17:20:00Z",
-  "market": "BTCUSD",
-  "price": 80794.0,
-  "bias": "omlaag",
-  "trigger": "Nieuwe zone",
-  "title": "Nieuwe supply-zone na uitbraak New York",
-  "text": "5 grote candles omlaag (gem. 1.83x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 81.326,0 – 81.414,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
-  "action": "Zone actief, wacht op entry",
-  "invalidation": "slot boven 81.414,0"
- },
- {
-  "id": "E00085",
-  "time": "2026-10-16T17:35:00Z",
-  "market": "BTCUSD",
-  "price": 81400.0,
-  "bias": "onbekend",
-  "trigger": "Overgeslagen",
-  "title": "Supply-zone: vallend mes",
-  "text": "De koers dook met een grote candle de zone in. Pat: geen vallend mes vangen, dus deze zone vervalt.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
   "id": "E00086",
   "time": "2026-10-17T00:20:00Z",
   "market": "BTCUSD",
@@ -1796,6 +1772,30 @@
   "trigger": "Overgeslagen",
   "title": "ORB-uitbraak Londen niet genomen",
   "text": "Slot onder de openingsrange, maar: trend is zijwaarts.",
+  "action": "Geen trade",
+  "invalidation": ""
+ },
+ {
+  "id": "E00234",
+  "time": "2026-10-27T10:15:00Z",
+  "market": "BTCUSD",
+  "price": 79491.0,
+  "bias": "zijwaarts",
+  "trigger": "Overgeslagen",
+  "title": "Displacement zonder setup (omlaag)",
+  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts. Geen zone.",
+  "action": "Geen trade",
+  "invalidation": ""
+ },
+ {
+  "id": "E00235",
+  "time": "2026-10-27T10:40:00Z",
+  "market": "BTCUSD",
+  "price": 79829.0,
+  "bias": "zijwaarts",
+  "trigger": "Overgeslagen",
+  "title": "Displacement zonder setup (omhoog)",
+  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts, beweging breekt de openingsrange niet. Geen zone.",
   "action": "Geen trade",
   "invalidation": ""
  }
