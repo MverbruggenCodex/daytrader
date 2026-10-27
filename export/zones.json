@@ -63,18 +63,5 @@
   "fvg": true,
   "bos": true,
   "note": ""
- },
- {
-  "id": "Z0017",
-  "market": "BTCUSD",
-  "session": "asia",
-  "side": "Demand",
-  "bottom": 81249.0,
-  "top": 81343.0,
-  "status": "Vers",
-  "created": "2026-10-23T02:35:00Z",
-  "fvg": true,
-  "bos": true,
-  "note": ""
  }
 ]
