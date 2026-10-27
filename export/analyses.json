@@ -1,29 +1,5 @@
 [
  {
-  "id": "E00092",
-  "time": "2026-10-17T14:35:00Z",
-  "market": "BTCUSD",
-  "price": 81567.0,
-  "bias": "omlaag",
-  "trigger": "Overgeslagen",
-  "title": "Displacement zonder setup (omhoog)",
-  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is omlaag. Geen zone.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
-  "id": "E00093",
-  "time": "2026-10-17T15:50:00Z",
-  "market": "BTCUSD",
-  "price": 81374.0,
-  "bias": "omlaag",
-  "trigger": "Nieuwe zone",
-  "title": "Nieuwe supply-zone na uitbraak New York",
-  "text": "3 grote candles omlaag (gem. 2.27x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 81.460,0 – 81.518,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
-  "action": "Zone actief, wacht op entry",
-  "invalidation": "slot boven 81.518,0"
- },
- {
   "id": "E00094",
   "time": "2026-10-17T16:25:00Z",
   "market": "BTCUSD",
@@ -1796,6 +1772,30 @@
   "trigger": "Overgeslagen",
   "title": "ORB-uitbraak New York niet genomen",
   "text": "Slot boven de openingsrange, maar: trend is zijwaarts.",
+  "action": "Geen trade",
+  "invalidation": ""
+ },
+ {
+  "id": "E00242",
+  "time": "2026-10-27T15:25:00Z",
+  "market": "BTCUSD",
+  "price": 80576.0,
+  "bias": "omhoog",
+  "trigger": "Nieuwe zone",
+  "title": "Nieuwe demand-zone na uitbraak New York",
+  "text": "3 grote candles omhoog (gem. 2.33x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 80.242,0 – 80.395,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
+  "action": "Zone actief, wacht op entry",
+  "invalidation": "slot onder 80.242,0"
+ },
+ {
+  "id": "E00243",
+  "time": "2026-10-27T15:40:00Z",
+  "market": "BTCUSD",
+  "price": 80505.0,
+  "bias": "onbekend",
+  "trigger": "Overgeslagen",
+  "title": "Entry-signaal demand-zone niet genomen",
+  "text": "De koers tikte de zone aan en sloot er weer buiten, maar: R:R 1:0.65 onder minimum 1:2.",
   "action": "Geen trade",
   "invalidation": ""
  }
