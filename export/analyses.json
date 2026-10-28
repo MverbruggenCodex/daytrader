@@ -1,29 +1,5 @@
 [
  {
-  "id": "E00094",
-  "time": "2026-10-17T16:25:00Z",
-  "market": "BTCUSD",
-  "price": 81255.0,
-  "bias": "omlaag",
-  "trigger": "Nieuwe zone",
-  "title": "Nieuwe supply-zone na uitbraak New York",
-  "text": "4 grote candles omlaag (gem. 1.61x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 81.318,0 – 81.417,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
-  "action": "Zone actief, wacht op entry",
-  "invalidation": "slot boven 81.417,0"
- },
- {
-  "id": "E00095",
-  "time": "2026-10-17T18:05:00Z",
-  "market": "BTCUSD",
-  "price": 81473.0,
-  "bias": "onbekend",
-  "trigger": "Zone vervallen",
-  "title": "Supply-zone vervallen",
-  "text": "Een candle sloot door de supply-zone (81.318,0 – 81.417,0). Volgens Pats regel is een zone dan dood; geen trade.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
   "id": "E00096",
   "time": "2026-10-17T18:05:00Z",
   "market": "BTCUSD",
@@ -1797,6 +1773,30 @@
   "title": "Entry-signaal demand-zone niet genomen",
   "text": "De koers tikte de zone aan en sloot er weer buiten, maar: R:R 1:0.65 onder minimum 1:2.",
   "action": "Geen trade",
+  "invalidation": ""
+ },
+ {
+  "id": "E00244",
+  "time": "2026-10-28T00:20:00Z",
+  "market": "BTCUSD",
+  "price": 80727.0,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange Tokio staat",
+  "text": "BTCUSD: range van het eerste kwartier 80.709,0 – 80.889,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00245",
+  "time": "2026-10-28T00:20:00Z",
+  "market": "XAUUSD",
+  "price": 4065.8,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange Tokio staat",
+  "text": "XAUUSD: range van het eerste kwartier 4.064,8 – 4.071,9. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
   "invalidation": ""
  }
 ]
