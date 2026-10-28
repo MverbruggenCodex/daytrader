@@ -1,29 +1,5 @@
 [
  {
-  "id": "E00101",
-  "time": "2026-10-18T01:40:00Z",
-  "market": "BTCUSD",
-  "price": 81683.45,
-  "bias": "onbekend",
-  "trigger": "Exit",
-  "title": "T007 gesloten: stop loss (verlies)",
-  "text": "Short BTCUSD van 81.103,0 gesloten op 81.683,4 via stop loss. Modelresultaat $-111.53 (-1.27R).",
-  "action": "Positie gesloten · $-111.53",
-  "invalidation": ""
- },
- {
-  "id": "E00102",
-  "time": "2026-10-18T01:45:00Z",
-  "market": "BTCUSD",
-  "price": 81825.0,
-  "bias": "zijwaarts",
-  "trigger": "Overgeslagen",
-  "title": "Displacement zonder setup (omhoog)",
-  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts. Geen zone.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
   "id": "E00103",
   "time": "2026-10-18T07:20:00Z",
   "market": "BTCUSD",
@@ -1796,6 +1772,30 @@
   "trigger": "Overgeslagen",
   "title": "Displacement zonder setup (omhoog)",
   "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is omlaag. Geen zone.",
+  "action": "Geen trade",
+  "invalidation": ""
+ },
+ {
+  "id": "E00251",
+  "time": "2026-10-28T11:10:00Z",
+  "market": "BTCUSD",
+  "price": 81351.0,
+  "bias": "omhoog",
+  "trigger": "Overgeslagen",
+  "title": "Displacement zonder setup (omlaag)",
+  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is omhoog, beweging breekt de openingsrange niet. Geen zone.",
+  "action": "Geen trade",
+  "invalidation": ""
+ },
+ {
+  "id": "E00252",
+  "time": "2026-10-28T11:25:00Z",
+  "market": "XAUUSD",
+  "price": 4049.3,
+  "bias": "omlaag",
+  "trigger": "Overgeslagen",
+  "title": "ORB-uitbraak Londen niet genomen",
+  "text": "Slot boven de openingsrange, maar: trend is omlaag.",
   "action": "Geen trade",
   "invalidation": ""
  }
