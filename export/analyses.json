@@ -1,17 +1,5 @@
 [
  {
-  "id": "E00124",
-  "time": "2026-10-20T00:20:00Z",
-  "market": "XAUUSD",
-  "price": 4134.1,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange Tokio staat",
-  "text": "XAUUSD: range van het eerste kwartier 4.132,6 – 4.139,6. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
   "id": "E00125",
   "time": "2026-10-20T01:00:00Z",
   "market": "XAUUSD",
@@ -1797,6 +1785,18 @@
   "title": "Displacement zonder setup (omlaag)",
   "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts, beweging breekt de openingsrange niet. Geen zone.",
   "action": "Geen trade",
+  "invalidation": ""
+ },
+ {
+  "id": "E00274",
+  "time": "2026-10-29T20:44:21Z",
+  "market": "BTCUSD",
+  "price": 80831.0,
+  "bias": "—",
+  "trigger": "Nieuws",
+  "title": "Scherpe daling na Fed-besluit",
+  "text": "BTC zakt ~2,5% in het laatste uur (80.8k -> 78.85k) na de Fed rate hold; risk-off op Wall Street (Alphabet -12%, Nasdaq -1,5%).",
+  "action": "",
   "invalidation": ""
  }
 ]
