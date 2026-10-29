@@ -63,18 +63,5 @@
   "fvg": true,
   "bos": true,
   "note": ""
- },
- {
-  "id": "Z0019",
-  "market": "BTCUSD",
-  "session": "london",
-  "side": "Supply",
-  "bottom": 80571.0,
-  "top": 80597.0,
-  "status": "Vervallen",
-  "created": "2026-10-25T08:30:00Z",
-  "fvg": true,
-  "bos": true,
-  "note": "candle sloot door de zone"
  }
 ]
