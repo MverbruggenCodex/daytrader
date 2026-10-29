@@ -1,17 +1,5 @@
 [
  {
-  "id": "E00121",
-  "time": "2026-10-19T18:30:00Z",
-  "market": "BTCUSD",
-  "price": 81808.0,
-  "bias": "zijwaarts",
-  "trigger": "Overgeslagen",
-  "title": "Displacement zonder setup (omlaag)",
-  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts. Geen zone.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
   "id": "E00122",
   "time": "2026-10-20T00:20:00Z",
   "market": "BTCUSD",
@@ -1796,6 +1784,18 @@
   "trigger": "Overgeslagen",
   "title": "Displacement zonder setup (omhoog)",
   "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts. Geen zone.",
+  "action": "Geen trade",
+  "invalidation": ""
+ },
+ {
+  "id": "E00271",
+  "time": "2026-10-29T14:10:00Z",
+  "market": "XAUUSD",
+  "price": 4021.8,
+  "bias": "omlaag",
+  "trigger": "Overgeslagen",
+  "title": "ORB-uitbraak New York niet genomen",
+  "text": "Slot onder de openingsrange, maar: nieuwsfilter: ECB rentebesluit + persconferentie.",
   "action": "Geen trade",
   "invalidation": ""
  }
