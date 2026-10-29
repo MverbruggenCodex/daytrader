@@ -1,41 +1,5 @@
 [
  {
-  "id": "E00108",
-  "time": "2026-10-19T00:20:00Z",
-  "market": "XAUUSD",
-  "price": 4178.4,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange Tokio staat",
-  "text": "XAUUSD: range van het eerste kwartier 4.180,7 – 4.186,7. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
-  "id": "E00109",
-  "time": "2026-10-19T02:20:00Z",
-  "market": "XAUUSD",
-  "price": 4175.6,
-  "bias": "omlaag",
-  "trigger": "Entry",
-  "title": "Short XAUUSD (T008), ORB-uitbraak",
-  "text": "5m-slot onder de openingsrange 4.180,7 – 4.186,7.",
-  "action": "Short op 4.175,6 · stop 4.186,7 · doel 4.164,5 (1:1.0)",
-  "invalidation": "stop 4.186,7 of sessie-einde"
- },
- {
-  "id": "E00110",
-  "time": "2026-10-19T02:50:00Z",
-  "market": "BTCUSD",
-  "price": 82746.0,
-  "bias": "omhoog",
-  "trigger": "Nieuwe zone",
-  "title": "Nieuwe demand-zone na uitbraak Tokio",
-  "text": "4 grote candles omhoog (gem. 2.34x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 82.315,0 – 82.372,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
-  "action": "Zone actief, wacht op entry",
-  "invalidation": "slot onder 82.315,0"
- },
- {
   "id": "E00111",
   "time": "2026-10-19T06:00:00Z",
   "market": "XAUUSD",
@@ -1796,6 +1760,42 @@
   "trigger": "Overgeslagen",
   "title": "Displacement zonder setup (omhoog)",
   "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts, beweging breekt de openingsrange niet. Geen zone.",
+  "action": "Geen trade",
+  "invalidation": ""
+ },
+ {
+  "id": "E00258",
+  "time": "2026-10-29T00:20:00Z",
+  "market": "BTCUSD",
+  "price": 81239.0,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange Tokio staat",
+  "text": "BTCUSD: range van het eerste kwartier 81.251,0 – 81.350,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00259",
+  "time": "2026-10-29T00:20:00Z",
+  "market": "XAUUSD",
+  "price": 4041.5,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange Tokio staat",
+  "text": "XAUUSD: range van het eerste kwartier 4.045,7 – 4.055,9. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00260",
+  "time": "2026-10-29T00:30:00Z",
+  "market": "XAUUSD",
+  "price": 4043.8,
+  "bias": "zijwaarts",
+  "trigger": "Overgeslagen",
+  "title": "ORB-uitbraak Tokio niet genomen",
+  "text": "Slot onder de openingsrange, maar: trend is zijwaarts.",
   "action": "Geen trade",
   "invalidation": ""
  }
