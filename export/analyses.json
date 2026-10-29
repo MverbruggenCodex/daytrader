@@ -1,17 +1,5 @@
 [
  {
-  "id": "E00125",
-  "time": "2026-10-20T01:00:00Z",
-  "market": "XAUUSD",
-  "price": 4132.2,
-  "bias": "omlaag",
-  "trigger": "Entry",
-  "title": "Short XAUUSD (T009), ORB-uitbraak",
-  "text": "5m-slot onder de openingsrange 4.132,6 – 4.139,6.",
-  "action": "Short op 4.132,2 · stop 4.139,6 · doel 4.124,8 (1:1.0)",
-  "invalidation": "stop 4.139,6 of sessie-einde"
- },
- {
   "id": "E00126",
   "time": "2026-10-20T01:15:00Z",
   "market": "BTCUSD",
@@ -1796,6 +1784,18 @@
   "trigger": "Nieuws",
   "title": "Scherpe daling na Fed-besluit",
   "text": "BTC zakt ~2,5% in het laatste uur (80.8k -> 78.85k) na de Fed rate hold; risk-off op Wall Street (Alphabet -12%, Nasdaq -1,5%).",
+  "action": "",
+  "invalidation": ""
+ },
+ {
+  "id": "E00275",
+  "time": "2026-10-29T23:44:12Z",
+  "market": "BTCUSD",
+  "price": 79100.0,
+  "bias": "—",
+  "trigger": "Nieuws",
+  "title": "Binance pauzeert opnames na vermoedelijke hack",
+  "text": "TechCrunch: Binance pauzeert opnames, hackers vermoedelijk miljarden aan crypto gestolen. BTC zakt verder naar ~78.4k (laagste van de dag 78.2k). Extra volatiliteit mogelijk.",
   "action": "",
   "invalidation": ""
  }
