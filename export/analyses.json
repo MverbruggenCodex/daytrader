@@ -1,29 +1,5 @@
 [
  {
-  "id": "E00139",
-  "time": "2026-10-21T00:20:00Z",
-  "market": "BTCUSD",
-  "price": 83118.0,
-  "bias": "omhoog",
-  "trigger": "Nieuwe zone",
-  "title": "Nieuwe demand-zone na uitbraak Tokio",
-  "text": "3 grote candles omhoog (gem. 1.62x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 82.948,0 – 82.991,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
-  "action": "Zone actief, wacht op entry",
-  "invalidation": "slot onder 82.948,0"
- },
- {
-  "id": "E00140",
-  "time": "2026-10-21T00:20:00Z",
-  "market": "XAUUSD",
-  "price": 4121.7,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange Tokio staat",
-  "text": "XAUUSD: range van het eerste kwartier 4.115,9 – 4.119,7. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
   "id": "E00141",
   "time": "2026-10-21T00:40:00Z",
   "market": "XAUUSD",
@@ -1797,6 +1773,30 @@
   "title": "Goud onder 3.900 geweest",
   "text": "Spot goud zakte ruim 3% en raakte kort 3893,6 (4u-low); koers nu rond 3919.",
   "action": "",
+  "invalidation": ""
+ },
+ {
+  "id": "E00289",
+  "time": "2026-10-30T15:05:00Z",
+  "market": "XAUUSD",
+  "price": 3921.1,
+  "bias": "omlaag",
+  "trigger": "Entry",
+  "title": "Short XAUUSD (T015), ORB-uitbraak",
+  "text": "5m-slot onder de openingsrange 3.923,3 – 3.947,6.",
+  "action": "Short op 3.921,1 · stop 3.947,6 · doel 3.894,6 (1:1.0)",
+  "invalidation": "stop 3.947,6 of sessie-einde"
+ },
+ {
+  "id": "E00290",
+  "time": "2026-10-30T15:10:00Z",
+  "market": "BTCUSD",
+  "price": 77714.0,
+  "bias": "omlaag",
+  "trigger": "Overgeslagen",
+  "title": "Displacement zonder setup (omhoog)",
+  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is omlaag. Geen zone.",
+  "action": "Geen trade",
   "invalidation": ""
  }
 ]
