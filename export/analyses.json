@@ -1,29 +1,5 @@
 [
  {
-  "id": "E00133",
-  "time": "2026-10-20T12:25:00Z",
-  "market": "BTCUSD",
-  "price": 81649.0,
-  "bias": "zijwaarts",
-  "trigger": "Overgeslagen",
-  "title": "Displacement zonder setup (omhoog)",
-  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts, beweging breekt de openingsrange niet. Geen zone.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
-  "id": "E00134",
-  "time": "2026-10-20T13:50:00Z",
-  "market": "BTCUSD",
-  "price": 81971.0,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange New York staat",
-  "text": "BTCUSD: range van het eerste kwartier 81.301,0 – 81.754,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
   "id": "E00135",
   "time": "2026-10-20T13:50:00Z",
   "market": "XAUUSD",
@@ -1797,6 +1773,30 @@
   "title": "Openingsrange Londen staat",
   "text": "XAUUSD: range van het eerste kwartier 3.976,3 – 3.988,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
   "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00283",
+  "time": "2026-10-30T09:44:19Z",
+  "market": "BTCUSD",
+  "price": 77991.0,
+  "bias": "—",
+  "trigger": "Nieuws",
+  "title": "Binance-hack toegeschreven aan Noord-Korea",
+  "text": "Reuters/TRM: Noord-Korea achter Binance-diefstal; BTC zakt in Londen naar ~77.500. Crypto-ETF's netto -116 mln.",
+  "action": "",
+  "invalidation": ""
+ },
+ {
+  "id": "E00284",
+  "time": "2026-10-30T09:44:19Z",
+  "market": "XAUUSD",
+  "price": 3989.9,
+  "bias": "—",
+  "trigger": "Nieuws",
+  "title": "Goud onder 4.000",
+  "text": "Goud zakt onder $4.000 door inflatiezorgen en aandelenverliezen (Nasdaq-futures -2% na Amazon/Intel).",
+  "action": "",
   "invalidation": ""
  }
 ]
