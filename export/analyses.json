@@ -1,17 +1,5 @@
 [
  {
-  "id": "E00141",
-  "time": "2026-10-21T00:40:00Z",
-  "market": "XAUUSD",
-  "price": 4120.9,
-  "bias": "omhoog",
-  "trigger": "Entry",
-  "title": "Long XAUUSD (T010), ORB-uitbraak",
-  "text": "5m-slot boven de openingsrange 4.115,9 – 4.119,7.",
-  "action": "Long op 4.120,9 · stop 4.115,9 · doel 4.125,9 (1:1.0)",
-  "invalidation": "stop 4.115,9 of sessie-einde"
- },
- {
   "id": "E00142",
   "time": "2026-10-21T01:05:00Z",
   "market": "BTCUSD",
@@ -1797,6 +1785,18 @@
   "title": "Displacement zonder setup (omhoog)",
   "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is omlaag. Geen zone.",
   "action": "Geen trade",
+  "invalidation": ""
+ },
+ {
+  "id": "E00291",
+  "time": "2026-10-30T16:59:58Z",
+  "market": "BTCUSD",
+  "price": 77476.0,
+  "bias": "—",
+  "trigger": "Nieuws",
+  "title": "Grote crypto-hack, BTC rond 77k",
+  "text": "FXStreet meldt de grootste hack in de cryptogeschiedenis; BTC zakte naar ca. 76.500 en herstelt rond 77.300. Geen high-impact release binnen 60 min (PCE was 12:30 UTC).",
+  "action": "",
   "invalidation": ""
  }
 ]
