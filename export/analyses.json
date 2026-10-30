@@ -1,17 +1,5 @@
 [
  {
-  "id": "E00142",
-  "time": "2026-10-21T01:05:00Z",
-  "market": "BTCUSD",
-  "price": 82893.0,
-  "bias": "onbekend",
-  "trigger": "Zone vervallen",
-  "title": "Demand-zone vervallen",
-  "text": "Een candle sloot door de demand-zone (82.948,0 – 82.991,0). Volgens Pats regel is een zone dan dood; geen trade.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
   "id": "E00143",
   "time": "2026-10-21T01:05:00Z",
   "market": "XAUUSD",
@@ -1797,6 +1785,18 @@
   "title": "Grote crypto-hack, BTC rond 77k",
   "text": "FXStreet meldt de grootste hack in de cryptogeschiedenis; BTC zakte naar ca. 76.500 en herstelt rond 77.300. Geen high-impact release binnen 60 min (PCE was 12:30 UTC).",
   "action": "",
+  "invalidation": ""
+ },
+ {
+  "id": "E00292",
+  "time": "2026-10-30T17:10:00Z",
+  "market": "XAUUSD",
+  "price": 3894.6,
+  "bias": "onbekend",
+  "trigger": "Exit",
+  "title": "T015 gesloten: take profit (winst)",
+  "text": "Short XAUUSD van 3.921,1 gesloten op 3.894,6 via take profit. Modelresultaat $63.39 (+0.72R).",
+  "action": "Positie gesloten · $63.39",
   "invalidation": ""
  }
 ]
