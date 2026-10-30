@@ -1,17 +1,5 @@
 [
  {
-  "id": "E00135",
-  "time": "2026-10-20T13:50:00Z",
-  "market": "XAUUSD",
-  "price": 4128.5,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange New York staat",
-  "text": "XAUUSD: range van het eerste kwartier 4.117,2 – 4.130,9. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
   "id": "E00136",
   "time": "2026-10-20T14:10:00Z",
   "market": "BTCUSD",
@@ -1797,6 +1785,18 @@
   "title": "Goud onder 4.000",
   "text": "Goud zakt onder $4.000 door inflatiezorgen en aandelenverliezen (Nasdaq-futures -2% na Amazon/Intel).",
   "action": "",
+  "invalidation": ""
+ },
+ {
+  "id": "E00285",
+  "time": "2026-10-30T10:20:00Z",
+  "market": "XAUUSD",
+  "price": 3988.1,
+  "bias": "omlaag",
+  "trigger": "Overgeslagen",
+  "title": "ORB-uitbraak Londen niet genomen",
+  "text": "Slot boven de openingsrange, maar: trend is omlaag; nieuwsfilter: BBP Q3 flash eurozone.",
+  "action": "Geen trade",
   "invalidation": ""
  }
 ]
