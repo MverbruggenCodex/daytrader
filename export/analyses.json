@@ -1,17 +1,5 @@
 [
  {
-  "id": "E00138",
-  "time": "2026-10-21T00:20:00Z",
-  "market": "BTCUSD",
-  "price": 83118.0,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange Tokio staat",
-  "text": "BTCUSD: range van het eerste kwartier 82.850,0 – 83.066,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
   "id": "E00139",
   "time": "2026-10-21T00:20:00Z",
   "market": "BTCUSD",
@@ -1797,6 +1785,18 @@
   "title": "Openingsrange New York staat",
   "text": "XAUUSD: range van het eerste kwartier 3.923,3 – 3.947,6. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
   "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00288",
+  "time": "2026-10-30T14:54:35Z",
+  "market": "XAUUSD",
+  "price": 3924.5,
+  "bias": "—",
+  "trigger": "Nieuws",
+  "title": "Goud onder 3.900 geweest",
+  "text": "Spot goud zakte ruim 3% en raakte kort 3893,6 (4u-low); koers nu rond 3919.",
+  "action": "",
   "invalidation": ""
  }
 ]
