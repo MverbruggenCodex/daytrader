@@ -1,15 +1,16 @@
 [
  {
-  "id": "Z0024",
-  "market": "BTCUSD",
-  "session": "newyork",
-  "side": "Demand",
-  "bottom": 80242.0,
-  "top": 80395.0,
-  "status": "Overgeslagen",
-  "created": "2026-10-27T15:25:00Z",
-  "fvg": true,
-  "bos": true,
-  "note": "R:R 1:0.65 onder minimum 1:2"
+  "id": "—",
+  "market": null,
+  "session": null,
+  "side": null,
+  "bottom": null,
+  "top": null,
+  "status": null,
+  "created": null,
+  "fvg": null,
+  "bos": null,
+  "note": null,
+  "_empty": true
  }
 ]
