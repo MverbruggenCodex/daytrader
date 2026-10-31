@@ -1,17 +1,5 @@
 [
  {
-  "id": "E00143",
-  "time": "2026-10-21T01:05:00Z",
-  "market": "XAUUSD",
-  "price": 4115.9,
-  "bias": "onbekend",
-  "trigger": "Exit",
-  "title": "T010 gesloten: stop loss (verlies)",
-  "text": "Long XAUUSD van 4.120,9 gesloten op 4.115,9 via stop loss. Modelresultaat $-225.90 (-2.57R).",
-  "action": "Positie gesloten · $-225.90",
-  "invalidation": ""
- },
- {
   "id": "E00144",
   "time": "2026-10-21T01:10:00Z",
   "market": "BTCUSD",
@@ -1797,6 +1785,18 @@
   "title": "T015 gesloten: take profit (winst)",
   "text": "Short XAUUSD van 3.921,1 gesloten op 3.894,6 via take profit. Modelresultaat $63.39 (+0.72R).",
   "action": "Positie gesloten · $63.39",
+  "invalidation": ""
+ },
+ {
+  "id": "E00293",
+  "time": "2026-10-31T00:20:00Z",
+  "market": "BTCUSD",
+  "price": 77404.0,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange Tokio staat",
+  "text": "BTCUSD: range van het eerste kwartier 77.271,0 – 77.400,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
   "invalidation": ""
  }
 ]
