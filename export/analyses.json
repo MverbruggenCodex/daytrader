@@ -1,29 +1,5 @@
 [
  {
-  "id": "E00159",
-  "time": "2026-10-22T01:40:00Z",
-  "market": "BTCUSD",
-  "price": 83816.0,
-  "bias": "zijwaarts",
-  "trigger": "Overgeslagen",
-  "title": "Displacement zonder setup (omlaag)",
-  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts. Geen zone.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
-  "id": "E00160",
-  "time": "2026-10-22T02:25:00Z",
-  "market": "BTCUSD",
-  "price": 82976.0,
-  "bias": "omlaag",
-  "trigger": "Nieuwe zone",
-  "title": "Nieuwe supply-zone na uitbraak Tokio",
-  "text": "3 grote candles omlaag (gem. 2.56x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 83.257,0 – 83.394,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
-  "action": "Zone actief, wacht op entry",
-  "invalidation": "slot boven 83.394,0"
- },
- {
   "id": "E00161",
   "time": "2026-10-22T07:20:00Z",
   "market": "BTCUSD",
@@ -1798,5 +1774,29 @@
   "text": "De koers tikte de zone aan en sloot er weer buiten. Zone 77.878,0 – 77.918,0. Trend omhoog; FVG ja; BOS ja; discount ja; level stack nee.",
   "action": "Long op 77.924,0 · stop 77.875,0 · doel 78.238,0 (1:6.41)",
   "invalidation": "stop 77.875,0 of sessie-einde"
+ },
+ {
+  "id": "E00309",
+  "time": "2026-11-01T12:20:00Z",
+  "market": "BTCUSD",
+  "price": 77875.04285714286,
+  "bias": "onbekend",
+  "trigger": "Exit",
+  "title": "T016 gesloten: stop loss (verlies)",
+  "text": "Long BTCUSD van 77.924,0 gesloten op 77.875,0 via stop loss. Modelresultaat $-354.33 (-4.02R).",
+  "action": "Positie gesloten · $-354.33",
+  "invalidation": ""
+ },
+ {
+  "id": "E00310",
+  "time": "2026-11-01T12:20:00Z",
+  "market": "BTCUSD",
+  "price": 77763.0,
+  "bias": "omlaag",
+  "trigger": "Nieuwe zone",
+  "title": "Nieuwe supply-zone na uitbraak Londen",
+  "text": "3 grote candles omlaag (gem. 2.88x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 77.941,0 – 78.001,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
+  "action": "Zone actief, wacht op entry",
+  "invalidation": "slot boven 78.001,0"
  }
 ]
