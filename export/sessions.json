@@ -119,5 +119,16 @@
   "or_high": 77968.0,
   "or_low": 77878.0,
   "trades": 1
+ },
+ {
+  "key": "BTCUSD|newyork|2026-11-01",
+  "market": "BTCUSD",
+  "session": "newyork",
+  "label": "New York",
+  "open": "2026-11-01T14:30:00Z",
+  "range_end": "2026-11-01T14:45:00Z",
+  "or_high": 78017.0,
+  "or_low": 77996.0,
+  "trades": 0
  }
 ]
