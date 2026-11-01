@@ -343,5 +343,28 @@
   "exit_reason": "take profit",
   "fees_usd": 24.6759,
   "liquid": "Verlopen"
+ },
+ {
+  "id": "T016",
+  "market": "BTCUSD",
+  "side": "Long",
+  "status": "Open",
+  "opened_at": "2026-11-01T11:40:00Z",
+  "entry": 77924.0,
+  "stop": 77875.042857,
+  "target": 78238.0,
+  "size": 1.79892034,
+  "risk_usd": 88.07,
+  "rr": 6.41,
+  "exit": null,
+  "closed_at": null,
+  "pnl_usd": null,
+  "r_result": null,
+  "setup": "ORB Londen + demand-zone",
+  "reason": "De koers tikte de zone aan en sloot er weer buiten. Zone 77.878,0 – 77.918,0. Trend omhoog; FVG ja; BOS ja; discount ja; level stack nee.",
+  "strategy": "ORB + Supply & Demand",
+  "exit_reason": null,
+  "fees_usd": 133.1701,
+  "liquid": "Wacht op bevestiging"
  }
 ]
