@@ -1,16 +1,15 @@
 [
  {
-  "id": "—",
-  "market": null,
-  "session": null,
-  "side": null,
-  "bottom": null,
-  "top": null,
-  "status": null,
-  "created": null,
-  "fvg": null,
-  "bos": null,
-  "note": null,
-  "_empty": true
+  "id": "Z0025",
+  "market": "BTCUSD",
+  "session": "asia",
+  "side": "Demand",
+  "bottom": 77478.0,
+  "top": 77507.0,
+  "status": "Vers",
+  "created": "2026-11-01T00:35:00Z",
+  "fvg": true,
+  "bos": true,
+  "note": ""
  }
 ]
