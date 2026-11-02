@@ -1,17 +1,5 @@
 [
  {
-  "id": "E00179",
-  "time": "2026-10-23T07:20:00Z",
-  "market": "BTCUSD",
-  "price": 81735.0,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange Londen staat",
-  "text": "BTCUSD: range van het eerste kwartier 81.765,0 – 81.911,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
   "id": "E00180",
   "time": "2026-10-23T07:20:00Z",
   "market": "XAUUSD",
@@ -1797,6 +1785,18 @@
   "title": "Displacement zonder setup (omhoog)",
   "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts, beweging breekt de openingsrange niet. Geen zone.",
   "action": "Geen trade",
+  "invalidation": ""
+ },
+ {
+  "id": "E00329",
+  "time": "2026-11-02T14:37:08Z",
+  "market": "XAUUSD",
+  "price": 3906.1,
+  "bias": "—",
+  "trigger": "Nieuws",
+  "title": "Goud herstelt van jaarlaagte",
+  "text": "Goud steeg vanaf 13:35 UTC van ~3.915 naar ~3.960 (+1,2%); headlines: herstel van een jaarlaagte na gedwongen verkopen door de AI-aandelencrash, olie daalt, VS-futures herstellen. ISM industrie VS om 16:00 (Amsterdam), niet in de blackout-lijst.",
+  "action": "",
   "invalidation": ""
  }
 ]
