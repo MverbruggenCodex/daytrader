@@ -1,41 +1,5 @@
 [
  {
-  "id": "E00180",
-  "time": "2026-10-23T07:20:00Z",
-  "market": "XAUUSD",
-  "price": 4016.0,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange Londen staat",
-  "text": "XAUUSD: range van het eerste kwartier 4.015,0 – 4.018,6. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
-  "id": "E00181",
-  "time": "2026-10-23T07:35:00Z",
-  "market": "XAUUSD",
-  "price": 4023.3,
-  "bias": "omlaag",
-  "trigger": "Overgeslagen",
-  "title": "ORB-uitbraak Londen niet genomen",
-  "text": "Slot boven de openingsrange, maar: trend is omlaag.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
-  "id": "E00182",
-  "time": "2026-10-23T12:15:00Z",
-  "market": "BTCUSD",
-  "price": 81513.0,
-  "bias": "zijwaarts",
-  "trigger": "Overgeslagen",
-  "title": "Displacement zonder setup (omlaag)",
-  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts. Geen zone.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
   "id": "E00183",
   "time": "2026-10-23T13:50:00Z",
   "market": "BTCUSD",
@@ -1797,6 +1761,42 @@
   "title": "Goud herstelt van jaarlaagte",
   "text": "Goud steeg vanaf 13:35 UTC van ~3.915 naar ~3.960 (+1,2%); headlines: herstel van een jaarlaagte na gedwongen verkopen door de AI-aandelencrash, olie daalt, VS-futures herstellen. ISM industrie VS om 16:00 (Amsterdam), niet in de blackout-lijst.",
   "action": "",
+  "invalidation": ""
+ },
+ {
+  "id": "E00330",
+  "time": "2026-11-02T14:50:00Z",
+  "market": "BTCUSD",
+  "price": 77835.0,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange New York staat",
+  "text": "BTCUSD: range van het eerste kwartier 77.742,0 – 78.138,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00331",
+  "time": "2026-11-02T14:50:00Z",
+  "market": "XAUUSD",
+  "price": 3963.4,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange New York staat",
+  "text": "XAUUSD: range van het eerste kwartier 3.949,4 – 3.967,4. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00332",
+  "time": "2026-11-02T15:00:00Z",
+  "market": "XAUUSD",
+  "price": 3968.0,
+  "bias": "zijwaarts",
+  "trigger": "Overgeslagen",
+  "title": "ORB-uitbraak New York niet genomen",
+  "text": "Slot boven de openingsrange, maar: trend is zijwaarts.",
+  "action": "Geen trade",
   "invalidation": ""
  }
 ]
