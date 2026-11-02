@@ -1,41 +1,5 @@
 [
  {
-  "id": "E00173",
-  "time": "2026-10-22T16:55:00Z",
-  "market": "BTCUSD",
-  "price": 81023.0,
-  "bias": "omlaag",
-  "trigger": "Nieuwe zone",
-  "title": "Nieuwe supply-zone na uitbraak New York",
-  "text": "3 grote candles omlaag (gem. 2.67x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 81.460,0 – 81.547,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
-  "action": "Zone actief, wacht op entry",
-  "invalidation": "slot boven 81.547,0"
- },
- {
-  "id": "E00174",
-  "time": "2026-10-23T00:20:00Z",
-  "market": "BTCUSD",
-  "price": 81196.0,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange Tokio staat",
-  "text": "BTCUSD: range van het eerste kwartier 81.141,0 – 81.410,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
-  "id": "E00175",
-  "time": "2026-10-23T00:20:00Z",
-  "market": "XAUUSD",
-  "price": 4023.8,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange Tokio staat",
-  "text": "XAUUSD: range van het eerste kwartier 4.022,5 – 4.029,1. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
   "id": "E00176",
   "time": "2026-10-23T00:55:00Z",
   "market": "BTCUSD",
@@ -1796,6 +1760,42 @@
   "trigger": "Zone vervallen",
   "title": "Supply-zone vervallen",
   "text": "Een candle sloot door de supply-zone (78.326,0 – 78.490,0). Volgens Pats regel is een zone dan dood; geen trade.",
+  "action": "Geen trade",
+  "invalidation": ""
+ },
+ {
+  "id": "E00323",
+  "time": "2026-11-02T08:20:00Z",
+  "market": "BTCUSD",
+  "price": 78100.0,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange Londen staat",
+  "text": "BTCUSD: range van het eerste kwartier 78.047,0 – 78.233,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00324",
+  "time": "2026-11-02T08:20:00Z",
+  "market": "XAUUSD",
+  "price": 3895.0,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange Londen staat",
+  "text": "XAUUSD: range van het eerste kwartier 3.899,2 – 3.907,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00325",
+  "time": "2026-11-02T08:40:00Z",
+  "market": "BTCUSD",
+  "price": 78284.0,
+  "bias": "omlaag",
+  "trigger": "Overgeslagen",
+  "title": "Displacement zonder setup (omhoog)",
+  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is omlaag. Geen zone.",
   "action": "Geen trade",
   "invalidation": ""
  }
