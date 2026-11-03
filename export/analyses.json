@@ -1,29 +1,5 @@
 [
  {
-  "id": "E00189",
-  "time": "2026-10-24T07:20:00Z",
-  "market": "BTCUSD",
-  "price": 80908.0,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange Londen staat",
-  "text": "BTCUSD: range van het eerste kwartier 80.764,0 – 80.900,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
-  "id": "E00190",
-  "time": "2026-10-24T08:00:00Z",
-  "market": "BTCUSD",
-  "price": 80718.0,
-  "bias": "zijwaarts",
-  "trigger": "Overgeslagen",
-  "title": "Displacement zonder setup (omlaag)",
-  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts. Geen zone.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
   "id": "E00191",
   "time": "2026-10-24T09:10:00Z",
   "market": "BTCUSD",
@@ -1797,6 +1773,30 @@
   "title": "Displacement zonder setup (omhoog)",
   "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts. Geen zone.",
   "action": "Geen trade",
+  "invalidation": ""
+ },
+ {
+  "id": "E00339",
+  "time": "2026-11-03T00:50:00Z",
+  "market": "XAUUSD",
+  "price": 3953.7,
+  "bias": "omhoog",
+  "trigger": "Entry",
+  "title": "Long XAUUSD (T017), ORB-uitbraak",
+  "text": "5m-slot boven de openingsrange 3.949,1 – 3.952,5.",
+  "action": "Long op 3.953,7 · stop 3.949,1 · doel 3.958,3 (1:1.0)",
+  "invalidation": "stop 3.949,1 of sessie-einde"
+ },
+ {
+  "id": "E00340",
+  "time": "2026-11-03T00:55:00Z",
+  "market": "XAUUSD",
+  "price": 3958.2999999999997,
+  "bias": "onbekend",
+  "trigger": "Exit",
+  "title": "T017 gesloten: take profit (verlies)",
+  "text": "Long XAUUSD van 3.953,7 gesloten op 3.958,3 via take profit. Modelresultaat $-55.84 (-0.63R).",
+  "action": "Positie gesloten · $-55.84",
   "invalidation": ""
  }
 ]
