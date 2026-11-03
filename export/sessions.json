@@ -141,5 +141,27 @@
   "or_high": 3911.8,
   "or_low": 3906.1,
   "trades": 0
+ },
+ {
+  "key": "BTCUSD|newyork|2026-11-03",
+  "market": "BTCUSD",
+  "session": "newyork",
+  "label": "New York",
+  "open": "2026-11-03T14:30:00Z",
+  "range_end": "2026-11-03T14:45:00Z",
+  "or_high": 77470.0,
+  "or_low": 77104.0,
+  "trades": 0
+ },
+ {
+  "key": "XAUUSD|newyork|2026-11-03",
+  "market": "XAUUSD",
+  "session": "newyork",
+  "label": "New York",
+  "open": "2026-11-03T14:30:00Z",
+  "range_end": "2026-11-03T14:45:00Z",
+  "or_high": 3949.1,
+  "or_low": 3943.3,
+  "trades": 0
  }
 ]
