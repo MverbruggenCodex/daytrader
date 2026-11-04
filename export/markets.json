@@ -2,50 +2,50 @@
  {
   "market": "BTCUSD",
   "status": "Sessie New York",
-  "price": 80369.0,
-  "day_open": 77702.0,
+  "price": 80095.0,
+  "day_open": 77586.0,
   "day_high": 81177.0,
   "day_low": 75687.0,
   "bias": "Neutraal",
   "note": "Zoveel mogelijk trades (keuze 12-10): ORB + S&D in Tokio, Londen (tot 14:00) en New York (tot 15:00), 2 per sessie, plus Pats swing 1u 24/7 (doel 2R, EMA 50)",
   "trading": true,
-  "updated": "2026-11-04T18:40:00Z"
+  "updated": "2026-11-04T19:40:00Z"
  },
  {
   "market": "EURUSD",
   "status": "Sessie New York",
-  "price": 1.1228,
-  "day_open": 1.1196,
+  "price": 1.1225,
+  "day_open": 1.1193,
   "day_high": 1.1281,
   "day_low": 1.119,
   "bias": "Bearish",
   "note": "Alleen volgen; strategie verloor in de backtest",
   "trading": false,
-  "updated": "2026-11-04T18:40:00Z"
+  "updated": "2026-11-04T19:40:00Z"
  },
  {
   "market": "XAUUSD",
   "status": "Sessie New York",
-  "price": 4062.5,
-  "day_open": 3931.1,
+  "price": 4060.7,
+  "day_open": 3926.4,
   "day_high": 4071.3,
   "day_low": 3919.6,
   "bias": "Bullish",
   "note": "Zoveel mogelijk trades (keuze 12-10): ORB-uitbraak in Tokio, Londen en New York (retest, stop overkant, 1R, trend 60m), plus Pats swing 4u (EMA 50)",
   "trading": true,
-  "updated": "2026-11-04T18:40:00Z"
+  "updated": "2026-11-04T19:40:00Z"
  },
  {
   "market": "SP500",
   "status": "Sessie New York",
-  "price": 7700.1,
-  "day_open": 7585.4,
+  "price": 7702.0,
+  "day_open": 7571.5,
   "day_high": 7713.9,
   "day_low": 7460.9,
   "bias": "Bullish",
   "note": "Alleen volgen; vervangt de DJ30",
   "trading": false,
-  "updated": "2026-11-04T18:40:00Z"
+  "updated": "2026-11-04T19:40:00Z"
  },
  {
   "market": "USDCAD",
@@ -57,7 +57,7 @@
   "bias": "—",
   "note": "Niet beschikbaar op Liquid/Hyperliquid",
   "trading": false,
-  "updated": "2026-11-04T18:43:37Z"
+  "updated": "2026-11-04T19:43:33Z"
  },
  {
   "market": "DJ30",
@@ -69,6 +69,6 @@
   "bias": "—",
   "note": "Niet beschikbaar op Liquid/Hyperliquid; SP500 vervangt hem",
   "trading": false,
-  "updated": "2026-11-04T18:43:37Z"
+  "updated": "2026-11-04T19:43:33Z"
  }
 ]
