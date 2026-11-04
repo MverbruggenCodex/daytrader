@@ -1,29 +1,5 @@
 [
  {
-  "id": "E00205",
-  "time": "2026-10-25T11:25:00Z",
-  "market": "BTCUSD",
-  "price": 80420.9857142857,
-  "bias": "onbekend",
-  "trigger": "Exit",
-  "title": "T013 gesloten: stop loss (verlies)",
-  "text": "Short BTCUSD van 80.303,0 gesloten op 80.421,0 via stop loss. Modelresultaat $-202.04 (-2.29R).",
-  "action": "Positie gesloten · $-202.04",
-  "invalidation": ""
- },
- {
-  "id": "E00206",
-  "time": "2026-10-25T11:50:00Z",
-  "market": "BTCUSD",
-  "price": 80546.0,
-  "bias": "zijwaarts",
-  "trigger": "Overgeslagen",
-  "title": "Displacement zonder setup (omhoog)",
-  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts, beweging breekt de openingsrange niet. Geen zone.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
   "id": "E00207",
   "time": "2026-10-25T11:55:00Z",
   "market": "BTCUSD",
@@ -1798,5 +1774,29 @@
   "text": "5 grote candles omlaag (gem. 2.17x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 76.673,0 – 76.793,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
   "action": "Zone actief, wacht op entry",
   "invalidation": "slot boven 76.793,0"
+ },
+ {
+  "id": "E00355",
+  "time": "2026-11-04T08:20:00Z",
+  "market": "BTCUSD",
+  "price": 78451.0,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange Londen staat",
+  "text": "BTCUSD: range van het eerste kwartier 78.123,0 – 78.469,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00356",
+  "time": "2026-11-04T08:20:00Z",
+  "market": "XAUUSD",
+  "price": 4028.5,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange Londen staat",
+  "text": "XAUUSD: range van het eerste kwartier 4.022,3 – 4.038,3. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
  }
 ]
