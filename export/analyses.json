@@ -1,41 +1,5 @@
 [
  {
-  "id": "E00222",
-  "time": "2026-10-26T13:30:00Z",
-  "market": "BTCUSD",
-  "price": 79935.0,
-  "bias": "zijwaarts",
-  "trigger": "Overgeslagen",
-  "title": "Displacement zonder setup (omlaag)",
-  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts, beweging breekt de openingsrange niet. Geen zone.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
-  "id": "E00223",
-  "time": "2026-10-26T13:50:00Z",
-  "market": "BTCUSD",
-  "price": 79651.0,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange New York staat",
-  "text": "BTCUSD: range van het eerste kwartier 79.430,0 – 80.085,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
-  "id": "E00224",
-  "time": "2026-10-26T13:50:00Z",
-  "market": "XAUUSD",
-  "price": 4000.5,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange New York staat",
-  "text": "XAUUSD: range van het eerste kwartier 4.002,6 – 4.012,4. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
   "id": "E00225",
   "time": "2026-10-26T14:20:00Z",
   "market": "BTCUSD",
@@ -1798,5 +1762,41 @@
   "text": "3 grote candles omlaag (gem. 1.69x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 80.476,0 – 80.521,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
   "action": "Zone actief, wacht op entry",
   "invalidation": "slot boven 80.521,0"
+ },
+ {
+  "id": "E00372",
+  "time": "2026-11-05T12:44:25Z",
+  "market": "BTCUSD",
+  "price": 80358.0,
+  "bias": "—",
+  "trigger": "Nieuws",
+  "title": "BTC zakt onder 80.000 na BoE-renteverhoging",
+  "text": "BoE verhoogde de rente naar 4% (eerste verhoging in ruim drie jaar). BTC daalde in het uur na het besluit van ~80.400 naar ~79.650 op hoog volume; goud zakte van ~4.135 naar ~4.117. Viel grotendeels binnen de BoE-blackout. VS-werkloosheidsaanvragen om 14:30 (Amsterdam), niet in de blackout-lijst.",
+  "action": "",
+  "invalidation": ""
+ },
+ {
+  "id": "E00373",
+  "time": "2026-11-05T12:35:00Z",
+  "market": "BTCUSD",
+  "price": 79974.0,
+  "bias": "omlaag",
+  "trigger": "Nieuwe zone",
+  "title": "Nieuwe supply-zone na uitbraak Londen",
+  "text": "4 grote candles omlaag (gem. 2.21x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 80.144,0 – 80.258,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
+  "action": "Zone actief, wacht op entry",
+  "invalidation": "slot boven 80.258,0"
+ },
+ {
+  "id": "E00374",
+  "time": "2026-11-05T12:40:00Z",
+  "market": "XAUUSD",
+  "price": 4119.1,
+  "bias": "onbekend",
+  "trigger": "Exit",
+  "title": "T018 gesloten: stop loss (verlies)",
+  "text": "Long XAUUSD van 4.129,1 gesloten op 4.119,1 via stop loss. Modelresultaat $-157.08 (-1.78R).",
+  "action": "Positie gesloten · $-157.08",
+  "invalidation": ""
  }
 ]
