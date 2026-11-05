@@ -1,5 +1,18 @@
 [
  {
+  "id": "Z0038",
+  "market": "BTCUSD",
+  "session": "newyork",
+  "side": "Supply",
+  "bottom": 76214.0,
+  "top": 76710.0,
+  "status": "Overgeslagen",
+  "created": "2026-11-05T15:50:00Z",
+  "fvg": true,
+  "bos": true,
+  "note": "R:R 1:0.70 onder minimum 1:2"
+ },
+ {
   "id": "Z0037",
   "market": "BTCUSD",
   "session": "newyork",
