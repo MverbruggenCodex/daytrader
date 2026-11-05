@@ -1,17 +1,5 @@
 [
  {
-  "id": "E00221",
-  "time": "2026-10-26T13:10:00Z",
-  "market": "BTCUSD",
-  "price": 80152.0,
-  "bias": "zijwaarts",
-  "trigger": "Overgeslagen",
-  "title": "Displacement zonder setup (omlaag)",
-  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts, beweging breekt de openingsrange niet. Geen zone.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
   "id": "E00222",
   "time": "2026-10-26T13:30:00Z",
   "market": "BTCUSD",
@@ -1798,5 +1786,17 @@
   "text": "5m-slot boven de openingsrange 4.119,1 – 4.128,9.",
   "action": "Long op 4.129,1 · stop 4.119,1 · doel 4.139,1 (1:1.0)",
   "invalidation": "stop 4.119,1 of sessie-einde"
+ },
+ {
+  "id": "E00371",
+  "time": "2026-11-05T10:45:00Z",
+  "market": "BTCUSD",
+  "price": 80321.0,
+  "bias": "omlaag",
+  "trigger": "Nieuwe zone",
+  "title": "Nieuwe supply-zone na uitbraak Londen",
+  "text": "3 grote candles omlaag (gem. 1.69x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 80.476,0 – 80.521,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
+  "action": "Zone actief, wacht op entry",
+  "invalidation": "slot boven 80.521,0"
  }
 ]
