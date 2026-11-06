@@ -1,41 +1,5 @@
 [
  {
-  "id": "E00241",
-  "time": "2026-10-27T14:25:00Z",
-  "market": "XAUUSD",
-  "price": 4038.0,
-  "bias": "zijwaarts",
-  "trigger": "Overgeslagen",
-  "title": "ORB-uitbraak New York niet genomen",
-  "text": "Slot boven de openingsrange, maar: trend is zijwaarts.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
-  "id": "E00242",
-  "time": "2026-10-27T15:25:00Z",
-  "market": "BTCUSD",
-  "price": 80576.0,
-  "bias": "omhoog",
-  "trigger": "Nieuwe zone",
-  "title": "Nieuwe demand-zone na uitbraak New York",
-  "text": "3 grote candles omhoog (gem. 2.33x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 80.242,0 – 80.395,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
-  "action": "Zone actief, wacht op entry",
-  "invalidation": "slot onder 80.242,0"
- },
- {
-  "id": "E00243",
-  "time": "2026-10-27T15:40:00Z",
-  "market": "BTCUSD",
-  "price": 80505.0,
-  "bias": "onbekend",
-  "trigger": "Overgeslagen",
-  "title": "Entry-signaal demand-zone niet genomen",
-  "text": "De koers tikte de zone aan en sloot er weer buiten, maar: R:R 1:0.65 onder minimum 1:2.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
   "id": "E00244",
   "time": "2026-10-28T00:20:00Z",
   "market": "BTCUSD",
@@ -1796,6 +1760,42 @@
   "trigger": "Overgeslagen",
   "title": "ORB-uitbraak Londen niet genomen",
   "text": "Slot boven de openingsrange, maar: trend is omlaag; nieuwsfilter: Banenrapport VS / NFP (14:30).",
+  "action": "Geen trade",
+  "invalidation": ""
+ },
+ {
+  "id": "E00391",
+  "time": "2026-11-06T14:50:00Z",
+  "market": "BTCUSD",
+  "price": 75852.0,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange New York staat",
+  "text": "BTCUSD: range van het eerste kwartier 75.279,0 – 76.013,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00392",
+  "time": "2026-11-06T14:50:00Z",
+  "market": "XAUUSD",
+  "price": 4048.7,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange New York staat",
+  "text": "XAUUSD: range van het eerste kwartier 4.031,6 – 4.042,1. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00393",
+  "time": "2026-11-06T15:05:00Z",
+  "market": "BTCUSD",
+  "price": 75075.0,
+  "bias": "zijwaarts",
+  "trigger": "Overgeslagen",
+  "title": "Displacement zonder setup (omlaag)",
+  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts. Geen zone.",
   "action": "Geen trade",
   "invalidation": ""
  }
