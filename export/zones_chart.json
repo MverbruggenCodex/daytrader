@@ -58,5 +58,15 @@
   "from": "2026-11-07T08:35:00Z",
   "until": "2026-11-07T09:25:00Z",
   "status": "Vervallen"
+ },
+ {
+  "id": "Z0040",
+  "market": "BTCUSD",
+  "side": "short",
+  "bottom": 75983.0,
+  "top": 75992.0,
+  "from": "2026-11-07T12:20:00Z",
+  "until": null,
+  "status": "Vers"
  }
 ]
