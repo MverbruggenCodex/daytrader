@@ -48,5 +48,15 @@
   "from": "2026-11-05T15:30:00Z",
   "until": "2026-11-05T15:55:00Z",
   "status": "Overgeslagen"
+ },
+ {
+  "id": "Z0039",
+  "market": "BTCUSD",
+  "side": "long",
+  "bottom": 76099.0,
+  "top": 76106.0,
+  "from": "2026-11-07T08:35:00Z",
+  "until": "2026-11-07T09:25:00Z",
+  "status": "Vervallen"
  }
 ]
