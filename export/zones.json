@@ -1,5 +1,18 @@
 [
  {
+  "id": "Z0041",
+  "market": "BTCUSD",
+  "session": "london",
+  "side": "Supply",
+  "bottom": 75873.0,
+  "top": 75893.0,
+  "status": "Vers",
+  "created": "2026-11-08T10:35:00Z",
+  "fvg": true,
+  "bos": true,
+  "note": ""
+ },
+ {
   "id": "Z0040",
   "market": "BTCUSD",
   "session": "london",

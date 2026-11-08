@@ -1,29 +1,5 @@
 [
  {
-  "id": "E00254",
-  "time": "2026-10-28T13:50:00Z",
-  "market": "BTCUSD",
-  "price": 80419.0,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange New York staat",
-  "text": "BTCUSD: range van het eerste kwartier 80.554,0 – 80.900,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
-  "id": "E00255",
-  "time": "2026-10-28T13:50:00Z",
-  "market": "XAUUSD",
-  "price": 4052.7,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange New York staat",
-  "text": "XAUUSD: range van het eerste kwartier 4.047,8 – 4.053,5. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
   "id": "E00256",
   "time": "2026-10-28T15:45:00Z",
   "market": "XAUUSD",
@@ -1798,5 +1774,29 @@
   "text": "BTCUSD: range van het eerste kwartier 75.903,0 – 75.959,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
   "action": "Geen trade; zones zoeken",
   "invalidation": ""
+ },
+ {
+  "id": "E00404",
+  "time": "2026-11-08T09:45:00Z",
+  "market": "BTCUSD",
+  "price": 75940.0,
+  "bias": "omhoog",
+  "trigger": "Overgeslagen",
+  "title": "Displacement zonder setup (omhoog)",
+  "text": "Sterke beweging met FVG en break of structure, maar beweging breekt de openingsrange niet. Geen zone.",
+  "action": "Geen trade",
+  "invalidation": ""
+ },
+ {
+  "id": "E00405",
+  "time": "2026-11-08T10:35:00Z",
+  "market": "BTCUSD",
+  "price": 75832.0,
+  "bias": "omlaag",
+  "trigger": "Nieuwe zone",
+  "title": "Nieuwe supply-zone na uitbraak Londen",
+  "text": "3 grote candles omlaag (gem. 1.62x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 75.873,0 – 75.893,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
+  "action": "Zone actief, wacht op entry",
+  "invalidation": "slot boven 75.893,0"
  }
 ]
