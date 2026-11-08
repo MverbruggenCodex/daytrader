@@ -2,14 +2,14 @@
  {
   "market": "BTCUSD",
   "status": "Sessie Tokio",
-  "price": 75894.0,
-  "day_open": 75869.0,
+  "price": 75827.0,
+  "day_open": 75987.0,
   "day_high": 76235.0,
   "day_low": 75549.0,
-  "bias": "Neutraal",
+  "bias": "Bullish",
   "note": "Zoveel mogelijk trades (keuze 12-10): ORB + S&D in Tokio, Londen (tot 14:00) en New York (tot 15:00), 2 per sessie, plus Pats swing 1u 24/7 (doel 2R, EMA 50)",
   "trading": true,
-  "updated": "2026-11-08T04:40:00Z"
+  "updated": "2026-11-08T05:40:00Z"
  },
  {
   "market": "EURUSD",
@@ -18,34 +18,34 @@
   "day_open": 1.1157,
   "day_high": 1.1168,
   "day_low": 1.1147,
-  "bias": "Bullish",
+  "bias": "Neutraal",
   "note": "Alleen volgen; strategie verloor in de backtest",
   "trading": false,
-  "updated": "2026-11-08T04:40:00Z"
+  "updated": "2026-11-08T05:40:00Z"
  },
  {
   "market": "XAUUSD",
   "status": "Buiten sessie",
-  "price": 4066.2,
-  "day_open": 4080.0,
-  "day_high": 4080.0,
+  "price": 4066.3,
+  "day_open": 4079.7,
+  "day_high": 4079.7,
   "day_low": 4054.6,
   "bias": "Bearish",
   "note": "Zoveel mogelijk trades (keuze 12-10): ORB-uitbraak in Tokio, Londen en New York (retest, stop overkant, 1R, trend 60m), plus Pats swing 4u (EMA 50)",
   "trading": true,
-  "updated": "2026-11-08T04:40:00Z"
+  "updated": "2026-11-08T05:40:00Z"
  },
  {
   "market": "SP500",
   "status": "Buiten sessie",
-  "price": 7372.7,
-  "day_open": 7393.8,
-  "day_high": 7394.0,
+  "price": 7371.8,
+  "day_open": 7391.7,
+  "day_high": 7393.3,
   "day_low": 7366.8,
   "bias": "Neutraal",
   "note": "Alleen volgen; vervangt de DJ30",
   "trading": false,
-  "updated": "2026-11-08T04:40:00Z"
+  "updated": "2026-11-08T05:40:00Z"
  },
  {
   "market": "USDCAD",
@@ -57,7 +57,7 @@
   "bias": "—",
   "note": "Niet beschikbaar op Liquid/Hyperliquid",
   "trading": false,
-  "updated": "2026-11-08T04:43:33Z"
+  "updated": "2026-11-08T05:43:24Z"
  },
  {
   "market": "DJ30",
@@ -69,6 +69,6 @@
   "bias": "—",
   "note": "Niet beschikbaar op Liquid/Hyperliquid; SP500 vervangt hem",
   "trading": false,
-  "updated": "2026-11-08T04:43:33Z"
+  "updated": "2026-11-08T05:43:24Z"
  }
 ]
