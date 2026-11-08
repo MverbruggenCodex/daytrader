@@ -1,17 +1,5 @@
 [
  {
-  "id": "E00262",
-  "time": "2026-10-29T02:40:00Z",
-  "market": "BTCUSD",
-  "price": 79782.0,
-  "bias": "zijwaarts",
-  "trigger": "Overgeslagen",
-  "title": "Displacement zonder setup (omlaag)",
-  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts. Geen zone.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
   "id": "E00263",
   "time": "2026-10-29T08:20:00Z",
   "market": "BTCUSD",
@@ -1797,6 +1785,18 @@
   "title": "Displacement zonder setup (omhoog)",
   "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is omlaag, beweging breekt de openingsrange niet. Geen zone.",
   "action": "Geen trade",
+  "invalidation": ""
+ },
+ {
+  "id": "E00412",
+  "time": "2026-11-08T22:46:00Z",
+  "market": "BTCUSD",
+  "price": 75708.0,
+  "bias": "—",
+  "trigger": "Nieuws",
+  "title": "BTC -3% flash drop, ~$1B liquidaties",
+  "text": "Rond 21:55Z zakte BTC van ~75.7k naar 73.5k (laag), herstel naar ~74.3k; brede risk-off (ook goud en S&P500 omlaag). Geen high-impact release binnen 60 min (zondagavond).",
+  "action": "",
   "invalidation": ""
  }
 ]
