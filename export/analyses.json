@@ -1,17 +1,5 @@
 [
  {
-  "id": "E00266",
-  "time": "2026-10-29T09:10:00Z",
-  "market": "XAUUSD",
-  "price": 4036.0,
-  "bias": "onbekend",
-  "trigger": "Exit",
-  "title": "T014 gesloten: stop loss (verlies)",
-  "text": "Short XAUUSD van 4.024,9 gesloten op 4.036,0 via stop loss. Modelresultaat $-148.83 (-1.69R).",
-  "action": "Positie gesloten · $-148.83",
-  "invalidation": ""
- },
- {
   "id": "E00267",
   "time": "2026-10-29T13:50:00Z",
   "market": "BTCUSD",
@@ -1797,6 +1785,18 @@
   "title": "Openingsrange Tokio staat",
   "text": "XAUUSD: range van het eerste kwartier 4.056,6 – 4.076,4. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
   "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00416",
+  "time": "2026-11-09T02:43:25Z",
+  "market": "XAUUSD",
+  "price": 4113.6,
+  "bias": "—",
+  "trigger": "Nieuws",
+  "title": "Goud stijgt naar ~4130",
+  "text": "Goud +1,8% in het huidige 4u-blok (4057 → 4132), boven 4100 ondanks sterker dan verwachte banencijfers; Aziatische markten stabiel, dollar stevig.",
+  "action": "",
   "invalidation": ""
  }
 ]
