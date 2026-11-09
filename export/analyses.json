@@ -1,29 +1,5 @@
 [
  {
-  "id": "E00267",
-  "time": "2026-10-29T13:50:00Z",
-  "market": "BTCUSD",
-  "price": 80076.0,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange New York staat",
-  "text": "BTCUSD: range van het eerste kwartier 79.890,0 – 80.267,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
-  "id": "E00268",
-  "time": "2026-10-29T13:50:00Z",
-  "market": "XAUUSD",
-  "price": 4030.0,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange New York staat",
-  "text": "XAUUSD: range van het eerste kwartier 4.022,4 – 4.038,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
   "id": "E00269",
   "time": "2026-10-29T14:00:00Z",
   "market": "BTCUSD",
@@ -1797,6 +1773,30 @@
   "title": "Goud stijgt naar ~4130",
   "text": "Goud +1,8% in het huidige 4u-blok (4057 → 4132), boven 4100 ondanks sterker dan verwachte banencijfers; Aziatische markten stabiel, dollar stevig.",
   "action": "",
+  "invalidation": ""
+ },
+ {
+  "id": "E00417",
+  "time": "2026-11-09T08:20:00Z",
+  "market": "BTCUSD",
+  "price": 74074.0,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange Londen staat",
+  "text": "BTCUSD: range van het eerste kwartier 73.698,0 – 73.934,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00418",
+  "time": "2026-11-09T08:20:00Z",
+  "market": "XAUUSD",
+  "price": 4092.4,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange Londen staat",
+  "text": "XAUUSD: range van het eerste kwartier 4.087,8 – 4.093,8. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
   "invalidation": ""
  }
 ]
