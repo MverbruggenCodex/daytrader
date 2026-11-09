@@ -1,41 +1,5 @@
 [
  {
-  "id": "E00263",
-  "time": "2026-10-29T08:20:00Z",
-  "market": "BTCUSD",
-  "price": 80075.0,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange Londen staat",
-  "text": "BTCUSD: range van het eerste kwartier 79.807,0 – 80.099,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
-  "id": "E00264",
-  "time": "2026-10-29T08:20:00Z",
-  "market": "XAUUSD",
-  "price": 4031.1,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange Londen staat",
-  "text": "XAUUSD: range van het eerste kwartier 4.025,4 – 4.036,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
-  "id": "E00265",
-  "time": "2026-10-29T09:00:00Z",
-  "market": "XAUUSD",
-  "price": 4024.9,
-  "bias": "omlaag",
-  "trigger": "Entry",
-  "title": "Short XAUUSD (T014), ORB-uitbraak",
-  "text": "5m-slot onder de openingsrange 4.025,4 – 4.036,0.",
-  "action": "Short op 4.024,9 · stop 4.036,0 · doel 4.013,8 (1:1.0)",
-  "invalidation": "stop 4.036,0 of sessie-einde"
- },
- {
   "id": "E00266",
   "time": "2026-10-29T09:10:00Z",
   "market": "XAUUSD",
@@ -1797,6 +1761,42 @@
   "title": "BTC -3% flash drop, ~$1B liquidaties",
   "text": "Rond 21:55Z zakte BTC van ~75.7k naar 73.5k (laag), herstel naar ~74.3k; brede risk-off (ook goud en S&P500 omlaag). Geen high-impact release binnen 60 min (zondagavond).",
   "action": "",
+  "invalidation": ""
+ },
+ {
+  "id": "E00413",
+  "time": "2026-11-09T00:43:26Z",
+  "market": "XAUUSD",
+  "price": 4066.0,
+  "bias": "—",
+  "trigger": "Nieuws",
+  "title": "Goud +0,7% bij Aziatische opening",
+  "text": "Goud stijgt van ca. 4075 naar 4102 in 15 minuten na de opening (00:25-00:40Z); Reuters: korte-termijn volatiliteit. Olie daalt nadat Trump nieuwe Iran-aanvallen 'onwaarschijnlijk' noemt.",
+  "action": "",
+  "invalidation": ""
+ },
+ {
+  "id": "E00414",
+  "time": "2026-11-09T00:20:00Z",
+  "market": "BTCUSD",
+  "price": 74803.0,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange Tokio staat",
+  "text": "BTCUSD: range van het eerste kwartier 74.449,0 – 74.880,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00415",
+  "time": "2026-11-09T00:20:00Z",
+  "market": "XAUUSD",
+  "price": 4071.8,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange Tokio staat",
+  "text": "XAUUSD: range van het eerste kwartier 4.056,6 – 4.076,4. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
   "invalidation": ""
  }
 ]
