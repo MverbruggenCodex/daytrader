@@ -1,17 +1,5 @@
 [
  {
-  "id": "E00273",
-  "time": "2026-10-29T16:35:00Z",
-  "market": "BTCUSD",
-  "price": 81205.0,
-  "bias": "zijwaarts",
-  "trigger": "Overgeslagen",
-  "title": "Displacement zonder setup (omlaag)",
-  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts, beweging breekt de openingsrange niet. Geen zone.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
   "id": "E00274",
   "time": "2026-10-29T20:44:21Z",
   "market": "BTCUSD",
@@ -1796,6 +1784,18 @@
   "trigger": "Overgeslagen",
   "title": "ORB-uitbraak New York niet genomen",
   "text": "Slot onder de openingsrange, maar: trend is omhoog.",
+  "action": "Geen trade",
+  "invalidation": ""
+ },
+ {
+  "id": "E00423",
+  "time": "2026-11-09T18:25:00Z",
+  "market": "BTCUSD",
+  "price": 74451.0,
+  "bias": "zijwaarts",
+  "trigger": "Overgeslagen",
+  "title": "Displacement zonder setup (omlaag)",
+  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts, beweging breekt de openingsrange niet. Geen zone.",
   "action": "Geen trade",
   "invalidation": ""
  }
