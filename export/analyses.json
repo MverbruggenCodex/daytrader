@@ -1,17 +1,5 @@
 [
  {
-  "id": "E00280",
-  "time": "2026-10-30T08:43:50Z",
-  "market": "BTCUSD",
-  "price": 78305.0,
-  "bias": "—",
-  "trigger": "Nieuws",
-  "title": "Binance-hack en liquidaties",
-  "text": "Liquid get_news: BBC meldt 'largest hack in history' bij Binance; Coinpedia meldt $1,5 mld aan liquidaties. BTC daalde van ~78.770 naar ~77.900 sinds 06:00 UTC. Hogere volatiliteit mogelijk.",
-  "action": "",
-  "invalidation": ""
- },
- {
   "id": "E00281",
   "time": "2026-10-30T08:20:00Z",
   "market": "BTCUSD",
@@ -1797,6 +1785,18 @@
   "title": "Openingsrange Londen staat",
   "text": "XAUUSD: range van het eerste kwartier 4.115,1 – 4.120,2. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
   "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00430",
+  "time": "2026-11-10T13:44:50Z",
+  "market": "XAUUSD",
+  "price": 4079.1,
+  "bias": "—",
+  "trigger": "Nieuws",
+  "title": "CPI VS: goud, BTC en S&P500 lager",
+  "text": "Na het CPI-cijfer VS (14:30, inflatie oktober iets lager maar nog hoog; Waller wil minstens 25bp verhoging in december) zakte goud in één candle van ~4.074 naar 4.044 (herstel ~4.060), BTC kort naar 73.444 (nu ~73.900), S&P500 naar 7.486, EURUSD 1,1184. Binnen de CPI-blackout 14:15–15:00.",
+  "action": "",
   "invalidation": ""
  }
 ]
