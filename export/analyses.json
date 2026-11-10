@@ -1,17 +1,5 @@
 [
  {
-  "id": "E00285",
-  "time": "2026-10-30T10:20:00Z",
-  "market": "XAUUSD",
-  "price": 3988.1,
-  "bias": "omlaag",
-  "trigger": "Overgeslagen",
-  "title": "ORB-uitbraak Londen niet genomen",
-  "text": "Slot boven de openingsrange, maar: trend is omlaag; nieuwsfilter: BBP Q3 flash eurozone.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
   "id": "E00286",
   "time": "2026-10-30T13:50:00Z",
   "market": "BTCUSD",
@@ -1797,6 +1785,18 @@
   "title": "Displacement zonder setup (omlaag)",
   "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is omhoog, beweging breekt de openingsrange niet. Geen zone.",
   "action": "Geen trade",
+  "invalidation": ""
+ },
+ {
+  "id": "E00435",
+  "time": "2026-11-10T15:43:39Z",
+  "market": "XAUUSD",
+  "price": 4051.7,
+  "bias": "—",
+  "trigger": "Nieuws",
+  "title": "Hete CPI VS, goud daalt",
+  "text": "CPI hoger dan verwacht; Fed's Waller steunt renteverhoging in december. Goud en BTC onder druk.",
+  "action": "",
   "invalidation": ""
  }
 ]
