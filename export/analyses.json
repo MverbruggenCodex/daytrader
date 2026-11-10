@@ -1,29 +1,5 @@
 [
  {
-  "id": "E00275",
-  "time": "2026-10-29T23:44:12Z",
-  "market": "BTCUSD",
-  "price": 79100.0,
-  "bias": "—",
-  "trigger": "Nieuws",
-  "title": "Binance pauzeert opnames na vermoedelijke hack",
-  "text": "TechCrunch: Binance pauzeert opnames, hackers vermoedelijk miljarden aan crypto gestolen. BTC zakt verder naar ~78.4k (laagste van de dag 78.2k). Extra volatiliteit mogelijk.",
-  "action": "",
-  "invalidation": ""
- },
- {
-  "id": "E00276",
-  "time": "2026-10-30T00:20:00Z",
-  "market": "BTCUSD",
-  "price": 77394.0,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange Tokio staat",
-  "text": "BTCUSD: range van het eerste kwartier 77.600,0 – 78.222,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
   "id": "E00277",
   "time": "2026-10-30T00:20:00Z",
   "market": "XAUUSD",
@@ -1797,6 +1773,30 @@
   "title": "Displacement zonder setup (omhoog)",
   "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is omlaag. Geen zone.",
   "action": "Geen trade",
+  "invalidation": ""
+ },
+ {
+  "id": "E00425",
+  "time": "2026-11-10T00:20:00Z",
+  "market": "BTCUSD",
+  "price": 75125.0,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange Tokio staat",
+  "text": "BTCUSD: range van het eerste kwartier 75.268,0 – 75.401,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00426",
+  "time": "2026-11-10T00:20:00Z",
+  "market": "XAUUSD",
+  "price": 4130.5,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange Tokio staat",
+  "text": "XAUUSD: range van het eerste kwartier 4.135,7 – 4.140,3. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
   "invalidation": ""
  }
 ]
