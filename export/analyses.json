@@ -1,53 +1,5 @@
 [
  {
-  "id": "E00281",
-  "time": "2026-10-30T08:20:00Z",
-  "market": "BTCUSD",
-  "price": 78092.0,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange Londen staat",
-  "text": "BTCUSD: range van het eerste kwartier 77.915,0 – 78.134,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
-  "id": "E00282",
-  "time": "2026-10-30T08:20:00Z",
-  "market": "XAUUSD",
-  "price": 3991.6,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange Londen staat",
-  "text": "XAUUSD: range van het eerste kwartier 3.976,3 – 3.988,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
-  "id": "E00283",
-  "time": "2026-10-30T09:44:19Z",
-  "market": "BTCUSD",
-  "price": 77991.0,
-  "bias": "—",
-  "trigger": "Nieuws",
-  "title": "Binance-hack toegeschreven aan Noord-Korea",
-  "text": "Reuters/TRM: Noord-Korea achter Binance-diefstal; BTC zakt in Londen naar ~77.500. Crypto-ETF's netto -116 mln.",
-  "action": "",
-  "invalidation": ""
- },
- {
-  "id": "E00284",
-  "time": "2026-10-30T09:44:19Z",
-  "market": "XAUUSD",
-  "price": 3989.9,
-  "bias": "—",
-  "trigger": "Nieuws",
-  "title": "Goud onder 4.000",
-  "text": "Goud zakt onder $4.000 door inflatiezorgen en aandelenverliezen (Nasdaq-futures -2% na Amazon/Intel).",
-  "action": "",
-  "invalidation": ""
- },
- {
   "id": "E00285",
   "time": "2026-10-30T10:20:00Z",
   "market": "XAUUSD",
@@ -1797,6 +1749,54 @@
   "title": "CPI VS: goud, BTC en S&P500 lager",
   "text": "Na het CPI-cijfer VS (14:30, inflatie oktober iets lager maar nog hoog; Waller wil minstens 25bp verhoging in december) zakte goud in één candle van ~4.074 naar 4.044 (herstel ~4.060), BTC kort naar 73.444 (nu ~73.900), S&P500 naar 7.486, EURUSD 1,1184. Binnen de CPI-blackout 14:15–15:00.",
   "action": "",
+  "invalidation": ""
+ },
+ {
+  "id": "E00431",
+  "time": "2026-11-10T14:50:00Z",
+  "market": "BTCUSD",
+  "price": 74063.0,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange New York staat",
+  "text": "BTCUSD: range van het eerste kwartier 73.568,0 – 74.409,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00432",
+  "time": "2026-11-10T14:50:00Z",
+  "market": "XAUUSD",
+  "price": 4037.7,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange New York staat",
+  "text": "XAUUSD: range van het eerste kwartier 4.036,9 – 4.059,4. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00433",
+  "time": "2026-11-10T15:05:00Z",
+  "market": "BTCUSD",
+  "price": 74603.0,
+  "bias": "zijwaarts",
+  "trigger": "Overgeslagen",
+  "title": "Displacement zonder setup (omhoog)",
+  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts. Geen zone.",
+  "action": "Geen trade",
+  "invalidation": ""
+ },
+ {
+  "id": "E00434",
+  "time": "2026-11-10T15:35:00Z",
+  "market": "BTCUSD",
+  "price": 73741.0,
+  "bias": "omhoog",
+  "trigger": "Overgeslagen",
+  "title": "Displacement zonder setup (omlaag)",
+  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is omhoog, beweging breekt de openingsrange niet. Geen zone.",
+  "action": "Geen trade",
   "invalidation": ""
  }
 ]
