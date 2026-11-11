@@ -1,29 +1,5 @@
 [
  {
-  "id": "E00286",
-  "time": "2026-10-30T13:50:00Z",
-  "market": "BTCUSD",
-  "price": 76767.0,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange New York staat",
-  "text": "BTCUSD: range van het eerste kwartier 76.911,0 – 77.267,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
-  "id": "E00287",
-  "time": "2026-10-30T13:50:00Z",
-  "market": "XAUUSD",
-  "price": 3925.0,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange New York staat",
-  "text": "XAUUSD: range van het eerste kwartier 3.923,3 – 3.947,6. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
   "id": "E00288",
   "time": "2026-10-30T14:54:35Z",
   "market": "XAUUSD",
@@ -1797,6 +1773,30 @@
   "title": "Hete CPI VS, goud daalt",
   "text": "CPI hoger dan verwacht; Fed's Waller steunt renteverhoging in december. Goud en BTC onder druk.",
   "action": "",
+  "invalidation": ""
+ },
+ {
+  "id": "E00436",
+  "time": "2026-11-11T00:20:00Z",
+  "market": "BTCUSD",
+  "price": 73659.0,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange Tokio staat",
+  "text": "BTCUSD: range van het eerste kwartier 73.626,0 – 73.793,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00437",
+  "time": "2026-11-11T00:20:00Z",
+  "market": "XAUUSD",
+  "price": 4042.7,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange Tokio staat",
+  "text": "XAUUSD: range van het eerste kwartier 4.039,2 – 4.042,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
   "invalidation": ""
  }
 ]
