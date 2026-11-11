@@ -35390,25 +35390,50 @@
    "created_t": 1794386400000,
    "expires_t": 1794393600000,
    "close_at": 1794412800000,
-   "status": "pending",
-   "liquid_order_id": null,
+   "status": "filled",
+   "liquid_order_id": "181140",
    "idempotency_key": "daytrader-T019-1794386400000",
    "note": "",
    "reason": "5m-slot boven de openingsrange 4.057,8 – 4.059,5.",
    "notional": 22018.67,
    "leverage": 10,
    "collateral": 2201.87,
-   "risk_usd": 17.89
+   "risk_usd": 17.89,
+   "updated_t": 1794386814201
   }
  ],
  "order_seq": 19,
  "liquid": {
   "paper_mode": true,
-  "equity": 8807.47,
-  "available": 8807.47,
-  "margin_used": 0.0,
-  "positions": [],
-  "updated_t": 1794386724379
+  "equity": 8786.29,
+  "available": 6584.47,
+  "margin_used": 2201.82,
+  "positions": [
+   {
+    "symbol": "xyz:GOLD-PERP",
+    "side": "long",
+    "size": "5.4218",
+    "entryPx": "4061.1",
+    "markPx": "4060.6",
+    "leverage": "10",
+    "leverageType": "isolated",
+    "unrealizedPnl": "-2.7109",
+    "liquidationPx": "3858.045",
+    "marginUsed": "2201.820089",
+    "returnOnEquity": "-0.00123119",
+    "tp": "4064.4",
+    "sl": "4057.8",
+    "tpTriggerPxs": [
+     "4064.4"
+    ],
+    "slTriggerPxs": [
+     "4057.8"
+    ],
+    "tpCoverage": 1,
+    "slCoverage": 1
+   }
+  ],
+  "updated_t": 1794386818584
  },
  "htf": {
   "BTCUSD@60": [
