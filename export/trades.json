@@ -417,7 +417,7 @@
   "id": "T019",
   "market": "XAUUSD",
   "side": "Long",
-  "status": "Open",
+  "status": "Gesloten",
   "opened_at": "2026-11-11T08:40:00Z",
   "entry": 4061.1,
   "stop": 4057.8,
@@ -425,15 +425,15 @@
   "size": 26.68787879,
   "risk_usd": 88.07,
   "rr": 1.0,
-  "exit": null,
-  "closed_at": null,
-  "pnl_usd": null,
-  "r_result": null,
+  "exit": 4057.8,
+  "closed_at": "2026-11-11T08:55:00Z",
+  "pnl_usd": -293.91,
+  "r_result": -3.34,
   "setup": "ORB-uitbraak Londen",
   "reason": "5m-slot boven de openingsrange 4.057,8 – 4.059,5.",
   "strategy": "ORB-uitbraak",
-  "exit_reason": null,
-  "fees_usd": 102.963,
-  "liquid": "Positie open"
+  "exit_reason": "stop loss",
+  "fees_usd": 205.8424,
+  "liquid": "Gesloten"
  }
 ]
