@@ -1,41 +1,5 @@
 [
  {
-  "id": "E00288",
-  "time": "2026-10-30T14:54:35Z",
-  "market": "XAUUSD",
-  "price": 3924.5,
-  "bias": "—",
-  "trigger": "Nieuws",
-  "title": "Goud onder 3.900 geweest",
-  "text": "Spot goud zakte ruim 3% en raakte kort 3893,6 (4u-low); koers nu rond 3919.",
-  "action": "",
-  "invalidation": ""
- },
- {
-  "id": "E00289",
-  "time": "2026-10-30T15:05:00Z",
-  "market": "XAUUSD",
-  "price": 3921.1,
-  "bias": "omlaag",
-  "trigger": "Entry",
-  "title": "Short XAUUSD (T015), ORB-uitbraak",
-  "text": "5m-slot onder de openingsrange 3.923,3 – 3.947,6.",
-  "action": "Short op 3.921,1 · stop 3.947,6 · doel 3.894,6 (1:1.0)",
-  "invalidation": "stop 3.947,6 of sessie-einde"
- },
- {
-  "id": "E00290",
-  "time": "2026-10-30T15:10:00Z",
-  "market": "BTCUSD",
-  "price": 77714.0,
-  "bias": "omlaag",
-  "trigger": "Overgeslagen",
-  "title": "Displacement zonder setup (omhoog)",
-  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is omlaag. Geen zone.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
   "id": "E00291",
   "time": "2026-10-30T16:59:58Z",
   "market": "BTCUSD",
@@ -1798,5 +1762,41 @@
   "text": "XAUUSD: range van het eerste kwartier 4.039,2 – 4.042,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
   "action": "Geen trade; zones zoeken",
   "invalidation": ""
+ },
+ {
+  "id": "E00438",
+  "time": "2026-11-11T08:20:00Z",
+  "market": "BTCUSD",
+  "price": 73970.0,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange Londen staat",
+  "text": "BTCUSD: range van het eerste kwartier 73.980,0 – 74.150,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00439",
+  "time": "2026-11-11T08:20:00Z",
+  "market": "XAUUSD",
+  "price": 4059.3,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange Londen staat",
+  "text": "XAUUSD: range van het eerste kwartier 4.057,8 – 4.059,5. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00440",
+  "time": "2026-11-11T08:40:00Z",
+  "market": "XAUUSD",
+  "price": 4061.1,
+  "bias": "omhoog",
+  "trigger": "Entry",
+  "title": "Long XAUUSD (T019), ORB-uitbraak",
+  "text": "5m-slot boven de openingsrange 4.057,8 – 4.059,5.",
+  "action": "Long op 4.061,1 · stop 4.057,8 · doel 4.064,4 (1:1.0)",
+  "invalidation": "stop 4.057,8 of sessie-einde"
  }
 ]
