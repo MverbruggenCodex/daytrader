@@ -1,15 +1,16 @@
 [
  {
-  "id": "Z0041",
-  "market": "BTCUSD",
-  "session": "london",
-  "side": "Supply",
-  "bottom": 75873.0,
-  "top": 75893.0,
-  "status": "Vervallen",
-  "created": "2026-11-08T10:35:00Z",
-  "fvg": true,
-  "bos": true,
-  "note": "candle sloot door de zone"
+  "id": "—",
+  "market": null,
+  "session": null,
+  "side": null,
+  "bottom": null,
+  "top": null,
+  "status": null,
+  "created": null,
+  "fvg": null,
+  "bos": null,
+  "note": null,
+  "_empty": true
  }
 ]
