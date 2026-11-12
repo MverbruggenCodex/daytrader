@@ -1,17 +1,5 @@
 [
  {
-  "id": "E00304",
-  "time": "2026-11-01T01:45:00Z",
-  "market": "BTCUSD",
-  "price": 77721.0,
-  "bias": "omhoog",
-  "trigger": "Nieuwe zone",
-  "title": "Nieuwe demand-zone na uitbraak Tokio",
-  "text": "3 grote candles omhoog (gem. 1.83x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 77.622,0 – 77.685,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
-  "action": "Zone actief, wacht op entry",
-  "invalidation": "slot onder 77.622,0"
- },
- {
   "id": "E00305",
   "time": "2026-11-01T02:00:00Z",
   "market": "BTCUSD",
@@ -1792,6 +1780,18 @@
   "time": "2026-11-12T09:15:00Z",
   "market": "BTCUSD",
   "price": 73316.0,
+  "bias": "zijwaarts",
+  "trigger": "Overgeslagen",
+  "title": "Displacement zonder setup (omlaag)",
+  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts. Geen zone.",
+  "action": "Geen trade",
+  "invalidation": ""
+ },
+ {
+  "id": "E00454",
+  "time": "2026-11-12T11:35:00Z",
+  "market": "BTCUSD",
+  "price": 73128.0,
   "bias": "zijwaarts",
   "trigger": "Overgeslagen",
   "title": "Displacement zonder setup (omlaag)",
