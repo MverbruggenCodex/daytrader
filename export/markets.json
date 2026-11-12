@@ -2,50 +2,50 @@
  {
   "market": "BTCUSD",
   "status": "Sessie New York",
-  "price": 71797.0,
-  "day_open": 74559.0,
+  "price": 71956.0,
+  "day_open": 74507.0,
   "day_high": 74778.0,
   "day_low": 71227.0,
   "bias": "Neutraal",
   "note": "Zoveel mogelijk trades (keuze 12-10): ORB + S&D in Tokio, Londen (tot 14:00) en New York (tot 15:00), 2 per sessie, plus Pats swing 1u 24/7 (doel 2R, EMA 50)",
   "trading": true,
-  "updated": "2026-11-12T17:40:00Z"
+  "updated": "2026-11-12T18:40:00Z"
  },
  {
   "market": "EURUSD",
   "status": "Sessie New York",
-  "price": 1.1062,
-  "day_open": 1.1096,
+  "price": 1.1058,
+  "day_open": 1.1098,
   "day_high": 1.1116,
-  "day_low": 1.1058,
+  "day_low": 1.1052,
   "bias": "Bearish",
   "note": "Alleen volgen; strategie verloor in de backtest",
   "trading": false,
-  "updated": "2026-11-12T17:40:00Z"
+  "updated": "2026-11-12T18:35:00Z"
  },
  {
   "market": "XAUUSD",
   "status": "Sessie New York",
-  "price": 3876.6,
-  "day_open": 4003.7,
-  "day_high": 4003.7,
+  "price": 3890.0,
+  "day_open": 3993.4,
+  "day_high": 4002.7,
   "day_low": 3854.2,
   "bias": "Bearish",
   "note": "Zoveel mogelijk trades (keuze 12-10): ORB-uitbraak in Tokio, Londen en New York (retest, stop overkant, 1R, trend 60m), plus Pats swing 4u (EMA 50)",
   "trading": true,
-  "updated": "2026-11-12T17:40:00Z"
+  "updated": "2026-11-12T18:40:00Z"
  },
  {
   "market": "SP500",
   "status": "Sessie New York",
-  "price": 7632.4,
-  "day_open": 7633.2,
+  "price": 7622.9,
+  "day_open": 7644.1,
   "day_high": 7649.8,
   "day_low": 7547.5,
   "bias": "Neutraal",
   "note": "Alleen volgen; vervangt de DJ30",
   "trading": false,
-  "updated": "2026-11-12T17:40:00Z"
+  "updated": "2026-11-12T18:40:00Z"
  },
  {
   "market": "USDCAD",
@@ -57,7 +57,7 @@
   "bias": "—",
   "note": "Niet beschikbaar op Liquid/Hyperliquid",
   "trading": false,
-  "updated": "2026-11-12T17:44:29Z"
+  "updated": "2026-11-12T18:43:21Z"
  },
  {
   "market": "DJ30",
@@ -69,6 +69,6 @@
   "bias": "—",
   "note": "Niet beschikbaar op Liquid/Hyperliquid; SP500 vervangt hem",
   "trading": false,
-  "updated": "2026-11-12T17:44:29Z"
+  "updated": "2026-11-12T18:43:21Z"
  }
 ]
