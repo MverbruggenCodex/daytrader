@@ -1,29 +1,5 @@
 [
  {
-  "id": "E00297",
-  "time": "2026-10-31T13:50:00Z",
-  "market": "BTCUSD",
-  "price": 77567.0,
-  "bias": "zijwaarts",
-  "trigger": "Overgeslagen",
-  "title": "Displacement zonder setup (omhoog)",
-  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts. Geen zone.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
-  "id": "E00298",
-  "time": "2026-10-31T13:50:00Z",
-  "market": "BTCUSD",
-  "price": 77567.0,
-  "bias": "zijwaarts",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange New York staat",
-  "text": "BTCUSD: range van het eerste kwartier 77.416,0 – 77.516,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
   "id": "E00299",
   "time": "2026-10-31T13:50:00Z",
   "market": "BTCUSD",
@@ -1797,6 +1773,30 @@
   "title": "Displacement zonder setup (omhoog)",
   "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is omlaag. Geen zone.",
   "action": "Geen trade",
+  "invalidation": ""
+ },
+ {
+  "id": "E00447",
+  "time": "2026-11-12T00:20:00Z",
+  "market": "BTCUSD",
+  "price": 73970.0,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange Tokio staat",
+  "text": "BTCUSD: range van het eerste kwartier 73.810,0 – 74.091,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00448",
+  "time": "2026-11-12T00:20:00Z",
+  "market": "XAUUSD",
+  "price": 3982.3,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange Tokio staat",
+  "text": "XAUUSD: range van het eerste kwartier 3.971,3 – 3.979,4. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
   "invalidation": ""
  }
 ]
