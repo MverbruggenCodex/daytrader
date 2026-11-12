@@ -322,23 +322,5 @@
   "created": "2026-10-14T15:05:00Z",
   "expires": "2026-10-14T17:05:00Z",
   "note": "niet meer open op Liquid, geen fill"
- },
- {
-  "id": "O001",
-  "trade_id": "T001",
-  "market": "BTCUSD",
-  "symbol": "BTC",
-  "side": "Long",
-  "price": 83760.0,
-  "sl": 83662.0,
-  "tp": 84133.0,
-  "notional": 48113.7,
-  "leverage": 20,
-  "risk_usd": 56.29,
-  "rr": 3.81,
-  "status": "Verlopen",
-  "created": "2026-10-13T08:45:00Z",
-  "expires": "2026-10-13T10:45:00Z",
-  "note": "koers (83569.0) al voorbij stop of doel"
  }
 ]
