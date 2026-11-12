@@ -1,17 +1,5 @@
 [
  {
-  "id": "E00309",
-  "time": "2026-11-01T12:20:00Z",
-  "market": "BTCUSD",
-  "price": 77875.04285714286,
-  "bias": "onbekend",
-  "trigger": "Exit",
-  "title": "T016 gesloten: stop loss (verlies)",
-  "text": "Long BTCUSD van 77.924,0 gesloten op 77.875,0 via stop loss. Modelresultaat $-354.33 (-4.02R).",
-  "action": "Positie gesloten · $-354.33",
-  "invalidation": ""
- },
- {
   "id": "E00310",
   "time": "2026-11-01T12:20:00Z",
   "market": "BTCUSD",
@@ -1798,5 +1786,17 @@
   "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts, beweging breekt de openingsrange niet. Geen zone.",
   "action": "Geen trade",
   "invalidation": ""
+ },
+ {
+  "id": "E00459",
+  "time": "2026-11-12T16:55:00Z",
+  "market": "XAUUSD",
+  "price": 3886.1,
+  "bias": "omlaag",
+  "trigger": "Entry",
+  "title": "Short XAUUSD (T020), ORB-uitbraak",
+  "text": "5m-slot onder de openingsrange 3.889,9 – 3.906,0.",
+  "action": "Short op 3.886,1 · stop 3.906,0 · doel 3.866,2 (1:1.0)",
+  "invalidation": "stop 3.906,0 of sessie-einde"
  }
 ]
