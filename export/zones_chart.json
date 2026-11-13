@@ -1,1 +1,12 @@
-[]
+[
+ {
+  "id": "Z0042",
+  "market": "BTCUSD",
+  "side": "short",
+  "bottom": 71331.0,
+  "top": 71404.0,
+  "from": "2026-11-13T00:20:00Z",
+  "until": null,
+  "status": "Vers"
+ }
+]

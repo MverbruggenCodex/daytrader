@@ -1,41 +1,5 @@
 [
  {
-  "id": "E00311",
-  "time": "2026-11-01T13:43:45Z",
-  "market": "BTCUSD",
-  "price": 77867.0,
-  "bias": "—",
-  "trigger": "Nieuws",
-  "title": "Binance hervat BTC- en ETH-opnames",
-  "text": "Binance hervat opnames na de hack van $6,3 mld; volgens berichten is 95% teruggehaald.",
-  "action": "",
-  "invalidation": ""
- },
- {
-  "id": "E00312",
-  "time": "2026-11-01T13:35:00Z",
-  "market": "BTCUSD",
-  "price": 78004.0,
-  "bias": "onbekend",
-  "trigger": "Zone vervallen",
-  "title": "Supply-zone vervallen",
-  "text": "Een candle sloot door de supply-zone (77.941,0 – 78.001,0). Volgens Pats regel is een zone dan dood; geen trade.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
-  "id": "E00313",
-  "time": "2026-11-01T14:50:00Z",
-  "market": "BTCUSD",
-  "price": 78030.0,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange New York staat",
-  "text": "BTCUSD: range van het eerste kwartier 77.996,0 – 78.053,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
   "id": "E00314",
   "time": "2026-11-01T16:00:00Z",
   "market": "BTCUSD",
@@ -1798,5 +1762,41 @@
   "text": "Short XAUUSD van 3.886,1 gesloten op 3.877,6 via sessie-einde. Modelresultaat $4.94 (+0.06R).",
   "action": "Positie gesloten · $4.94",
   "invalidation": ""
+ },
+ {
+  "id": "E00461",
+  "time": "2026-11-13T00:20:00Z",
+  "market": "BTCUSD",
+  "price": 71339.0,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange Tokio staat",
+  "text": "BTCUSD: range van het eerste kwartier 71.280,0 – 71.507,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00462",
+  "time": "2026-11-13T00:20:00Z",
+  "market": "XAUUSD",
+  "price": 3888.0,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange Tokio staat",
+  "text": "XAUUSD: range van het eerste kwartier 3.882,0 – 3.890,8. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00463",
+  "time": "2026-11-13T00:40:00Z",
+  "market": "BTCUSD",
+  "price": 70904.0,
+  "bias": "omlaag",
+  "trigger": "Nieuwe zone",
+  "title": "Nieuwe supply-zone na uitbraak Tokio",
+  "text": "3 grote candles omlaag (gem. 4.17x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 71.331,0 – 71.404,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
+  "action": "Zone actief, wacht op entry",
+  "invalidation": "slot boven 71.404,0"
  }
 ]
