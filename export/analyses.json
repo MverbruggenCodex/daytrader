@@ -1,29 +1,5 @@
 [
  {
-  "id": "E00319",
-  "time": "2026-11-02T00:20:00Z",
-  "market": "XAUUSD",
-  "price": 3901.1,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange Tokio staat",
-  "text": "XAUUSD: range van het eerste kwartier 3.901,6 – 3.905,7. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
-  "id": "E00320",
-  "time": "2026-11-02T00:30:00Z",
-  "market": "XAUUSD",
-  "price": 3901.5,
-  "bias": "zijwaarts",
-  "trigger": "Overgeslagen",
-  "title": "ORB-uitbraak Tokio niet genomen",
-  "text": "Slot onder de openingsrange, maar: trend is zijwaarts.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
   "id": "E00321",
   "time": "2026-11-02T01:10:00Z",
   "market": "BTCUSD",
@@ -1797,6 +1773,30 @@
   "title": "Goud op 13-maands dieptepunt voor US PPI",
   "text": "Goud zakt door sterkere dollar en renterisico; US PPI later vandaag (niet binnen 60 min).",
   "action": "",
+  "invalidation": ""
+ },
+ {
+  "id": "E00469",
+  "time": "2026-11-13T08:20:00Z",
+  "market": "BTCUSD",
+  "price": 68562.0,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange Londen staat",
+  "text": "BTCUSD: range van het eerste kwartier 68.540,0 – 68.771,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00470",
+  "time": "2026-11-13T08:20:00Z",
+  "market": "XAUUSD",
+  "price": 3895.4,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange Londen staat",
+  "text": "XAUUSD: range van het eerste kwartier 3.894,7 – 3.901,5. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
   "invalidation": ""
  }
 ]
