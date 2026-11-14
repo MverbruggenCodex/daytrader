@@ -38,5 +38,15 @@
   "from": "2026-11-14T12:45:00Z",
   "until": null,
   "status": "Vers"
+ },
+ {
+  "id": "Z0046",
+  "market": "BTCUSD",
+  "side": "short",
+  "bottom": 65851.0,
+  "top": 66024.0,
+  "from": "2026-11-14T15:00:00Z",
+  "until": null,
+  "status": "Vers"
  }
 ]
