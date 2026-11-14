@@ -1,17 +1,5 @@
 [
  {
-  "id": "E00332",
-  "time": "2026-11-02T15:00:00Z",
-  "market": "XAUUSD",
-  "price": 3968.0,
-  "bias": "zijwaarts",
-  "trigger": "Overgeslagen",
-  "title": "ORB-uitbraak New York niet genomen",
-  "text": "Slot boven de openingsrange, maar: trend is zijwaarts.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
   "id": "E00333",
   "time": "2026-11-02T17:08:01Z",
   "market": "XAUUSD",
@@ -1797,6 +1785,18 @@
   "title": "Displacement zonder setup (omlaag)",
   "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts. Geen zone.",
   "action": "Geen trade",
+  "invalidation": ""
+ },
+ {
+  "id": "E00482",
+  "time": "2026-11-14T03:43:48Z",
+  "market": "BTCUSD",
+  "price": 67474.0,
+  "bias": "—",
+  "trigger": "Nieuws",
+  "title": "Crypto-selloff: BTC onder 67.000",
+  "text": "Nieuws (The Defiant, SSBCrack): crypto-selloff verdiept, BTC zakte rond 03:30 UTC naar 66.588. Zaterdag, geen high-impact macro-releases; geen blackout.",
+  "action": "",
   "invalidation": ""
  }
 ]
