@@ -304,23 +304,5 @@
   "created": "2026-10-16T01:10:00Z",
   "expires": "2026-10-16T03:00:00Z",
   "note": "koers (4150.6) al voorbij stop of doel"
- },
- {
-  "id": "O003",
-  "trade_id": "T003",
-  "market": "XAUUSD",
-  "symbol": "xyz:GOLD",
-  "side": "Long",
-  "price": 4145.1,
-  "sl": 4136.3,
-  "tp": 4153.9,
-  "notional": 24056.85,
-  "leverage": 10,
-  "risk_usd": 51.07,
-  "rr": 1.0,
-  "status": "Geannuleerd",
-  "created": "2026-10-15T07:30:00Z",
-  "expires": "2026-10-15T09:30:00Z",
-  "note": "limietorder niet gevuld voor het einde van het entry-venster"
  }
 ]
