@@ -2,50 +2,50 @@
  {
   "market": "BTCUSD",
   "status": "Sessie Tokio",
-  "price": 66993.0,
-  "day_open": 68603.0,
+  "price": 66939.0,
+  "day_open": 68589.0,
   "day_high": 70214.0,
   "day_low": 66434.0,
   "bias": "Bearish",
   "note": "Zoveel mogelijk trades (keuze 12-10): ORB + S&D in Tokio, Londen (tot 14:00) en New York (tot 15:00), 2 per sessie, plus Pats swing 1u 24/7 (doel 2R, EMA 50)",
   "trading": true,
-  "updated": "2026-11-14T04:40:00Z"
+  "updated": "2026-11-14T05:40:00Z"
  },
  {
   "market": "EURUSD",
   "status": "Buiten sessie",
   "price": 1.1031,
-  "day_open": 1.1064,
+  "day_open": 1.1061,
   "day_high": 1.1079,
   "day_low": 1.1026,
   "bias": "Neutraal",
   "note": "Alleen volgen; strategie verloor in de backtest",
   "trading": false,
-  "updated": "2026-11-14T04:40:00Z"
+  "updated": "2026-11-14T05:00:00Z"
  },
  {
   "market": "XAUUSD",
   "status": "Buiten sessie",
-  "price": 3874.2,
-  "day_open": 3910.9,
-  "day_high": 3919.9,
+  "price": 3874.0,
+  "day_open": 3907.9,
+  "day_high": 3907.9,
   "day_low": 3867.2,
   "bias": "Neutraal",
   "note": "Zoveel mogelijk trades (keuze 12-10): ORB-uitbraak in Tokio, Londen en New York (retest, stop overkant, 1R, trend 60m), plus Pats swing 4u (EMA 50)",
   "trading": true,
-  "updated": "2026-11-14T04:40:00Z"
+  "updated": "2026-11-14T05:40:00Z"
  },
  {
   "market": "SP500",
   "status": "Buiten sessie",
-  "price": 7534.2,
-  "day_open": 7594.9,
+  "price": 7531.9,
+  "day_open": 7588.8,
   "day_high": 7648.8,
   "day_low": 7499.1,
-  "bias": "Bearish",
+  "bias": "Neutraal",
   "note": "Alleen volgen; vervangt de DJ30",
   "trading": false,
-  "updated": "2026-11-14T04:40:00Z"
+  "updated": "2026-11-14T05:40:00Z"
  },
  {
   "market": "USDCAD",
@@ -57,7 +57,7 @@
   "bias": "—",
   "note": "Niet beschikbaar op Liquid/Hyperliquid",
   "trading": false,
-  "updated": "2026-11-14T04:43:09Z"
+  "updated": "2026-11-14T05:43:42Z"
  },
  {
   "market": "DJ30",
@@ -69,6 +69,6 @@
   "bias": "—",
   "note": "Niet beschikbaar op Liquid/Hyperliquid; SP500 vervangt hem",
   "trading": false,
-  "updated": "2026-11-14T04:43:09Z"
+  "updated": "2026-11-14T05:43:42Z"
  }
 ]
