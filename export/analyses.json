@@ -1,17 +1,5 @@
 [
  {
-  "id": "E00333",
-  "time": "2026-11-02T17:08:01Z",
-  "market": "XAUUSD",
-  "price": 3959.7,
-  "bias": "—",
-  "trigger": "Nieuws",
-  "title": "Goud herstelt boven 3970",
-  "text": "Goud steeg vanmiddag van ca. 3900 naar 3972 nu olie daalt en renteverhogingsverwachtingen afnemen (FXEmpire, Livemint).",
-  "action": "",
-  "invalidation": ""
- },
- {
   "id": "E00334",
   "time": "2026-11-02T16:00:00Z",
   "market": "BTCUSD",
@@ -1797,6 +1785,18 @@
   "title": "Crypto-selloff: BTC onder 67.000",
   "text": "Nieuws (The Defiant, SSBCrack): crypto-selloff verdiept, BTC zakte rond 03:30 UTC naar 66.588. Zaterdag, geen high-impact macro-releases; geen blackout.",
   "action": "",
+  "invalidation": ""
+ },
+ {
+  "id": "E00483",
+  "time": "2026-11-14T08:20:00Z",
+  "market": "BTCUSD",
+  "price": 67234.0,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange Londen staat",
+  "text": "BTCUSD: range van het eerste kwartier 67.137,0 – 67.304,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
   "invalidation": ""
  }
 ]
