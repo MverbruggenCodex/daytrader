@@ -6,11 +6,11 @@
   "side": "Supply",
   "bottom": 65851.0,
   "top": 66024.0,
-  "status": "Vers",
+  "status": "Overgeslagen",
   "created": "2026-11-14T15:20:00Z",
   "fvg": true,
   "bos": true,
-  "note": ""
+  "note": "R:R 1:1.39 onder minimum 1:2"
  },
  {
   "id": "Z0045",

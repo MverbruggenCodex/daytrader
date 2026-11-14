@@ -1,17 +1,5 @@
 [
  {
-  "id": "E00339",
-  "time": "2026-11-03T00:50:00Z",
-  "market": "XAUUSD",
-  "price": 3953.7,
-  "bias": "omhoog",
-  "trigger": "Entry",
-  "title": "Long XAUUSD (T017), ORB-uitbraak",
-  "text": "5m-slot boven de openingsrange 3.949,1 – 3.952,5.",
-  "action": "Long op 3.953,7 · stop 3.949,1 · doel 3.958,3 (1:1.0)",
-  "invalidation": "stop 3.949,1 of sessie-einde"
- },
- {
   "id": "E00340",
   "time": "2026-11-03T00:55:00Z",
   "market": "XAUUSD",
@@ -1798,5 +1786,17 @@
   "text": "3 grote candles omlaag (gem. 3.88x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 65.851,0 – 66.024,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
   "action": "Zone actief, wacht op entry",
   "invalidation": "slot boven 66.024,0"
+ },
+ {
+  "id": "E00489",
+  "time": "2026-11-14T15:50:00Z",
+  "market": "BTCUSD",
+  "price": 65631.0,
+  "bias": "onbekend",
+  "trigger": "Overgeslagen",
+  "title": "Entry-signaal supply-zone niet genomen",
+  "text": "De koers tikte de zone aan en sloot er weer buiten, maar: R:R 1:1.39 onder minimum 1:2.",
+  "action": "Geen trade",
+  "invalidation": ""
  }
 ]
