@@ -1,17 +1,5 @@
 [
  {
-  "id": "E00395",
-  "time": "2026-11-07T08:20:00Z",
-  "market": "BTCUSD",
-  "price": 76110.0,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange Londen staat",
-  "text": "BTCUSD: range van het eerste kwartier 76.068,0 – 76.114,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
   "id": "E00396",
   "time": "2026-11-07T08:55:00Z",
   "market": "BTCUSD",
@@ -1797,6 +1785,18 @@
   "title": "Goud laagste sinds sept 2025",
   "text": "Goud zakt ~3% naar laagste niveau sinds september 2025; BTC onder 63.000; Fed's Barr: renteverhogingen waarschijnlijk. FOMC-notulen 20:00 al gepasseerd.",
   "action": "",
+  "invalidation": ""
+ },
+ {
+  "id": "E00545",
+  "time": "2026-11-18T21:00:00Z",
+  "market": "BTCUSD",
+  "price": 62596.0,
+  "bias": "onbekend",
+  "trigger": "Exit",
+  "title": "T022 gesloten: sessie-einde (winst)",
+  "text": "Short BTCUSD van 63.480,0 gesloten op 62.596,0 via sessie-einde. Modelresultaat $408.13 (+4.67R).",
+  "action": "Positie gesloten · $408.13",
   "invalidation": ""
  }
 ]
