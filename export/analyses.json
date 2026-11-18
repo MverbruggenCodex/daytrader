@@ -1,17 +1,5 @@
 [
  {
-  "id": "E00393",
-  "time": "2026-11-06T15:05:00Z",
-  "market": "BTCUSD",
-  "price": 75075.0,
-  "bias": "zijwaarts",
-  "trigger": "Overgeslagen",
-  "title": "Displacement zonder setup (omlaag)",
-  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts. Geen zone.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
   "id": "E00394",
   "time": "2026-11-07T00:20:00Z",
   "market": "BTCUSD",
@@ -1798,5 +1786,17 @@
   "text": "Short XAUUSD van 3.763,3 gesloten op 3.745,8 via take profit. Modelresultaat $51.79 (+0.59R).",
   "action": "Positie gesloten · $51.79",
   "invalidation": ""
+ },
+ {
+  "id": "E00543",
+  "time": "2026-11-18T17:35:00Z",
+  "market": "BTCUSD",
+  "price": 63480.0,
+  "bias": "onbekend",
+  "trigger": "Entry",
+  "title": "Short BTCUSD (T022)",
+  "text": "De koers tikte de zone aan en sloot er weer buiten. Zone 63.481,0 – 63.620,0. Trend omlaag; FVG ja; BOS ja; discount ja; level stack nee.",
+  "action": "Short op 63.480,0 · stop 63.643,7 · doel 62.256,0 (1:7.48)",
+  "invalidation": "stop 63.643,7 of sessie-einde"
  }
 ]

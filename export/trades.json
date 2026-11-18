@@ -480,6 +480,29 @@
   "strategy": "ORB-uitbraak",
   "exit_reason": "take profit",
   "fees_usd": 35.6397,
-  "liquid": "Limietorder geplaatst"
+  "liquid": "Geannuleerd"
+ },
+ {
+  "id": "T022",
+  "market": "BTCUSD",
+  "side": "Short",
+  "status": "Open",
+  "opened_at": "2026-11-18T17:35:00Z",
+  "entry": 63480.0,
+  "stop": 63643.714286,
+  "target": 62256.0,
+  "size": 0.53404014,
+  "risk_usd": 87.43,
+  "rr": 7.48,
+  "exit": null,
+  "closed_at": null,
+  "pnl_usd": null,
+  "r_result": null,
+  "setup": "ORB New York + supply-zone",
+  "reason": "De koers tikte de zone aan en sloot er weer buiten. Zone 63.481,0 – 63.620,0. Trend omlaag; FVG ja; BOS ja; discount ja; level stack nee.",
+  "strategy": "ORB + Supply & Demand",
+  "exit_reason": null,
+  "fees_usd": 32.2058,
+  "liquid": "Wacht op bevestiging"
  }
 ]
