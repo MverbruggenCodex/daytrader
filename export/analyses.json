@@ -1,17 +1,5 @@
 [
  {
-  "id": "E00383",
-  "time": "2026-11-06T00:20:00Z",
-  "market": "XAUUSD",
-  "price": 4103.3,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange Tokio staat",
-  "text": "XAUUSD: range van het eerste kwartier 4.084,3 – 4.105,9. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
   "id": "E00384",
   "time": "2026-11-06T08:20:00Z",
   "market": "BTCUSD",
@@ -1797,6 +1785,18 @@
   "title": "Openingsrange Tokio staat",
   "text": "XAUUSD: range van het eerste kwartier 3.842,0 – 3.850,7. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
   "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00533",
+  "time": "2026-11-18T02:43:28Z",
+  "market": "XAUUSD",
+  "price": 3820.9,
+  "bias": "—",
+  "trigger": "Nieuws",
+  "title": "Goud op laagste punt in ruim een jaar",
+  "text": "Goud zakt richting 3800 voor de Fed-notulen (vanavond 20:00 Amsterdam); haviks versterken renteverhogingsverwachting.",
+  "action": "",
   "invalidation": ""
  }
 ]
