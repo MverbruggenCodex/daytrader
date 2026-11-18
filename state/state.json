@@ -35331,15 +35331,16 @@
    "created_t": 1795014300000,
    "expires_t": 1795021500000,
    "close_at": 1795035600000,
-   "status": "pending",
-   "liquid_order_id": null,
+   "status": "placed",
+   "liquid_order_id": "199399",
    "idempotency_key": "daytrader-T021-1795014300000",
    "note": "",
    "reason": "5m-slot onder de openingsrange 3.766,7 – 3.780,8.",
    "notional": 18801.45,
    "leverage": 9,
    "collateral": 2089.05,
-   "risk_usd": 87.43
+   "risk_usd": 87.43,
+   "updated_t": 1795016675720
   }
  ],
  "order_seq": 21,
