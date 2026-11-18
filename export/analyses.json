@@ -1,17 +1,5 @@
 [
  {
-  "id": "E00394",
-  "time": "2026-11-07T00:20:00Z",
-  "market": "BTCUSD",
-  "price": 75951.0,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange Tokio staat",
-  "text": "BTCUSD: range van het eerste kwartier 75.834,0 – 75.947,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
   "id": "E00395",
   "time": "2026-11-07T08:20:00Z",
   "market": "BTCUSD",
@@ -1798,5 +1786,17 @@
   "text": "De koers tikte de zone aan en sloot er weer buiten. Zone 63.481,0 – 63.620,0. Trend omlaag; FVG ja; BOS ja; discount ja; level stack nee.",
   "action": "Short op 63.480,0 · stop 63.643,7 · doel 62.256,0 (1:7.48)",
   "invalidation": "stop 63.643,7 of sessie-einde"
+ },
+ {
+  "id": "E00544",
+  "time": "2026-11-18T19:43:33Z",
+  "market": "XAUUSD",
+  "price": 3745.2,
+  "bias": "—",
+  "trigger": "Nieuws",
+  "title": "Goud laagste sinds sept 2025",
+  "text": "Goud zakt ~3% naar laagste niveau sinds september 2025; BTC onder 63.000; Fed's Barr: renteverhogingen waarschijnlijk. FOMC-notulen 20:00 al gepasseerd.",
+  "action": "",
+  "invalidation": ""
  }
 ]
