@@ -1,29 +1,5 @@
 [
  {
-  "id": "E00391",
-  "time": "2026-11-06T14:50:00Z",
-  "market": "BTCUSD",
-  "price": 75852.0,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange New York staat",
-  "text": "BTCUSD: range van het eerste kwartier 75.279,0 – 76.013,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
-  "id": "E00392",
-  "time": "2026-11-06T14:50:00Z",
-  "market": "XAUUSD",
-  "price": 4048.7,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange New York staat",
-  "text": "XAUUSD: range van het eerste kwartier 4.031,6 – 4.042,1. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
   "id": "E00393",
   "time": "2026-11-06T15:05:00Z",
   "market": "BTCUSD",
@@ -1798,5 +1774,29 @@
   "text": "5m-slot onder de openingsrange 3.766,7 – 3.780,8.",
   "action": "Short op 3.763,3 · stop 3.780,8 · doel 3.745,8 (1:1.0)",
   "invalidation": "stop 3.780,8 of sessie-einde"
+ },
+ {
+  "id": "E00541",
+  "time": "2026-11-18T15:50:00Z",
+  "market": "BTCUSD",
+  "price": 63033.0,
+  "bias": "omlaag",
+  "trigger": "Nieuwe zone",
+  "title": "Nieuwe supply-zone na uitbraak New York",
+  "text": "3 grote candles omlaag (gem. 3.45x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 63.481,0 – 63.620,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
+  "action": "Zone actief, wacht op entry",
+  "invalidation": "slot boven 63.620,0"
+ },
+ {
+  "id": "E00542",
+  "time": "2026-11-18T16:25:00Z",
+  "market": "XAUUSD",
+  "price": 3745.8,
+  "bias": "onbekend",
+  "trigger": "Exit",
+  "title": "T021 gesloten: take profit (winst)",
+  "text": "Short XAUUSD van 3.763,3 gesloten op 3.745,8 via take profit. Modelresultaat $51.79 (+0.59R).",
+  "action": "Positie gesloten · $51.79",
+  "invalidation": ""
  }
 ]
