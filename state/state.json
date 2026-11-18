@@ -35415,15 +35415,16 @@
    "created_t": 1795023300000,
    "expires_t": 1795030500000,
    "close_at": 1795035600000,
-   "status": "pending",
-   "liquid_order_id": null,
+   "status": "placed",
+   "liquid_order_id": "199748",
    "idempotency_key": "daytrader-T022-1795023300000",
    "note": "",
    "reason": "De koers tikte de zone aan en sloot er weer buiten. Zone 63.481,0 – 63.620,0. Trend omlaag; FVG ja; BOS ja; discount ja; level stack nee.",
    "notional": 33900.87,
    "leverage": 16,
    "collateral": 2118.8,
-   "risk_usd": 87.43
+   "risk_usd": 87.43,
+   "updated_t": 1795024686829
   }
  ],
  "order_seq": 22,

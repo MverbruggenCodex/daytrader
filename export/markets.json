@@ -3,7 +3,7 @@
   "market": "BTCUSD",
   "status": "Sessie New York",
   "price": 63297.0,
-  "day_open": 63794.0,
+  "day_open": 63805.0,
   "day_high": 65243.0,
   "day_low": 62256.0,
   "bias": "Bearish",
@@ -15,7 +15,7 @@
   "market": "EURUSD",
   "status": "Sessie New York",
   "price": 1.098,
-  "day_open": 1.1024,
+  "day_open": 1.1025,
   "day_high": 1.1031,
   "day_low": 1.0961,
   "bias": "Neutraal",
@@ -27,8 +27,8 @@
   "market": "XAUUSD",
   "status": "Sessie New York",
   "price": 3745.1,
-  "day_open": 3867.6,
-  "day_high": 3867.7,
+  "day_open": 3864.4,
+  "day_high": 3865.2,
   "day_low": 3736.7,
   "bias": "Neutraal",
   "note": "Zoveel mogelijk trades (keuze 12-10): ORB-uitbraak in Tokio, Londen en New York (retest, stop overkant, 1R, trend 60m), plus Pats swing 4u (EMA 50)",
@@ -39,7 +39,7 @@
   "market": "SP500",
   "status": "Sessie New York",
   "price": 7341.0,
-  "day_open": 7348.7,
+  "day_open": 7336.0,
   "day_high": 7422.7,
   "day_low": 7287.5,
   "bias": "Bearish",
@@ -57,7 +57,7 @@
   "bias": "—",
   "note": "Niet beschikbaar op Liquid/Hyperliquid",
   "trading": false,
-  "updated": "2026-11-18T17:43:29Z"
+  "updated": "2026-11-18T17:58:06Z"
  },
  {
   "market": "DJ30",
@@ -69,6 +69,6 @@
   "bias": "—",
   "note": "Niet beschikbaar op Liquid/Hyperliquid; SP500 vervangt hem",
   "trading": false,
-  "updated": "2026-11-18T17:43:29Z"
+  "updated": "2026-11-18T17:58:06Z"
  }
 ]
