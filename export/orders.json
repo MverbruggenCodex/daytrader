@@ -1,5 +1,23 @@
 [
  {
+  "id": "O021",
+  "trade_id": "T021",
+  "market": "XAUUSD",
+  "symbol": "xyz:GOLD",
+  "side": "Short",
+  "price": 3763.3,
+  "sl": 3780.8,
+  "tp": 3745.8,
+  "notional": 18801.45,
+  "leverage": 9,
+  "risk_usd": 87.43,
+  "rr": 1.0,
+  "status": "Wacht op bevestiging",
+  "created": "2026-11-18T15:05:00Z",
+  "expires": "2026-11-18T17:05:00Z",
+  "note": ""
+ },
+ {
   "id": "O020",
   "trade_id": "T020",
   "market": "XAUUSD",
