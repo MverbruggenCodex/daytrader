@@ -1,17 +1,5 @@
 [
  {
-  "id": "E00400",
-  "time": "2026-11-07T14:50:00Z",
-  "market": "BTCUSD",
-  "price": 75940.0,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange New York staat",
-  "text": "BTCUSD: range van het eerste kwartier 75.915,0 – 75.960,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
   "id": "E00401",
   "time": "2026-11-07T15:10:00Z",
   "market": "BTCUSD",
@@ -1797,6 +1785,18 @@
   "title": "ORB-uitbraak Tokio niet genomen",
   "text": "Slot boven de openingsrange, maar: trend is zijwaarts.",
   "action": "Geen trade",
+  "invalidation": ""
+ },
+ {
+  "id": "E00550",
+  "time": "2026-11-19T03:43:29Z",
+  "market": "XAUUSD",
+  "price": 3743.2,
+  "bias": "—",
+  "trigger": "Nieuws",
+  "title": "Goud op laagste punt in 14 maanden",
+  "text": "Brede daling in grondstoffen (goud, zilver, koper); goud zakte vannacht tot 3695 en herstelt licht.",
+  "action": "",
   "invalidation": ""
  }
 ]
