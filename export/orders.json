@@ -1,5 +1,23 @@
 [
  {
+  "id": "O024",
+  "trade_id": "T024",
+  "market": "BTCUSD",
+  "symbol": "BTC",
+  "side": "Long",
+  "price": 63756.0,
+  "sl": 63670.0,
+  "tp": 64050.0,
+  "notional": 43712.85,
+  "leverage": 20,
+  "risk_usd": 59.02,
+  "rr": 3.42,
+  "status": "Wacht op bevestiging",
+  "created": "2026-11-19T12:20:00Z",
+  "expires": "2026-11-19T14:00:00Z",
+  "note": ""
+ },
+ {
   "id": "O023",
   "trade_id": "T023",
   "market": "XAUUSD",

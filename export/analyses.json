@@ -1,41 +1,5 @@
 [
  {
-  "id": "E00406",
-  "time": "2026-11-08T10:50:00Z",
-  "market": "BTCUSD",
-  "price": 75900.0,
-  "bias": "onbekend",
-  "trigger": "Zone vervallen",
-  "title": "Supply-zone vervallen",
-  "text": "Een candle sloot door de supply-zone (75.873,0 – 75.893,0). Volgens Pats regel is een zone dan dood; geen trade.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
-  "id": "E00407",
-  "time": "2026-11-08T10:50:00Z",
-  "market": "BTCUSD",
-  "price": 75900.0,
-  "bias": "omlaag",
-  "trigger": "Overgeslagen",
-  "title": "Displacement zonder setup (omhoog)",
-  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is omlaag, beweging breekt de openingsrange niet. Geen zone.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
-  "id": "E00408",
-  "time": "2026-11-08T11:20:00Z",
-  "market": "BTCUSD",
-  "price": 75959.0,
-  "bias": "omlaag",
-  "trigger": "Overgeslagen",
-  "title": "Displacement zonder setup (omhoog)",
-  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is omlaag, beweging breekt de openingsrange niet. Geen zone.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
   "id": "E00409",
   "time": "2026-11-08T13:05:00Z",
   "market": "BTCUSD",
@@ -1798,5 +1762,41 @@
   "text": "3 grote candles omhoog (gem. 2.72x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 63.680,0 – 63.735,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
   "action": "Zone actief, wacht op entry",
   "invalidation": "slot onder 63.680,0"
+ },
+ {
+  "id": "E00556",
+  "time": "2026-11-19T12:15:00Z",
+  "market": "XAUUSD",
+  "price": 3719.8,
+  "bias": "onbekend",
+  "trigger": "Exit",
+  "title": "T023 gesloten: take profit (winst)",
+  "text": "Short XAUUSD van 3.731,9 gesloten op 3.719,8 via take profit. Modelresultaat $36.28 (+0.41R).",
+  "action": "Positie gesloten · $36.28",
+  "invalidation": ""
+ },
+ {
+  "id": "E00557",
+  "time": "2026-11-19T12:20:00Z",
+  "market": "BTCUSD",
+  "price": 63756.0,
+  "bias": "onbekend",
+  "trigger": "Entry",
+  "title": "Long BTCUSD (T024)",
+  "text": "De koers tikte de zone aan en sloot er weer buiten. Zone 63.680,0 – 63.735,0. Trend omhoog; FVG ja; BOS ja; discount ja; level stack nee.",
+  "action": "Long op 63.756,0 · stop 63.669,9 · doel 64.050,0 (1:3.42)",
+  "invalidation": "stop 63.669,9 of sessie-einde"
+ },
+ {
+  "id": "E00558",
+  "time": "2026-11-19T12:30:00Z",
+  "market": "BTCUSD",
+  "price": 63669.921428571426,
+  "bias": "onbekend",
+  "trigger": "Exit",
+  "title": "T024 gesloten: stop loss (verlies)",
+  "text": "Long BTCUSD van 63.756,0 gesloten op 63.669,9 via stop loss. Modelresultaat $-210.39 (-2.41R).",
+  "action": "Positie gesloten · $-210.39",
+  "invalidation": ""
  }
 ]
