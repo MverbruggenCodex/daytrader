@@ -1,29 +1,5 @@
 [
  {
-  "id": "E00401",
-  "time": "2026-11-07T15:10:00Z",
-  "market": "BTCUSD",
-  "price": 75859.0,
-  "bias": "zijwaarts",
-  "trigger": "Overgeslagen",
-  "title": "Displacement zonder setup (omlaag)",
-  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts. Geen zone.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
-  "id": "E00402",
-  "time": "2026-11-08T00:20:00Z",
-  "market": "BTCUSD",
-  "price": 75790.0,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange Tokio staat",
-  "text": "BTCUSD: range van het eerste kwartier 75.799,0 – 75.851,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
   "id": "E00403",
   "time": "2026-11-08T08:20:00Z",
   "market": "BTCUSD",
@@ -1797,6 +1773,30 @@
   "title": "Goud op laagste punt in 14 maanden",
   "text": "Brede daling in grondstoffen (goud, zilver, koper); goud zakte vannacht tot 3695 en herstelt licht.",
   "action": "",
+  "invalidation": ""
+ },
+ {
+  "id": "E00551",
+  "time": "2026-11-19T08:20:00Z",
+  "market": "BTCUSD",
+  "price": 63737.0,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange Londen staat",
+  "text": "BTCUSD: range van het eerste kwartier 63.600,0 – 63.776,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00552",
+  "time": "2026-11-19T08:20:00Z",
+  "market": "XAUUSD",
+  "price": 3739.1,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange Londen staat",
+  "text": "XAUUSD: range van het eerste kwartier 3.734,7 – 3.744,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
   "invalidation": ""
  }
 ]
