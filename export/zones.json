@@ -37,31 +37,5 @@
   "fvg": true,
   "bos": true,
   "note": "candle sloot door de zone"
- },
- {
-  "id": "Z0048",
-  "market": "BTCUSD",
-  "session": "asia",
-  "side": "Supply",
-  "bottom": 62701.0,
-  "top": 62985.0,
-  "status": "Overgeslagen",
-  "created": "2026-11-15T01:40:00Z",
-  "fvg": true,
-  "bos": true,
-  "note": "R:R 1:1.50 onder minimum 1:2; een diepere zone ligt dichtbij (Pat: de laagste demand / hoogste supply is de sterkste)"
- },
- {
-  "id": "Z0047",
-  "market": "BTCUSD",
-  "session": "asia",
-  "side": "Supply",
-  "bottom": 63714.0,
-  "top": 63940.0,
-  "status": "Vervallen",
-  "created": "2026-11-15T01:05:00Z",
-  "fvg": true,
-  "bos": true,
-  "note": "candle sloot door de zone"
  }
 ]
