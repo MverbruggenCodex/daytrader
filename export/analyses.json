@@ -1,17 +1,5 @@
 [
  {
-  "id": "E00405",
-  "time": "2026-11-08T10:35:00Z",
-  "market": "BTCUSD",
-  "price": 75832.0,
-  "bias": "omlaag",
-  "trigger": "Nieuwe zone",
-  "title": "Nieuwe supply-zone na uitbraak Londen",
-  "text": "3 grote candles omlaag (gem. 1.62x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 75.873,0 – 75.893,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
-  "action": "Zone actief, wacht op entry",
-  "invalidation": "slot boven 75.893,0"
- },
- {
   "id": "E00406",
   "time": "2026-11-08T10:50:00Z",
   "market": "BTCUSD",
@@ -1798,5 +1786,17 @@
   "text": "5m-slot onder de openingsrange 3.734,7 – 3.744,0.",
   "action": "Short op 3.731,9 · stop 3.744,0 · doel 3.719,8 (1:1.0)",
   "invalidation": "stop 3.744,0 of sessie-einde"
+ },
+ {
+  "id": "E00555",
+  "time": "2026-11-19T11:35:00Z",
+  "market": "BTCUSD",
+  "price": 64010.0,
+  "bias": "omhoog",
+  "trigger": "Nieuwe zone",
+  "title": "Nieuwe demand-zone na uitbraak Londen",
+  "text": "3 grote candles omhoog (gem. 2.72x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 63.680,0 – 63.735,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
+  "action": "Zone actief, wacht op entry",
+  "invalidation": "slot onder 63.680,0"
  }
 ]
