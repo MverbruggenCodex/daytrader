@@ -1,17 +1,5 @@
 [
  {
-  "id": "E00409",
-  "time": "2026-11-08T13:05:00Z",
-  "market": "BTCUSD",
-  "price": 76000.0,
-  "bias": "zijwaarts",
-  "trigger": "Overgeslagen",
-  "title": "Displacement zonder setup (omhoog)",
-  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts. Geen zone.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
   "id": "E00410",
   "time": "2026-11-08T14:50:00Z",
   "market": "BTCUSD",
@@ -1797,6 +1785,18 @@
   "title": "T024 gesloten: stop loss (verlies)",
   "text": "Long BTCUSD van 63.756,0 gesloten op 63.669,9 via stop loss. Modelresultaat $-210.39 (-2.41R).",
   "action": "Positie gesloten · $-210.39",
+  "invalidation": ""
+ },
+ {
+  "id": "E00559",
+  "time": "2026-11-19T14:00:00Z",
+  "market": "BTCUSD",
+  "price": 64008.0,
+  "bias": "zijwaarts",
+  "trigger": "Overgeslagen",
+  "title": "Displacement zonder setup (omhoog)",
+  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts. Geen zone.",
+  "action": "Geen trade",
   "invalidation": ""
  }
 ]
