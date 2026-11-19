@@ -573,5 +573,28 @@
   "exit_reason": "take profit",
   "fees_usd": 45.1716,
   "liquid": "Verlopen"
+ },
+ {
+  "id": "T026",
+  "market": "BTCUSD",
+  "side": "Short",
+  "status": "Gesloten",
+  "opened_at": "2026-11-19T17:30:00Z",
+  "entry": 63006.0,
+  "stop": 63253.214286,
+  "target": 62209.0,
+  "size": 0.35366079,
+  "risk_usd": 87.43,
+  "rr": 3.22,
+  "exit": 63253.21428571428,
+  "closed_at": "2026-11-19T17:35:00Z",
+  "pnl_usd": -129.85,
+  "r_result": -1.49,
+  "setup": "ORB New York + supply-zone",
+  "reason": "De koers tikte de zone aan en sloot er weer buiten. Zone 63.030,0 – 63.227,0. Trend omlaag; FVG ja; BOS ja; discount ja; level stack nee.",
+  "strategy": "ORB + Supply & Demand",
+  "exit_reason": "stop loss",
+  "fees_usd": 42.4203,
+  "liquid": "Wacht op bevestiging"
  }
 ]
