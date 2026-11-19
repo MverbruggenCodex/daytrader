@@ -504,5 +504,28 @@
   "exit_reason": "sessie-einde",
   "fees_usd": 63.9631,
   "liquid": "Geannuleerd"
+ },
+ {
+  "id": "T023",
+  "market": "XAUUSD",
+  "side": "Short",
+  "status": "Open",
+  "opened_at": "2026-11-19T09:25:00Z",
+  "entry": 3731.9,
+  "stop": 3744.0,
+  "target": 3719.8,
+  "size": 7.22561983,
+  "risk_usd": 87.43,
+  "rr": 1.0,
+  "exit": null,
+  "closed_at": null,
+  "pnl_usd": null,
+  "r_result": null,
+  "setup": "ORB-uitbraak Londen",
+  "reason": "5m-slot onder de openingsrange 3.734,7 – 3.744,0.",
+  "strategy": "ORB-uitbraak",
+  "exit_reason": null,
+  "fees_usd": 25.617,
+  "liquid": "Wacht op bevestiging"
  }
 ]
