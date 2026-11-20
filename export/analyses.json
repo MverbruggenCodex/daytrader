@@ -1,29 +1,5 @@
 [
  {
-  "id": "E00434",
-  "time": "2026-11-10T15:35:00Z",
-  "market": "BTCUSD",
-  "price": 73741.0,
-  "bias": "omhoog",
-  "trigger": "Overgeslagen",
-  "title": "Displacement zonder setup (omlaag)",
-  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is omhoog, beweging breekt de openingsrange niet. Geen zone.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
-  "id": "E00435",
-  "time": "2026-11-10T15:43:39Z",
-  "market": "XAUUSD",
-  "price": 4051.7,
-  "bias": "—",
-  "trigger": "Nieuws",
-  "title": "Hete CPI VS, goud daalt",
-  "text": "CPI hoger dan verwacht; Fed's Waller steunt renteverhoging in december. Goud en BTC onder druk.",
-  "action": "",
-  "invalidation": ""
- },
- {
   "id": "E00436",
   "time": "2026-11-11T00:20:00Z",
   "market": "BTCUSD",
@@ -1792,6 +1768,30 @@
   "time": "2026-11-20T15:15:00Z",
   "market": "BTCUSD",
   "price": 60881.0,
+  "bias": "omhoog",
+  "trigger": "Overgeslagen",
+  "title": "Displacement zonder setup (omlaag)",
+  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is omhoog. Geen zone.",
+  "action": "Geen trade",
+  "invalidation": ""
+ },
+ {
+  "id": "E00584",
+  "time": "2026-11-20T16:43:25Z",
+  "market": "BTCUSD",
+  "price": 60120.0,
+  "bias": "—",
+  "trigger": "Nieuws",
+  "title": "BTC zakt onder 60K",
+  "text": "Crypto-sell-off: BTC tijdelijk onder 59.000 (laag 58.725), ETH/XRP/SOL ook lager.",
+  "action": "",
+  "invalidation": ""
+ },
+ {
+  "id": "E00585",
+  "time": "2026-11-20T15:50:00Z",
+  "market": "BTCUSD",
+  "price": 59728.0,
   "bias": "omhoog",
   "trigger": "Overgeslagen",
   "title": "Displacement zonder setup (omlaag)",
