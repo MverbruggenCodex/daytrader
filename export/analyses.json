@@ -1,29 +1,5 @@
 [
  {
-  "id": "E00447",
-  "time": "2026-11-12T00:20:00Z",
-  "market": "BTCUSD",
-  "price": 73970.0,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange Tokio staat",
-  "text": "BTCUSD: range van het eerste kwartier 73.810,0 – 74.091,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
-  "id": "E00448",
-  "time": "2026-11-12T00:20:00Z",
-  "market": "XAUUSD",
-  "price": 3982.3,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange Tokio staat",
-  "text": "XAUUSD: range van het eerste kwartier 3.971,3 – 3.979,4. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
   "id": "E00449",
   "time": "2026-11-12T02:20:00Z",
   "market": "BTCUSD",
@@ -1798,5 +1774,29 @@
   "text": "3 grote candles omhoog (gem. 3.15x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 59.060,0 – 59.311,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
   "action": "Zone actief, wacht op entry",
   "invalidation": "slot onder 59.060,0"
+ },
+ {
+  "id": "E00597",
+  "time": "2026-11-21T14:50:00Z",
+  "market": "BTCUSD",
+  "price": 60319.0,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange New York staat",
+  "text": "BTCUSD: range van het eerste kwartier 60.136,0 – 60.535,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00598",
+  "time": "2026-11-21T15:40:00Z",
+  "market": "BTCUSD",
+  "price": 59810.0,
+  "bias": "omhoog",
+  "trigger": "Overgeslagen",
+  "title": "Displacement zonder setup (omlaag)",
+  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is omhoog. Geen zone.",
+  "action": "Geen trade",
+  "invalidation": ""
  }
 ]
