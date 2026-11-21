@@ -1,17 +1,5 @@
 [
  {
-  "id": "E00443",
-  "time": "2026-11-11T13:05:00Z",
-  "market": "BTCUSD",
-  "price": 73753.0,
-  "bias": "zijwaarts",
-  "trigger": "Overgeslagen",
-  "title": "Displacement zonder setup (omlaag)",
-  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts. Geen zone.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
   "id": "E00444",
   "time": "2026-11-11T14:50:00Z",
   "market": "BTCUSD",
@@ -1798,5 +1786,17 @@
   "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts. Geen zone.",
   "action": "Geen trade",
   "invalidation": ""
+ },
+ {
+  "id": "E00593",
+  "time": "2026-11-21T11:35:00Z",
+  "market": "BTCUSD",
+  "price": 58306.0,
+  "bias": "omhoog",
+  "trigger": "Nieuwe zone",
+  "title": "Nieuwe demand-zone na uitbraak Londen",
+  "text": "3 grote candles omhoog (gem. 1.84x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 57.836,0 – 57.937,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
+  "action": "Zone actief, wacht op entry",
+  "invalidation": "slot onder 57.836,0"
  }
 ]
