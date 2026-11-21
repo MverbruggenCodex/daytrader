@@ -1,17 +1,5 @@
 [
  {
-  "id": "E00439",
-  "time": "2026-11-11T08:20:00Z",
-  "market": "XAUUSD",
-  "price": 4059.3,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange Londen staat",
-  "text": "XAUUSD: range van het eerste kwartier 4.057,8 – 4.059,5. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
   "id": "E00440",
   "time": "2026-11-11T08:40:00Z",
   "market": "XAUUSD",
@@ -1796,6 +1784,18 @@
   "trigger": "Nieuws",
   "title": "Scherpe daling BTC",
   "text": "BTC zakte rond 03:30Z in één 5m-candle van ~58.230 naar 56.800 (-2,5%); aandelen en goud ook lager (correctie-nieuws VS-aandelen).",
+  "action": "",
+  "invalidation": ""
+ },
+ {
+  "id": "E00589",
+  "time": "2026-11-21T04:43:36Z",
+  "market": "BTCUSD",
+  "price": 57087.0,
+  "bias": "—",
+  "trigger": "Nieuws",
+  "title": "BTC zakt onder 56k",
+  "text": "Uitverkoop zet door: BTC van ~58.5k naar low 55.509 (−5% in 2 uur), ca. $416M liquidaties; aandelen in correctie, goud test nieuwe lows. Geen macro-release (zaterdag).",
   "action": "",
   "invalidation": ""
  }
