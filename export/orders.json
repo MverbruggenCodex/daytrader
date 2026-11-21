@@ -268,23 +268,5 @@
   "created": "2026-10-22T14:50:00Z",
   "expires": "2026-10-22T16:50:00Z",
   "note": "koers (4043.3) al voorbij stop of doel"
- },
- {
-  "id": "O011",
-  "trade_id": "T011",
-  "market": "XAUUSD",
-  "symbol": "xyz:GOLD",
-  "side": "Short",
-  "price": 4087.4,
-  "sl": 4100.0,
-  "tp": 4074.8,
-  "notional": 22018.4,
-  "leverage": 10,
-  "risk_usd": 67.87,
-  "rr": 1.0,
-  "status": "Gesloten",
-  "created": "2026-10-22T08:05:00Z",
-  "expires": "2026-10-22T10:05:00Z",
-  "note": "positie niet meer open op Liquid (TP, SL of handmatig)"
  }
 ]
