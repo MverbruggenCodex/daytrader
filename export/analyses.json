@@ -1,17 +1,5 @@
 [
  {
-  "id": "E00440",
-  "time": "2026-11-11T08:40:00Z",
-  "market": "XAUUSD",
-  "price": 4061.1,
-  "bias": "omhoog",
-  "trigger": "Entry",
-  "title": "Long XAUUSD (T019), ORB-uitbraak",
-  "text": "5m-slot boven de openingsrange 4.057,8 – 4.059,5.",
-  "action": "Long op 4.061,1 · stop 4.057,8 · doel 4.064,4 (1:1.0)",
-  "invalidation": "stop 4.057,8 of sessie-einde"
- },
- {
   "id": "E00441",
   "time": "2026-11-11T08:55:00Z",
   "market": "XAUUSD",
@@ -1796,6 +1784,18 @@
   "trigger": "Nieuws",
   "title": "BTC zakt onder 56k",
   "text": "Uitverkoop zet door: BTC van ~58.5k naar low 55.509 (−5% in 2 uur), ca. $416M liquidaties; aandelen in correctie, goud test nieuwe lows. Geen macro-release (zaterdag).",
+  "action": "",
+  "invalidation": ""
+ },
+ {
+  "id": "E00590",
+  "time": "2026-11-21T05:43:13Z",
+  "market": "BTCUSD",
+  "price": 55967.0,
+  "bias": "—",
+  "trigger": "Nieuws",
+  "title": "BTC verder omlaag naar 55,5k",
+  "text": "Uitverkoop zet door: low 55.509 rond 05:05Z, nu ~55.8k. Nieuws: crypto-bloodbath, liquidaties, aandelen in correctie. Zaterdag, geen macro-releases.",
   "action": "",
   "invalidation": ""
  }
