@@ -1,17 +1,5 @@
 [
  {
-  "id": "E00438",
-  "time": "2026-11-11T08:20:00Z",
-  "market": "BTCUSD",
-  "price": 73970.0,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange Londen staat",
-  "text": "BTCUSD: range van het eerste kwartier 73.980,0 – 74.150,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
   "id": "E00439",
   "time": "2026-11-11T08:20:00Z",
   "market": "XAUUSD",
@@ -1797,6 +1785,18 @@
   "title": "Openingsrange Tokio staat",
   "text": "BTCUSD: range van het eerste kwartier 58.854,0 – 59.037,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
   "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00588",
+  "time": "2026-11-21T03:43:24Z",
+  "market": "BTCUSD",
+  "price": 58697.0,
+  "bias": "—",
+  "trigger": "Nieuws",
+  "title": "Scherpe daling BTC",
+  "text": "BTC zakte rond 03:30Z in één 5m-candle van ~58.230 naar 56.800 (-2,5%); aandelen en goud ook lager (correctie-nieuws VS-aandelen).",
+  "action": "",
   "invalidation": ""
  }
 ]
