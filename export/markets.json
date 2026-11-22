@@ -2,50 +2,50 @@
  {
   "market": "BTCUSD",
   "status": "Buiten sessie",
-  "price": 59224.0,
-  "day_open": 57181.0,
+  "price": 59001.0,
+  "day_open": 58067.0,
   "day_high": 60980.0,
-  "day_low": 57060.0,
+  "day_low": 57354.0,
   "bias": "Bearish",
   "note": "Zoveel mogelijk trades (keuze 12-10): ORB + S&D in Tokio, Londen (tot 14:00) en New York (tot 15:00), 2 per sessie, plus Pats swing 1u 24/7 (doel 2R, EMA 50)",
   "trading": true,
-  "updated": "2026-11-22T06:40:00Z"
+  "updated": "2026-11-22T07:40:00Z"
  },
  {
   "market": "EURUSD",
   "status": "Buiten sessie",
-  "price": 1.098,
-  "day_open": 1.0964,
-  "day_high": 1.0983,
+  "price": 1.0975,
+  "day_open": 1.0963,
+  "day_high": 1.0984,
   "day_low": 1.0958,
-  "bias": "Bullish",
+  "bias": "Neutraal",
   "note": "Alleen volgen; strategie verloor in de backtest",
   "trading": false,
-  "updated": "2026-11-22T06:20:00Z"
+  "updated": "2026-11-22T07:40:00Z"
  },
  {
   "market": "XAUUSD",
   "status": "Buiten sessie",
-  "price": 3542.6,
-  "day_open": 3526.1,
+  "price": 3542.5,
+  "day_open": 3532.2,
   "day_high": 3670.0,
-  "day_low": 3525.6,
+  "day_low": 3526.9,
   "bias": "Neutraal",
   "note": "Zoveel mogelijk trades (keuze 12-10): ORB-uitbraak in Tokio, Londen en New York (retest, stop overkant, 1R, trend 60m), plus Pats swing 4u (EMA 50)",
   "trading": true,
-  "updated": "2026-11-22T06:40:00Z"
+  "updated": "2026-11-22T07:40:00Z"
  },
  {
   "market": "SP500",
   "status": "Buiten sessie",
-  "price": 7005.9,
-  "day_open": 6962.1,
+  "price": 7001.7,
+  "day_open": 6961.8,
   "day_high": 7026.3,
-  "day_low": 6948.1,
-  "bias": "Bearish",
+  "day_low": 6951.6,
+  "bias": "Bullish",
   "note": "Alleen volgen; vervangt de DJ30",
   "trading": false,
-  "updated": "2026-11-22T06:40:00Z"
+  "updated": "2026-11-22T07:40:00Z"
  },
  {
   "market": "USDCAD",
@@ -57,7 +57,7 @@
   "bias": "—",
   "note": "Niet beschikbaar op Liquid/Hyperliquid",
   "trading": false,
-  "updated": "2026-11-22T06:43:26Z"
+  "updated": "2026-11-22T07:43:10Z"
  },
  {
   "market": "DJ30",
@@ -69,6 +69,6 @@
   "bias": "—",
   "note": "Niet beschikbaar op Liquid/Hyperliquid; SP500 vervangt hem",
   "trading": false,
-  "updated": "2026-11-22T06:43:26Z"
+  "updated": "2026-11-22T07:43:10Z"
  }
 ]
