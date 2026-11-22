@@ -102,18 +102,5 @@
   "fvg": true,
   "bos": true,
   "note": ""
- },
- {
-  "id": "Z0051",
-  "market": "BTCUSD",
-  "session": "newyork",
-  "side": "Supply",
-  "bottom": 63481.0,
-  "top": 63620.0,
-  "status": "Trade",
-  "created": "2026-11-18T15:50:00Z",
-  "fvg": true,
-  "bos": true,
-  "note": ""
  }
 ]
