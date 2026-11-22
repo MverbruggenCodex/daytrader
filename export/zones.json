@@ -115,18 +115,5 @@
   "fvg": true,
   "bos": true,
   "note": ""
- },
- {
-  "id": "Z0050",
-  "market": "BTCUSD",
-  "session": "london",
-  "side": "Supply",
-  "bottom": 64542.0,
-  "top": 64639.0,
-  "status": "Vers",
-  "created": "2026-11-18T10:25:00Z",
-  "fvg": true,
-  "bos": true,
-  "note": ""
  }
 ]
