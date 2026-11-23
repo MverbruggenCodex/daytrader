@@ -1,17 +1,5 @@
 [
  {
-  "id": "E00466",
-  "time": "2026-11-13T03:43:33Z",
-  "market": "BTCUSD",
-  "price": 70332.0,
-  "bias": "—",
-  "trigger": "Nieuws",
-  "title": "Bijna $600M aan crypto-longs geliquideerd",
-  "text": "BTC zakt naar augustus-dieptepunten (~68.900); ETH onder $2.000. Hoge volatiliteit in de Tokio-sessie.",
-  "action": "",
-  "invalidation": ""
- },
- {
   "id": "E00467",
   "time": "2026-11-13T02:45:00Z",
   "market": "BTCUSD",
@@ -1796,6 +1784,18 @@
   "trigger": "Overgeslagen",
   "title": "ORB-uitbraak Londen niet genomen",
   "text": "Slot boven de openingsrange, maar: trend is zijwaarts.",
+  "action": "Geen trade",
+  "invalidation": ""
+ },
+ {
+  "id": "E00616",
+  "time": "2026-11-23T09:50:00Z",
+  "market": "BTCUSD",
+  "price": 61422.0,
+  "bias": "omlaag",
+  "trigger": "Overgeslagen",
+  "title": "Displacement zonder setup (omlaag)",
+  "text": "Sterke beweging met FVG en break of structure, maar beweging breekt de openingsrange niet. Geen zone.",
   "action": "Geen trade",
   "invalidation": ""
  }
