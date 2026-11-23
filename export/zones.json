@@ -76,18 +76,5 @@
   "fvg": true,
   "bos": true,
   "note": "R:R 1:0.84 onder minimum 1:2"
- },
- {
-  "id": "Z0053",
-  "market": "BTCUSD",
-  "session": "newyork",
-  "side": "Supply",
-  "bottom": 63030.0,
-  "top": 63227.0,
-  "status": "Trade",
-  "created": "2026-11-19T17:05:00Z",
-  "fvg": true,
-  "bos": true,
-  "note": ""
  }
 ]
