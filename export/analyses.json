@@ -1,29 +1,5 @@
 [
  {
-  "id": "E00460",
-  "time": "2026-11-12T21:00:00Z",
-  "market": "XAUUSD",
-  "price": 3877.6,
-  "bias": "onbekend",
-  "trigger": "Exit",
-  "title": "T020 gesloten: sessie-einde (winst)",
-  "text": "Short XAUUSD van 3.886,1 gesloten op 3.877,6 via sessie-einde. Modelresultaat $4.94 (+0.06R).",
-  "action": "Positie gesloten · $4.94",
-  "invalidation": ""
- },
- {
-  "id": "E00461",
-  "time": "2026-11-13T00:20:00Z",
-  "market": "BTCUSD",
-  "price": 71339.0,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange Tokio staat",
-  "text": "BTCUSD: range van het eerste kwartier 71.280,0 – 71.507,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
   "id": "E00462",
   "time": "2026-11-13T00:20:00Z",
   "market": "XAUUSD",
@@ -1792,6 +1768,30 @@
   "time": "2026-11-23T01:55:00Z",
   "market": "BTCUSD",
   "price": 60835.0,
+  "bias": "omhoog",
+  "trigger": "Overgeslagen",
+  "title": "Displacement zonder setup (omlaag)",
+  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is omhoog. Geen zone.",
+  "action": "Geen trade",
+  "invalidation": ""
+ },
+ {
+  "id": "E00610",
+  "time": "2026-11-23T03:43:23Z",
+  "market": "XAUUSD",
+  "price": 3580.8,
+  "bias": "—",
+  "trigger": "Nieuws",
+  "title": "Goud stijgt >1,5% op safe-haven vraag",
+  "text": "Tech-selloff in Azië (AI-zorgen) duwt goud omhoog na 14-maandsdieptepunt; 4u-candle tot 3630.",
+  "action": "",
+  "invalidation": ""
+ },
+ {
+  "id": "E00611",
+  "time": "2026-11-23T02:50:00Z",
+  "market": "BTCUSD",
+  "price": 60432.0,
   "bias": "omhoog",
   "trigger": "Overgeslagen",
   "title": "Displacement zonder setup (omlaag)",
