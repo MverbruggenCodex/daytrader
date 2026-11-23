@@ -1,15 +1,5 @@
 [
  {
-  "id": "Z0054",
-  "market": "BTCUSD",
-  "side": "short",
-  "bottom": 61661.0,
-  "top": 61748.0,
-  "from": "2026-11-20T09:20:00Z",
-  "until": "2026-11-20T09:40:00Z",
-  "status": "Overgeslagen"
- },
- {
   "id": "Z0055",
   "market": "BTCUSD",
   "side": "long",
