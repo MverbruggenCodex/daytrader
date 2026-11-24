@@ -1,5 +1,18 @@
 [
  {
+  "id": "Z0060",
+  "market": "BTCUSD",
+  "session": "asia",
+  "side": "Demand",
+  "bottom": 61167.0,
+  "top": 61273.0,
+  "status": "Vers",
+  "created": "2026-11-24T01:10:00Z",
+  "fvg": true,
+  "bos": true,
+  "note": ""
+ },
+ {
   "id": "Z0059",
   "market": "BTCUSD",
   "session": "asia",
