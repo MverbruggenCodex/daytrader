@@ -619,5 +619,28 @@
   "exit_reason": "stop loss",
   "fees_usd": 52.342,
   "liquid": "Verlopen"
+ },
+ {
+  "id": "T028",
+  "market": "BTCUSD",
+  "side": "Short",
+  "status": "Open",
+  "opened_at": "2026-11-24T11:50:00Z",
+  "entry": 60284.0,
+  "stop": 60564.678571,
+  "target": 59332.0,
+  "size": 0.3114951,
+  "risk_usd": 87.43,
+  "rr": 3.39,
+  "exit": null,
+  "closed_at": null,
+  "pnl_usd": null,
+  "r_result": null,
+  "setup": "ORB Londen + supply-zone",
+  "reason": "De koers tikte de zone aan en sloot er weer buiten. Zone 60.326,0 – 60.547,0. Trend omlaag; FVG ja; BOS ja; discount ja; level stack ja.",
+  "strategy": "ORB + Supply & Demand",
+  "exit_reason": null,
+  "fees_usd": 17.8393,
+  "liquid": "Wacht op bevestiging"
  }
 ]
