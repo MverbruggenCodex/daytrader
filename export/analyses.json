@@ -1,17 +1,5 @@
 [
  {
-  "id": "E00488",
-  "time": "2026-11-14T15:20:00Z",
-  "market": "BTCUSD",
-  "price": 65465.0,
-  "bias": "omlaag",
-  "trigger": "Nieuwe zone",
-  "title": "Nieuwe supply-zone na uitbraak New York",
-  "text": "3 grote candles omlaag (gem. 3.88x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 65.851,0 – 66.024,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
-  "action": "Zone actief, wacht op entry",
-  "invalidation": "slot boven 66.024,0"
- },
- {
   "id": "E00489",
   "time": "2026-11-14T15:50:00Z",
   "market": "BTCUSD",
@@ -1797,6 +1785,18 @@
   "title": "T028 gesloten: stop loss (verlies)",
   "text": "Short BTCUSD van 60.284,0 gesloten op 60.564,7 via stop loss. Modelresultaat $-123.19 (-1.41R).",
   "action": "Positie gesloten · $-123.19",
+  "invalidation": ""
+ },
+ {
+  "id": "E00638",
+  "time": "2026-11-24T14:43:26Z",
+  "market": "BTCUSD",
+  "price": 60133.0,
+  "bias": "—",
+  "trigger": "Nieuws",
+  "title": "VS bereidt hogere tarieven op China voor",
+  "text": "WSJ: de VS bereiden hogere importtarieven voor op China en andere landen; risico op extra volatiliteit in BTC en aandelen.",
+  "action": "",
   "invalidation": ""
  }
 ]

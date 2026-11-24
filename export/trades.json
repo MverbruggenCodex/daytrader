@@ -641,6 +641,6 @@
   "strategy": "ORB + Supply & Demand",
   "exit_reason": "stop loss",
   "fees_usd": 35.7616,
-  "liquid": "Wacht op bevestiging"
+  "liquid": "Verlopen"
  }
 ]
