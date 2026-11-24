@@ -1,29 +1,5 @@
 [
  {
-  "id": "E00482",
-  "time": "2026-11-14T03:43:48Z",
-  "market": "BTCUSD",
-  "price": 67474.0,
-  "bias": "—",
-  "trigger": "Nieuws",
-  "title": "Crypto-selloff: BTC onder 67.000",
-  "text": "Nieuws (The Defiant, SSBCrack): crypto-selloff verdiept, BTC zakte rond 03:30 UTC naar 66.588. Zaterdag, geen high-impact macro-releases; geen blackout.",
-  "action": "",
-  "invalidation": ""
- },
- {
-  "id": "E00483",
-  "time": "2026-11-14T08:20:00Z",
-  "market": "BTCUSD",
-  "price": 67234.0,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange Londen staat",
-  "text": "BTCUSD: range van het eerste kwartier 67.137,0 – 67.304,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
   "id": "E00484",
   "time": "2026-11-14T13:05:00Z",
   "market": "BTCUSD",
@@ -1798,5 +1774,29 @@
   "text": "XAUUSD: range van het eerste kwartier 3.618,9 – 3.629,3. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
   "action": "Geen trade; zones zoeken",
   "invalidation": ""
+ },
+ {
+  "id": "E00632",
+  "time": "2026-11-24T09:05:00Z",
+  "market": "BTCUSD",
+  "price": 59978.0,
+  "bias": "omlaag",
+  "trigger": "Nieuwe zone",
+  "title": "Nieuwe supply-zone na uitbraak Londen",
+  "text": "3 grote candles omlaag (gem. 3.19x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 60.326,0 – 60.547,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
+  "action": "Zone actief, wacht op entry",
+  "invalidation": "slot boven 60.547,0"
+ },
+ {
+  "id": "E00633",
+  "time": "2026-11-24T09:25:00Z",
+  "market": "XAUUSD",
+  "price": 3617.8,
+  "bias": "omlaag",
+  "trigger": "Entry",
+  "title": "Short XAUUSD (T027), ORB-uitbraak",
+  "text": "5m-slot onder de openingsrange 3.618,9 – 3.629,3.",
+  "action": "Short op 3.617,8 · stop 3.629,3 · doel 3.606,3 (1:1.0)",
+  "invalidation": "stop 3.629,3 of sessie-einde"
  }
 ]
