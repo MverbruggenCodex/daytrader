@@ -1,53 +1,5 @@
 [
  {
-  "id": "E00489",
-  "time": "2026-11-14T15:50:00Z",
-  "market": "BTCUSD",
-  "price": 65631.0,
-  "bias": "onbekend",
-  "trigger": "Overgeslagen",
-  "title": "Entry-signaal supply-zone niet genomen",
-  "text": "De koers tikte de zone aan en sloot er weer buiten, maar: R:R 1:1.39 onder minimum 1:2.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
-  "id": "E00490",
-  "time": "2026-11-14T17:40:00Z",
-  "market": "BTCUSD",
-  "price": 66032.0,
-  "bias": "omlaag",
-  "trigger": "Overgeslagen",
-  "title": "Displacement zonder setup (omhoog)",
-  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is omlaag, beweging breekt de openingsrange niet. Geen zone.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
-  "id": "E00491",
-  "time": "2026-11-14T21:43:25Z",
-  "market": "BTCUSD",
-  "price": 65511.0,
-  "bias": "—",
-  "trigger": "Nieuws",
-  "title": "BTC zakt onder 64K",
-  "text": "Coinpaper: BTC breekt onder $64K, ETH richting $1.800; scherpe 5m-daling rond 21:30Z. Goud ook flink lager (3774).",
-  "action": "",
-  "invalidation": ""
- },
- {
-  "id": "E00492",
-  "time": "2026-11-15T00:20:00Z",
-  "market": "BTCUSD",
-  "price": 64276.0,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange Tokio staat",
-  "text": "BTCUSD: range van het eerste kwartier 63.855,0 – 64.555,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
   "id": "E00493",
   "time": "2026-11-15T01:43:28Z",
   "market": "BTCUSD",
@@ -1797,6 +1749,54 @@
   "title": "VS bereidt hogere tarieven op China voor",
   "text": "WSJ: de VS bereiden hogere importtarieven voor op China en andere landen; risico op extra volatiliteit in BTC en aandelen.",
   "action": "",
+  "invalidation": ""
+ },
+ {
+  "id": "E00639",
+  "time": "2026-11-24T15:43:27Z",
+  "market": "BTCUSD",
+  "price": 60273.0,
+  "bias": "—",
+  "trigger": "Nieuws",
+  "title": "BTC onder 60.000",
+  "text": "Nieuws: Bitcoin zakt onder 60k, ether -7%; goud daalt ook (ETF-uitstroom). Geen high-impact release binnen 60 min.",
+  "action": "",
+  "invalidation": ""
+ },
+ {
+  "id": "E00640",
+  "time": "2026-11-24T14:50:00Z",
+  "market": "BTCUSD",
+  "price": 60370.0,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange New York staat",
+  "text": "BTCUSD: range van het eerste kwartier 60.033,0 – 60.646,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00641",
+  "time": "2026-11-24T14:50:00Z",
+  "market": "XAUUSD",
+  "price": 3631.8,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange New York staat",
+  "text": "XAUUSD: range van het eerste kwartier 3.616,2 – 3.632,6. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00642",
+  "time": "2026-11-24T15:15:00Z",
+  "market": "BTCUSD",
+  "price": 59939.0,
+  "bias": "omhoog",
+  "trigger": "Overgeslagen",
+  "title": "Displacement zonder setup (omlaag)",
+  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is omhoog. Geen zone.",
+  "action": "Geen trade",
   "invalidation": ""
  }
 ]
