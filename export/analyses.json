@@ -1,53 +1,5 @@
 [
  {
-  "id": "E00507",
-  "time": "2026-11-16T01:00:00Z",
-  "market": "XAUUSD",
-  "price": 3887.7,
-  "bias": "zijwaarts",
-  "trigger": "Overgeslagen",
-  "title": "ORB-uitbraak Tokio niet genomen",
-  "text": "Slot onder de openingsrange, maar: trend is zijwaarts.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
-  "id": "E00508",
-  "time": "2026-11-16T08:20:00Z",
-  "market": "BTCUSD",
-  "price": 64560.0,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange Londen staat",
-  "text": "BTCUSD: range van het eerste kwartier 64.617,0 – 64.955,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
-  "id": "E00509",
-  "time": "2026-11-16T08:20:00Z",
-  "market": "XAUUSD",
-  "price": 3859.4,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange Londen staat",
-  "text": "XAUUSD: range van het eerste kwartier 3.853,9 – 3.857,5. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
-  "id": "E00510",
-  "time": "2026-11-16T08:35:00Z",
-  "market": "XAUUSD",
-  "price": 3858.0,
-  "bias": "omlaag",
-  "trigger": "Overgeslagen",
-  "title": "ORB-uitbraak Londen niet genomen",
-  "text": "Slot boven de openingsrange, maar: trend is omlaag.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
   "id": "E00511",
   "time": "2026-11-16T12:10:00Z",
   "market": "BTCUSD",
@@ -1797,6 +1749,54 @@
   "title": "BTC onder 58.000",
   "text": "BTC zakt naar ~57.500 (dagdieptepunt) terwijl aandelen verder dalen na hete PCE en nieuwe tarieven; S&P500 onder 7.000, goud ~3.459.",
   "action": "",
+  "invalidation": ""
+ },
+ {
+  "id": "E00657",
+  "time": "2026-11-25T15:43:30Z",
+  "market": "XAUUSD",
+  "price": 3462.2,
+  "bias": "—",
+  "trigger": "Nieuws",
+  "title": "Goud onder 3.450, 15-maandslaagte",
+  "text": "Goud zakte rond 16:35 naar 3.429 (laagste in ~15 maanden) en herstelt naar ~3.446; tech-uitverkoop en dalende yields.",
+  "action": "",
+  "invalidation": ""
+ },
+ {
+  "id": "E00658",
+  "time": "2026-11-25T14:50:00Z",
+  "market": "BTCUSD",
+  "price": 57627.0,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange New York staat",
+  "text": "BTCUSD: range van het eerste kwartier 57.332,0 – 58.261,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00659",
+  "time": "2026-11-25T14:50:00Z",
+  "market": "XAUUSD",
+  "price": 3461.3,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange New York staat",
+  "text": "XAUUSD: range van het eerste kwartier 3.456,6 – 3.473,4. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00660",
+  "time": "2026-11-25T15:05:00Z",
+  "market": "BTCUSD",
+  "price": 58583.0,
+  "bias": "omlaag",
+  "trigger": "Overgeslagen",
+  "title": "Displacement zonder setup (omhoog)",
+  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is omlaag. Geen zone.",
+  "action": "Geen trade",
   "invalidation": ""
  }
 ]
