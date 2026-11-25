@@ -1,17 +1,5 @@
 [
  {
-  "id": "E00506",
-  "time": "2026-11-16T00:20:00Z",
-  "market": "XAUUSD",
-  "price": 3891.5,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange Tokio staat",
-  "text": "XAUUSD: range van het eerste kwartier 3.890,0 – 3.898,2. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
   "id": "E00507",
   "time": "2026-11-16T01:00:00Z",
   "market": "XAUUSD",
@@ -1796,6 +1784,18 @@
   "trigger": "Nieuws",
   "title": "Goud zakt na PCE-cijfer VS",
   "text": "Na het PCE-cijfer VS (14:30 Amsterdam) zakte goud in drie candles van ~3.511 naar 3.470,7 (-1,1%) op zeer hoog volume; BTC kort van ~58.880 naar 58.190 (nu ~58.280), S&P500 naar 7.050. Headlines: VS-tariefplannen versterken renteverhogingsverwachtingen. Binnen de PCE-blackout 14:15-15:00.",
+  "action": "",
+  "invalidation": ""
+ },
+ {
+  "id": "E00656",
+  "time": "2026-11-25T14:43:34Z",
+  "market": "BTCUSD",
+  "price": 57793.0,
+  "bias": "—",
+  "trigger": "Nieuws",
+  "title": "BTC onder 58.000",
+  "text": "BTC zakt naar ~57.500 (dagdieptepunt) terwijl aandelen verder dalen na hete PCE en nieuwe tarieven; S&P500 onder 7.000, goud ~3.459.",
   "action": "",
   "invalidation": ""
  }

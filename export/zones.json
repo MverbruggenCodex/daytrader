@@ -50,31 +50,5 @@
   "fvg": true,
   "bos": true,
   "note": ""
- },
- {
-  "id": "Z0058",
-  "market": "BTCUSD",
-  "session": "london",
-  "side": "Demand",
-  "bottom": 59060.0,
-  "top": 59311.0,
-  "status": "Vers",
-  "created": "2026-11-21T13:35:00Z",
-  "fvg": true,
-  "bos": true,
-  "note": ""
- },
- {
-  "id": "Z0057",
-  "market": "BTCUSD",
-  "session": "london",
-  "side": "Demand",
-  "bottom": 58759.0,
-  "top": 58862.0,
-  "status": "Vers",
-  "created": "2026-11-21T13:10:00Z",
-  "fvg": true,
-  "bos": true,
-  "note": ""
  }
 ]
