@@ -693,7 +693,7 @@
   "id": "T031",
   "market": "XAUUSD",
   "side": "Short",
-  "status": "Open",
+  "status": "Gesloten",
   "opened_at": "2026-11-25T16:40:00Z",
   "entry": 3450.4,
   "stop": 3473.4,
@@ -701,15 +701,15 @@
   "size": 3.80130435,
   "risk_usd": 87.43,
   "rr": 1.0,
-  "exit": null,
-  "closed_at": null,
-  "pnl_usd": null,
-  "r_result": null,
+  "exit": 3473.4,
+  "closed_at": "2026-11-25T17:05:00Z",
+  "pnl_usd": -112.43,
+  "r_result": -1.29,
   "setup": "ORB-uitbraak New York",
   "reason": "5m-slot onder de openingsrange 3.456,6 – 3.473,4.",
   "strategy": "ORB-uitbraak",
-  "exit_reason": null,
-  "fees_usd": 12.4602,
-  "liquid": "Wacht op bevestiging"
+  "exit_reason": "stop loss",
+  "fees_usd": 25.0035,
+  "liquid": "Verlopen"
  }
 ]

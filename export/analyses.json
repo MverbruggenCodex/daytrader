@@ -1,41 +1,5 @@
 [
  {
-  "id": "E00512",
-  "time": "2026-11-16T14:50:00Z",
-  "market": "BTCUSD",
-  "price": 65269.0,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange New York staat",
-  "text": "BTCUSD: range van het eerste kwartier 64.403,0 – 65.679,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
-  "id": "E00513",
-  "time": "2026-11-16T14:50:00Z",
-  "market": "XAUUSD",
-  "price": 3888.4,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange New York staat",
-  "text": "XAUUSD: range van het eerste kwartier 3.865,9 – 3.888,4. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
-  "id": "E00514",
-  "time": "2026-11-16T15:25:00Z",
-  "market": "BTCUSD",
-  "price": 64236.0,
-  "bias": "omhoog",
-  "trigger": "Overgeslagen",
-  "title": "Displacement zonder setup (omlaag)",
-  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is omhoog. Geen zone.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
   "id": "E00515",
   "time": "2026-11-16T15:50:00Z",
   "market": "XAUUSD",
@@ -1798,5 +1762,41 @@
   "text": "5m-slot onder de openingsrange 3.456,6 – 3.473,4.",
   "action": "Short op 3.450,4 · stop 3.473,4 · doel 3.427,4 (1:1.0)",
   "invalidation": "stop 3.473,4 of sessie-einde"
+ },
+ {
+  "id": "E00662",
+  "time": "2026-11-25T16:45:00Z",
+  "market": "BTCUSD",
+  "price": 58129.0,
+  "bias": "zijwaarts",
+  "trigger": "Overgeslagen",
+  "title": "Displacement zonder setup (omlaag)",
+  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts, beweging breekt de openingsrange niet. Geen zone.",
+  "action": "Geen trade",
+  "invalidation": ""
+ },
+ {
+  "id": "E00663",
+  "time": "2026-11-25T17:05:00Z",
+  "market": "XAUUSD",
+  "price": 3473.4,
+  "bias": "onbekend",
+  "trigger": "Exit",
+  "title": "T031 gesloten: stop loss (verlies)",
+  "text": "Short XAUUSD van 3.450,4 gesloten op 3.473,4 via stop loss. Modelresultaat $-112.43 (-1.29R).",
+  "action": "Positie gesloten · $-112.43",
+  "invalidation": ""
+ },
+ {
+  "id": "E00664",
+  "time": "2026-11-25T17:10:00Z",
+  "market": "BTCUSD",
+  "price": 59231.0,
+  "bias": "zijwaarts",
+  "trigger": "Overgeslagen",
+  "title": "Displacement zonder setup (omhoog)",
+  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts. Geen zone.",
+  "action": "Geen trade",
+  "invalidation": ""
  }
 ]
