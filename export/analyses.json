@@ -1,41 +1,5 @@
 [
  {
-  "id": "E00502",
-  "time": "2026-11-15T13:40:00Z",
-  "market": "BTCUSD",
-  "price": 65355.0,
-  "bias": "omlaag",
-  "trigger": "Overgeslagen",
-  "title": "Displacement zonder setup (omlaag)",
-  "text": "Sterke beweging met FVG en break of structure, maar beweging breekt de openingsrange niet. Geen zone.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
-  "id": "E00503",
-  "time": "2026-11-15T14:50:00Z",
-  "market": "BTCUSD",
-  "price": 64795.0,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange New York staat",
-  "text": "BTCUSD: range van het eerste kwartier 64.399,0 – 65.010,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
-  "id": "E00504",
-  "time": "2026-11-16T00:20:00Z",
-  "market": "BTCUSD",
-  "price": 65026.0,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange Tokio staat",
-  "text": "BTCUSD: range van het eerste kwartier 65.050,0 – 65.383,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
   "id": "E00505",
   "time": "2026-11-16T00:20:00Z",
   "market": "BTCUSD",
@@ -1797,6 +1761,42 @@
   "title": "T030 gesloten: stop loss (verlies)",
   "text": "Short BTCUSD van 59.261,0 gesloten op 59.419,7 via stop loss. Modelresultaat $-149.54 (-1.71R).",
   "action": "Positie gesloten · $-149.54",
+  "invalidation": ""
+ },
+ {
+  "id": "E00652",
+  "time": "2026-11-25T08:20:00Z",
+  "market": "BTCUSD",
+  "price": 58925.0,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange Londen staat",
+  "text": "BTCUSD: range van het eerste kwartier 58.688,0 – 58.915,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00653",
+  "time": "2026-11-25T08:20:00Z",
+  "market": "XAUUSD",
+  "price": 3526.1,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange Londen staat",
+  "text": "XAUUSD: range van het eerste kwartier 3.518,7 – 3.529,4. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
+  "invalidation": ""
+ },
+ {
+  "id": "E00654",
+  "time": "2026-11-25T08:30:00Z",
+  "market": "XAUUSD",
+  "price": 3533.1,
+  "bias": "zijwaarts",
+  "trigger": "Overgeslagen",
+  "title": "ORB-uitbraak Londen niet genomen",
+  "text": "Slot boven de openingsrange, maar: trend is zijwaarts.",
+  "action": "Geen trade",
   "invalidation": ""
  }
 ]
