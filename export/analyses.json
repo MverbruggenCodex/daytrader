@@ -1,17 +1,5 @@
 [
  {
-  "id": "E00505",
-  "time": "2026-11-16T00:20:00Z",
-  "market": "BTCUSD",
-  "price": 65026.0,
-  "bias": "zijwaarts",
-  "trigger": "Overgeslagen",
-  "title": "Displacement zonder setup (omlaag)",
-  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is zijwaarts. Geen zone.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
   "id": "E00506",
   "time": "2026-11-16T00:20:00Z",
   "market": "XAUUSD",
@@ -1797,6 +1785,18 @@
   "title": "ORB-uitbraak Londen niet genomen",
   "text": "Slot boven de openingsrange, maar: trend is zijwaarts.",
   "action": "Geen trade",
+  "invalidation": ""
+ },
+ {
+  "id": "E00655",
+  "time": "2026-11-25T13:45:10Z",
+  "market": "XAUUSD",
+  "price": 3524.8,
+  "bias": "—",
+  "trigger": "Nieuws",
+  "title": "Goud zakt na PCE-cijfer VS",
+  "text": "Na het PCE-cijfer VS (14:30 Amsterdam) zakte goud in drie candles van ~3.511 naar 3.470,7 (-1,1%) op zeer hoog volume; BTC kort van ~58.880 naar 58.190 (nu ~58.280), S&P500 naar 7.050. Headlines: VS-tariefplannen versterken renteverhogingsverwachtingen. Binnen de PCE-blackout 14:15-15:00.",
+  "action": "",
   "invalidation": ""
  }
 ]
