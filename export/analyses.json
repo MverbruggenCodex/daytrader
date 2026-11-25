@@ -1,29 +1,5 @@
 [
  {
-  "id": "E00499",
-  "time": "2026-11-15T08:20:00Z",
-  "market": "BTCUSD",
-  "price": 63895.0,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange Londen staat",
-  "text": "BTCUSD: range van het eerste kwartier 63.868,0 – 64.141,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
-  "id": "E00500",
-  "time": "2026-11-15T08:35:00Z",
-  "market": "BTCUSD",
-  "price": 64700.0,
-  "bias": "omlaag",
-  "trigger": "Overgeslagen",
-  "title": "Displacement zonder setup (omhoog)",
-  "text": "Sterke beweging met FVG en break of structure, maar 15m-trend is omlaag. Geen zone.",
-  "action": "Geen trade",
-  "invalidation": ""
- },
- {
   "id": "E00501",
   "time": "2026-11-15T09:05:00Z",
   "market": "BTCUSD",
@@ -1798,5 +1774,29 @@
   "text": "Short XAUUSD van 3.546,4 gesloten op 3.557,6 via stop loss. Modelresultaat $-140.11 (-1.60R).",
   "action": "Positie gesloten · $-140.11",
   "invalidation": ""
+ },
+ {
+  "id": "E00649",
+  "time": "2026-11-25T02:05:00Z",
+  "market": "BTCUSD",
+  "price": 59086.0,
+  "bias": "omlaag",
+  "trigger": "Nieuwe zone",
+  "title": "Nieuwe supply-zone na uitbraak Tokio",
+  "text": "4 grote candles omlaag (gem. 1.68x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 59.286,0 – 59.400,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
+  "action": "Zone actief, wacht op entry",
+  "invalidation": "slot boven 59.400,0"
+ },
+ {
+  "id": "E00650",
+  "time": "2026-11-25T02:40:00Z",
+  "market": "BTCUSD",
+  "price": 59261.0,
+  "bias": "onbekend",
+  "trigger": "Entry",
+  "title": "Short BTCUSD (T030)",
+  "text": "De koers tikte de zone aan en sloot er weer buiten. Zone 59.286,0 – 59.400,0. Trend omlaag; FVG ja; BOS ja; discount ja; level stack ja.",
+  "action": "Short op 59.261,0 · stop 59.419,7 · doel 58.915,0 (1:2.18)",
+  "invalidation": "stop 59.419,7 of sessie-einde"
  }
 ]

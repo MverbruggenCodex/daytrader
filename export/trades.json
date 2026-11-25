@@ -664,6 +664,29 @@
   "strategy": "ORB-uitbraak",
   "exit_reason": "stop loss",
   "fees_usd": 52.6828,
+  "liquid": "Verlopen"
+ },
+ {
+  "id": "T030",
+  "market": "BTCUSD",
+  "side": "Short",
+  "status": "Open",
+  "opened_at": "2026-11-25T02:40:00Z",
+  "entry": 59261.0,
+  "stop": 59419.707143,
+  "target": 58915.0,
+  "size": 0.55088888,
+  "risk_usd": 87.43,
+  "rr": 2.18,
+  "exit": null,
+  "closed_at": null,
+  "pnl_usd": null,
+  "r_result": null,
+  "setup": "ORB Tokio + supply-zone",
+  "reason": "De koers tikte de zone aan en sloot er weer buiten. Zone 59.286,0 – 59.400,0. Trend omlaag; FVG ja; BOS ja; discount ja; level stack ja.",
+  "strategy": "ORB + Supply & Demand",
+  "exit_reason": null,
+  "fees_usd": 31.0139,
   "liquid": "Wacht op bevestiging"
  }
 ]
