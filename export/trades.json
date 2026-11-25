@@ -670,7 +670,7 @@
   "id": "T030",
   "market": "BTCUSD",
   "side": "Short",
-  "status": "Open",
+  "status": "Gesloten",
   "opened_at": "2026-11-25T02:40:00Z",
   "entry": 59261.0,
   "stop": 59419.707143,
@@ -678,15 +678,15 @@
   "size": 0.55088888,
   "risk_usd": 87.43,
   "rr": 2.18,
-  "exit": null,
-  "closed_at": null,
-  "pnl_usd": null,
-  "r_result": null,
+  "exit": 59419.70714285714,
+  "closed_at": "2026-11-25T03:15:00Z",
+  "pnl_usd": -149.54,
+  "r_result": -1.71,
   "setup": "ORB Tokio + supply-zone",
   "reason": "De koers tikte de zone aan en sloot er weer buiten. Zone 59.286,0 – 59.400,0. Trend omlaag; FVG ja; BOS ja; discount ja; level stack ja.",
   "strategy": "ORB + Supply & Demand",
-  "exit_reason": null,
-  "fees_usd": 31.0139,
-  "liquid": "Wacht op bevestiging"
+  "exit_reason": "stop loss",
+  "fees_usd": 62.1109,
+  "liquid": "Verlopen"
  }
 ]
