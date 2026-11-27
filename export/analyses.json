@@ -1,17 +1,5 @@
 [
  {
-  "id": "E00544",
-  "time": "2026-11-18T19:43:33Z",
-  "market": "XAUUSD",
-  "price": 3745.2,
-  "bias": "—",
-  "trigger": "Nieuws",
-  "title": "Goud laagste sinds sept 2025",
-  "text": "Goud zakt ~3% naar laagste niveau sinds september 2025; BTC onder 63.000; Fed's Barr: renteverhogingen waarschijnlijk. FOMC-notulen 20:00 al gepasseerd.",
-  "action": "",
-  "invalidation": ""
- },
- {
   "id": "E00545",
   "time": "2026-11-18T21:00:00Z",
   "market": "BTCUSD",
@@ -1798,5 +1786,17 @@
   "text": "De koers tikte de zone aan en sloot er weer buiten. Zone 60.121,0 – 60.200,0. Trend omlaag; FVG ja; BOS ja; discount ja; level stack nee.",
   "action": "Short op 60.102,0 · stop 60.247,8 · doel 58.755,0 (1:9.24)",
   "invalidation": "stop 60.247,8 of sessie-einde"
+ },
+ {
+  "id": "E00694",
+  "time": "2026-11-27T16:35:00Z",
+  "market": "BTCUSD",
+  "price": 60247.79285714286,
+  "bias": "onbekend",
+  "trigger": "Exit",
+  "title": "T034 gesloten: stop loss (verlies)",
+  "text": "Short BTCUSD van 60.102,0 gesloten op 60.247,8 via stop loss. Modelresultaat $-155.99 (-1.78R).",
+  "action": "Positie gesloten · $-155.99",
+  "invalidation": ""
  }
 ]

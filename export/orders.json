@@ -12,10 +12,10 @@
   "leverage": 17,
   "risk_usd": 87.43,
   "rr": 9.24,
-  "status": "Wacht op bevestiging",
+  "status": "Verlopen",
   "created": "2026-11-27T15:40:00Z",
   "expires": "2026-11-27T17:40:00Z",
-  "note": ""
+  "note": "koers (60301.0) al voorbij stop of doel"
  },
  {
   "id": "O033",

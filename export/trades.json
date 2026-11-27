@@ -762,7 +762,7 @@
   "id": "T034",
   "market": "BTCUSD",
   "side": "Short",
-  "status": "Open",
+  "status": "Gesloten",
   "opened_at": "2026-11-27T15:40:00Z",
   "entry": 60102.0,
   "stop": 60247.792857,
@@ -770,15 +770,15 @@
   "size": 0.59968644,
   "risk_usd": 87.43,
   "rr": 9.24,
-  "exit": null,
-  "closed_at": null,
-  "pnl_usd": null,
-  "r_result": null,
+  "exit": 60247.79285714286,
+  "closed_at": "2026-11-27T16:35:00Z",
+  "pnl_usd": -155.99,
+  "r_result": -1.78,
   "setup": "ORB New York + supply-zone",
   "reason": "De koers tikte de zone aan en sloot er weer buiten. Zone 60.121,0 – 60.200,0. Trend omlaag; FVG ja; BOS ja; discount ja; level stack nee.",
   "strategy": "ORB + Supply & Demand",
-  "exit_reason": null,
-  "fees_usd": 34.2402,
-  "liquid": "Wacht op bevestiging"
+  "exit_reason": "stop loss",
+  "fees_usd": 68.5635,
+  "liquid": "Verlopen"
  }
 ]
