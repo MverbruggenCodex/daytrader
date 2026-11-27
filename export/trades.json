@@ -734,5 +734,28 @@
   "exit_reason": "sessie-einde",
   "fees_usd": 40.6686,
   "liquid": "Verlopen"
+ },
+ {
+  "id": "T033",
+  "market": "BTCUSD",
+  "side": "Long",
+  "status": "Open",
+  "opened_at": "2026-11-27T02:55:00Z",
+  "entry": 61349.0,
+  "stop": 61129.014286,
+  "target": 61837.0,
+  "size": 0.3974349,
+  "risk_usd": 87.43,
+  "rr": 2.22,
+  "exit": null,
+  "closed_at": null,
+  "pnl_usd": null,
+  "r_result": null,
+  "setup": "ORB Tokio + demand-zone",
+  "reason": "De koers tikte de zone aan en sloot er weer buiten. Zone 61.153,0 – 61.342,0. Trend omhoog; FVG ja; BOS ja; discount ja; level stack nee.",
+  "strategy": "ORB + Supply & Demand",
+  "exit_reason": null,
+  "fees_usd": 23.1631,
+  "liquid": "Verlopen"
  }
 ]

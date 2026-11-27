@@ -1,17 +1,5 @@
 [
  {
-  "id": "E00534",
-  "time": "2026-11-18T08:20:00Z",
-  "market": "BTCUSD",
-  "price": 64574.0,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange Londen staat",
-  "text": "BTCUSD: range van het eerste kwartier 64.510,0 – 64.868,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
   "id": "E00535",
   "time": "2026-11-18T08:20:00Z",
   "market": "XAUUSD",
@@ -1798,5 +1786,17 @@
   "text": "3 grote candles omhoog (gem. 3.98x normale grootte) met fair value gap en break of structure, door de openingsrange heen en mee met de 15m-trend. Zone 61.153,0 – 61.342,0. Wacht op een terugval naar de zone en een slot weer erbuiten.",
   "action": "Zone actief, wacht op entry",
   "invalidation": "slot onder 61.153,0"
+ },
+ {
+  "id": "E00684",
+  "time": "2026-11-27T02:55:00Z",
+  "market": "BTCUSD",
+  "price": 61349.0,
+  "bias": "onbekend",
+  "trigger": "Entry",
+  "title": "Long BTCUSD (T033)",
+  "text": "De koers tikte de zone aan en sloot er weer buiten. Zone 61.153,0 – 61.342,0. Trend omhoog; FVG ja; BOS ja; discount ja; level stack nee.",
+  "action": "Long op 61.349,0 · stop 61.129,0 · doel 61.837,0 (1:2.22)",
+  "invalidation": "stop 61.129,0 of sessie-einde"
  }
 ]
