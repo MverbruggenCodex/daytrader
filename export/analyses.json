@@ -1,17 +1,5 @@
 [
  {
-  "id": "E00535",
-  "time": "2026-11-18T08:20:00Z",
-  "market": "XAUUSD",
-  "price": 3761.3,
-  "bias": "onbekend",
-  "trigger": "Openingsrange",
-  "title": "Openingsrange Londen staat",
-  "text": "XAUUSD: range van het eerste kwartier 3.760,5 – 3.776,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
-  "action": "Geen trade; zones zoeken",
-  "invalidation": ""
- },
- {
   "id": "E00536",
   "time": "2026-11-18T10:25:00Z",
   "market": "BTCUSD",
@@ -1798,5 +1786,17 @@
   "text": "De koers tikte de zone aan en sloot er weer buiten. Zone 61.153,0 – 61.342,0. Trend omhoog; FVG ja; BOS ja; discount ja; level stack nee.",
   "action": "Long op 61.349,0 · stop 61.129,0 · doel 61.837,0 (1:2.22)",
   "invalidation": "stop 61.129,0 of sessie-einde"
+ },
+ {
+  "id": "E00685",
+  "time": "2026-11-27T05:35:00Z",
+  "market": "BTCUSD",
+  "price": 61837.0,
+  "bias": "onbekend",
+  "trigger": "Exit",
+  "title": "T033 gesloten: take profit (winst)",
+  "text": "Long BTCUSD van 61.349,0 gesloten op 61.837,0 via take profit. Modelresultaat $147.44 (+1.69R).",
+  "action": "Positie gesloten · $147.44",
+  "invalidation": ""
  }
 ]
