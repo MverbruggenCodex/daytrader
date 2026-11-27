@@ -18,5 +18,15 @@
   "from": "2026-11-27T02:15:00Z",
   "until": "2026-11-27T02:50:00Z",
   "status": "Trade"
+ },
+ {
+  "id": "Z0064",
+  "market": "BTCUSD",
+  "side": "short",
+  "bottom": 60121.0,
+  "top": 60200.0,
+  "from": "2026-11-27T14:40:00Z",
+  "until": "2026-11-27T15:35:00Z",
+  "status": "Trade"
  }
 ]

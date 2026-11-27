@@ -1,5 +1,23 @@
 [
  {
+  "id": "O034",
+  "trade_id": "T034",
+  "market": "BTCUSD",
+  "symbol": "BTC",
+  "side": "Short",
+  "price": 60102.0,
+  "sl": 60248.0,
+  "tp": 58755.0,
+  "notional": 36042.35,
+  "leverage": 17,
+  "risk_usd": 87.43,
+  "rr": 9.24,
+  "status": "Wacht op bevestiging",
+  "created": "2026-11-27T15:40:00Z",
+  "expires": "2026-11-27T17:40:00Z",
+  "note": ""
+ },
+ {
   "id": "O033",
   "trade_id": "T033",
   "market": "BTCUSD",
