@@ -1,27 +1,5 @@
 [
  {
-  "key": "BTCUSD|london|2026-11-24",
-  "market": "BTCUSD",
-  "session": "london",
-  "label": "Londen",
-  "open": "2026-11-24T08:00:00Z",
-  "range_end": "2026-11-24T08:15:00Z",
-  "or_high": 60409.0,
-  "or_low": 60142.0,
-  "trades": 1
- },
- {
-  "key": "XAUUSD|london|2026-11-24",
-  "market": "XAUUSD",
-  "session": "london",
-  "label": "Londen",
-  "open": "2026-11-24T08:00:00Z",
-  "range_end": "2026-11-24T08:15:00Z",
-  "or_high": 3629.3,
-  "or_low": 3618.9,
-  "trades": 1
- },
- {
   "key": "BTCUSD|newyork|2026-11-24",
   "market": "BTCUSD",
   "session": "newyork",
@@ -195,6 +173,28 @@
   "range_end": "2026-11-27T00:15:00Z",
   "or_high": 3574.4,
   "or_low": 3567.5,
+  "trades": 0
+ },
+ {
+  "key": "BTCUSD|london|2026-11-27",
+  "market": "BTCUSD",
+  "session": "london",
+  "label": "Londen",
+  "open": "2026-11-27T08:00:00Z",
+  "range_end": "2026-11-27T08:15:00Z",
+  "or_high": 61965.0,
+  "or_low": 61629.0,
+  "trades": 0
+ },
+ {
+  "key": "XAUUSD|london|2026-11-27",
+  "market": "XAUUSD",
+  "session": "london",
+  "label": "Londen",
+  "open": "2026-11-27T08:00:00Z",
+  "range_end": "2026-11-27T08:15:00Z",
+  "or_high": 3672.8,
+  "or_low": 3660.9,
   "trades": 0
  }
 ]
