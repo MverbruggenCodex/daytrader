@@ -1,17 +1,5 @@
 [
  {
-  "id": "E00545",
-  "time": "2026-11-18T21:00:00Z",
-  "market": "BTCUSD",
-  "price": 62596.0,
-  "bias": "onbekend",
-  "trigger": "Exit",
-  "title": "T022 gesloten: sessie-einde (winst)",
-  "text": "Short BTCUSD van 63.480,0 gesloten op 62.596,0 via sessie-einde. Modelresultaat $408.13 (+4.67R).",
-  "action": "Positie gesloten · $408.13",
-  "invalidation": ""
- },
- {
   "id": "E00546",
   "time": "2026-11-19T00:20:00Z",
   "market": "BTCUSD",
@@ -1797,6 +1785,18 @@
   "title": "T034 gesloten: stop loss (verlies)",
   "text": "Short BTCUSD van 60.102,0 gesloten op 60.247,8 via stop loss. Modelresultaat $-155.99 (-1.78R).",
   "action": "Positie gesloten · $-155.99",
+  "invalidation": ""
+ },
+ {
+  "id": "E00695",
+  "time": "2026-11-28T00:20:00Z",
+  "market": "BTCUSD",
+  "price": 59947.0,
+  "bias": "onbekend",
+  "trigger": "Openingsrange",
+  "title": "Openingsrange Tokio staat",
+  "text": "BTCUSD: range van het eerste kwartier 59.897,0 – 59.985,0. Wacht op een uitbraak met displacement (grote candles, FVG en break of structure) in de richting van de 15m-trend.",
+  "action": "Geen trade; zones zoeken",
   "invalidation": ""
  }
 ]
