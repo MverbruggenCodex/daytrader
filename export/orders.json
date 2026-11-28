@@ -358,23 +358,5 @@
   "created": "2026-10-30T15:05:00Z",
   "expires": "2026-10-30T17:05:00Z",
   "note": "niet op tijd bevestigd"
- },
- {
-  "id": "O014",
-  "trade_id": "T014",
-  "market": "XAUUSD",
-  "symbol": "xyz:GOLD",
-  "side": "Short",
-  "price": 4024.9,
-  "sl": 4036.0,
-  "tp": 4013.8,
-  "notional": 22018.67,
-  "leverage": 10,
-  "risk_usd": 60.72,
-  "rr": 1.0,
-  "status": "Verlopen",
-  "created": "2026-10-29T09:00:00Z",
-  "expires": "2026-10-29T11:00:00Z",
-  "note": "niet op tijd bevestigd"
  }
 ]
